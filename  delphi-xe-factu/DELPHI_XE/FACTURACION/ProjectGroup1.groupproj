@@ -1,0 +1,48 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{BD9D7036-A550-4AD6-896D-55E541E9A3C2}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="ProyectoFacturacionXE.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="C:\SEBAOT DESARROLL\Componentes XE\Jedi\jvcl\examples\JvDBImage\JvDBImageDemo.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="ProyectoFacturacionXE">
+			<MSBuild Projects="ProyectoFacturacionXE.dproj"/>
+		</Target>
+		<Target Name="ProyectoFacturacionXE:Clean">
+			<MSBuild Projects="ProyectoFacturacionXE.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="ProyectoFacturacionXE:Make">
+			<MSBuild Projects="ProyectoFacturacionXE.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="JvDBImageDemo">
+			<MSBuild Projects="C:\SEBAOT DESARROLL\Componentes XE\Jedi\jvcl\examples\JvDBImage\JvDBImageDemo.dproj"/>
+		</Target>
+		<Target Name="JvDBImageDemo:Clean">
+			<MSBuild Projects="C:\SEBAOT DESARROLL\Componentes XE\Jedi\jvcl\examples\JvDBImage\JvDBImageDemo.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="JvDBImageDemo:Make">
+			<MSBuild Projects="C:\SEBAOT DESARROLL\Componentes XE\Jedi\jvcl\examples\JvDBImage\JvDBImageDemo.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="ProyectoFacturacionXE;JvDBImageDemo"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="ProyectoFacturacionXE:Clean;JvDBImageDemo:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="ProyectoFacturacionXE:Make;JvDBImageDemo:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>
