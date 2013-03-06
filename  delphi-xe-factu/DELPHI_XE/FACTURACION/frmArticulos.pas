@@ -8,7 +8,7 @@ uses
   Mask, ExtCtrls, Grids, DBGrids, JvDBImage, ExtDlgs,
   jpeg, JvGIF, JvPCX, JvAni, JvExDBGrids, JvDBGrid, JvJVCLUtils,
   Buttons, DBClient, JvExExtCtrls, JvImage, DBGridEhGrouping, Provider, GridsEh,
-  DBGridEh, DBCtrlsEh, DBLookupEh;
+  DBGridEh, DBCtrlsEh, DBLookupEh, IBStoredProc;
 
 type
   TfrmArticulosUt = class(TForm)
@@ -49,8 +49,7 @@ type
     qryGrillaArticulos: TIBQuery;
     dsGrillaArt: TDataSource;
     qryAux: TIBQuery;
-    OpenPictureDialog1: TOpenPictureDialog;
-    JvDBImage1: TJvDBImage;
+    image: TJvDBImage;
     SQLQRY: TIBQuery;
     DBGridEh1: TDBGridEh;
     qryArticulo: TIBQuery;
@@ -75,17 +74,40 @@ type
     cbxIVA: TDBLookupComboboxEh;
     cbxRAMO: TDBLookupComboboxEh;
     cbxPROVEEDOR: TDBLookupComboboxEh;
+    sp: TIBStoredProc;
+    OpenPictureDialog1: TOpenPictureDialog;
+    btn1: TBitBtn;
+    btn2: TButton;
+    imgFoto: TImage;
+    cdsArticuloCODARTICULO: TLargeintField;
+    cdsArticuloAVISAR_EXIST_MIN: TWideStringField;
+    cdsArticuloCODPROVEEDOR2: TIntegerField;
+    cdsArticuloCODRAMO2: TIntegerField;
+    cdsArticuloCODTIPOIVA2: TIntegerField;
+    cdsArticuloCODUNIDADMEDIDA2: TIntegerField;
+    cdsArticuloDESCRIPCION: TWideStringField;
+    cdsArticuloEXISTENCIA2: TIntegerField;
+    cdsArticuloEXISTENCIA_MIN2: TIntegerField;
+    cdsArticuloEXT_IMG: TWideStringField;
+    cdsArticuloIMAGEN: TMemoField;
+    cdsArticuloNOM_IMG: TWideStringField;
+    cdsArticuloOBSERVACION: TWideStringField;
+    cdsArticuloPRECIO_MODIFICABLE: TWideStringField;
+    cdsArticuloPRECIOCOMPRA: TLargeintField;
+    sp1: TIBStoredProc;
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure tsConsultaEnter(Sender: TObject);
     procedure tsConsultaExit(Sender: TObject);
     procedure dbnvgr1Click(Sender: TObject; Button: TNavigateBtn);
-    procedure JvDBImage1Click(Sender: TObject);
-    procedure btn1Click(Sender: TObject);
+    procedure imageClick(Sender: TObject);
+
     procedure DBGridEh1DblClick(Sender: TObject);
+    procedure btn1Click(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
+
 
   private
-     procedure AddImage(const Filename: string);
     { Private declarations }
   public
     { Public declarations }
@@ -100,38 +122,60 @@ implementation
 {$R *.dfm}
 
 
-
-
-
 procedure TfrmArticulosUt.btn1Click(Sender: TObject);
   var
-  imgJPG:TJpegImage;
-  blobF:TBlobField;
-  Corriente:TMemoryStream;
-  fs : TMemoryStream;
-
-  xSQl:String;
+  BlobField: TField;
+ BS: TStream;
 begin
-   imgJPG := TJpegImage.create;
-  with SQLQRY do begin
 
-    SQL.Clear;
-    SQL.Add('SELECT IMAGEN FROM ARTICULO WHERE' +
-          ' CODARTICULO=1001');
-    Open;
-    if RecordCount = 1 then begin
-      (Fields[0] as TBlobField).SaveToStream(fs);
-      imgJPG.LoadFromStream(fs);
-      //with DM1.TableRepositorioImagen do begin
-        //imgFoto.Picture.Assign(imgJPG);   // imgFOTO es un componente TImage
-        //imgFoto.Visible := True;
-        //ImgFoto.Refresh;
-      //end;
+   SQLQRY.SQL.Clear;
+    SQLQRY.SQL.Add('SELECT IMAGEN FROM articulo WHERE codarticulo=:COD');
+    SQLQRY.ParamByName('COD').AsInteger:= StrToInt(Trim(dbedtCodArt.Text));
+    SQLQRY.Open;
+    SQLQRY.First;
+  with SQLQRY do
+
+    begin
+       BlobField := FieldByName('IMAGEN'); {'Pic' is name of column with photo}
+       BS := CreateBlobStream(BlobField,bmRead);
+       Image.Picture.Graphic:= TJpegImage.Create; {assume is Jpeg}
+    Try
+       Image.Picture.Graphic.LoadFromStream(BS); {error if not Jpeg}
+      Except {repeat steps for BitMap}
+         BS.Free;
+         Image.Picture.Graphic:= nil; {empty}
+         BlobField := FieldByName('IMAGEN'); {'Pic' is name of column with photo}
+         BS := CreateBlobStream(BlobField,bmRead);
+         Image.Picture.Graphic:= TBitMap.Create; {bitmap}
+         Image.Picture.Graphic.LoadFromStream(BS);
+      end; {Try}
+      BS.Free;
+    end; {with SQLQuery}
+end;
+
+procedure TfrmArticulosUt.btn2Click(Sender: TObject);
+var
+    Jpeg:TJpegImage;
+    Corriente:TMemoryStream;
+begin
+  imgFoto.Picture := nil;
+  if cdsArticuloIMAGEN.BlobSize > 0  then begin
+    Jpeg:=TJpegImage.create;
+    Corriente:=TMemoryStream.create;
+    try
+      cdsArticulo.SaveToStream(Corriente);
+      Corriente.Seek(0,soFromBeginning);
+      Jpeg.LoadFromStream(Corriente);
+      //Jpeg.LoadFromStream(Corriente, ftBlob);
+      imgFoto.Picture.Assign(Jpeg);
+      imgFoto.Visible:=TRUE;
+      imgFoto.Stretch:=TRUE;
+    finally
+      Jpeg.Free;
+      Corriente.Free;
     end;
- //   Close;   //Evito cerrar el query que recupera la consulta pensado que se cerraba y que la imagen ya no se visualizaba
   end;
-  fs.Free;
-  imgJPG.Free;
+
 end;
 
 procedure TfrmArticulosUt.DBGridEh1DblClick(Sender: TObject);
@@ -172,6 +216,26 @@ begin
         END;
    end;
 
+   with SQLQRY do
+   begin
+        SQL.Clear;
+        SQL.Add('SELECT DIR_IMAGENES FROM PARAMETROS');
+        Open;
+        try
+         if  image.Picture.LoadFromFile(TRIM(FieldByName('DIR_IMAGENES').AsString)+TRIM(dbedtCodArt.Text)+'.JPG');
+
+
+        except
+         image.Picture.LoadFromFile(TRIM(FieldByName('DIR_IMAGENES').AsString)+TRIM(dbedtCodArt.Text)+'.JPG');
+        END;
+       Close;
+    END
+
+
+
+
+
+
 end;
 
 procedure TfrmArticulosUt.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -193,34 +257,42 @@ begin
   qryRamo.Active:=true;
   qryProveedor.Active:=true;
   qryGrillaArticulos.Active:=true;
-
   pgcConsulta.ActivePage:= tsConsulta;
 
+
+   with SQLQRY do
+   begin
+        SQL.Clear;
+        SQL.Add('SELECT DIR_IMAGENES FROM PARAMETROS');
+        Open;
+        try
+         image.Picture.LoadFromFile(TRIM(FieldByName('DIR_IMAGENES').AsString)+TRIM(dbedtCodArt.Text)+'.JPG');
+        except
+         image.Picture.LoadFromFile(TRIM(FieldByName('DIR_IMAGENES').AsString)+TRIM(dbedtCodArt.Text)+'.JPG');
+        Close;
+        END
+    END
+
 end;
 
-procedure TfrmArticulosUt.JvDBImage1Click(Sender: TObject);
-var i:integer;
+procedure TfrmArticulosUt.imageClick(Sender: TObject);
+var
+ i:integer;
+ S: TMemoryStream;
 begin
-     with OpenPictureDialog1 do
-  if Execute then
+  if OpenPictureDialog1.Execute then
   begin
+    Image.Picture.LoadFromFile(OpenPictureDialog1.FileName);
+    S := TMemoryStream.Create;
     try
-        AddImage(Files[0]);
+      Image.Picture.Graphic.SaveToStream(S);
+      sp.Params[1].LoadFromStream(S, ftBlob);
+      sp.Params[0].AsInteger := StrToInt(dbedtCodArt.Text);
+      sp.ExecProc;
     finally
-
+      S.Free;
     end;
   end;
-end;
-
-procedure TfrmArticulosUt.AddImage(const Filename:string);
-begin
-  // ClientDataSet1ima.Text:=tbTablaArticulo.FieldByName('IMAGEN').AsString;
-  //tbTablaArticulo.Append;
-  JvDBImage1.Picture.LoadFromFile(Filename);
-  //tbTablaArticuloIMAGEN.LoadFromFile(Filename);
-  //tbTablaArticulo.FieldByName('NOM_IMG').AsString := ExtractFileName(Filename);
- // tbTablaArticulo.FieldByName('EXT_IMG').AsString := AnsiUpperCase(Copy(ExtractFileExt(Filename), 2, MaxInt));
-
 end;
 
 procedure TfrmArticulosUt.tsConsultaEnter(Sender: TObject);
