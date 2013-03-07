@@ -2,8 +2,8 @@ object frmCiudad2: TfrmCiudad2
   Left = 0
   Top = 0
   Caption = 'Ciudad'
-  ClientHeight = 245
-  ClientWidth = 477
+  ClientHeight = 244
+  ClientWidth = 474
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -25,6 +25,10 @@ object frmCiudad2: TfrmCiudad2
     TabOrder = 0
     object tsABM: TTabSheet
       Caption = 'DATOS'
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object lbl1: TLabel
         Left = 30
         Top = 57
@@ -235,7 +239,6 @@ object frmCiudad2: TfrmCiudad2
   object qryGrilla: TIBQuery
     Database = DataModule1.DMBaseDatos
     Transaction = DataModule1.DMTransaction
-    Active = True
     SQL.Strings = (
       'select CODCIUDAD, NOMBRECIUDAD,CIUDAD.CODPAIS,'
       'PAIS.NOMBREPAIS from CIUDAD JOIN PAIS'
