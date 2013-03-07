@@ -12,7 +12,8 @@ uses
   frmAgencia in 'frmAgencia.pas' {frmBaseTMAgencia},
   frmArticulos in 'frmArticulos.pas' {frmArticulosUt},
   Utilidades in 'Utilidades.pas',
-  frmCiudad in 'frmCiudad.pas' {frmCiudad2};
+  frmCiudad in 'frmCiudad.pas' {frmCiudad2},
+  frmProveedores in 'frmProveedores.pas' {frmProveedoresUt};
 
 {$R *.res}
 

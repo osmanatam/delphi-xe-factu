@@ -1,9 +1,11 @@
 object frmBaseTM: TfrmBaseTM
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu, biMaximize]
+  BorderStyle = bsSingle
   Caption = 'frmBaseTM'
-  ClientHeight = 263
-  ClientWidth = 479
+  ClientHeight = 261
+  ClientWidth = 475
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

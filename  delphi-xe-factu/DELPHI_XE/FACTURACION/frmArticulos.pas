@@ -76,9 +76,6 @@ type
     cbxPROVEEDOR: TDBLookupComboboxEh;
     sp: TIBStoredProc;
     OpenPictureDialog1: TOpenPictureDialog;
-    btn1: TBitBtn;
-    btn2: TButton;
-    imgFoto: TImage;
     cdsArticuloCODARTICULO: TLargeintField;
     cdsArticuloAVISAR_EXIST_MIN: TWideStringField;
     cdsArticuloCODPROVEEDOR2: TIntegerField;
@@ -95,16 +92,19 @@ type
     cdsArticuloPRECIO_MODIFICABLE: TWideStringField;
     cdsArticuloPRECIOCOMPRA: TLargeintField;
     sp1: TIBStoredProc;
+    lbl11: TLabel;
+    dbedtPRECIOVTA: TDBEdit;
+    qryArticuloPRECIOVTA: TLargeintField;
+    cdsArticuloPRECIOVTA: TLargeintField;
+    btnProveed: TButton;
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure tsConsultaEnter(Sender: TObject);
-    procedure tsConsultaExit(Sender: TObject);
     procedure dbnvgr1Click(Sender: TObject; Button: TNavigateBtn);
     procedure imageClick(Sender: TObject);
 
     procedure DBGridEh1DblClick(Sender: TObject);
-    procedure btn1Click(Sender: TObject);
-    procedure btn2Click(Sender: TObject);
+    procedure btnProveedClick(Sender: TObject);
+    {procedure btn2Click(Sender: TObject);}
 
 
   private
@@ -118,41 +118,44 @@ var
   CODIGOART: STRING;
 
 implementation
- uses DataModule;
+ uses DataModule, Utilidades,frmProveedores;
 {$R *.dfm}
 
 
-procedure TfrmArticulosUt.btn1Click(Sender: TObject);
-  var
+procedure TfrmArticulosUt.btnProveedClick(Sender: TObject);
+ { var
   BlobField: TField;
- BS: TStream;
+ BS: TStream; }
 begin
+      frmProveedoresUt:=TfrmProveedoresUt.Create(SELF);
+      frmProveedoresUt.Show;
 
+
+{
    SQLQRY.SQL.Clear;
     SQLQRY.SQL.Add('SELECT IMAGEN FROM articulo WHERE codarticulo=:COD');
     SQLQRY.ParamByName('COD').AsInteger:= StrToInt(Trim(dbedtCodArt.Text));
     SQLQRY.Open;
     SQLQRY.First;
   with SQLQRY do
-
     begin
-       BlobField := FieldByName('IMAGEN'); {'Pic' is name of column with photo}
+       BlobField := FieldByName('IMAGEN');
        BS := CreateBlobStream(BlobField,bmRead);
-       Image.Picture.Graphic:= TJpegImage.Create; {assume is Jpeg}
+       Image.Picture.Graphic:= TJpegImage.Create;
     Try
-       Image.Picture.Graphic.LoadFromStream(BS); {error if not Jpeg}
-      Except {repeat steps for BitMap}
+       Image.Picture.Graphic.LoadFromStream(BS);
+      Except
          BS.Free;
-         Image.Picture.Graphic:= nil; {empty}
-         BlobField := FieldByName('IMAGEN'); {'Pic' is name of column with photo}
+         Image.Picture.Graphic:= nil;
+         BlobField := FieldByName('IMAGEN');
          BS := CreateBlobStream(BlobField,bmRead);
-         Image.Picture.Graphic:= TBitMap.Create; {bitmap}
+         Image.Picture.Graphic:= TBitMap.Create;
          Image.Picture.Graphic.LoadFromStream(BS);
-      end; {Try}
+      end;
       BS.Free;
-    end; {with SQLQuery}
+    end; }
 end;
-
+{
 procedure TfrmArticulosUt.btn2Click(Sender: TObject);
 var
     Jpeg:TJpegImage;
@@ -175,8 +178,7 @@ begin
       Corriente.Free;
     end;
   end;
-
-end;
+end;}
 
 procedure TfrmArticulosUt.DBGridEh1DblClick(Sender: TObject);
 begin
@@ -198,38 +200,53 @@ begin
         end;
     nbPost:
         BEGIN
-
-
-
+          cdsArticulo.ApplyUpdates(0);
         END;
     nbInsert:
         BEGIN
           qryAux.SQL.Clear;
           qryAux.SQL.Add('select MAX(CODARTICULO)+1 FROM ARTICULO');
           qryAux.Open;
-          CODIGOART:= qryAux.Fields[0].AsString;
+          dbedtCodArt.Text:= trim(qryAux.Fields[0].AsString);
           qryAux.Close;
         END;
     nbCancel:
         BEGIN
 
         END;
+    nbDelete:
+        BEGIN
+           if Utilidades.msSi('Esta Seguro Borrar el Articulo?','Borrar Articulo') = true then
+            begin
+              cdsArticulo.ApplyUpdates(0);
+              cdsArticulo.Close;
+               qryArticulo.SQL.Clear;
+               qryArticulo.SQL.Add('SELECT * FROM ARTICULO ORDER BY 1');
+              cdsArticulo.Open;
+              pgcConsulta.ActivePage:= tsCONSULTA;
+            end
+        END;
    end;
+   //eventos de la grilla
+   qryGrillaArticulos.Close;
+   qryGrillaArticulos.Open;
+   DBGridEh1.Refresh;
 
-   with SQLQRY do
+
+  { with SQLQRY do
    begin
         SQL.Clear;
         SQL.Add('SELECT DIR_IMAGENES FROM PARAMETROS');
         Open;
         try
-         if  image.Picture.LoadFromFile(TRIM(FieldByName('DIR_IMAGENES').AsString)+TRIM(dbedtCodArt.Text)+'.JPG');
+         image.Picture.LoadFromFile(TRIM(FieldByName('DIR_IMAGENES').AsString)+TRIM(dbedtCodArt.Text)+'.JPG');
 
 
         except
          image.Picture.LoadFromFile(TRIM(FieldByName('DIR_IMAGENES').AsString)+TRIM(dbedtCodArt.Text)+'.JPG');
         END;
        Close;
-    END
+    END}
 
 
 
@@ -260,7 +277,7 @@ begin
   pgcConsulta.ActivePage:= tsConsulta;
 
 
-   with SQLQRY do
+   {with SQLQRY do
    begin
         SQL.Clear;
         SQL.Add('SELECT DIR_IMAGENES FROM PARAMETROS');
@@ -271,7 +288,7 @@ begin
          image.Picture.LoadFromFile(TRIM(FieldByName('DIR_IMAGENES').AsString)+TRIM(dbedtCodArt.Text)+'.JPG');
         Close;
         END
-    END
+    END}
 
 end;
 
@@ -293,18 +310,6 @@ begin
       S.Free;
     end;
   end;
-end;
-
-procedure TfrmArticulosUt.tsConsultaEnter(Sender: TObject);
-begin
-  // qryGrillaArticulos.Active:=true;
-  dbedtCodArt.text:=CODIGOART;
-  keybd_event(VK_TAB, 0, 0, 0);
-end;
-
-procedure TfrmArticulosUt.tsConsultaExit(Sender: TObject);
-begin
-   //qryGrillaArticulos.Active:=false;
 end;
 
 end.

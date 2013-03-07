@@ -2,8 +2,8 @@ inherited frmBaseTMPais: TfrmBaseTMPais
   Caption = 'Pais'
   ClientHeight = 253
   ClientWidth = 484
-  ExplicitWidth = 500
-  ExplicitHeight = 291
+  ExplicitWidth = 490
+  ExplicitHeight = 281
   PixelsPerInch = 96
   TextHeight = 13
   inherited pgc1: TPageControl
@@ -15,7 +15,6 @@ inherited frmBaseTMPais: TfrmBaseTMPais
     ExplicitWidth = 477
     ExplicitHeight = 249
     inherited tsABM: TTabSheet
-      ExplicitLeft = 0
       ExplicitWidth = 469
       ExplicitHeight = 221
       inherited lbl1: TLabel

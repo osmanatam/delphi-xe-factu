@@ -4,7 +4,6 @@ object DataModule1: TDataModule1
   Height = 282
   Width = 370
   object DMBaseDatos: TIBDatabase
-    Connected = True
     DatabaseName = 'localhost:C:\PROYECTO_PATRIA\BD\FACTURACION.FDB'
     Params.Strings = (
       'user_name=SYSDBA'
@@ -27,7 +26,6 @@ object DataModule1: TDataModule1
     Top = 64
   end
   object DMTransaction: TIBTransaction
-    Active = True
     Left = 48
     Top = 16
   end

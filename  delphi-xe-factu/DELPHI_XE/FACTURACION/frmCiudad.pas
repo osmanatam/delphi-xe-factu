@@ -130,11 +130,13 @@ begin
     nbDelete:
         begin
            if Utilidades.msSi('Esta Seguro Borrar Ciudad?','Borrar Ciudad') = true then
-              cdsTablaReal.ApplyUpdates(0);
-           cdsTablaReal.Close;
-           qryTablaReal.SQL.Clear;
-           qryTablaReal.SQL.Add('SELECT CODCIUDAD, NOMBRECIUDAD, CODPAIS FROM CIUDAD ORDER BY 1');
-           cdsTablaReal.Open;
+             begin
+               cdsTablaReal.ApplyUpdates(0);
+               cdsTablaReal.Close;
+               qryTablaReal.SQL.Clear;
+               qryTablaReal.SQL.Add('SELECT CODCIUDAD, NOMBRECIUDAD, CODPAIS FROM CIUDAD ORDER BY 1');
+               cdsTablaReal.Open;
+             end
         end;
   end;
   qryGrilla.Close;

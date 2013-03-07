@@ -1,9 +1,11 @@
 object frmArticulosUt: TfrmArticulosUt
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu, biMaximize]
+  BorderStyle = bsSingle
   Caption = 'Articulos'
-  ClientHeight = 331
-  ClientWidth = 979
+  ClientHeight = 325
+  ClientWidth = 780
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,25 +19,18 @@ object frmArticulosUt: TfrmArticulosUt
   PixelsPerInch = 96
   TextHeight = 13
   object pgcConsulta: TPageControl
-    Left = 8
-    Top = 8
-    Width = 945
+    Left = 2
+    Top = 1
+    Width = 777
     Height = 321
     ActivePage = tsDatos
     TabOrder = 0
     object tsDatos: TTabSheet
       Caption = 'Datos Articulos'
-      ExplicitLeft = 0
-      object imgFoto: TImage
-        Left = 800
-        Top = 175
-        Width = 105
-        Height = 105
-      end
       object pnl1: TPanel
         Left = 3
         Top = 3
-        Width = 761
+        Width = 763
         Height = 41
         Caption = 'MANTENIMIENTO DE ARTICULOS'
         Color = clSilver
@@ -49,9 +44,9 @@ object frmArticulosUt: TfrmArticulosUt
         TabOrder = 0
       end
       object dbnvgr1: TDBNavigator
-        Left = 11
-        Top = 248
-        Width = 744
+        Left = 3
+        Top = 251
+        Width = 760
         Height = 42
         DataSource = dsArticulo
         VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbPost, nbCancel]
@@ -60,10 +55,10 @@ object frmArticulosUt: TfrmArticulosUt
         OnClick = dbnvgr1Click
       end
       object grp1: TGroupBox
-        Left = 11
+        Left = 3
         Top = 50
-        Width = 395
-        Height = 192
+        Width = 398
+        Height = 198
         Caption = 'Datos Rapidos'
         TabOrder = 2
         object lbl6: TLabel
@@ -108,6 +103,7 @@ object frmArticulosUt: TfrmArticulosUt
           Height = 26
           DataField = 'CODARTICULO'
           DataSource = dsArticulo
+          Enabled = False
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -15
@@ -179,10 +175,10 @@ object frmArticulosUt: TfrmArticulosUt
         end
       end
       object grp2: TGroupBox
-        Left = 412
+        Left = 413
         Top = 50
-        Width = 349
-        Height = 192
+        Width = 350
+        Height = 198
         Caption = 'Valores'
         TabOrder = 3
         object lbl1: TLabel
@@ -201,14 +197,14 @@ object frmArticulosUt: TfrmArticulosUt
         end
         object lbl3: TLabel
           Left = 10
-          Top = 75
+          Top = 101
           Width = 52
           Height = 13
           Caption = 'Existencia:'
         end
         object lbl4: TLabel
-          Left = 11
-          Top = 102
+          Left = 10
+          Top = 128
           Width = 87
           Height = 13
           Caption = 'Existencia Minima:'
@@ -219,6 +215,13 @@ object frmArticulosUt: TfrmArticulosUt
           Width = 64
           Height = 13
           Caption = 'Observacion:'
+        end
+        object lbl11: TLabel
+          Left = 10
+          Top = 74
+          Width = 64
+          Height = 13
+          Caption = 'Precio Venta:'
         end
         object dbedtPrecioCompra: TDBEdit
           Left = 96
@@ -231,7 +234,7 @@ object frmArticulosUt: TfrmArticulosUt
         end
         object dbedtExistencia: TDBEdit
           Left = 96
-          Top = 72
+          Top = 98
           Width = 137
           Height = 21
           DataField = 'EXISTENCIA'
@@ -239,9 +242,9 @@ object frmArticulosUt: TfrmArticulosUt
           TabOrder = 1
         end
         object dbedtExistenciaMin: TDBEdit
-          Left = 104
-          Top = 99
-          Width = 129
+          Left = 96
+          Top = 125
+          Width = 137
           Height = 21
           DataField = 'EXISTENCIA_MIN'
           DataSource = dsArticulo
@@ -249,7 +252,7 @@ object frmArticulosUt: TfrmArticulosUt
         end
         object dbchkPRECIO_MODIFICABLE: TDBCheckBox
           Left = 239
-          Top = 45
+          Top = 67
           Width = 107
           Height = 25
           Caption = 'Precio Modificable'
@@ -261,7 +264,7 @@ object frmArticulosUt: TfrmArticulosUt
         end
         object dbchkAVISAR_EXIST_MIN: TDBCheckBox
           Left = 239
-          Top = 99
+          Top = 125
           Width = 108
           Height = 25
           Caption = 'Avisar Exist. Min.'
@@ -273,9 +276,9 @@ object frmArticulosUt: TfrmArticulosUt
         end
         object dbmmoOBSERVACION: TDBMemo
           Left = 80
-          Top = 126
+          Top = 152
           Width = 251
-          Height = 63
+          Height = 37
           DataField = 'OBSERVACION'
           DataSource = dsArticulo
           TabOrder = 5
@@ -283,7 +286,7 @@ object frmArticulosUt: TfrmArticulosUt
         object cbxPROVEEDOR: TDBLookupComboboxEh
           Left = 96
           Top = 18
-          Width = 241
+          Width = 193
           Height = 21
           DataField = 'CODPROVEEDOR'
           DataSource = dsArticulo
@@ -294,34 +297,29 @@ object frmArticulosUt: TfrmArticulosUt
           TabOrder = 6
           Visible = True
         end
-      end
-      object btn1: TBitBtn
-        Left = 783
-        Top = 66
-        Width = 42
-        Height = 25
-        Caption = 'img'
-        DoubleBuffered = True
-        ParentDoubleBuffered = False
-        TabOrder = 4
-        OnClick = btn1Click
-      end
-      object btn2: TButton
-        Left = 816
-        Top = 144
-        Width = 75
-        Height = 25
-        Caption = 'btn2'
-        TabOrder = 5
-        OnClick = btn2Click
+        object dbedtPRECIOVTA: TDBEdit
+          Left = 96
+          Top = 71
+          Width = 137
+          Height = 21
+          DataField = 'PRECIOVTA'
+          DataSource = dsArticulo
+          TabOrder = 7
+        end
+        object btnProveed: TButton
+          Left = 295
+          Top = 18
+          Width = 42
+          Height = 21
+          Caption = '+'
+          TabOrder = 8
+          OnClick = btnProveedClick
+        end
       end
     end
     object tsConsulta: TTabSheet
       Caption = 'Consulta Articulos'
       ImageIndex = 1
-      OnEnter = tsConsultaEnter
-      OnExit = tsConsultaExit
-      ExplicitWidth = 769
       object DBGridEh1: TDBGridEh
         Left = 3
         Top = 3
@@ -504,7 +502,7 @@ object frmArticulosUt: TfrmArticulosUt
       'NOM_IMG, '
       'OBSERVACION,'
       'PRECIO_MODIFICABLE, '
-      'PRECIOCOMPRA '
+      'PRECIOCOMPRA, PRECIOVTA '
       'from ARTICULO'
       'order by 1')
     Left = 192
@@ -589,6 +587,11 @@ object frmArticulosUt: TfrmArticulosUt
       Origin = '"ARTICULO"."PRECIOCOMPRA"'
       Required = True
     end
+    object qryArticuloPRECIOVTA: TLargeintField
+      FieldName = 'PRECIOVTA'
+      Origin = '"ARTICULO"."PRECIOVTA"'
+      Required = True
+    end
   end
   object dspvArticulo: TDataSetProvider
     DataSet = qryArticulo
@@ -662,6 +665,10 @@ object frmArticulosUt: TfrmArticulosUt
     end
     object cdsArticuloPRECIOCOMPRA: TLargeintField
       FieldName = 'PRECIOCOMPRA'
+      Required = True
+    end
+    object cdsArticuloPRECIOVTA: TLargeintField
+      FieldName = 'PRECIOVTA'
       Required = True
     end
   end
