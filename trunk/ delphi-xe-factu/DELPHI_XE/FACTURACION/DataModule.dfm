@@ -4,7 +4,9 @@ object DataModule1: TDataModule1
   Height = 282
   Width = 370
   object DMBaseDatos: TIBDatabase
-    DatabaseName = 'localhost:C:\PROYECTO_PATRIA\BD\FACTURACION.FDB'
+    DatabaseName = 
+      'localhost:C:\Users\claudio.brignardello\firebird\ delphi-xe-fact' +
+      'u\FACTURACION.FDB'
     Params.Strings = (
       'user_name=SYSDBA'
       'password=whitelion')

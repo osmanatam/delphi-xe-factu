@@ -106,8 +106,8 @@
     <Transaction>2013/02/27 14:33:02.000.216,C:\Users\claudio.brignardello\firebird\FACTURACION\frmTablaMenor.pas=</Transaction>
     <Transaction>2013/02/27 14:33:17.000.015,C:\Users\claudio.brignardello\firebird\FACTURACION\frmTipoIVA.pas=</Transaction>
     <Transaction>2013/02/27 16:42:09.000.145,C:\Users\claudio.brignardello\firebird\FACTURACION\frmMostrarImagenes.pas=</Transaction>
-    <Transaction>2013/03/07 16:48:40.751,=C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\Unit1.pas</Transaction>
-    <Transaction>2013/03/07 16:48:58.425,C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmProveedores.pas=C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\Unit1.pas</Transaction>
-    <Transaction>2013/03/07 16:48:58.425,C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmProveedores.dfm=C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\Unit1.dfm</Transaction>
+    <Transaction>2013/03/07 16:48:40.000.751,=C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\Unit1.pas</Transaction>
+    <Transaction>2013/03/07 16:48:58.000.425,C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmProveedores.pas=C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\Unit1.pas</Transaction>
+    <Transaction>2013/03/07 16:48:58.000.425,C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmProveedores.dfm=C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\Unit1.dfm</Transaction>
   </Transactions>
 </BorlandProject>
