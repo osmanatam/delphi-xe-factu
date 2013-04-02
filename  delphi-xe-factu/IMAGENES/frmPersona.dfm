@@ -2,8 +2,8 @@ object Form3: TForm3
   Left = 0
   Top = 0
   Caption = 'Imagenes'
-  ClientHeight = 256
-  ClientWidth = 323
+  ClientHeight = 299
+  ClientWidth = 331
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -37,35 +37,35 @@ object Form3: TForm3
   object dbeID_PERSONA: TDBEdit
     Left = 5
     Top = 46
-    Width = 44
+    Width = 81
     Height = 21
     DataField = 'ID_PERSONA'
     DataSource = DataSource
     TabOrder = 0
   end
   object dbeNOMBRE: TDBEdit
-    Left = 55
+    Left = 92
     Top = 46
-    Width = 265
+    Width = 236
     Height = 21
     DataField = 'NOMBRE'
     DataSource = DataSource
     TabOrder = 1
   end
   object btn1: TButton
-    Left = 245
-    Top = 97
+    Left = 251
+    Top = 100
     Width = 75
-    Height = 25
+    Height = 65
     Caption = 'Cargar'
     Enabled = False
     TabOrder = 2
     OnClick = btn1Click
   end
   object dbeFormato_Foto: TDBEdit
-    Left = 249
-    Top = 70
-    Width = 71
+    Left = 247
+    Top = 73
+    Width = 81
     Height = 21
     Color = clSilver
     DataField = 'FORMATO_FOTO'
@@ -75,10 +75,10 @@ object Form3: TForm3
     TabOrder = 3
   end
   object btn2: TButton
-    Left = 245
-    Top = 224
+    Left = 251
+    Top = 184
     Width = 75
-    Height = 25
+    Height = 64
     Caption = 'Guardar'
     Enabled = False
     TabOrder = 4
@@ -87,13 +87,25 @@ object Form3: TForm3
   object dbnvgr1: TDBNavigator
     Left = 5
     Top = 6
-    Width = 315
+    Width = 322
     Height = 34
     DataSource = DataSource
     VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbCancel]
     ConfirmDelete = False
     TabOrder = 5
     OnClick = dbnvgr1Click
+  end
+  object rg1: TRadioGroup
+    Left = 8
+    Top = 256
+    Width = 318
+    Height = 39
+    Caption = 'Formato de Guardado'
+    Columns = 2
+    Items.Strings = (
+      'Compresion de imagen'
+      'Guardar Original')
+    TabOrder = 6
   end
   object IBDatabase: TIBDatabase
     Connected = True
