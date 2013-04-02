@@ -35,6 +35,7 @@ type
     qryMaxIDF_1: TLargeintField;
     shp1: TShape;
     lbl1: TLabel;
+    rg1: TRadioGroup;
     procedure btn1Click(Sender: TObject);
     procedure DataSourceDataChange(Sender: TObject; Field: TField);
     procedure btn2Click(Sender: TObject);
@@ -57,18 +58,58 @@ var
   m, f: TStream;
   mst: TMemoryStream;
   s: string;
+  bmp: TBitmap; jpg: TJPEGImage;
 begin
-  if OpenPictureDialog.Execute then
-  begin
-    cds1.Edit; //tendria que dar error sin esto
-    cds1FOTO.LoadFromFile(OpenPictureDialog.filename);
-    s:= AnsiUpperCase(ExtractFileExt(OpenPictureDialog.FileName)); //Siempre en mayusculas
-    if s='.JPEG' then s:= '.JPG'; //un caso especial
-    cds1FORMATO_FOTO.AsString:= Copy(s,2,3); //elimino el punto
-    //cds1.Post;
-    btn2.Enabled:=true;
-    btn1.Enabled:=false;
-  end;
+
+ if rg1.ItemIndex =1 then
+    begin
+      if OpenPictureDialog.Execute then
+      begin
+        cds1.Edit; //tendria que dar error sin esto
+        cds1FOTO.LoadFromFile(OpenPictureDialog.filename);
+        s:= AnsiUpperCase(ExtractFileExt(OpenPictureDialog.FileName)); //Siempre en mayusculas
+        if s='.JPEG' then s:= '.JPG'; //un caso especial
+        cds1FORMATO_FOTO.AsString:= Copy(s,2,3); //elimino el punto
+        //cds1.Post;
+        btn2.Enabled:=true;
+        btn1.Enabled:=false;
+      end;
+     end
+ else if rg1.ItemIndex =0 then
+     begin
+      if OpenPictureDialog.Execute then
+      begin
+       try
+         jpg := TJPEGImage.Create;
+         jpg.LoadFromFile(OpenPictureDialog.FileName);
+         bmp := TBitmap.Create;
+         bmp.Assign(jpg);
+         bmp.Width := Image1.Width;
+         bmp.Height := Image1.Height;
+         bmp.Canvas.StretchDraw(bmp.Canvas.Cliprect, jpg);
+         jpg.Assign(bmp);
+         bmp.Destroy;
+         jpg.SaveToFile(ExtractFilePath(ParamStr(0))+'\tempimagen.jpg');
+         cds1.Edit; //tendria que dar error sin esto
+        cds1FOTO.LoadFromFile(ExtractFilePath(ParamStr(0))+'\tempimagen.jpg');
+        cds1FORMATO_FOTO.AsString:= 'JPG';
+        //cds1.Post;
+        DeleteFile(ExtractFilePath(ParamStr(0))+'\tempimagen.jpg');
+        btn2.Enabled:=true;
+        btn1.Enabled:=false;
+        except
+         BEGIN
+          ShowMessage('Para compresion, solo se admiten imagenes del tipo JPG');
+          jpg.Destroy;
+         END
+       end;
+      end;
+      end
+ else
+     begin
+      ShowMessage('Seleccione formato de guardado');
+      rg1.SetFocus;
+     end;
  end;
 
 
