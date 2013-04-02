@@ -79,6 +79,7 @@ begin
     cds1.Post;
     cds1.ApplyUpdates(0);
     btn2.Enabled:=false;
+
   END
  ELSE
   BEGIN

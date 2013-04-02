@@ -74,7 +74,7 @@ object Form3: TForm3
   object dbnvgr1: TDBNavigator
     Left = 5
     Top = 6
-    Width = 315
+    Width = 322
     Height = 34
     DataSource = DataSource
     VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbCancel]
