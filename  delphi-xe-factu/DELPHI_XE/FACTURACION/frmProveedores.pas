@@ -43,13 +43,14 @@ type
     cdsCiudadCODCIUDAD: TIntegerField;
     tbCiudadNOMBRECIUDAD: TIBStringField;
     cdsCiudadCODPAIS: TIntegerField;
-    edtMailMAIL: TDBEditEh;
-    edtMailMAIL1: TDBEditEh;
-    edtMailMAIL2: TDBEditEh;
-    edtMailMAIL3: TDBEditEh;
-    edtMailMAIL4: TDBEditEh;
-    edtMailMAIL5: TDBEditEh;
-    edtMailMAIL6: TDBEditEh;
+    edtRucDV: TDBEditEh;
+    edtMailNOMBREPROVEEDOR: TDBEditEh;
+    edtMailNomProveedor: TDBEditEh;
+    edtDireccionProveedor: TDBEditEh;
+    edtTelefono: TDBEditEh;
+    edtRucProv: TDBEditEh;
+    edtwebpage: TDBEditEh;
+    edtMailProv: TDBEditEh;
     cdsProveedorCODPROVEEDOR: TIntegerField;
     tbProveedorNOMBREPROVEEDOR: TIBStringField;
     tbProveedorTELEFONO: TIBStringField;
@@ -68,7 +69,6 @@ type
     cdsProveedorWEB: TWideStringField;
     cdsProveedorDIRECCION: TWideStringField;
     cdsProveedorCODCIUDADPRO2: TIntegerField;
-    edtMailNOMBREPROVEEDOR: TDBEditEh;
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private

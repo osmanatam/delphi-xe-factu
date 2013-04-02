@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, Menus, ExtCtrls, frmpais,frmciudad,FRMTIPOIVA,frmunidadmedida,frmpaisult,
-  frmempresa,frmAgencia,frmArticulos,frmMostrarImagenes;
+  frmempresa,frmAgencia,frmArticulos,frmMostrarImagenes,frmProveedores;
 
 type
   TfrmMenuPrincipal = class(TForm)
@@ -38,6 +38,7 @@ type
     procedure mniSucursalClick(Sender: TObject);
     procedure mnuManArticulosClick(Sender: TObject);
     procedure PEEImagenesClick(Sender: TObject);
+    procedure mniMantProveedoresClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -64,6 +65,12 @@ begin
    frmBaseTMEmpresa:=TfrmBaseTMEmpresa.Create(SELF);
    frmBaseTMEmpresa.pnl1.Caption:='Mantenimiento Empresa';
    frmBaseTMEmpresa.Show;
+end;
+
+procedure TfrmMenuPrincipal.mniMantProveedoresClick(Sender: TObject);
+begin
+    frmProveedoresUt:=TfrmProveedoresUt.Create(SELF);
+      frmProveedoresUt.Show;
 end;
 
 procedure TfrmMenuPrincipal.mniPaisClick(Sender: TObject);
