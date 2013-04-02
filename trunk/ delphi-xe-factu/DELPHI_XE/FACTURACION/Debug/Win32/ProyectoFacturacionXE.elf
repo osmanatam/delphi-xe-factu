@@ -7,547 +7,6 @@ Application:
   1.3 Version Number  : 
   1.4 Parameters      : 
   1.5 Compilation Date: Wed, 6 Mar 2013 15:14:02 -0300
-  1.6 Up Time         : 9 minutes, 32 seconds
-
-Exception:
-----------------------------------------------------
-  2.1 Date          : Wed, 6 Mar 2013 15:23:35 -0300
-  2.2 Address       : 004530C9
-  2.3 Module Name   : ProyectoFacturacionXE.exe
-  2.4 Module Version: 
-  2.5 Type          : EReadError
-  2.6 Message       : Stream read error.
-  2.7 ID            : E7C3
-  2.8 Count         : 1
-  2.9 Status        : New
-  2.10 Note         : 
-
-User:
--------------------------------------------------------
-  3.1 ID        : claudio.brignardello
-  3.2 Name      : Claudio
-  3.3 Email     : 
-  3.4 Company   : 
-  3.5 Privileges: SeShutdownPrivilege             - OFF
-                  SeChangeNotifyPrivilege         - ON
-                  SeUndockPrivilege               - OFF
-                  SeIncreaseWorkingSetPrivilege   - OFF
-                  SeTimeZonePrivilege             - OFF
-
-Active Controls:
-------------------------------------
-  4.1 Form Class   : TfrmArticulosUt
-  4.2 Form Text    : Articulos
-  4.3 Control Class: TBitBtn
-  4.4 Control Text : 
-
-Computer:
--------------------------------------------------------------------------------------------------------------------------
-  5.1 Name          : INFORMATICA3
-  5.2 Total Memory  : 3325 Mb
-  5.3 Free Memory   : 1349 Mb
-  5.4 Total Disk    : 465,76 Gb
-  5.5 Free Disk     : 260,44 Gb
-  5.6 System Up Time: 7 hours, 34 minutes, 45 seconds
-  5.7 Processor     : Intel(R) Core(TM)2 Duo CPU     E7500  @ 2.93GHz
-  5.8 Display Mode  : 1366 x 768, 32 bit
-  5.9 Display DPI   : 96
-  5.10 Video Card   : Intel(R) G41 Express Chipset (Microsoft Corporation - WDDM 1.1) (driver 8.15.10.1749 - RAM 1534 MB)
-  5.11 Printer      : Microsoft XPS Document Writer (driver 6.1.7601.17514)
-
-Operating System:
------------------------------------
-  6.1 Type    : Microsoft Windows 7
-  6.2 Build # : 7601
-  6.3 Update  : Service Pack 1
-  6.4 Language: Spanish
-  6.5 Charset : 0
-
-Network:
----------------------------------
-  7.1 IP Address: 192.168.066.185
-  7.2 Submask   : 255.255.255.000
-  7.3 Gateway   : 192.168.066.201
-  7.4 DNS 1     : 192.168.065.001
-  7.5 DNS 2     : 000.000.000.000
-  7.6 DHCP      : OFF            
-
-Call Stack Information:
--------------------------------------------------------------------------------------------------------------------
-|Address |Module                   |Unit                     |Class          |Procedure/Method            |Line   |
--------------------------------------------------------------------------------------------------------------------
-|*Exception Thread: ID=4256; Priority=0; Class=; [Main]                                                           |
-|-----------------------------------------------------------------------------------------------------------------|
-|004530C9|ProyectoFacturacionXE.exe|Classes                  |TStream        |ReadBuffer                  |       |
-|0045307C|ProyectoFacturacionXE.exe|Classes                  |TStream        |ReadBuffer                  |       |
-|004F44EA|ProyectoFacturacionXE.exe|Graphics                 |TBitmap        |ReadStream                  |       |
-|005E2B0C|ProyectoFacturacionXE.exe|IBBlob                   |TIBBlobStream  |EnsureBlobInitialized       |       |
-|005E2F13|ProyectoFacturacionXE.exe|IBBlob                   |TIBBlobStream  |Seek                        |       |
-|005E0F6E|ProyectoFacturacionXE.exe|IBCustomDataSet          |TIBDSBlobStream|Seek                        |       |
-|00453061|ProyectoFacturacionXE.exe|Classes                  |TStream        |Seek                        |       |
-|00452E33|ProyectoFacturacionXE.exe|Classes                  |TStream        |GetPosition                 |       |
-|004F44A4|ProyectoFacturacionXE.exe|Graphics                 |TBitmap        |ReadStream                  |       |
-|004F3DE3|ProyectoFacturacionXE.exe|Graphics                 |TBitmap        |LoadFromStream              |       |
-|00BA85D5|ProyectoFacturacionXE.exe|frmArticulos.pas         |TfrmArticulosUt|btn1Click                   |149[22]|
-|00406E14|ProyectoFacturacionXE.exe|System                   |               |_RaiseExcept                |       |
-|007B6946|ProyectoFacturacionXE.exe|jpeg                     |               |JpegError                   |       |
-|0040BC88|ProyectoFacturacionXE.exe|System                   |               |LocaleCharsFromUnicode      |       |
-|00407870|ProyectoFacturacionXE.exe|System                   |               |CharFromWChar               |       |
-|00407850|ProyectoFacturacionXE.exe|System                   |               |CharFromWChar               |       |
-|0040788B|ProyectoFacturacionXE.exe|System                   |               |CharFromWChar               |       |
-|0040787C|ProyectoFacturacionXE.exe|System                   |               |CharFromWChar               |       |
-|004089F2|ProyectoFacturacionXE.exe|System                   |               |_UStrToString               |       |
-|004049C8|ProyectoFacturacionXE.exe|System                   |               |Move                        |       |
-|00408A11|ProyectoFacturacionXE.exe|System                   |               |_UStrToString               |       |
-|0050FFCC|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |WndProc                     |       |
-|0058E2B0|ProyectoFacturacionXE.exe|Forms                    |TCustomForm    |WndProc                     |       |
-|76DE6FF2|ntdll.dll                |                         |               |KiUserExceptionDispatcher   |       |
-|00406E14|ProyectoFacturacionXE.exe|System                   |               |_RaiseExcept                |       |
-|007B6946|ProyectoFacturacionXE.exe|jpeg                     |               |JpegError                   |       |
-|007C2FEA|ProyectoFacturacionXE.exe|jpeg                     |               |jpeg                        |       |
-|007C2F6C|ProyectoFacturacionXE.exe|jpeg                     |               |jpeg                        |       |
-|007C3023|ProyectoFacturacionXE.exe|jpeg                     |               |jpeg                        |       |
-|007B82A1|ProyectoFacturacionXE.exe|jpeg                     |               |jpeg_consume_input          |       |
-|007B8240|ProyectoFacturacionXE.exe|jpeg                     |               |jpeg_consume_input          |       |
-|007B8202|ProyectoFacturacionXE.exe|jpeg                     |               |jpeg_read_header            |       |
-|007B81D4|ProyectoFacturacionXE.exe|jpeg                     |               |jpeg_read_header            |       |
-|007B7C0E|ProyectoFacturacionXE.exe|jpeg                     |TJPEGImage     |ReadStream                  |       |
-|007B7B40|ProyectoFacturacionXE.exe|jpeg                     |TJPEGImage     |ReadStream                  |       |
-|007B7AC7|ProyectoFacturacionXE.exe|jpeg                     |TJPEGImage     |LoadFromStream              |       |
-|00BA8546|ProyectoFacturacionXE.exe|frmArticulos.pas         |TfrmArticulosUt|btn1Click                   |142[15]|
-|0050C1DC|ProyectoFacturacionXE.exe|Controls                 |TControl       |Click                       |       |
-|0050C16C|ProyectoFacturacionXE.exe|Controls                 |TControl       |Click                       |       |
-|0054315E|ProyectoFacturacionXE.exe|StdCtrls                 |TCustomButton  |Click                       |       |
-|00543140|ProyectoFacturacionXE.exe|StdCtrls                 |TCustomButton  |Click                       |       |
-|00696A48|ProyectoFacturacionXE.exe|Buttons                  |TBitBtn        |Click                       |       |
-|00405DE0|ProyectoFacturacionXE.exe|System                   |               |_CallDynaInst               |       |
-|00543C4C|ProyectoFacturacionXE.exe|StdCtrls                 |TCustomButton  |CNCommand                   |       |
-|0050BC70|ProyectoFacturacionXE.exe|Controls                 |TControl       |WndProc                     |       |
-|75CF61EA|USER32.dll               |                         |               |GetWindowLongW              |       |
-|76DE5952|ntdll.dll                |                         |               |NtFindAtom                  |       |
-|0050B99C|ProyectoFacturacionXE.exe|Controls                 |TControl       |WndProc                     |       |
-|00510534|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |WndProc                     |       |
-|75CF1B3C|USER32.dll               |                         |               |CallWindowProcW             |       |
-|00510634|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |DefaultHandler              |       |
-|0050FFCC|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |WndProc                     |       |
-|00542E28|ProyectoFacturacionXE.exe|StdCtrls                 |TButtonControl |WndProc                     |       |
-|0050B894|ProyectoFacturacionXE.exe|Controls                 |TControl       |Perform                     |       |
-|0050B870|ProyectoFacturacionXE.exe|Controls                 |TControl       |Perform                     |       |
-|00510687|ProyectoFacturacionXE.exe|Controls                 |               |DoControlMsg                |       |
-|00510664|ProyectoFacturacionXE.exe|Controls                 |               |DoControlMsg                |       |
-|005110E3|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |WMCommand                   |       |
-|0050BC70|ProyectoFacturacionXE.exe|Controls                 |TControl       |WndProc                     |       |
-|73F50914|uxtheme.dll              |                         |               |BufferedPaintRenderAnimation|       |
-|73F5091E|uxtheme.dll              |                         |               |BufferedPaintRenderAnimation|       |
-|76E0FFA8|ntdll.dll                |                         |               |RtlReAllocateHeap           |       |
-|75CF5D4C|USER32.dll               |                         |               |EndPaint                    |       |
-|75CF2392|USER32.dll               |                         |               |PtInRect                    |       |
-|0050B99C|ProyectoFacturacionXE.exe|Controls                 |TControl       |WndProc                     |       |
-|00510534|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |WndProc                     |       |
-|0040679E|ProyectoFacturacionXE.exe|System                   |TMonitor       |TryEnter                    |       |
-|00406778|ProyectoFacturacionXE.exe|System                   |TMonitor       |TryEnter                    |       |
-|00406350|ProyectoFacturacionXE.exe|System                   |TMonitor       |Enter                       |       |
-|00406224|ProyectoFacturacionXE.exe|System                   |TMonitor       |CheckOwningThread           |       |
-|004028D0|ProyectoFacturacionXE.exe|System                   |               |InterlockedCompareExchange  |       |
-|004064FA|ProyectoFacturacionXE.exe|System                   |TMonitor       |Exit                        |       |
-|0050B99C|ProyectoFacturacionXE.exe|Controls                 |TControl       |WndProc                     |       |
-|00510534|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |WndProc                     |       |
-|0050FBD4|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |MainWndProc                 |       |
-|004F1E10|ProyectoFacturacionXE.exe|Graphics                 |               |FreeMemoryContexts          |       |
-|0050FBE9|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |MainWndProc                 |       |
-|0050FBD4|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |MainWndProc                 |       |
-|004601DC|ProyectoFacturacionXE.exe|Classes                  |               |StdWndProc                  |       |
-|75CF557D|USER32.dll               |                         |               |SendMessageW                |       |
-|75CF1B52|USER32.dll               |                         |               |CallWindowProcW             |       |
-|75CF1B3C|USER32.dll               |                         |               |CallWindowProcW             |       |
-|00510634|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |DefaultHandler              |       |
-|0050C62C|ProyectoFacturacionXE.exe|Controls                 |TControl       |WMLButtonUp                 |       |
-|0050BC70|ProyectoFacturacionXE.exe|Controls                 |TControl       |WndProc                     |       |
-|76DE76E0|ntdll.dll                |                         |               |RtlLeaveCriticalSection     |       |
-|0050B99C|ProyectoFacturacionXE.exe|Controls                 |TControl       |WndProc                     |       |
-|00510163|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |WndProc                     |       |
-|0040679E|ProyectoFacturacionXE.exe|System                   |TMonitor       |TryEnter                    |       |
-|00406778|ProyectoFacturacionXE.exe|System                   |TMonitor       |TryEnter                    |       |
-|00406350|ProyectoFacturacionXE.exe|System                   |TMonitor       |Enter                       |       |
-|00406224|ProyectoFacturacionXE.exe|System                   |TMonitor       |CheckOwningThread           |       |
-|004028D0|ProyectoFacturacionXE.exe|System                   |               |InterlockedCompareExchange  |       |
-|004064FA|ProyectoFacturacionXE.exe|System                   |TMonitor       |Exit                        |       |
-|004064D8|ProyectoFacturacionXE.exe|System                   |TMonitor       |Exit                        |       |
-|00406533|ProyectoFacturacionXE.exe|System                   |TMonitor       |Exit                        |       |
-|00406524|ProyectoFacturacionXE.exe|System                   |TMonitor       |Exit                        |       |
-|004F1EAB|ProyectoFacturacionXE.exe|Graphics                 |               |FreeMemoryContexts          |       |
-|0050FBD4|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |MainWndProc                 |       |
-|75CE9DC7|USER32.dll               |                         |               |GetCapture                  |       |
-|0050FDC7|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |IsControlMouseMsg           |       |
-|0050B99C|ProyectoFacturacionXE.exe|Controls                 |TControl       |WndProc                     |       |
-|00510534|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |WndProc                     |       |
-|0050FFCC|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |WndProc                     |       |
-|00542E28|ProyectoFacturacionXE.exe|StdCtrls                 |TButtonControl |WndProc                     |       |
-|0050FBD4|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |MainWndProc                 |       |
-|004601DC|ProyectoFacturacionXE.exe|Classes                  |               |StdWndProc                  |       |
-|75CFCC6B|USER32.dll               |                         |               |DispatchMessageW            |       |
-|75CFCC61|USER32.dll               |                         |               |DispatchMessageW            |       |
-|0059727F|ProyectoFacturacionXE.exe|Forms                    |TApplication   |ProcessMessage              |       |
-|0059718C|ProyectoFacturacionXE.exe|Forms                    |TApplication   |ProcessMessage              |       |
-|005972C2|ProyectoFacturacionXE.exe|Forms                    |TApplication   |HandleMessage               |       |
-|005972B8|ProyectoFacturacionXE.exe|Forms                    |TApplication   |HandleMessage               |       |
-|00592C21|ProyectoFacturacionXE.exe|Forms                    |TCustomForm    |ShowModal                   |       |
-|0050A278|ProyectoFacturacionXE.exe|Controls                 |TControl       |SetVisible                  |       |
-|0058DBA6|ProyectoFacturacionXE.exe|Forms                    |TCustomForm    |SetVisible                  |       |
-|00BAAAE6|ProyectoFacturacionXE.exe|frmLogin.pas             |TFLogin        |btnBtnOkClick               |82[29] |
-|0050C1DC|ProyectoFacturacionXE.exe|Controls                 |TControl       |Click                       |       |
-|0050C16C|ProyectoFacturacionXE.exe|Controls                 |TControl       |Click                       |       |
-|0054315E|ProyectoFacturacionXE.exe|StdCtrls                 |TCustomButton  |Click                       |       |
-|00405DE0|ProyectoFacturacionXE.exe|System                   |               |_CallDynaInst               |       |
-|00543C4C|ProyectoFacturacionXE.exe|StdCtrls                 |TCustomButton  |CNCommand                   |       |
-|0050BC70|ProyectoFacturacionXE.exe|Controls                 |TControl       |WndProc                     |       |
-|75CF61EA|USER32.dll               |                         |               |GetWindowLongW              |       |
-|76DE5952|ntdll.dll                |                         |               |NtFindAtom                  |       |
-|0050B99C|ProyectoFacturacionXE.exe|Controls                 |TControl       |WndProc                     |       |
-|00510534|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |WndProc                     |       |
-|75CF1B3C|USER32.dll               |                         |               |CallWindowProcW             |       |
-|00510634|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |DefaultHandler              |       |
-|0050FFCC|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |WndProc                     |       |
-|00542E28|ProyectoFacturacionXE.exe|StdCtrls                 |TButtonControl |WndProc                     |       |
-|0050B894|ProyectoFacturacionXE.exe|Controls                 |TControl       |Perform                     |       |
-|0050B870|ProyectoFacturacionXE.exe|Controls                 |TControl       |Perform                     |       |
-|00510687|ProyectoFacturacionXE.exe|Controls                 |               |DoControlMsg                |       |
-|00510664|ProyectoFacturacionXE.exe|Controls                 |               |DoControlMsg                |       |
-|005110E3|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |WMCommand                   |       |
-|0050BC70|ProyectoFacturacionXE.exe|Controls                 |TControl       |WndProc                     |       |
-|73F449F6|uxtheme.dll              |                         |               |BeginBufferedPaint          |       |
-|75CF4D86|USER32.dll               |                         |               |IsWindowVisible             |       |
-|75CF4D95|USER32.dll               |                         |               |IsWindowVisible             |       |
-|75CF5D4C|USER32.dll               |                         |               |EndPaint                    |       |
-|75CE933E|USER32.dll               |                         |               |ShowCaret                   |       |
-|75CF2392|USER32.dll               |                         |               |PtInRect                    |       |
-|0050B99C|ProyectoFacturacionXE.exe|Controls                 |TControl       |WndProc                     |       |
-|00510534|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |WndProc                     |       |
-|0040679E|ProyectoFacturacionXE.exe|System                   |TMonitor       |TryEnter                    |       |
-|00406778|ProyectoFacturacionXE.exe|System                   |TMonitor       |TryEnter                    |       |
-|00406350|ProyectoFacturacionXE.exe|System                   |TMonitor       |Enter                       |       |
-|00406224|ProyectoFacturacionXE.exe|System                   |TMonitor       |CheckOwningThread           |       |
-|004028D0|ProyectoFacturacionXE.exe|System                   |               |InterlockedCompareExchange  |       |
-|004064FA|ProyectoFacturacionXE.exe|System                   |TMonitor       |Exit                        |       |
-|0050B99C|ProyectoFacturacionXE.exe|Controls                 |TControl       |WndProc                     |       |
-|00510534|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |WndProc                     |       |
-|0050FBD4|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |MainWndProc                 |       |
-|004F1E10|ProyectoFacturacionXE.exe|Graphics                 |               |FreeMemoryContexts          |       |
-|0050FBE9|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |MainWndProc                 |       |
-|0050FBD4|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |MainWndProc                 |       |
-|004601DC|ProyectoFacturacionXE.exe|Classes                  |               |StdWndProc                  |       |
-|75CF557D|USER32.dll               |                         |               |SendMessageW                |       |
-|75CF1B52|USER32.dll               |                         |               |CallWindowProcW             |       |
-|75CF1B3C|USER32.dll               |                         |               |CallWindowProcW             |       |
-|00510634|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |DefaultHandler              |       |
-|0050C62C|ProyectoFacturacionXE.exe|Controls                 |TControl       |WMLButtonUp                 |       |
-|0050BC70|ProyectoFacturacionXE.exe|Controls                 |TControl       |WndProc                     |       |
-|75CF53F5|USER32.dll               |                         |               |IsWindow                    |       |
-|0050B99C|ProyectoFacturacionXE.exe|Controls                 |TControl       |WndProc                     |       |
-|00510163|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |WndProc                     |       |
-|0040679E|ProyectoFacturacionXE.exe|System                   |TMonitor       |TryEnter                    |       |
-|00406778|ProyectoFacturacionXE.exe|System                   |TMonitor       |TryEnter                    |       |
-|00406350|ProyectoFacturacionXE.exe|System                   |TMonitor       |Enter                       |       |
-|7562C410|kernel32.dll             |                         |               |InterlockedDecrement        |       |
-|00406224|ProyectoFacturacionXE.exe|System                   |TMonitor       |CheckOwningThread           |       |
-|004028D0|ProyectoFacturacionXE.exe|System                   |               |InterlockedCompareExchange  |       |
-|004064FA|ProyectoFacturacionXE.exe|System                   |TMonitor       |Exit                        |       |
-|004064D8|ProyectoFacturacionXE.exe|System                   |TMonitor       |Exit                        |       |
-|00406533|ProyectoFacturacionXE.exe|System                   |TMonitor       |Exit                        |       |
-|00406524|ProyectoFacturacionXE.exe|System                   |TMonitor       |Exit                        |       |
-|004F1EAB|ProyectoFacturacionXE.exe|Graphics                 |               |FreeMemoryContexts          |       |
-|0050FBD4|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |MainWndProc                 |       |
-|75CE9DC7|USER32.dll               |                         |               |GetCapture                  |       |
-|0050FDC7|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |IsControlMouseMsg           |       |
-|0050B99C|ProyectoFacturacionXE.exe|Controls                 |TControl       |WndProc                     |       |
-|00510534|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |WndProc                     |       |
-|0050FFCC|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |WndProc                     |       |
-|00542E28|ProyectoFacturacionXE.exe|StdCtrls                 |TButtonControl |WndProc                     |       |
-|0050FBD4|ProyectoFacturacionXE.exe|Controls                 |TWinControl    |MainWndProc                 |       |
-|004601DC|ProyectoFacturacionXE.exe|Classes                  |               |StdWndProc                  |       |
-|75CFCC6B|USER32.dll               |                         |               |DispatchMessageW            |       |
-|75CFCC61|USER32.dll               |                         |               |DispatchMessageW            |       |
-|0059727F|ProyectoFacturacionXE.exe|Forms                    |TApplication   |ProcessMessage              |       |
-|0059718C|ProyectoFacturacionXE.exe|Forms                    |TApplication   |ProcessMessage              |       |
-|005972C2|ProyectoFacturacionXE.exe|Forms                    |TApplication   |HandleMessage               |       |
-|005972B8|ProyectoFacturacionXE.exe|Forms                    |TApplication   |HandleMessage               |       |
-|005975ED|ProyectoFacturacionXE.exe|Forms                    |TApplication   |Run                         |       |
-|00597524|ProyectoFacturacionXE.exe|Forms                    |TApplication   |Run                         |       |
-|00BBEB91|ProyectoFacturacionXE.exe|ProyectoFacturacionXE.dpr|               |                            |25[6]  |
-|7562ED6A|kernel32.dll             |                         |               |GetDriveTypeW               |       |
--------------------------------------------------------------------------------------------------------------------
-
-Modules Information:
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-|Handle  |Name                     |Description                                                                              |Version           |Size    |Modified           |Path                                                                                                         |
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-|00400000|ProyectoFacturacionXE.exe|                                                                                         |                  |8943616 |2013-03-06 15:14:04|C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\Debug\Win32                    |
-|0E7C0000|StructuredQuery.dll      |Structured Query                                                                         |7.0.7601.17514    |363520  |2010-11-20 04:21:28|C:\Windows\System32                                                                                          |
-|10000000|gds32.dll                |Firebird SQL Server                                                                      |6.3.6.5026        |356448  |2009-10-06 01:05:06|C:\Windows\system32                                                                                          |
-|4DAE0000|midas.dll                |Embarcadero MIDAS Component Package                                                      |15.0.3953.35171   |444928  |2010-11-03 18:55:00|C:\Windows\system32                                                                                          |
-|52FC0000|EhStorAPI.dll            |API de almacenamiento mejorado de Windows                                                |6.1.7601.17514    |128512  |2010-11-20 04:18:40|C:\Windows\system32                                                                                          |
-|53FB0000|FONTSUB.dll              |Font Subsetting DLL                                                                      |6.1.7601.17105    |70656   |2010-09-30 03:48:00|C:\Windows\system32                                                                                          |
-|63510000|ieframe.DLL              |Explorador de Internet                                                                   |9.0.8112.16464    |9738240 |2013-01-08 19:09:20|C:\Windows\system32                                                                                          |
-|69710000|SearchFolder.dll         |Carpeta de búsqueda                                                                      |6.1.7601.17514    |646144  |2010-11-20 04:21:08|C:\Windows\system32                                                                                          |
-|699A0000|ntshrui.dll              |Extensiones de shell para uso compartido                                                 |6.1.7601.17755    |442880  |2012-01-04 05:58:42|C:\Windows\system32                                                                                          |
-|69C80000|NetworkExplorer.dll      |Explorador de red                                                                        |6.1.7601.17514    |1661440 |2010-11-20 04:20:30|C:\Windows\system32                                                                                          |
-|6A1D0000|GrooveIntlResource.dll   |Módulo de Recurso Intl de Microsoft SharePoint Workspace                                 |14.0.4761.1000    |8901552 |2010-03-25 03:45:42|C:\Program Files\Microsoft Office\Office14\3082                                                              |
-|6AA50000|OFFICE.ODF               |                                                                                         |14.0.4738.1000    |4254560 |2010-01-30 02:41:12|C:\Program Files\Common Files\microsoft shared\OFFICE14\Cultures                                             |
-|6AE60000|GROOVEEX.DLL             |Microsoft SharePoint Workspace Extensions                                                |14.0.4761.1000    |4222864 |2010-03-25 10:25:22|C:\Program Files\Microsoft Office\Office14                                                                   |
-|6B290000|SHFolder.dll             |Shell Folder Service                                                                     |6.1.7600.16385    |7168    |2009-07-13 22:16:16|C:\Windows\system32                                                                                          |
-|6B440000|tiptsf.dll               |Entorno de servicios de texto del Panel de entrada de Tablet PC                          |6.1.7600.16385    |348160  |2009-07-13 22:16:18|C:\Program Files\Common Files\microsoft shared\ink                                                           |
-|6B4A0000|msls31.dll               |Microsoft Line Services library file                                                     |3.10.349.0        |161792  |2013-01-18 17:58:08|C:\Windows\system32                                                                                          |
-|6B570000|LINKINFO.dll             |Windows Volume Tracking                                                                  |6.1.7600.16385    |22016   |2009-07-13 22:15:38|C:\Windows\system32                                                                                          |
-|6B590000|SHDOCVW.dll              |Biblioteca de objetos y controles de documentos del shell                                |6.1.7601.17514    |179712  |2010-11-20 04:21:16|C:\Windows\system32                                                                                          |
-|6B640000|IconCodecService.dll     |Converts a PNG part of the icon to a legacy bmp icon                                     |6.1.7600.16385    |9728    |2009-07-13 22:15:28|C:\Windows\system32                                                                                          |
-|6B650000|ATL90.DLL                |ATL Module for Windows (Unicode)                                                         |9.0.30729.4148    |159032  |2013-01-18 08:27:40|C:\Windows\WinSxS\x86_microsoft.vc90.atl_1fc8b3b9a1e18e3b_9.0.30729.4148_none_51ca66a2bbe76806               |
-|6B680000|EhStorShell.dll          |DLL de extensión de shell de Almacenamiento mejorado de Windows                          |6.1.7600.16385    |189952  |2009-07-13 22:15:16|C:\Windows\system32                                                                                          |
-|6B6C0000|crshhndl.dll             |Crash handler library                                                                    |1.0.10.0          |1612168 |2012-12-12 20:30:08|C:\Program Files\TortoiseSVN\bin                                                                             |
-|6B850000|MSVCP100.dll             |Microsoft® C Runtime Library                                                             |10.0.40219.325    |421200  |2011-06-11 01:58:52|C:\Windows\system32                                                                                          |
-|6B8C0000|libsasl32.dll            |                                                                                         |2.1.24.0          |70536   |2012-12-12 20:30:10|C:\Program Files\TortoiseSVN\bin                                                                             |
-|6B8E0000|intl3_tsvn32.dll         |LGPLed libintl for Windows NT/2000/XP and Windows 95/98/ME                               |0.14.6.0          |45960   |2012-12-12 20:30:08|C:\Program Files\TortoiseSVN\bin                                                                             |
-|6B8F0000|libaprutil_tsvn32.dll    |Apache Portable Runtime Utility Library                                                  |1.3.12.0          |210312  |2012-12-12 20:30:08|C:\Program Files\TortoiseSVN\bin                                                                             |
-|6B930000|MSVCR100.dll             |Microsoft® C Runtime Library                                                             |10.0.40219.325    |773968  |2011-06-11 01:58:52|C:\Windows\system32                                                                                          |
-|6BA30000|libapr_tsvn32.dll        |Apache Portable Runtime Library                                                          |1.4.6.0           |134024  |2012-12-12 20:30:10|C:\Program Files\TortoiseSVN\bin                                                                             |
-|6BA60000|libsvn_tsvn32.dll        |Subversion library dll built for TortoiseSVN                                             |1.7.8.43435       |3083656 |2012-12-12 20:30:10|C:\Program Files\TortoiseSVN\bin                                                                             |
-|6BD60000|TortoiseSVN32.dll        |TortoiseSVN shell extension client                                                       |1.7.11.23600      |435080  |2012-12-12 20:30:24|C:\Program Files\TortoiseSVN\bin                                                                             |
-|6BDD0000|TortoiseOverlays.dll     |TortoiseSVN overlay handler shim                                                         |1.1.3.21564       |64792   |2011-06-13 10:20:44|C:\Program Files\Common Files\TortoiseOverlays                                                               |
-|6C070000|explorerframe.dll        |ExplorerFrame                                                                            |6.1.7601.17514    |1493504 |2010-11-20 04:19:02|C:\Windows\system32                                                                                          |
-|6C3D0000|PortableDeviceTypes.dll  |Windows Portable Device (Parameter) Types Component                                      |6.1.7600.16385    |159744  |2009-07-13 22:16:14|C:\Windows\system32                                                                                          |
-|6C800000|actxprxy.dll             |ActiveX Interface Marshaling Library                                                     |6.1.7601.17514    |309760  |2010-11-20 04:18:02|C:\Windows\system32                                                                                          |
-|6C8E0000|DAVHLPR.dll              |DAV Helper DLL                                                                           |6.1.7600.16385    |19456   |2009-07-13 22:15:10|C:\Windows\System32                                                                                          |
-|6C8F0000|davclnt.dll              |Web DAV Client DLL                                                                       |6.1.7601.17514    |80384   |2010-11-20 04:18:28|C:\Windows\System32                                                                                          |
-|6C910000|ntlanman.dll             |Microsoft® Lan Manager                                                                   |6.1.7601.17514    |69120   |2010-11-20 04:20:48|C:\Windows\System32                                                                                          |
-|6C930000|drprov.dll               |Proveedor de red del servidor host de sesión de Escritorio remoto de Microsoft           |6.1.7600.16385    |18944   |2009-07-13 22:15:14|C:\Windows\System32                                                                                          |
-|6C960000|TortoiseStub32.dll       |TortoiseSVN shell extension client                                                       |1.7.11.23600      |40328   |2012-12-12 20:30:24|C:\Program Files\TortoiseSVN\bin                                                                             |
-|6DEA0000|MSVCP60.dll              |Windows NT C++ Runtime Library DLL                                                       |7.0.7600.16385    |406528  |2009-07-13 22:15:52|C:\Windows\system32                                                                                          |
-|6E820000|PortableDeviceApi.dll    |Componentes de la API de dispositivo portátil de Windows                                 |6.1.7601.17514    |547840  |2010-11-20 04:20:56|C:\Windows\system32                                                                                          |
-|702B0000|MPR.dll                  |DLL del enrutador de provisión múltiple                                                  |6.1.7600.16385    |64000   |2009-07-13 22:15:42|C:\Windows\system32                                                                                          |
-|70750000|winspool.drv             |Controlador de administración de colas para Windows                                      |6.1.7601.17514    |320000  |2010-11-20 04:16:52|C:\Windows\system32                                                                                          |
-|72490000|rasadhlp.dll             |Remote Access AutoDial Helper                                                            |6.1.7600.16385    |11776   |2009-07-13 22:16:14|C:\Windows\system32                                                                                          |
-|72640000|winrnr.dll               |LDAP RnR Provider DLL                                                                    |6.1.7600.16385    |20992   |2009-07-13 22:16:20|C:\Windows\System32                                                                                          |
-|72660000|pnrpnsp.dll              |Proveedor de espacio de nombres PNRP                                                     |6.1.7600.16385    |65024   |2009-07-13 22:16:14|C:\Windows\system32                                                                                          |
-|72680000|napinsp.dll              |Proveedor de correcciones de compatibilidad (shim) de nomenclaturas de correo electrónico|6.1.7600.16385    |52224   |2009-07-13 22:16:04|C:\Windows\system32                                                                                          |
-|728A0000|cscapi.dll               |Offline Files Win32 API                                                                  |6.1.7601.17514    |34816   |2010-11-20 04:18:26|C:\Windows\system32                                                                                          |
-|729D0000|wsock32.dll              |Windows Socket 32-Bit DLL                                                                |6.1.7600.16385    |15360   |2009-07-13 22:16:22|C:\Windows\system32                                                                                          |
-|72A40000|MSVCP90.dll              |Microsoft® C++ Runtime Library                                                           |9.0.30729.4940    |569680  |2010-11-04 17:53:44|C:\Windows\WinSxS\x86_microsoft.vc90.crt_1fc8b3b9a1e18e3b_9.0.30729.4940_none_50916076bcb9a742               |
-|72AD0000|MSVCR90.dll              |Microsoft® C Runtime Library                                                             |9.0.30729.4940    |653136  |2010-11-04 17:53:46|C:\Windows\WinSxS\x86_microsoft.vc90.crt_1fc8b3b9a1e18e3b_9.0.30729.4940_none_50916076bcb9a742               |
-|72C40000|fwpuclnt.dll             |API de modo usuario de FWP/IPsec                                                         |6.1.7601.17514    |216576  |2010-11-20 04:19:04|C:\Windows\System32                                                                                          |
-|72CD0000|dhcpcsvc.DLL             |Servicio cliente DHCP                                                                    |6.1.7600.16385    |61952   |2009-07-13 22:15:12|C:\Windows\system32                                                                                          |
-|72CF0000|dhcpcsvc6.DLL            |Cliente DHCPv6                                                                           |6.1.7601.17970    |44032   |2012-10-09 14:40:32|C:\Windows\system32                                                                                          |
-|72DA0000|WINNSI.DLL               |Network Store Information RPC interface                                                  |6.1.7600.16385    |16896   |2009-07-13 22:16:20|C:\Windows\system32                                                                                          |
-|72DB0000|IPHLPAPI.DLL             |API auxiliar para IP                                                                     |6.1.7601.17514    |103936  |2010-11-20 04:19:24|C:\Windows\system32                                                                                          |
-|72FC0000|thumbcache.dll           |Caché de vistas en miniatura de Microsoft                                                |6.1.7601.17514    |82944   |2010-11-20 04:21:32|C:\Windows\system32                                                                                          |
-|73190000|slc.dll                  |DLL cliente de licencias de software                                                     |6.1.7600.16385    |27136   |2009-07-13 22:16:16|C:\Windows\system32                                                                                          |
-|731B0000|NLAapi.dll               |Network Location Awareness 2                                                             |6.1.7601.17964    |52224   |2012-10-03 13:42:28|C:\Windows\system32                                                                                          |
-|73460000|winmm.dll                |MCI API DLL                                                                              |6.1.7601.17514    |194048  |2010-11-20 04:21:38|C:\Windows\system32                                                                                          |
-|734A0000|msimg32.dll              |GDIEXT Client DLL                                                                        |6.1.7600.16385    |4608    |2009-07-13 22:15:46|C:\Windows\system32                                                                                          |
-|73540000|OLEACC.dll               |Active Accessibility Core Component                                                      |7.0.0.0           |233472  |2011-08-27 01:26:28|C:\Windows\system32                                                                                          |
-|737C0000|wkscli.dll               |Workstation Service Client DLL                                                           |6.1.7601.17514    |47104   |2010-11-20 04:21:38|C:\Windows\system32                                                                                          |
-|738A0000|mssprxy.dll              |Microsoft Search Proxy                                                                   |7.0.7600.16385    |35328   |2009-07-13 22:15:50|C:\Windows\system32                                                                                          |
-|739E0000|WindowsCodecs.dll        |Microsoft Windows Codecs Library                                                         |6.1.7601.17514    |1010688 |2010-11-20 04:21:38|C:\Windows\system32                                                                                          |
-|73AE0000|XmlLite.dll              |Microsoft XmlLite Library                                                                |1.3.1001.0        |180224  |2011-06-16 01:33:20|C:\Windows\system32                                                                                          |
-|73B10000|dwmapi.dll               |API del Administrador de ventanas de escritorio de Microsoft                             |6.1.7600.16385    |67072   |2009-07-13 22:15:14|C:\Windows\system32                                                                                          |
-|73B30000|PROPSYS.dll              |Sistema de propiedades de Microsoft                                                      |7.0.7601.17514    |988160  |2010-11-20 04:20:58|C:\Windows\system32                                                                                          |
-|73CC0000|DUser.dll                |Windows DirectUser Engine                                                                |6.1.7600.16385    |181248  |2009-07-13 22:15:14|C:\Windows\system32                                                                                          |
-|73CF0000|DUI70.dll                |Motor DirectUI de Windows                                                                |6.1.7600.16385    |717824  |2009-07-13 22:15:14|C:\Windows\system32                                                                                          |
-|73F40000|uxtheme.dll              |Biblioteca UxTheme de Microsoft                                                          |6.1.7600.16385    |249856  |2009-07-13 22:16:18|C:\Windows\system32                                                                                          |
-|73F80000|comctl32.dll             |Biblioteca de controles de la experiencia del usuario                                    |6.10.7601.17514   |1680896 |2010-11-20 03:55:10|C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_41e6975e2bd6f2b2|
-|743E0000|ntmarta.dll              |Proveedor MARTA de Windows NT                                                            |6.1.7600.16385    |121856  |2009-07-13 22:16:12|C:\Windows\system32                                                                                          |
-|74410000|version.dll              |Version Checking and File Installation Libraries                                         |6.1.7600.16385    |21504   |2009-07-13 22:16:18|C:\Windows\system32                                                                                          |
-|744A0000|wshtcpip.dll             |DLL de la aplicación auxiliar Winsock2 (TL/IPv4)                                         |6.1.7600.16385    |9216    |2009-07-13 22:16:22|C:\Windows\System32                                                                                          |
-|74730000|netutils.dll             |Net Win32 API Helpers DLL                                                                |6.1.7601.17514    |22528   |2010-11-20 04:20:30|C:\Windows\system32                                                                                          |
-|74740000|rsaenh.dll               |Microsoft Enhanced Cryptographic Provider                                                |6.1.7600.16385    |242936  |2009-07-13 22:17:56|C:\Windows\system32                                                                                          |
-|74820000|DNSAPI.dll               |DLL de API de cliente DNS                                                                |6.1.7601.17570    |270336  |2011-03-03 02:38:02|C:\Windows\system32                                                                                          |
-|74960000|mswsock.dll              |Proveedor de servicios de Microsoft Windows Sockets 2.0                                  |6.1.7601.17514    |232448  |2010-11-20 04:19:58|C:\Windows\system32                                                                                          |
-|749A0000|CRYPTSP.dll              |Cryptographic Service Provider API                                                       |6.1.7600.16385    |78848   |2009-07-13 22:15:08|C:\Windows\system32                                                                                          |
-|74C40000|srvcli.dll               |Server Service Client DLL                                                                |6.1.7601.17514    |90112   |2010-11-20 04:21:28|C:\Windows\system32                                                                                          |
-|74DE0000|Secur32.dll              |Security Support Provider Interface                                                      |6.1.7601.17725    |22016   |2011-11-17 02:34:54|C:\Windows\system32                                                                                          |
-|74E00000|WINSTA.dll               |Winstation Library                                                                       |6.1.7601.17514    |156672  |2010-11-20 04:21:38|C:\Windows\System32                                                                                          |
-|74E30000|SspiCli.dll              |Security Support Provider Interface                                                      |6.1.7601.17725    |100352  |2011-11-17 02:34:56|C:\Windows\system32                                                                                          |
-|74E60000|apphelp.dll              |Biblioteca de compatibilidad de aplicaciones cliente                                     |6.1.7601.17514    |295936  |2010-11-20 04:18:04|C:\Windows\system32                                                                                          |
-|74EB0000|CRYPTBASE.dll            |Base cryptographic API DLL                                                               |6.1.7600.16385    |36864   |2009-07-13 22:15:08|C:\Windows\system32                                                                                          |
-|74F20000|RpcRtRemote.dll          |Remote RPC Extension                                                                     |6.1.7601.17514    |46080   |2010-11-20 04:21:04|C:\Windows\system32                                                                                          |
-|74F30000|profapi.dll              |User Profile Basic API                                                                   |6.1.7600.16385    |31744   |2009-07-13 22:16:14|C:\Windows\system32                                                                                          |
-|74FA0000|MSASN1.dll               |ASN.1 Runtime APIs                                                                       |6.1.7601.17514    |34304   |2010-11-20 04:19:46|C:\Windows\system32                                                                                          |
-|74FB0000|CRYPT32.dll              |Crypto API32                                                                             |6.1.7601.17856    |1159680 |2012-06-02 01:36:30|C:\Windows\system32                                                                                          |
-|75160000|DEVOBJ.dll               |Device Information Set DLL                                                               |6.1.7600.16385    |64512   |2009-07-13 22:15:12|C:\Windows\system32                                                                                          |
-|75180000|WINTRUST.dll             |Microsoft Trust Verification APIs                                                        |6.1.7601.17940    |172544  |2012-08-24 13:57:50|C:\Windows\system32                                                                                          |
-|751B0000|CFGMGR32.dll             |Configuration Manager DLL                                                                |6.1.7601.17514    |145920  |2010-11-20 09:18:14|C:\Windows\system32                                                                                          |
-|751E0000|KERNELBASE.dll           |Archivo DLL de cliente API BASE de Windows NT                                            |6.1.7601.17965    |293376  |2012-10-04 13:43:06|C:\Windows\system32                                                                                          |
-|75230000|urlmon.dll               |Extensiones OLE32 para Win32                                                             |9.0.8112.16464    |1103872 |2013-01-08 19:03:58|C:\Windows\system32                                                                                          |
-|75350000|GDI32.dll                |GDI Client DLL                                                                           |6.1.7601.17514    |304640  |2010-11-20 04:19:06|C:\Windows\system32                                                                                          |
-|75400000|iertutil.dll             |Run time utility for Internet Explorer                                                   |9.0.8112.16464    |1796096 |2013-01-08 18:56:52|C:\Windows\system32                                                                                          |
-|755C0000|imm32.dll                |Multi-User Windows IMM32 API Client DLL                                                  |6.1.7601.17514    |118272  |2010-11-20 04:19:24|C:\Windows\system32                                                                                          |
-|755E0000|kernel32.dll             |Archivo DLL de cliente API BASE de Windows NT                                            |6.1.7601.17965    |868352  |2012-10-04 13:43:06|C:\Windows\system32                                                                                          |
-|756C0000|oleaut32.dll             |                                                                                         |6.1.7601.17676    |571904  |2011-08-27 01:26:28|C:\Windows\system32                                                                                          |
-|75750000|RPCRT4.dll               |Tiempo de ejecución de llamada a procedimiento remoto                                    |6.1.7601.17514    |653312  |2010-11-20 04:21:04|C:\Windows\system32                                                                                          |
-|75800000|ole32.dll                |Microsoft OLE para Windows                                                               |6.1.7601.17514    |1414144 |2010-11-20 04:20:50|C:\Windows\system32                                                                                          |
-|75960000|advapi32.dll             |API base de Windows 32 avanzado                                                          |6.1.7601.17514    |640512  |2010-11-20 04:18:04|C:\Windows\system32                                                                                          |
-|75A00000|msvcrt.dll               |Windows NT CRT DLL                                                                       |7.0.7601.17744    |690688  |2011-12-16 04:53:00|C:\Windows\system32                                                                                          |
-|75AB0000|WININET.dll              |Extensiones de Internet para Win32                                                       |9.0.8112.16464    |1129472 |2013-01-08 19:03:22|C:\Windows\system32                                                                                          |
-|75BD0000|WS2_32.dll               |DLL de 32 bits de Windows Socket 2.0                                                     |6.1.7601.17514    |206848  |2010-11-20 04:21:40|C:\Windows\system32                                                                                          |
-|75C10000|MSCTF.dll                |Archivo DLL del servidor MSCTF                                                           |6.1.7600.16385    |828928  |2009-07-13 22:15:44|C:\Windows\system32                                                                                          |
-|75CE0000|USER32.dll               |Archivo DLL de cliente API USER de Windows multiusuario                                  |6.1.7601.17514    |811520  |2010-11-20 04:21:34|C:\Windows\system32                                                                                          |
-|75DB0000|SHELL32.dll              |Archivo DLL común del shell de Windows                                                   |6.1.7601.17859    |12873728|2012-06-09 01:41:02|C:\Windows\system32                                                                                          |
-|76A30000|comdlg32.dll             |Archivo DLL de diálogos comunes                                                          |6.1.7601.17514    |485888  |2010-11-20 04:18:24|C:\Windows\system32                                                                                          |
-|76AB0000|SHLWAPI.dll              |Biblioteca de utilidades de Shell                                                        |6.1.7601.17514    |350208  |2010-11-20 04:21:20|C:\Windows\system32                                                                                          |
-|76B10000|SETUPAPI.dll             |API de instalación de Windows                                                            |6.1.7601.17514    |1667584 |2010-11-20 04:21:16|C:\Windows\system32                                                                                          |
-|76CB0000|WLDAP32.dll              |DLL de API de LDAP Win32                                                                 |6.1.7601.17514    |269824  |2010-11-20 04:21:38|C:\Windows\system32                                                                                          |
-|76D00000|USP10.dll                |Uniscribe Unicode script processor                                                       |1.626.7601.17514  |626176  |2010-11-20 04:21:34|C:\Windows\system32                                                                                          |
-|76DA0000|ntdll.dll                |DLL del nivel de Windows NT                                                              |6.1.7601.17725    |1288472 |2011-11-17 02:38:40|C:\Windows\SYSTEM32                                                                                          |
-|76EE0000|PSAPI.DLL                |Process Status Helper                                                                    |6.1.7600.16385    |6144    |2009-07-13 22:16:14|C:\Windows\system32                                                                                          |
-|76EF0000|Normaliz.dll             |Unicode Normalization DLL                                                                |6.1.7600.16385    |2048    |2009-07-13 22:09:02|C:\Windows\system32                                                                                          |
-|76F00000|LPK.dll                  |Language Pack                                                                            |6.1.7600.16385    |26624   |2009-07-13 22:15:38|C:\Windows\system32                                                                                          |
-|76F10000|sechost.dll              |Host for SCM/SDDL/LSA Lookup APIs                                                        |6.1.7600.16385    |92160   |2009-07-13 22:16:14|C:\Windows\SYSTEM32                                                                                          |
-|76F30000|NSI.dll                  |NSI User-mode interface DLL                                                              |6.1.7600.16385    |8704    |2009-07-13 22:16:12|C:\Windows\system32                                                                                          |
-|76F40000|CLBCatQ.DLL              |COM+ Configuration Catalog                                                               |2001.12.8530.16385|522240  |2009-07-13 22:15:04|C:\Windows\system32                                                                                          |
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-Processes Information:
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-|ID  |Name                     |Description                                                                      |Version        |Memory|Priority    |Threads|Path                                                                                     |
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-|0   |[System Process]         |                                                                                 |               |0     |            |2      |                                                                                         |
-|4   |System                   |                                                                                 |               |0     |Normal      |100    |                                                                                         |
-|268 |smss.exe                 |Administrador de sesión de Windows                                               |6.1.7600.16385 |0     |Above-Normal|2      |                                                                                         |
-|320 |TeamViewer_Service.exe   |                                                                                 |               |0     |Normal      |7      |                                                                                         |
-|360 |csrss.exe                |Proceso en tiempo de ejecución del cliente-servidor                              |6.1.7600.16385 |0     |High        |9      |                                                                                         |
-|412 |wininit.exe              |Aplicación de inicio de Windows                                                  |6.1.7600.16385 |0     |High        |3      |                                                                                         |
-|424 |csrss.exe                |Proceso en tiempo de ejecución del cliente-servidor                              |6.1.7600.16385 |0     |High        |11     |                                                                                         |
-|468 |services.exe             |Aplicación de servicios y controlador                                            |6.1.7600.16385 |0     |Normal      |9      |                                                                                         |
-|500 |lsass.exe                |Local Security Authority Process                                                 |6.1.7601.17725 |0     |Normal      |9      |                                                                                         |
-|508 |lsm.exe                  |Servicio de administrador de sesión local                                        |6.1.7601.17514 |0     |Normal      |10     |                                                                                         |
-|516 |winlogon.exe             |Aplicación de inicio de sesión de Windows                                        |6.1.7601.17514 |0     |High        |3      |                                                                                         |
-|576 |chrome.exe               |Google Chrome                                                                    |25.0.1364.152  |0     |Below-Normal|9      |C:\Users\claudio.brignardello\AppData\Local\Google\Chrome\Application                    |
-|648 |svchost.exe              |Proceso host para los servicios de Windows                                       |6.1.7600.16385 |0     |Normal      |11     |                                                                                         |
-|732 |svchost.exe              |Proceso host para los servicios de Windows                                       |6.1.7600.16385 |0     |Normal      |9      |                                                                                         |
-|848 |svchost.exe              |Proceso host para los servicios de Windows                                       |6.1.7600.16385 |0     |Normal      |20     |                                                                                         |
-|888 |svchost.exe              |Proceso host para los servicios de Windows                                       |6.1.7600.16385 |0     |Normal      |26     |                                                                                         |
-|936 |svchost.exe              |Proceso host para los servicios de Windows                                       |6.1.7600.16385 |0     |Normal      |34     |                                                                                         |
-|1036|svchost.exe              |Proceso host para los servicios de Windows                                       |6.1.7600.16385 |0     |Normal      |5      |                                                                                         |
-|1104|svchost.exe              |Proceso host para los servicios de Windows                                       |6.1.7600.16385 |0     |Normal      |13     |                                                                                         |
-|1248|svchost.exe              |Proceso host para los servicios de Windows                                       |6.1.7600.16385 |0     |Normal      |23     |                                                                                         |
-|1308|AvastSvc.exe             |                                                                                 |               |0     |Normal      |54     |                                                                                         |
-|1332|chrome.exe               |Google Chrome                                                                    |25.0.1364.152  |0     |Below-Normal|12     |C:\Users\claudio.brignardello\AppData\Local\Google\Chrome\Application                    |
-|1356|OSPPSVC.EXE              |                                                                                 |               |0     |Normal      |3      |                                                                                         |
-|1532|jucheck.exe              |                                                                                 |               |0     |Normal      |9      |                                                                                         |
-|1552|spoolsv.exe              |Aplicación de subsistema de cola                                                 |6.1.7601.17777 |0     |Normal      |15     |                                                                                         |
-|1588|svchost.exe              |Proceso host para los servicios de Windows                                       |6.1.7600.16385 |0     |Normal      |17     |                                                                                         |
-|1656|bds.exe                  |Embarcadero RAD Studio for Windows                                               |15.0.3953.35171|0     |Normal      |27     |C:\Program Files\Embarcadero\RAD Studio\8.0\bin                                          |
-|1716|armsvc.exe               |                                                                                 |               |0     |Normal      |4      |                                                                                         |
-|1748|audiodg.exe              |Aislamiento de gráficos de dispositivo de audio de Windows                       |6.1.7601.17514 |0     |Normal      |6      |                                                                                         |
-|1760|ProyectoFacturacionXE.exe|                                                                                 |               |0     |Normal      |22     |C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\Debug\Win32|
-|1768|cbVSCService.exe         |                                                                                 |               |0     |Normal      |8      |                                                                                         |
-|1812|cbService.exe            |                                                                                 |               |0     |Normal      |12     |                                                                                         |
-|1860|fbguard.exe              |                                                                                 |               |0     |Normal      |6      |                                                                                         |
-|1912|srvany.exe               |                                                                                 |               |0     |Normal      |2      |                                                                                         |
-|1952|KMService.exe            |                                                                                 |               |0     |Normal      |3      |                                                                                         |
-|1960|conhost.exe              |Host de ventana de consola                                                       |6.1.7601.17965 |0     |Normal      |2      |                                                                                         |
-|2004|svchost.exe              |Proceso host para los servicios de Windows                                       |6.1.7600.16385 |0     |Normal      |8      |                                                                                         |
-|2052|fbserver.exe             |                                                                                 |               |0     |Normal      |15     |                                                                                         |
-|2180|svchost.exe              |Proceso host para los servicios de Windows                                       |6.1.7600.16385 |0     |Normal      |9      |                                                                                         |
-|2588|svchost.exe              |Proceso host para los servicios de Windows                                       |6.1.7600.16385 |0     |Normal      |5      |                                                                                         |
-|2664|chrome.exe               |Google Chrome                                                                    |25.0.1364.152  |0     |Normal      |16     |C:\Users\claudio.brignardello\AppData\Local\Google\Chrome\Application                    |
-|2804|SeaPort.EXE              |                                                                                 |               |0     |Normal      |7      |                                                                                         |
-|2816|taskhost.exe             |Proceso de host para tareas de Windows                                           |6.1.7601.18010 |0     |Normal      |10     |C:\Windows\system32                                                                      |
-|3000|Dwm.exe                  |Administrador de ventanas del escritorio                                         |6.1.7600.16385 |0     |High        |5      |C:\Windows\system32                                                                      |
-|3024|Explorer.EXE             |Explorador de Windows                                                            |6.1.7601.17567 |0     |Normal      |44     |C:\Windows                                                                               |
-|3044|chrome.exe               |Google Chrome                                                                    |25.0.1364.152  |0     |Below-Normal|9      |C:\Users\claudio.brignardello\AppData\Local\Google\Chrome\Application                    |
-|3124|AvastUI.exe              |avast! Antivirus                                                                 |5.0.462.0      |0     |Normal      |9      |C:\Program Files\Alwil Software\Avast5                                                   |
-|3136|jusched.exe              |Java(TM) Update Scheduler                                                        |2.1.9.0        |0     |Normal      |8      |C:\Program Files\Common Files\Java\Java Update                                           |
-|3172|cbInterface.exe          |Cobian Backup 10 Boletus                                                         |10.0.0.385     |0     |Normal      |13     |C:\Program Files\Cobian Backup 10                                                        |
-|3180|hpwuschd2.exe            |hpwuSchd Application                                                             |80.1.1.0       |0     |Normal      |1      |C:\Program Files\HP\HP Software Update                                                   |
-|3188|StikyNot.exe             |Notas rápidas                                                                    |6.1.7600.16385 |0     |Normal      |8      |C:\Windows\System32                                                                      |
-|3196|googletalk.exe           |Google Talk                                                                      |1.0.0.105      |0     |Normal      |13     |C:\Program Files\Google\Google Talk                                                      |
-|3312|NMBgMonitor.exe          |Nero Home                                                                        |1.7.11.0       |0     |Normal      |7      |C:\Program Files\Common Files\Ahead\Lib                                                  |
-|3360|SearchFilterHost.exe     |Microsoft Windows Search Filter Host                                             |7.0.7601.17610 |0     |Low         |6      |                                                                                         |
-|3420|chrome.exe               |Google Chrome                                                                    |25.0.1364.152  |0     |Normal      |39     |C:\Users\claudio.brignardello\AppData\Local\Google\Chrome\Application                    |
-|3452|OUTLOOK.EXE              |Microsoft Outlook                                                                |14.0.4760.1000 |0     |Normal      |26     |C:\Program Files\Microsoft Office\Office14                                               |
-|3520|NMIndexStoreSvr.exe      |Nero Home                                                                        |1.7.11.0       |0     |Normal      |12     |C:\Program Files\Common Files\Ahead\Lib                                                  |
-|3540|TSVNCache.exe            |TortoiseSVN status cache                                                         |1.7.11.23600   |0     |Normal      |30     |C:\Program Files\TortoiseSVN\bin                                                         |
-|3588|SearchIndexer.exe        |Indizador de Microsoft Windows Search                                            |7.0.7601.17610 |0     |Normal      |12     |                                                                                         |
-|3748|chrome.exe               |Google Chrome                                                                    |25.0.1364.152  |0     |Normal      |7      |C:\Users\claudio.brignardello\AppData\Local\Google\Chrome\Application                    |
-|3864|NMIndexingService.exe    |Nero Home                                                                        |1.7.11.0       |0     |Normal      |6      |                                                                                         |
-|4020|svchost.exe              |Proceso host para los servicios de Windows                                       |6.1.7600.16385 |0     |Normal      |10     |                                                                                         |
-|4092|ibexpert.exe             |IBExpert IDE                                                                     |2012.5.19.1    |0     |Normal      |8      |C:\Program Files\HK-Software\IBExpert                                                    |
-|4148|taskeng.exe              |Motor de Programador de tareas                                                   |6.1.7601.17514 |0     |Below-Normal|7      |                                                                                         |
-|4388|chrome.exe               |Google Chrome                                                                    |25.0.1364.152  |0     |Below-Normal|9      |C:\Users\claudio.brignardello\AppData\Local\Google\Chrome\Application                    |
-|4604|chrome.exe               |Google Chrome                                                                    |25.0.1364.152  |0     |Normal      |9      |C:\Users\claudio.brignardello\AppData\Local\Google\Chrome\Application                    |
-|4768|chrome.exe               |Google Chrome                                                                    |25.0.1364.152  |0     |Below-Normal|9      |C:\Users\claudio.brignardello\AppData\Local\Google\Chrome\Application                    |
-|4832|chrome.exe               |Google Chrome                                                                    |25.0.1364.152  |0     |Below-Normal|9      |C:\Users\claudio.brignardello\AppData\Local\Google\Chrome\Application                    |
-|4964|SearchProtocolHost.exe   |Microsoft Windows Search Protocol Host                                           |7.0.7601.17610 |0     |Low         |8      |                                                                                         |
-|5020|chrome.exe               |Google Chrome                                                                    |25.0.1364.152  |0     |Below-Normal|9      |C:\Users\claudio.brignardello\AppData\Local\Google\Chrome\Application                    |
-|5072|VSSVC.exe                |Servicio de instantáneas de volumen de Microsoft®                                |6.1.7601.17514 |0     |Normal      |5      |                                                                                         |
-|5164|svchost.exe              |Proceso host para los servicios de Windows                                       |6.1.7600.16385 |0     |Normal      |4      |                                                                                         |
-|5200|chrome.exe               |Google Chrome                                                                    |25.0.1364.152  |0     |Below-Normal|9      |C:\Users\claudio.brignardello\AppData\Local\Google\Chrome\Application                    |
-|6000|WUDFHost.exe             |Windows Driver Foundation - proceso host del marco de controlador de modo usuario|6.2.9200.16384 |0     |Normal      |8      |                                                                                         |
-|6040|chrome.exe               |Google Chrome                                                                    |25.0.1364.152  |0     |Below-Normal|9      |C:\Users\claudio.brignardello\AppData\Local\Google\Chrome\Application                    |
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-Assembler Information:
--------------------------------------------------------------------
-; Classes.TStream.ReadBuffer (Line=0 - Offset=0)
-; ----------------------------------------------
-004530A9  mov     eax, [esp]
-004530AC  mov     esi, [eax]
-004530AE  call    dword ptr [esi+$0C]
-004530B1  mov     esi, eax
-004530B3  test    esi, esi
-004530B5  jnle    Classes.TStream.ReadBuffer
-004530B7  mov     ecx, [$BDE978]
-004530BD  mov     dl, $01
-004530BF  mov     eax, dword ptr [Classes.Classes]
-004530C4  call    SysUtils.Exception.CreateRes
-004530C9  call    System._RaiseExcept               ; <-- EXCEPTION
-004530CE  jmp     Classes.TStream.ReadBuffer
-004530D0  add     ebx, esi
-004530D2  cmp     edi, ebx
-004530D4  jnle    Classes.TStream.ReadBuffer
-004530D6  pop     ecx
-004530D7  pop     edx
-004530D8  pop     edi
-004530D9  pop     esi
-004530DA  pop     ebx
-004530DB  ret
-
-Registers:
------------------------------
-EAX: 04051880   EDI: 0000000E
-EBX: 00000009   ESI: 00000000
-ECX: 00440C00   ESP: 0012E21C
-EDX: 004530CE   EIP: 004530C9
-
-Stack:               Memory Dump:
-------------------   ---------------------------------------------------------------------------
-0012E21C: 04001270   004530C9: E8 46 3D FB FF EB 02 03 DE 3B FB 7F C9 59 5A 5F  .F=......;...YZ_
-0012E220: 0012E234   004530D9: 5E 5B C3 53 56 57 83 C4 F8 8B F9 89 54 24 04 89  ^[.SVW......T$..
-0012E224: 04001270   004530E9: 04 24 8B 54 24 04 8B CF 8B 04 24 8B 18 FF 53 10  .$.T$.....$...S.
-0012E228: 00000009   004530F9: 8B D8 3B FB 7E 37 8B CF 2B CB 8B 54 24 04 03 D3  ..;.~7..+..T$...
-0012E22C: 02E569F0   00453109: 8B 04 24 8B 30 FF 56 10 8B F0 85 F6 7F 19 8B 0D  ..$.0.V.........
-0012E230: 004F44EF   00453119: 78 E9 BD 00 B2 01 A1 10 0D 44 00 E8 E7 68 FD FF  x........D...h..
-0012E234: 3F3F3F3F   00453129: E8 E6 3C FB FF EB 02 03 DE 3B FB 7F C9 59 5A 5F  ..<......;...YZ_
-0012E238: 3F61413F   00453139: 5E 5B C3 55 8B EC 83 C4 E8 53 56 57 8B FA 89 45  ^[.U.....SVW...E
-0012E23C: 0012E23F   00453149: FC 83 7D 0C 00 75 1D 83 7D 08 00 75 17 6A 00 6A  ..}..u..}..u.j.j
-0012E240: 01BB3C90   00453159: 00 8B C7 E8 E7 FC FF FF 8B C7 8B 10 FF 12 89 45  ...............E
-0012E244: 02E72800   00453169: 08 89 55 0C 8B 45 08 89 45 F0 8B 45 0C 89 45 F4  ..U..E..E..E..E.
-0012E248: 005E2F18   00453179: 83 7D 0C 00 75 0B 81 7D 08 00 F0 00 00 76 0D EB  .}..u..}.....v..
-0012E24C: 02E72800   00453189: 02 7E 09 C7 45 EC 00 F0 00 00 EB 06 8B 45 08 89  .~..E........E..
-0012E250: 005E2F18   00453199: 45 EC 8B 45 EC E8 55 15 FB FF 89 45 E8 33 C0 55  E..E..U....E.3.U
-0012E254: 0012EACC   004531A9: 68 18 32 45 00 64 FF 30 64 89 20 EB 3D 8B 45 EC  h.2E.d.0d. .=.E.
-0012E258: 00000001   004531B9: 99 3B 55 0C 75 07 3B 45 08 73 09 EB 02 7D 05 8B  .;U.u.;E.s...}..
-
-
-
-EurekaLog 6.1.01 RC 1
-
-Application:
-------------------------------------------------------
-  1.1 Start Date      : Wed, 6 Mar 2013 15:14:03 -0300
-  1.2 Name/Description: ProyectoFacturacionXE.exe
-  1.3 Version Number  : 
-  1.4 Parameters      : 
-  1.5 Compilation Date: Wed, 6 Mar 2013 15:14:02 -0300
   1.6 Up Time         : 10 minutes, 23 seconds
 
 Exception:
@@ -12354,6 +11813,445 @@ Stack:               Memory Dump:
 0012E504: 00406CF0   005B9B73: FF 32 64 89 22 8B D6 E8 21 31 01 00 8B D8 85 DB  .2d."...!1......
 0012E508: 0012E51C   005B9B83: 75 24 57 8D 55 FC A1 88 D7 BD 00 E8 89 20 E5 FF  u$W.U........ ..
 0012E50C: 00000000   005B9B93: 8B 45 FC 50 89 75 F4 C6 45 F8 11 8D 55 F4 33 C9  .E.P.u..E...U.3.
+
+
+
+EurekaLog 6.1.01 RC 1
+
+Application:
+------------------------------------------------------
+  1.1 Start Date      : Tue, 2 Apr 2013 13:26:38 -0400
+  1.2 Name/Description: ProyectoFacturacionXE.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+  1.5 Compilation Date: Tue, 2 Apr 2013 13:19:00 -0400
+  1.6 Up Time         : 3 minutes, 24 seconds
+
+Exception:
+-----------------------------------------------------------------------------------
+  2.1 Date          : Tue, 2 Apr 2013 13:30:02 -0400
+  2.2 Address       : 005F9403
+  2.3 Module Name   : ProyectoFacturacionXE.exe
+  2.4 Module Version: 
+  2.5 Type          : EIBInterBaseError
+  2.6 Message       : arithmetic exception, numeric overflow, or string truncation.
+  2.7 ID            : E3D5
+  2.8 Count         : 1
+  2.9 Status        : New
+  2.10 Note         : 
+
+User:
+-------------------------------------------------------
+  3.1 ID        : claudio.brignardello
+  3.2 Name      : Claudio
+  3.3 Email     : 
+  3.4 Company   : 
+  3.5 Privileges: SeShutdownPrivilege             - OFF
+                  SeChangeNotifyPrivilege         - ON
+                  SeUndockPrivilege               - OFF
+                  SeIncreaseWorkingSetPrivilege   - OFF
+                  SeTimeZonePrivilege             - OFF
+
+Active Controls:
+-----------------------------------------------------------------------------------------------
+  4.1 Form Class   : TAppBuilder
+  4.2 Form Text    : ProyectoFacturacionXE - Embarcadero RAD Studio XE - frmArticulos [Running]
+  4.3 Control Class: TButton
+  4.4 Control Text : 
+
+Computer:
+-------------------------------------------------------------------------------------------------------------------------
+  5.1 Name          : INFORMATICA3
+  5.2 Total Memory  : 3325 Mb
+  5.3 Free Memory   : 852 Mb
+  5.4 Total Disk    : 465,76 Gb
+  5.5 Free Disk     : 226,78 Gb
+  5.6 System Up Time: 5 hours, 35 minutes, 35 seconds
+  5.7 Processor     : Intel(R) Core(TM)2 Duo CPU     E7500  @ 2.93GHz
+  5.8 Display Mode  : 1366 x 768, 32 bit
+  5.9 Display DPI   : 96
+  5.10 Video Card   : Intel(R) G41 Express Chipset (Microsoft Corporation - WDDM 1.1) (driver 8.15.10.1749 - RAM 1534 MB)
+  5.11 Printer      : Microsoft XPS Document Writer (driver 6.1.7601.17514)
+
+Operating System:
+-----------------------------------
+  6.1 Type    : Microsoft Windows 7
+  6.2 Build # : 7601
+  6.3 Update  : Service Pack 1
+  6.4 Language: Spanish
+  6.5 Charset : 0
+
+Network:
+---------------------------------------------------
+  7.1 IP Address: 192.168.066.185 - 192.168.056.001
+  7.2 Submask   : 255.255.255.000 - 255.255.255.000
+  7.3 Gateway   : 192.168.066.201 - 000.000.000.000
+  7.4 DNS 1     : 192.168.065.001 - 000.000.000.000
+  7.5 DNS 2     : 000.000.000.000 - 000.000.000.000
+  7.6 DHCP      : OFF             - OFF            
+
+Call Stack Information:
+----------------------------------------------------------------------------------------------------------------------
+|Address |Module                   |Unit                     |Class            |Procedure/Method            |Line    |
+----------------------------------------------------------------------------------------------------------------------
+|Running Thread: ID=5388; Priority=0; Class=; [Main]                                                                 |
+|--------------------------------------------------------------------------------------------------------------------|
+|00BA4F47|ProyectoFacturacionXE.exe|frmProveedores.pas       |TfrmProveedoresUt|FormShow                    |99[2]   |
+|006F13A0|ProyectoFacturacionXE.exe|DBCtrlsEh.pas            |TCustomDBEditEh  |WndProc                     |3157[54]|
+|75A633E7|USER32.dll               |                         |                 |GetMonitorInfoW             |        |
+|00BA639A|ProyectoFacturacionXE.exe|frmArticulos.pas         |TfrmArticulosUt  |btnProveedClick             |130[2]  |
+|75A661EA|USER32.dll               |                         |                 |GetWindowLongW              |        |
+|75A61B3C|USER32.dll               |                         |                 |CallWindowProcW             |        |
+|75A64D86|USER32.dll               |                         |                 |IsWindowVisible             |        |
+|75A64D95|USER32.dll               |                         |                 |IsWindowVisible             |        |
+|75A65D4C|USER32.dll               |                         |                 |EndPaint                    |        |
+|75A62392|USER32.dll               |                         |                 |PtInRect                    |        |
+|75A6557D|USER32.dll               |                         |                 |SendMessageW                |        |
+|75A61B52|USER32.dll               |                         |                 |CallWindowProcW             |        |
+|75A61B3C|USER32.dll               |                         |                 |CallWindowProcW             |        |
+|75A653F5|USER32.dll               |                         |                 |IsWindow                    |        |
+|75A59DC7|USER32.dll               |                         |                 |GetCapture                  |        |
+|75A6CC6B|USER32.dll               |                         |                 |DispatchMessageW            |        |
+|75A6CC61|USER32.dll               |                         |                 |DispatchMessageW            |        |
+|00BA8ACA|ProyectoFacturacionXE.exe|frmLogin.pas             |TFLogin          |btnBtnOkClick               |82[29]  |
+|75A661EA|USER32.dll               |                         |                 |GetWindowLongW              |        |
+|73AE091E|uxtheme.dll              |                         |                 |BufferedPaintRenderAnimation|        |
+|75A61B52|USER32.dll               |                         |                 |CallWindowProcW             |        |
+|75A61B3C|USER32.dll               |                         |                 |CallWindowProcW             |        |
+|75A62392|USER32.dll               |                         |                 |PtInRect                    |        |
+|75A6557D|USER32.dll               |                         |                 |SendMessageW                |        |
+|75A61B52|USER32.dll               |                         |                 |CallWindowProcW             |        |
+|75A61B3C|USER32.dll               |                         |                 |CallWindowProcW             |        |
+|75A653F5|USER32.dll               |                         |                 |IsWindow                    |        |
+|76FC5952|ntdll.dll                |                         |                 |NtFindAtom                  |        |
+|75C1C410|kernel32.dll             |                         |                 |InterlockedDecrement        |        |
+|75A59DC7|USER32.dll               |                         |                 |GetCapture                  |        |
+|75A6CC6B|USER32.dll               |                         |                 |DispatchMessageW            |        |
+|75A6CC61|USER32.dll               |                         |                 |DispatchMessageW            |        |
+|00BBCB91|ProyectoFacturacionXE.exe|ProyectoFacturacionXE.dpr|                 |                            |26[6]   |
+|75C1ED6A|kernel32.dll             |                         |                 |GetDriveTypeW               |        |
+|--------------------------------------------------------------------------------------------------------------------|
+|                                                                                                                    |
+|Running Thread: ID=4744; Priority=0; Class=TWriterThread                                                            |
+|--------------------------------------------------------------------------------------------------------------------|
+|76FC57D2|ntdll.dll                |                         |                 |NtDelayExecution            |        |
+|75C1C410|kernel32.dll             |                         |                 |InterlockedDecrement        |        |
+|75211821|KERNELBASE.dll           |                         |                 |SleepEx                     |        |
+|75211813|KERNELBASE.dll           |                         |                 |Sleep                       |        |
+|75C1C266|kernel32.dll             |                         |                 |Sleep                       |        |
+|75C1ED6A|kernel32.dll             |                         |                 |GetDriveTypeW               |        |
+|--------------------------------------------------------------------------------------------------------------------|
+|Calling Thread: ID=5388; Priority=0; Class=; [Main]                                                                 |
+|--------------------------------------------------------------------------------------------------------------------|
+|75A61B52|USER32.dll               |                         |                 |CallWindowProcW             |        |
+|76C170B6|USP10.dll                |                         |                 |ScriptGetCMap               |        |
+|76C15CE0|USP10.dll                |                         |                 |ScriptPlace                 |        |
+|752181D1|KERNELBASE.dll           |                         |                 |MultiByteToWideChar         |        |
+|752182DA|KERNELBASE.dll           |                         |                 |MultiByteToWideChar         |        |
+|75C1EF07|kernel32.dll             |                         |                 |WideCharToMultiByte         |        |
+|76FB5C70|ntdll.dll                |                         |                 |RtlFillMemoryUlong          |        |
+|76FC76E0|ntdll.dll                |                         |                 |RtlLeaveCriticalSection     |        |
+|75C1C3CE|kernel32.dll             |                         |                 |InterlockedIncrement        |        |
+|75C1C3EB|kernel32.dll             |                         |                 |InterlockedDecrement        |        |
+|75A661EA|USER32.dll               |                         |                 |GetWindowLongW              |        |
+|75A661DE|USER32.dll               |                         |                 |GetWindowLongW              |        |
+|1000F820|gds32.dll                |                         |                 |gds__thread_enter           |        |
+|76FC5862|ntdll.dll                |                         |                 |ZwDeviceIoControlFile       |        |
+|75CB6B84|WS2_32.dll               |                         |                 |recv                        |        |
+|75CB6B8B|WS2_32.dll               |                         |                 |recv                        |        |
+|75639910|msvcrt.dll               |                         |                 |memcpy                      |        |
+|76F0E55F|oleaut32.dll             |                         |                 |SafeArrayCopyData           |        |
+|76F0E0D0|oleaut32.dll             |                         |                 |SafeArrayUnlock             |        |
+|76F0E578|oleaut32.dll             |                         |                 |SafeArrayCopyData           |        |
+|76F0E496|oleaut32.dll             |                         |                 |SafeArrayCopyData           |        |
+|76F0E474|oleaut32.dll             |                         |                 |SafeArrayUnaccessData       |        |
+|76F0E3D1|oleaut32.dll             |                         |                 |SafeArrayUnaccessData       |        |
+|76EF48F1|oleaut32.dll             |                         |                 |VariantCopy                 |        |
+|76FB5C70|ntdll.dll                |                         |                 |RtlFillMemoryUlong          |        |
+|76FC76E0|ntdll.dll                |                         |                 |RtlLeaveCriticalSection     |        |
+|76FB5B80|ntdll.dll                |                         |                 |RtlCompareMemory            |        |
+|00BA4F39|ProyectoFacturacionXE.exe|frmProveedores.pas       |TfrmProveedoresUt|FormShow                    |98[1]   |
+|006F13A0|ProyectoFacturacionXE.exe|DBCtrlsEh.pas            |TCustomDBEditEh  |WndProc                     |3157[54]|
+|75A633E7|USER32.dll               |                         |                 |GetMonitorInfoW             |        |
+|00BA639A|ProyectoFacturacionXE.exe|frmArticulos.pas         |TfrmArticulosUt  |btnProveedClick             |130[2]  |
+|75A661EA|USER32.dll               |                         |                 |GetWindowLongW              |        |
+|76FC5952|ntdll.dll                |                         |                 |NtFindAtom                  |        |
+|75A61B3C|USER32.dll               |                         |                 |CallWindowProcW             |        |
+|75A64D86|USER32.dll               |                         |                 |IsWindowVisible             |        |
+|75A64D95|USER32.dll               |                         |                 |IsWindowVisible             |        |
+|75A65D4C|USER32.dll               |                         |                 |EndPaint                    |        |
+|75A62392|USER32.dll               |                         |                 |PtInRect                    |        |
+|75C1C410|kernel32.dll             |                         |                 |InterlockedDecrement        |        |
+----------------------------------------------------------------------------------------------------------------------
+
+Modules Information:
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name                     |Description                                                                              |Version           |Size    |Modified           |Path                                                                                                         |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|ProyectoFacturacionXE.exe|                                                                                         |                  |8946688 |2013-04-02 13:19:02|C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\Debug\Win32                    |
+|05FB0000|MediaLibraryNSE.dll      |Nero File Dialog                                                                         |1.7.11.0          |1286144 |2007-01-15 15:24:18|C:\Program Files\Common Files\Ahead\Lib                                                                      |
+|06A90000|MFC71U.DLL               |MFCDLL Shared Library - Retail Version                                                   |7.10.3077.0       |1047552 |2003-03-18 19:12:12|C:\Program Files\Common Files\Ahead\Lib                                                                      |
+|10000000|gds32.dll                |Firebird SQL Server                                                                      |6.3.6.5026        |356448  |2009-10-06 00:05:06|C:\Windows\system32                                                                                          |
+|28B40000|wpdshext.dll             |Extensión de shell de dispositivos portátiles                                            |6.1.7601.17514    |2311168 |2010-11-20 03:21:40|C:\Windows\system32                                                                                          |
+|2B9D0000|WMVCore.DLL              |Windows Media Playback/Authoring DLL                                                     |12.0.7601.17514   |2504192 |2010-11-20 03:20:58|C:\Windows\system32                                                                                          |
+|4DAE0000|midas.dll                |Embarcadero MIDAS Component Package                                                      |15.0.3953.35171   |444928  |2010-11-03 17:55:00|C:\Windows\system32                                                                                          |
+|502D0000|FONTSUB.dll              |Font Subsetting DLL                                                                      |6.1.7601.17105    |70656   |2010-09-30 02:48:00|C:\Windows\system32                                                                                          |
+|50AA0000|PhotoMetadataHandler.dll |Photo Metadata Handler                                                                   |6.1.7600.16385    |316928  |2009-07-13 21:16:14|C:\Windows\system32                                                                                          |
+|522C0000|StructuredQuery.dll      |Structured Query                                                                         |7.0.7601.17514    |363520  |2010-11-20 03:21:28|C:\Windows\System32                                                                                          |
+|53480000|audiodev.dll             |Extensión de shell de dispositivos de multimedia portátil                                |6.1.7601.17514    |243712  |2010-11-20 03:18:06|C:\Windows\system32                                                                                          |
+|53D70000|WMASF.DLL                |Windows Media ASF DLL                                                                    |12.0.7600.16385   |237568  |2009-07-13 21:16:20|C:\Windows\system32                                                                                          |
+|66F50000|ieframe.DLL              |Explorador de Internet                                                                   |9.0.8112.16470    |9738240 |2013-02-01 23:42:28|C:\Windows\system32                                                                                          |
+|6AB80000|mssprxy.dll              |Microsoft Search Proxy                                                                   |7.0.7600.16385    |35328   |2009-07-13 21:15:50|C:\Windows\system32                                                                                          |
+|6B210000|EhStorAPI.dll            |API de almacenamiento mejorado de Windows                                                |6.1.7601.17514    |128512  |2010-11-20 03:18:40|C:\Windows\system32                                                                                          |
+|6B3C0000|ntshrui.dll              |Extensiones de shell para uso compartido                                                 |6.1.7601.17755    |442880  |2012-01-04 04:58:42|C:\Windows\system32                                                                                          |
+|6B430000|NetworkExplorer.dll      |Explorador de red                                                                        |6.1.7601.17514    |1661440 |2010-11-20 03:20:30|C:\Windows\system32                                                                                          |
+|6B980000|SearchFolder.dll         |Carpeta de búsqueda                                                                      |6.1.7601.17514    |646144  |2010-11-20 03:21:08|C:\Windows\system32                                                                                          |
+|6BB20000|GrooveIntlResource.dll   |Módulo de Recurso Intl de Microsoft SharePoint Workspace                                 |14.0.4761.1000    |8901552 |2010-03-25 02:45:42|C:\Program Files\Microsoft Office\Office14\3082                                                              |
+|6CAF0000|DAVHLPR.dll              |DAV Helper DLL                                                                           |6.1.7600.16385    |19456   |2009-07-13 21:15:10|C:\Windows\System32                                                                                          |
+|6CB00000|davclnt.dll              |Web DAV Client DLL                                                                       |6.1.7601.17514    |80384   |2010-11-20 03:18:28|C:\Windows\System32                                                                                          |
+|6CB20000|ntlanman.dll             |Microsoft® Lan Manager                                                                   |6.1.7601.17514    |69120   |2010-11-20 03:20:48|C:\Windows\System32                                                                                          |
+|6CB40000|drprov.dll               |Proveedor de red del servidor host de sesión de Escritorio remoto de Microsoft           |6.1.7600.16385    |18944   |2009-07-13 21:15:14|C:\Windows\System32                                                                                          |
+|6CCE0000|SHFolder.dll             |Shell Folder Service                                                                     |6.1.7600.16385    |7168    |2009-07-13 21:16:16|C:\Windows\system32                                                                                          |
+|6D9F0000|PortableDeviceApi.dll    |Componentes de la API de dispositivo portátil de Windows                                 |6.1.7601.17514    |547840  |2010-11-20 03:20:56|C:\Windows\system32                                                                                          |
+|6E2A0000|MSVCP60.dll              |Windows NT C++ Runtime Library DLL                                                       |7.0.7600.16385    |406528  |2009-07-13 21:15:52|C:\Windows\system32                                                                                          |
+|6F110000|MPR.dll                  |DLL del enrutador de provisión múltiple                                                  |6.1.7600.16385    |64000   |2009-07-13 21:15:42|C:\Windows\system32                                                                                          |
+|6F5A0000|winspool.drv             |Controlador de administración de colas para Windows                                      |6.1.7601.17514    |320000  |2010-11-20 03:16:52|C:\Windows\system32                                                                                          |
+|71320000|OLEACC.dll               |Active Accessibility Core Component                                                      |7.0.0.0           |233472  |2011-08-27 00:26:28|C:\Windows\system32                                                                                          |
+|71560000|tiptsf.dll               |Entorno de servicios de texto del Panel de entrada de Tablet PC                          |6.1.7600.16385    |348160  |2009-07-13 21:16:18|C:\Program Files\Common Files\microsoft shared\ink                                                           |
+|715C0000|msls31.dll               |Microsoft Line Services library file                                                     |3.10.349.0        |161792  |2013-01-18 16:58:08|C:\Windows\system32                                                                                          |
+|71690000|actxprxy.dll             |ActiveX Interface Marshaling Library                                                     |6.1.7601.17514    |309760  |2010-11-20 03:18:02|C:\Windows\system32                                                                                          |
+|71760000|GROOVEEX.DLL             |Microsoft SharePoint Workspace Extensions                                                |14.0.4761.1000    |4222864 |2010-03-25 09:25:22|C:\Program Files\Microsoft Office\Office14                                                                   |
+|71B70000|OFFICE.ODF               |                                                                                         |14.0.4738.1000    |4254560 |2010-01-30 01:41:12|C:\Program Files\Common Files\microsoft shared\OFFICE14\Cultures                                             |
+|71F80000|libsvn_tsvn32.dll        |Subversion library dll built for TortoiseSVN                                             |1.7.8.43435       |3083656 |2012-12-12 19:30:10|C:\Program Files\TortoiseSVN\bin                                                                             |
+|72500000|explorerframe.dll        |ExplorerFrame                                                                            |6.1.7601.17514    |1493504 |2010-11-20 03:19:02|C:\Windows\system32                                                                                          |
+|72670000|rasadhlp.dll             |Remote Access AutoDial Helper                                                            |6.1.7600.16385    |11776   |2009-07-13 21:16:14|C:\Windows\system32                                                                                          |
+|72820000|winrnr.dll               |LDAP RnR Provider DLL                                                                    |6.1.7600.16385    |20992   |2009-07-13 21:16:20|C:\Windows\System32                                                                                          |
+|72840000|pnrpnsp.dll              |Proveedor de espacio de nombres PNRP                                                     |6.1.7600.16385    |65024   |2009-07-13 21:16:14|C:\Windows\system32                                                                                          |
+|72950000|napinsp.dll              |Proveedor de correcciones de compatibilidad (shim) de nomenclaturas de correo electrónico|6.1.7600.16385    |52224   |2009-07-13 21:16:04|C:\Windows\system32                                                                                          |
+|72A50000|msimg32.dll              |GDIEXT Client DLL                                                                        |6.1.7600.16385    |4608    |2009-07-13 21:15:46|C:\Windows\system32                                                                                          |
+|72A70000|LINKINFO.dll             |Windows Volume Tracking                                                                  |6.1.7600.16385    |22016   |2009-07-13 21:15:38|C:\Windows\system32                                                                                          |
+|72AC0000|MSVCP100.dll             |Microsoft® C Runtime Library                                                             |10.0.40219.325    |421200  |2011-06-11 00:58:52|C:\Windows\system32                                                                                          |
+|72D90000|thumbcache.dll           |Caché de vistas en miniatura de Microsoft                                                |6.1.7601.17514    |82944   |2010-11-20 03:21:32|C:\Windows\system32                                                                                          |
+|72E40000|SHDOCVW.dll              |Biblioteca de objetos y controles de documentos del shell                                |6.1.7601.17514    |179712  |2010-11-20 03:21:16|C:\Windows\system32                                                                                          |
+|72E70000|ATL90.DLL                |ATL Module for Windows (Unicode)                                                         |9.0.30729.4148    |159032  |2013-01-18 07:27:40|C:\Windows\WinSxS\x86_microsoft.vc90.atl_1fc8b3b9a1e18e3b_9.0.30729.4148_none_51ca66a2bbe76806               |
+|72EA0000|MSVCR100.dll             |Microsoft® C Runtime Library                                                             |10.0.40219.325    |773968  |2011-06-11 00:58:52|C:\Windows\system32                                                                                          |
+|72F80000|EhStorShell.dll          |DLL de extensión de shell de Almacenamiento mejorado de Windows                          |6.1.7600.16385    |189952  |2009-07-13 21:15:16|C:\Windows\system32                                                                                          |
+|72FC0000|libaprutil_tsvn32.dll    |Apache Portable Runtime Utility Library                                                  |1.3.12.0          |210312  |2012-12-12 19:30:08|C:\Program Files\TortoiseSVN\bin                                                                             |
+|73000000|libapr_tsvn32.dll        |Apache Portable Runtime Library                                                          |1.4.6.0           |134024  |2012-12-12 19:30:10|C:\Program Files\TortoiseSVN\bin                                                                             |
+|73030000|cscapi.dll               |Offline Files Win32 API                                                                  |6.1.7601.17514    |34816   |2010-11-20 03:18:26|C:\Windows\system32                                                                                          |
+|73150000|libsasl32.dll            |                                                                                         |2.1.24.0          |70536   |2012-12-12 19:30:10|C:\Program Files\TortoiseSVN\bin                                                                             |
+|731B0000|wkscli.dll               |Workstation Service Client DLL                                                           |6.1.7601.17514    |47104   |2010-11-20 03:21:38|C:\Windows\system32                                                                                          |
+|73260000|wsock32.dll              |Windows Socket 32-Bit DLL                                                                |6.1.7600.16385    |15360   |2009-07-13 21:16:22|C:\Windows\system32                                                                                          |
+|732D0000|MSVCP90.dll              |Microsoft® C++ Runtime Library                                                           |9.0.30729.4940    |569680  |2010-11-04 16:53:44|C:\Windows\WinSxS\x86_microsoft.vc90.crt_1fc8b3b9a1e18e3b_9.0.30729.4940_none_50916076bcb9a742               |
+|73360000|WindowsCodecs.dll        |Microsoft Windows Codecs Library                                                         |6.1.7601.17514    |1010688 |2010-11-20 03:21:38|C:\Windows\system32                                                                                          |
+|73460000|MSVCR90.dll              |Microsoft® C Runtime Library                                                             |9.0.30729.4940    |653136  |2010-11-04 16:53:46|C:\Windows\WinSxS\x86_microsoft.vc90.crt_1fc8b3b9a1e18e3b_9.0.30729.4940_none_50916076bcb9a742               |
+|735C0000|XmlLite.dll              |Microsoft XmlLite Library                                                                |1.3.1001.0        |180224  |2011-06-16 00:33:20|C:\Windows\system32                                                                                          |
+|735F0000|dwmapi.dll               |API del Administrador de ventanas de escritorio de Microsoft                             |6.1.7600.16385    |67072   |2009-07-13 21:15:14|C:\Windows\system32                                                                                          |
+|73620000|fwpuclnt.dll             |API de modo usuario de FWP/IPsec                                                         |6.1.7601.17514    |216576  |2010-11-20 03:19:04|C:\Windows\System32                                                                                          |
+|73670000|TortoiseSVN32.dll        |TortoiseSVN shell extension client                                                       |1.7.11.23600      |435080  |2012-12-12 19:30:24|C:\Program Files\TortoiseSVN\bin                                                                             |
+|736E0000|DUI70.dll                |Motor DirectUI de Windows                                                                |6.1.7600.16385    |717824  |2009-07-13 21:15:14|C:\Windows\system32                                                                                          |
+|73810000|winmm.dll                |MCI API DLL                                                                              |6.1.7601.17514    |194048  |2010-11-20 03:21:38|C:\Windows\system32                                                                                          |
+|738E0000|WINNSI.DLL               |Network Store Information RPC interface                                                  |6.1.7600.16385    |16896   |2009-07-13 21:16:20|C:\Windows\system32                                                                                          |
+|738F0000|IPHLPAPI.DLL             |API auxiliar para IP                                                                     |6.1.7601.17514    |103936  |2010-11-20 03:19:24|C:\Windows\system32                                                                                          |
+|73940000|gdiplus.dll              |Microsoft GDI+                                                                           |6.1.7601.17825    |1625088 |2012-04-21 00:21:02|C:\Windows\WinSxS\x86_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.7601.17825_none_72d273598668a06b        |
+|73AD0000|uxtheme.dll              |Biblioteca UxTheme de Microsoft                                                          |6.1.7600.16385    |249856  |2009-07-13 21:16:18|C:\Windows\system32                                                                                          |
+|73B30000|comctl32.dll             |Biblioteca de controles de la experiencia del usuario                                    |6.10.7601.17514   |1680896 |2010-11-20 02:55:10|C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_41e6975e2bd6f2b2|
+|73D20000|slc.dll                  |DLL cliente de licencias de software                                                     |6.1.7600.16385    |27136   |2009-07-13 21:16:16|C:\Windows\system32                                                                                          |
+|73D90000|NLAapi.dll               |Network Location Awareness 2                                                             |6.1.7601.17964    |52224   |2012-10-03 12:42:28|C:\Windows\system32                                                                                          |
+|73FD0000|IconCodecService.dll     |Converts a PNG part of the icon to a legacy bmp icon                                     |6.1.7600.16385    |9728    |2009-07-13 21:15:28|C:\Windows\system32                                                                                          |
+|73FE0000|intl3_tsvn32.dll         |LGPLed libintl for Windows NT/2000/XP and Windows 95/98/ME                               |0.14.6.0          |45960   |2012-12-12 19:30:08|C:\Program Files\TortoiseSVN\bin                                                                             |
+|73FF0000|TortoiseStub32.dll       |TortoiseSVN shell extension client                                                       |1.7.11.23600      |40328   |2012-12-12 19:30:24|C:\Program Files\TortoiseSVN\bin                                                                             |
+|74000000|TortoiseOverlays.dll     |TortoiseSVN overlay handler shim                                                         |1.1.3.21564       |64792   |2011-06-13 09:20:44|C:\Program Files\Common Files\TortoiseOverlays                                                               |
+|74060000|DUser.dll                |Windows DirectUser Engine                                                                |6.1.7600.16385    |181248  |2009-07-13 21:15:14|C:\Windows\system32                                                                                          |
+|74290000|ntmarta.dll              |Proveedor MARTA de Windows NT                                                            |6.1.7600.16385    |121856  |2009-07-13 21:16:12|C:\Windows\system32                                                                                          |
+|742F0000|PROPSYS.dll              |Sistema de propiedades de Microsoft                                                      |7.0.7601.17514    |988160  |2010-11-20 03:20:58|C:\Windows\system32                                                                                          |
+|745F0000|version.dll              |Version Checking and File Installation Libraries                                         |6.1.7600.16385    |21504   |2009-07-13 21:16:18|C:\Windows\system32                                                                                          |
+|74680000|wshtcpip.dll             |DLL de la aplicación auxiliar Winsock2 (TL/IPv4)                                         |6.1.7600.16385    |9216    |2009-07-13 21:16:22|C:\Windows\System32                                                                                          |
+|74910000|netutils.dll             |Net Win32 API Helpers DLL                                                                |6.1.7601.17514    |22528   |2010-11-20 03:20:30|C:\Windows\system32                                                                                          |
+|74920000|rsaenh.dll               |Microsoft Enhanced Cryptographic Provider                                                |6.1.7600.16385    |242936  |2009-07-13 21:17:56|C:\Windows\system32                                                                                          |
+|74A00000|DNSAPI.dll               |DLL de API de cliente DNS                                                                |6.1.7601.17570    |270336  |2011-03-03 01:38:02|C:\Windows\system32                                                                                          |
+|74B40000|mswsock.dll              |Proveedor de servicios de Microsoft Windows Sockets 2.0                                  |6.1.7601.17514    |232448  |2010-11-20 03:19:58|C:\Windows\system32                                                                                          |
+|74B80000|CRYPTSP.dll              |Cryptographic Service Provider API                                                       |6.1.7600.16385    |78848   |2009-07-13 21:15:08|C:\Windows\system32                                                                                          |
+|74C50000|srvcli.dll               |Server Service Client DLL                                                                |6.1.7601.17514    |90112   |2010-11-20 03:21:28|C:\Windows\system32                                                                                          |
+|74E90000|Secur32.dll              |Security Support Provider Interface                                                      |6.1.7601.17725    |22016   |2011-11-17 01:34:54|C:\Windows\system32                                                                                          |
+|74FF0000|SspiCli.dll              |Security Support Provider Interface                                                      |6.1.7601.17725    |100352  |2011-11-17 01:34:56|C:\Windows\system32                                                                                          |
+|75010000|apphelp.dll              |Biblioteca de compatibilidad de aplicaciones cliente                                     |6.1.7601.17514    |295936  |2010-11-20 03:18:04|C:\Windows\system32                                                                                          |
+|75060000|CRYPTBASE.dll            |Base cryptographic API DLL                                                               |6.1.7600.16385    |36864   |2009-07-13 21:15:08|C:\Windows\system32                                                                                          |
+|750D0000|WINSTA.dll               |Winstation Library                                                                       |6.1.7601.17514    |156672  |2010-11-20 03:21:38|C:\Windows\System32                                                                                          |
+|75100000|RpcRtRemote.dll          |Remote RPC Extension                                                                     |6.1.7601.17514    |46080   |2010-11-20 03:21:04|C:\Windows\system32                                                                                          |
+|75110000|profapi.dll              |User Profile Basic API                                                                   |6.1.7600.16385    |31744   |2009-07-13 21:16:14|C:\Windows\system32                                                                                          |
+|75180000|MSASN1.dll               |ASN.1 Runtime APIs                                                                       |6.1.7601.17514    |34304   |2010-11-20 03:19:46|C:\Windows\system32                                                                                          |
+|75190000|CFGMGR32.dll             |Configuration Manager DLL                                                                |6.1.7601.17514    |145920  |2010-11-20 08:18:14|C:\Windows\system32                                                                                          |
+|751C0000|DEVOBJ.dll               |Device Information Set DLL                                                               |6.1.7600.16385    |64512   |2009-07-13 21:15:12|C:\Windows\system32                                                                                          |
+|751E0000|WINTRUST.dll             |Microsoft Trust Verification APIs                                                        |6.1.7601.17940    |172544  |2012-08-24 12:57:50|C:\Windows\system32                                                                                          |
+|75210000|KERNELBASE.dll           |Archivo DLL de cliente API BASE de Windows NT                                            |6.1.7601.17965    |293376  |2012-10-04 12:43:06|C:\Windows\system32                                                                                          |
+|75260000|CRYPT32.dll              |Crypto API32                                                                             |6.1.7601.17856    |1159680 |2012-06-02 00:36:30|C:\Windows\system32                                                                                          |
+|75410000|SHLWAPI.dll              |Biblioteca de utilidades de Shell                                                        |6.1.7601.17514    |350208  |2010-11-20 03:21:20|C:\Windows\system32                                                                                          |
+|75470000|CLBCatQ.DLL              |COM+ Configuration Catalog                                                               |2001.12.8530.16385|522240  |2009-07-13 21:15:04|C:\Windows\system32                                                                                          |
+|75500000|MSCTF.dll                |Archivo DLL del servidor MSCTF                                                           |6.1.7600.16385    |828928  |2009-07-13 21:15:44|C:\Windows\system32                                                                                          |
+|755D0000|PSAPI.DLL                |Process Status Helper                                                                    |6.1.7600.16385    |6144    |2009-07-13 21:16:14|C:\Windows\system32                                                                                          |
+|755E0000|WLDAP32.dll              |DLL de API de LDAP Win32                                                                 |6.1.7601.17514    |269824  |2010-11-20 03:21:38|C:\Windows\system32                                                                                          |
+|75630000|msvcrt.dll               |Windows NT CRT DLL                                                                       |7.0.7601.17744    |690688  |2011-12-16 03:53:00|C:\Windows\system32                                                                                          |
+|756E0000|NSI.dll                  |NSI User-mode interface DLL                                                              |6.1.7600.16385    |8704    |2009-07-13 21:16:12|C:\Windows\system32                                                                                          |
+|756F0000|GDI32.dll                |GDI Client DLL                                                                           |6.1.7601.17514    |304640  |2010-11-20 03:19:06|C:\Windows\system32                                                                                          |
+|75740000|SETUPAPI.dll             |API de instalación de Windows                                                            |6.1.7601.17514    |1667584 |2010-11-20 03:21:16|C:\Windows\system32                                                                                          |
+|758E0000|ole32.dll                |Microsoft OLE para Windows                                                               |6.1.7601.17514    |1414144 |2010-11-20 03:20:50|C:\Windows\system32                                                                                          |
+|75A40000|LPK.dll                  |Language Pack                                                                            |6.1.7600.16385    |26624   |2009-07-13 21:15:38|C:\Windows\system32                                                                                          |
+|75A50000|USER32.dll               |Archivo DLL de cliente API USER de Windows multiusuario                                  |6.1.7601.17514    |811520  |2010-11-20 03:21:34|C:\Windows\system32                                                                                          |
+|75B20000|advapi32.dll             |API base de Windows 32 avanzado                                                          |6.1.7601.17514    |640512  |2010-11-20 03:18:04|C:\Windows\system32                                                                                          |
+|75BC0000|Normaliz.dll             |Unicode Normalization DLL                                                                |6.1.7600.16385    |2048    |2009-07-13 21:09:02|C:\Windows\system32                                                                                          |
+|75BD0000|kernel32.dll             |Archivo DLL de cliente API BASE de Windows NT                                            |6.1.7601.17965    |868352  |2012-10-04 12:43:06|C:\Windows\system32                                                                                          |
+|75CB0000|WS2_32.dll               |DLL de 32 bits de Windows Socket 2.0                                                     |6.1.7601.17514    |206848  |2010-11-20 03:21:40|C:\Windows\system32                                                                                          |
+|75CF0000|urlmon.dll               |Extensiones OLE32 para Win32                                                             |9.0.8112.16470    |1103872 |2013-02-01 23:31:04|C:\Windows\system32                                                                                          |
+|75E10000|WININET.dll              |Extensiones de Internet para Win32                                                       |9.0.8112.16470    |1129472 |2013-02-01 23:30:22|C:\Windows\system32                                                                                          |
+|75F60000|SHELL32.dll              |Archivo DLL común del shell de Windows                                                   |6.1.7601.17859    |12873728|2012-06-09 00:41:02|C:\Windows\system32                                                                                          |
+|76C10000|USP10.dll                |Uniscribe Unicode script processor                                                       |1.626.7601.17514  |626176  |2010-11-20 03:21:34|C:\Windows\system32                                                                                          |
+|76CB0000|comdlg32.dll             |Archivo DLL de diálogos comunes                                                          |6.1.7601.17514    |485888  |2010-11-20 03:18:24|C:\Windows\system32                                                                                          |
+|76D30000|iertutil.dll             |Run time utility for Internet Explorer                                                   |9.0.8112.16470    |1796096 |2013-02-01 23:23:52|C:\Windows\system32                                                                                          |
+|76EF0000|oleaut32.dll             |                                                                                         |6.1.7601.17676    |571904  |2011-08-27 00:26:28|C:\Windows\system32                                                                                          |
+|76F80000|ntdll.dll                |DLL del nivel de Windows NT                                                              |6.1.7601.17725    |1288472 |2011-11-17 01:38:40|C:\Windows\SYSTEM32                                                                                          |
+|770C0000|imm32.dll                |Multi-User Windows IMM32 API Client DLL                                                  |6.1.7601.17514    |118272  |2010-11-20 03:19:24|C:\Windows\system32                                                                                          |
+|770E0000|RPCRT4.dll               |Tiempo de ejecución de llamada a procedimiento remoto                                    |6.1.7601.17514    |653312  |2010-11-20 03:21:04|C:\Windows\system32                                                                                          |
+|77190000|sechost.dll              |Host for SCM/SDDL/LSA Lookup APIs                                                        |6.1.7600.16385    |92160   |2009-07-13 21:16:14|C:\Windows\SYSTEM32                                                                                          |
+|7C340000|MSVCR71.dll              |Microsoft® C Runtime Library                                                             |7.10.3052.4       |348160  |2003-02-21 13:42:22|C:\Program Files\Common Files\Ahead\Lib                                                                      |
+|7C3A0000|MSVCP71.dll              |Microsoft® C++ Runtime Library                                                           |7.10.3077.0       |499712  |2003-03-19 05:14:52|C:\Program Files\Common Files\Ahead\Lib                                                                      |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Processes Information:
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|ID  |Name                     |Description                                                |Version        |Memory|Priority    |Threads|Path                                                                                     |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|0   |[System Process]         |                                                           |               |0     |            |2      |                                                                                         |
+|4   |System                   |                                                           |               |0     |Normal      |99     |                                                                                         |
+|240 |chrome.exe               |Google Chrome                                              |25.0.1364.172  |0     |Below-Normal|12     |C:\Users\claudio.brignardello\AppData\Local\Google\Chrome\Application                    |
+|268 |smss.exe                 |Administrador de sesión de Windows                         |6.1.7600.16385 |0     |Above-Normal|2      |                                                                                         |
+|304 |conhost.exe              |Host de ventana de consola                                 |6.1.7601.17965 |0     |Normal      |2      |                                                                                         |
+|312 |TeamViewer_Service.exe   |                                                           |               |0     |Normal      |12     |                                                                                         |
+|372 |csrss.exe                |Proceso en tiempo de ejecución del cliente-servidor        |6.1.7600.16385 |0     |High        |9      |                                                                                         |
+|424 |wininit.exe              |Aplicación de inicio de Windows                            |6.1.7600.16385 |0     |High        |3      |                                                                                         |
+|432 |csrss.exe                |Proceso en tiempo de ejecución del cliente-servidor        |6.1.7600.16385 |0     |High        |12     |                                                                                         |
+|488 |winlogon.exe             |Aplicación de inicio de sesión de Windows                  |6.1.7601.17514 |0     |High        |3      |                                                                                         |
+|520 |services.exe             |Aplicación de servicios y controlador                      |6.1.7600.16385 |0     |Normal      |9      |                                                                                         |
+|536 |lsass.exe                |Local Security Authority Process                           |6.1.7601.17725 |0     |Normal      |9      |                                                                                         |
+|548 |lsm.exe                  |Servicio de administrador de sesión local                  |6.1.7601.17514 |0     |Normal      |11     |                                                                                         |
+|652 |svchost.exe              |Proceso host para los servicios de Windows                 |6.1.7600.16385 |0     |Normal      |11     |                                                                                         |
+|680 |NMIndexingService.exe    |Nero Home                                                  |1.7.11.0       |0     |Normal      |6      |                                                                                         |
+|732 |svchost.exe              |Proceso host para los servicios de Windows                 |6.1.7600.16385 |0     |Normal      |10     |                                                                                         |
+|808 |svchost.exe              |Proceso host para los servicios de Windows                 |6.1.7600.16385 |0     |Normal      |21     |                                                                                         |
+|840 |svchost.exe              |Proceso host para los servicios de Windows                 |6.1.7600.16385 |0     |Normal      |22     |                                                                                         |
+|868 |svchost.exe              |Proceso host para los servicios de Windows                 |6.1.7600.16385 |0     |Normal      |39     |                                                                                         |
+|1024|svchost.exe              |Proceso host para los servicios de Windows                 |6.1.7600.16385 |0     |Normal      |8      |                                                                                         |
+|1076|svchost.exe              |Proceso host para los servicios de Windows                 |6.1.7600.16385 |0     |Normal      |13     |                                                                                         |
+|1188|svchost.exe              |Proceso host para los servicios de Windows                 |6.1.7600.16385 |0     |Normal      |23     |                                                                                         |
+|1264|AvastSvc.exe             |                                                           |               |0     |Normal      |52     |                                                                                         |
+|1280|SearchFilterHost.exe     |Microsoft Windows Search Filter Host                       |7.0.7601.17610 |0     |Low         |5      |                                                                                         |
+|1600|spoolsv.exe              |Aplicación de subsistema de cola                           |6.1.7601.17777 |0     |Normal      |14     |                                                                                         |
+|1636|svchost.exe              |Proceso host para los servicios de Windows                 |6.1.7600.16385 |0     |Normal      |19     |                                                                                         |
+|1752|armsvc.exe               |                                                           |               |0     |Normal      |4      |                                                                                         |
+|1816|cbVSCService.exe         |                                                           |               |0     |Normal      |8      |                                                                                         |
+|1900|cbService.exe            |                                                           |               |0     |Normal      |12     |                                                                                         |
+|1920|chrome.exe               |Google Chrome                                              |25.0.1364.172  |0     |Below-Normal|9      |C:\Users\claudio.brignardello\AppData\Local\Google\Chrome\Application                    |
+|1964|fbguard.exe              |                                                           |               |0     |Normal      |6      |                                                                                         |
+|1972|VSSVC.exe                |Servicio de instantáneas de volumen de Microsoft®          |6.1.7601.17514 |0     |Normal      |5      |                                                                                         |
+|1996|srvany.exe               |                                                           |               |0     |Normal      |2      |                                                                                         |
+|2012|chrome.exe               |Google Chrome                                              |25.0.1364.172  |0     |Normal      |9      |C:\Users\claudio.brignardello\AppData\Local\Google\Chrome\Application                    |
+|2024|KMService.exe            |                                                           |               |0     |Normal      |3      |                                                                                         |
+|2044|svchost.exe              |Proceso host para los servicios de Windows                 |6.1.7600.16385 |0     |Normal      |6      |                                                                                         |
+|2076|fbserver.exe             |                                                           |               |0     |Normal      |18     |                                                                                         |
+|2172|svchost.exe              |Proceso host para los servicios de Windows                 |6.1.7600.16385 |0     |Normal      |9      |                                                                                         |
+|2504|ibexpert.exe             |IBExpert IDE                                               |2012.5.19.1    |0     |Normal      |5      |C:\Program Files\HK-Software\IBExpert                                                    |
+|2640|svchost.exe              |Proceso host para los servicios de Windows                 |6.1.7600.16385 |0     |Normal      |5      |                                                                                         |
+|2780|TeamViewer.exe           |TeamViewer 8                                               |8.0.17396.0    |0     |Normal      |13     |C:\Program Files\TeamViewer\Version8                                                     |
+|2788|taskhost.exe             |Proceso de host para tareas de Windows                     |6.1.7601.18010 |0     |Normal      |11     |C:\Windows\system32                                                                      |
+|2912|OSPPSVC.EXE              |                                                           |               |0     |Normal      |3      |                                                                                         |
+|2956|tv_w32.exe               |                                                           |               |0     |Normal      |2      |                                                                                         |
+|2988|chrome.exe               |Google Chrome                                              |25.0.1364.172  |0     |Normal      |40     |C:\Users\claudio.brignardello\AppData\Local\Google\Chrome\Application                    |
+|3024|bds.exe                  |Embarcadero RAD Studio for Windows                         |15.0.3953.35171|0     |Normal      |21     |C:\Program Files\Embarcadero\RAD Studio\8.0\bin                                          |
+|3204|Dwm.exe                  |Administrador de ventanas del escritorio                   |6.1.7600.16385 |0     |High        |5      |C:\Windows\system32                                                                      |
+|3224|chrome.exe               |Google Chrome                                              |25.0.1364.172  |0     |Normal      |7      |C:\Users\claudio.brignardello\AppData\Local\Google\Chrome\Application                    |
+|3228|Explorer.EXE             |Explorador de Windows                                      |6.1.7601.17567 |0     |Normal      |25     |C:\Windows                                                                               |
+|3328|chrome.exe               |Google Chrome                                              |25.0.1364.172  |0     |Below-Normal|9      |C:\Users\claudio.brignardello\AppData\Local\Google\Chrome\Application                    |
+|3348|AvastUI.exe              |avast! Antivirus                                           |5.0.462.0      |0     |Normal      |8      |C:\Program Files\Alwil Software\Avast5                                                   |
+|3356|jusched.exe              |Java(TM) Update Scheduler                                  |2.1.9.0        |0     |Normal      |3      |C:\Program Files\Common Files\Java\Java Update                                           |
+|3472|TSVNCache.exe            |TortoiseSVN status cache                                   |1.7.11.23600   |0     |Normal      |26     |C:\Program Files\TortoiseSVN\bin                                                         |
+|3480|cbInterface.exe          |Cobian Backup 10 Boletus                                   |10.0.0.385     |0     |Normal      |13     |C:\Program Files\Cobian Backup 10                                                        |
+|3488|hpwuschd2.exe            |hpwuSchd Application                                       |80.1.1.0       |0     |Normal      |1      |C:\Program Files\HP\HP Software Update                                                   |
+|3496|StikyNot.exe             |Notas rápidas                                              |6.1.7600.16385 |0     |Normal      |8      |C:\Windows\System32                                                                      |
+|3652|googletalk.exe           |Google Talk                                                |1.0.0.105      |0     |Normal      |17     |C:\Program Files\Google\Google Talk                                                      |
+|3672|SeaPort.EXE              |                                                           |               |0     |Normal      |7      |                                                                                         |
+|3684|NMBgMonitor.exe          |Nero Home                                                  |1.7.11.0       |0     |Normal      |5      |C:\Program Files\Common Files\Ahead\Lib                                                  |
+|3708|sidebar.exe              |Gadgets de escritorio de Windows                           |6.1.7601.17514 |0     |Normal      |20     |C:\Program Files\Windows Sidebar                                                         |
+|3856|NMIndexStoreSvr.exe      |Nero Home                                                  |1.7.11.0       |0     |Normal      |10     |C:\Program Files\Common Files\Ahead\Lib                                                  |
+|3864|SearchIndexer.exe        |Indizador de Microsoft Windows Search                      |7.0.7601.17610 |0     |Normal      |12     |                                                                                         |
+|3872|OUTLOOK.EXE              |Microsoft Outlook                                          |14.0.4760.1000 |0     |Normal      |22     |C:\Program Files\Microsoft Office\Office14                                               |
+|4060|svchost.exe              |Proceso host para los servicios de Windows                 |6.1.7600.16385 |0     |Normal      |10     |                                                                                         |
+|4308|chrome.exe               |Google Chrome                                              |25.0.1364.172  |0     |Normal      |34     |C:\Users\claudio.brignardello\AppData\Local\Google\Chrome\Application                    |
+|4356|bds.exe                  |Embarcadero RAD Studio for Windows                         |15.0.3953.35171|0     |Normal      |28     |C:\Program Files\Embarcadero\RAD Studio\8.0\bin                                          |
+|4516|SearchProtocolHost.exe   |Microsoft Windows Search Protocol Host                     |7.0.7601.17610 |0     |Low         |8      |                                                                                         |
+|4632|jucheck.exe              |                                                           |               |0     |Normal      |9      |                                                                                         |
+|4840|chrome.exe               |Google Chrome                                              |25.0.1364.172  |0     |Below-Normal|9      |C:\Users\claudio.brignardello\AppData\Local\Google\Chrome\Application                    |
+|4956|chrome.exe               |Google Chrome                                              |25.0.1364.172  |0     |Normal      |9      |C:\Users\claudio.brignardello\AppData\Local\Google\Chrome\Application                    |
+|5208|chrome.exe               |Google Chrome                                              |25.0.1364.172  |0     |Below-Normal|9      |C:\Users\claudio.brignardello\AppData\Local\Google\Chrome\Application                    |
+|5280|infomon.exe              |                                                           |               |0     |Normal      |6      |C:\Sebaot                                                                                |
+|5344|TrustedInstaller.exe     |                                                           |               |0     |Normal      |4      |                                                                                         |
+|5392|chrome.exe               |Google Chrome                                              |25.0.1364.172  |0     |Normal      |9      |C:\Users\claudio.brignardello\AppData\Local\Google\Chrome\Application                    |
+|5480|audiodg.exe              |Aislamiento de gráficos de dispositivo de audio de Windows |6.1.7601.17514 |0     |Normal      |7      |                                                                                         |
+|5972|WmiPrvSE.exe             |WMI Provider Host                                          |6.1.7601.17514 |0     |Normal      |8      |                                                                                         |
+|5980|ProyectoFacturacionXE.exe|                                                           |               |0     |Normal      |20     |C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\Debug\Win32|
+|6052|svchost.exe              |Proceso host para los servicios de Windows                 |6.1.7600.16385 |0     |Normal      |4      |                                                                                         |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Assembler Information:
+---------------------------------------------------------
+; IB.IBDataBaseError (Line=0 - Offset=0)
+; --------------------------------------
+005F93E5  cmp     esi, $FFFFFDD9          ; ''...
+005F93EB  jz      IB.IBDataBaseError
+005F93ED  mov     eax, [ebp-$08]
+005F93F0  push    eax
+005F93F1  mov     eax, [ebp-$04]
+005F93F4  push    eax
+005F93F5  mov     ecx, esi
+005F93F7  mov     dl, $01
+005F93F9  mov     eax, dword ptr [IB.IB]
+005F93FE  call    IB.EIBError.Create
+005F9403  call    System._RaiseExcept     ; <-- EXCEPTION
+005F9408  jmp     IB.IBDataBaseError
+005F940A  mov     eax, [ebp-$08]
+005F940D  push    eax
+005F940E  mov     eax, [ebp-$04]
+005F9411  push    eax
+005F9412  mov     ecx, esi
+005F9414  mov     dl, $01
+005F9416  mov     eax, dword ptr [IB.IB]
+005F941B  call    IB.EIBError.Create
+005F9420  call    System._RaiseExcept
+
+Registers:
+-----------------------------
+EAX: 01E29F18   EDI: 01D00750
+EBX: 005F1FC4   ESI: FFFFFCDE
+ECX: 005F8E00   ESP: 00129554
+EDX: 005F9408   EIP: 005F9403
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+00129554: 0012E5AC   005F9403: E8 0C DA E0 FF EB 1B 8B 45 F8 50 8B 45 FC 50 8B  ........E.P.E.P.
+00129558: 00406CF0   005F9413: CE B2 01 A1 C4 8E 5F 00 E8 24 02 00 00 E8 EF D9  ......_..$......
+0012955C: 0012E5A4   005F9423: E0 FF 33 C0 5A 59 59 64 89 10 68 A4 94 5F 00 8D  ..3.ZYYd..h.._..
+00129560: 01D00750   005F9433: 85 C8 AF FF FF E8 9F 20 E1 FF 8D 85 CC AF FF FF  ....... ........
+00129564: 00000000   005F9443: BA 03 00 00 00 E8 3F E3 E0 FF 8D 85 D8 AF FF FF  ......?.........
+00129568: 14000001   005F9453: E8 84 20 E1 FF 8D 85 DC AF FF FF E8 79 20 E1 FF  .. .........y ..
+0012956C: 00000000   005F9463: 8D 85 E0 AF FF FF BA 02 00 00 00 E8 19 E3 E0 FF  ................
+00129570: 00000000   005F9473: 8D 85 E8 AF FF FF E8 5E 20 E1 FF 8D 85 EC AF FF  .......^ .......
+00129574: 00000000   005F9483: FF E8 A3 E2 E0 FF 8D 85 F0 AF FF FF E8 48 20 E1  .............H .
+00129578: 00000000   005F9493: FF 8D 45 FC E8 90 E2 E0 FF C3 E9 CE D7 E0 FF EB  ..E.............
+0012957C: 00000000   005F94A3: 8E 5F 5E 5B 8B E5 5D C3 00 B0 04 02 00 FF FF FF  ._^[..].........
+00129580: 00000000   005F94B3: FF 09 00 00 00 53 00 51 00 4C 00 43 00 4F 00 44  .....S.Q.L.C.O.D
+00129584: 00000000   005F94C3: 00 45 00 3A 00 20 00 00 00 B0 04 02 00 FF FF FF  .E.:. ..........
+00129588: 00000000   005F94D3: FF 02 00 00 00 0D 00 0A 00 00 00 00 00 B0 04 02  ................
+0012958C: 00000000   005F94E3: 00 FF FF FF FF 01 00 00 00 20 00 00 00 E8 37 2D  ......... ....7-
+00129590: 00000000   005F94F3: E1 FF 05 BC 01 00 00 C3 90 E8 2B 2D E1 FF 05 BC  ..........+-....
 
 
 

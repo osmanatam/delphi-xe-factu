@@ -8,7 +8,7 @@ uses
   Mask, ExtCtrls, Grids, DBGrids, JvDBImage, ExtDlgs,
   jpeg, JvGIF, JvPCX, JvAni, JvExDBGrids, JvDBGrid, JvJVCLUtils,
   Buttons, DBClient, JvExExtCtrls, JvImage, DBGridEhGrouping, Provider, GridsEh,
-  DBGridEh, DBCtrlsEh, DBLookupEh, IBStoredProc;
+  DBGridEh, DBCtrlsEh, DBLookupEh, IBStoredProc,pngimage, GIFImg;
 
 type
   TfrmArticulosUt = class(TForm)
@@ -49,10 +49,20 @@ type
     qryGrillaArticulos: TIBQuery;
     dsGrillaArt: TDataSource;
     qryAux: TIBQuery;
-    image: TJvDBImage;
     SQLQRY: TIBQuery;
     DBGridEh1: TDBGridEh;
     qryArticulo: TIBQuery;
+    dspvArticulo: TDataSetProvider;
+    cdsArticulo: TClientDataSet;
+    cbxUM: TDBLookupComboboxEh;
+    cbxIVA: TDBLookupComboboxEh;
+    cbxRAMO: TDBLookupComboboxEh;
+    cbxPROVEEDOR: TDBLookupComboboxEh;
+    OpenPictureDialog: TOpenPictureDialog;
+    lbl11: TLabel;
+    dbedtPRECIOVTA: TDBEdit;
+    btnProveed: TButton;
+    Image1: TImage;
     qryArticuloCODARTICULO: TLargeintField;
     tbArticuloAVISAR_EXIST_MIN: TIBStringField;
     cdsArticuloCODPROVEEDOR: TIntegerField;
@@ -62,20 +72,13 @@ type
     tbArticuloDESCRIPCION: TIBStringField;
     cdsArticuloEXISTENCIA: TIntegerField;
     cdsArticuloEXISTENCIA_MIN: TIntegerField;
-    tbArticuloEXT_IMG: TIBStringField;
-    qryArticuloIMAGEN: TWideMemoField;
+    tbArticuloIMG_EXT: TIBStringField;
+    qryArticuloIMAGEN: TBlobField;
     tbArticuloNOM_IMG: TIBStringField;
     tbArticuloOBSERVACION: TIBStringField;
     tbArticuloPRECIO_MODIFICABLE: TIBStringField;
     qryArticuloPRECIOCOMPRA: TLargeintField;
-    dspvArticulo: TDataSetProvider;
-    cdsArticulo: TClientDataSet;
-    cbxUM: TDBLookupComboboxEh;
-    cbxIVA: TDBLookupComboboxEh;
-    cbxRAMO: TDBLookupComboboxEh;
-    cbxPROVEEDOR: TDBLookupComboboxEh;
-    sp: TIBStoredProc;
-    OpenPictureDialog1: TOpenPictureDialog;
+    qryArticuloPRECIOVTA: TLargeintField;
     cdsArticuloCODARTICULO: TLargeintField;
     cdsArticuloAVISAR_EXIST_MIN: TWideStringField;
     cdsArticuloCODPROVEEDOR2: TIntegerField;
@@ -85,25 +88,25 @@ type
     cdsArticuloDESCRIPCION: TWideStringField;
     cdsArticuloEXISTENCIA2: TIntegerField;
     cdsArticuloEXISTENCIA_MIN2: TIntegerField;
-    cdsArticuloEXT_IMG: TWideStringField;
-    cdsArticuloIMAGEN: TMemoField;
+    cdsArticuloIMG_EXT: TWideStringField;
+    cdsArticuloIMAGEN: TBlobField;
     cdsArticuloNOM_IMG: TWideStringField;
     cdsArticuloOBSERVACION: TWideStringField;
     cdsArticuloPRECIO_MODIFICABLE: TWideStringField;
     cdsArticuloPRECIOCOMPRA: TLargeintField;
-    sp1: TIBStoredProc;
-    lbl11: TLabel;
-    dbedtPRECIOVTA: TDBEdit;
-    qryArticuloPRECIOVTA: TLargeintField;
     cdsArticuloPRECIOVTA: TLargeintField;
-    btnProveed: TButton;
+    shp1: TShape;
+    lbl12: TLabel;
+    btn1: TButton;
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure dbnvgr1Click(Sender: TObject; Button: TNavigateBtn);
-    procedure imageClick(Sender: TObject);
 
     procedure DBGridEh1DblClick(Sender: TObject);
     procedure btnProveedClick(Sender: TObject);
+    procedure Image1Click(Sender: TObject);
+    procedure dsArticuloDataChange(Sender: TObject; Field: TField);
+    procedure btn1Click(Sender: TObject);
     {procedure btn2Click(Sender: TObject);}
 
 
@@ -121,6 +124,14 @@ implementation
  uses DataModule, Utilidades,frmProveedores;
 {$R *.dfm}
 
+
+procedure TfrmArticulosUt.btn1Click(Sender: TObject);
+begin
+       cdsArticulo.Close;
+       qryArticulo.SQL.Clear;
+       qryArticulo.SQL.Add('SELECT * FROM articulo');
+       cdsArticulo.Open;
+end;
 
 procedure TfrmArticulosUt.btnProveedClick(Sender: TObject);
  { var
@@ -255,6 +266,28 @@ begin
 
 end;
 
+procedure TfrmArticulosUt.dsArticuloDataChange(Sender: TObject; Field: TField);
+var
+  m, f: TStream;
+begin
+  if cdsArticuloIMAGEN.IsNull then
+    Image1.Picture:= nil
+  else
+  begin
+    if cdsArticuloIMG_EXT.AsString = 'BMP' then
+      Image1.Picture.Graphic:= TBitmap.Create
+    else if cdsArticuloIMG_EXT.AsString = 'JPG' then
+      Image1.Picture.Graphic:= TJpegImage.Create
+    else if cdsArticuloIMG_EXT.AsString='GIF' then
+      Image1.Picture.Graphic:= TGIFImage.Create
+    else
+      Exit;
+    m:= cdsArticulo.CreateBlobStream(cdsArticuloIMAGEN, bmRead);
+    Image1.Picture.Graphic.LoadFromStream(m);
+    m.Free;
+  end;
+end;
+
 procedure TfrmArticulosUt.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   cdsArticulo.Close;
@@ -292,25 +325,22 @@ begin
 
 end;
 
-procedure TfrmArticulosUt.imageClick(Sender: TObject);
+procedure TfrmArticulosUt.Image1Click(Sender: TObject);
 var
- i:integer;
- S: TMemoryStream;
+  m, f: TStream;
+  mst: TMemoryStream;
+  s: string;
 begin
-  if OpenPictureDialog1.Execute then
+  if OpenPictureDialog.Execute then
   begin
-    Image.Picture.LoadFromFile(OpenPictureDialog1.FileName);
-    S := TMemoryStream.Create;
-    try
-      Image.Picture.Graphic.SaveToStream(S);
-      sp.Params[1].LoadFromStream(S, ftBlob);
-      sp.Params[0].AsInteger := StrToInt(dbedtCodArt.Text);
-      sp.ExecProc;
-    finally
-      S.Free;
-    end;
+    cdsArticulo.Edit; //tendria que dar error sin esto
+    cdsArticuloIMAGEN.LoadFromFile(OpenPictureDialog.filename);
+    s:= AnsiUpperCase(ExtractFileExt(OpenPictureDialog.FileName)); //Siempre en mayusculas
+    if s='.JPEG' then s:= '.JPG'; //un caso especial
+    cdsArticuloIMG_EXT.AsString:= Copy(s,2,3); //elimino el punto
+    //cds1.Post;
   end;
-end;
+ end;
 
 end.
 

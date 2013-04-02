@@ -4,7 +4,7 @@ object frmArticulosUt: TfrmArticulosUt
   BorderIcons = [biSystemMenu, biMaximize]
   BorderStyle = bsSingle
   Caption = 'Articulos'
-  ClientHeight = 325
+  ClientHeight = 348
   ClientWidth = 780
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -22,11 +22,12 @@ object frmArticulosUt: TfrmArticulosUt
     Left = 2
     Top = 1
     Width = 777
-    Height = 321
+    Height = 344
     ActivePage = tsDatos
     TabOrder = 0
     object tsDatos: TTabSheet
       Caption = 'Datos Articulos'
+      ExplicitHeight = 310
       object pnl1: TPanel
         Left = 3
         Top = 3
@@ -45,7 +46,7 @@ object frmArticulosUt: TfrmArticulosUt
       end
       object dbnvgr1: TDBNavigator
         Left = 3
-        Top = 251
+        Top = 272
         Width = 760
         Height = 42
         DataSource = dsArticulo
@@ -57,10 +58,16 @@ object frmArticulosUt: TfrmArticulosUt
       object grp1: TGroupBox
         Left = 3
         Top = 50
-        Width = 398
-        Height = 198
+        Width = 404
+        Height = 216
         Caption = 'Datos Rapidos'
         TabOrder = 2
+        object shp1: TShape
+          Left = 275
+          Top = 78
+          Width = 122
+          Height = 115
+        end
         object lbl6: TLabel
           Left = 14
           Top = 31
@@ -96,6 +103,21 @@ object frmArticulosUt: TfrmArticulosUt
           Height = 13
           Caption = 'Familia/Ramo:'
         end
+        object lbl12: TLabel
+          Left = 294
+          Top = 126
+          Width = 91
+          Height = 13
+          Caption = 'Click p/ cargar foto'
+        end
+        object Image1: TImage
+          Left = 277
+          Top = 81
+          Width = 117
+          Height = 110
+          Stretch = True
+          OnClick = Image1Click
+        end
         object dbedtCodArt: TDBEdit
           Left = 175
           Top = 21
@@ -122,15 +144,6 @@ object frmArticulosUt: TfrmArticulosUt
           DataSource = dsArticulo
           TabOrder = 1
         end
-        object image: TJvDBImage
-          Left = 281
-          Top = 82
-          Width = 111
-          Height = 106
-          Stretch = True
-          TabOrder = 2
-          OnClick = imageClick
-        end
         object cbxUM: TDBLookupComboboxEh
           Left = 117
           Top = 91
@@ -142,7 +155,7 @@ object frmArticulosUt: TfrmArticulosUt
           KeyField = 'CODUNIDADMEDIDA'
           ListField = 'DESCRIPCION'
           ListSource = dsUM
-          TabOrder = 3
+          TabOrder = 2
           Visible = True
         end
         object cbxIVA: TDBLookupComboboxEh
@@ -156,7 +169,7 @@ object frmArticulosUt: TfrmArticulosUt
           KeyField = 'CODTIPOIVA'
           ListField = 'DESCIVA'
           ListSource = dsIVA
-          TabOrder = 4
+          TabOrder = 3
           Visible = True
         end
         object cbxRAMO: TDBLookupComboboxEh
@@ -170,15 +183,24 @@ object frmArticulosUt: TfrmArticulosUt
           KeyField = 'CODRAMO'
           ListField = 'DESCRIPCIONRAMO'
           ListSource = dsRAMO
-          TabOrder = 5
+          TabOrder = 4
           Visible = True
+        end
+        object btn1: TButton
+          Left = 326
+          Top = 21
+          Width = 66
+          Height = 26
+          Caption = 'Recargar...'
+          TabOrder = 5
+          OnClick = btn1Click
         end
       end
       object grp2: TGroupBox
         Left = 413
         Top = 50
         Width = 350
-        Height = 198
+        Height = 216
         Caption = 'Valores'
         TabOrder = 3
         object lbl1: TLabel
@@ -277,8 +299,8 @@ object frmArticulosUt: TfrmArticulosUt
         object dbmmoOBSERVACION: TDBMemo
           Left = 80
           Top = 152
-          Width = 251
-          Height = 37
+          Width = 255
+          Height = 56
           DataField = 'OBSERVACION'
           DataSource = dsArticulo
           TabOrder = 5
@@ -320,6 +342,7 @@ object frmArticulosUt: TfrmArticulosUt
     object tsConsulta: TTabSheet
       Caption = 'Consulta Articulos'
       ImageIndex = 1
+      ExplicitHeight = 293
       object DBGridEh1: TDBGridEh
         Left = 3
         Top = 3
@@ -387,6 +410,7 @@ object frmArticulosUt: TfrmArticulosUt
   end
   object dsArticulo: TDataSource
     DataSet = cdsArticulo
+    OnDataChange = dsArticuloDataChange
     Left = 168
     Top = 48
   end
@@ -497,7 +521,7 @@ object frmArticulosUt: TfrmArticulosUt
       'DESCRIPCION, '
       'EXISTENCIA, '
       'EXISTENCIA_MIN, '
-      'EXT_IMG, '
+      'IMG_EXT, '
       'IMAGEN, '
       'NOM_IMG, '
       'OBSERVACION,'
@@ -552,17 +576,16 @@ object frmArticulosUt: TfrmArticulosUt
       FieldName = 'EXISTENCIA_MIN'
       Origin = '"ARTICULO"."EXISTENCIA_MIN"'
     end
-    object tbArticuloEXT_IMG: TIBStringField
-      FieldName = 'EXT_IMG'
-      Origin = '"ARTICULO"."EXT_IMG"'
+    object tbArticuloIMG_EXT: TIBStringField
+      FieldName = 'IMG_EXT'
+      Origin = '"ARTICULO"."IMG_EXT"'
       FixedChar = True
       Size = 5
     end
-    object qryArticuloIMAGEN: TWideMemoField
+    object qryArticuloIMAGEN: TBlobField
       FieldName = 'IMAGEN'
       Origin = '"ARTICULO"."IMAGEN"'
       ProviderFlags = [pfInUpdate]
-      BlobType = ftMemo
       Size = 8
     end
     object tbArticuloNOM_IMG: TIBStringField
@@ -639,14 +662,13 @@ object frmArticulosUt: TfrmArticulosUt
     object cdsArticuloEXISTENCIA_MIN2: TIntegerField
       FieldName = 'EXISTENCIA_MIN'
     end
-    object cdsArticuloEXT_IMG: TWideStringField
-      FieldName = 'EXT_IMG'
+    object cdsArticuloIMG_EXT: TWideStringField
+      FieldName = 'IMG_EXT'
       FixedChar = True
       Size = 5
     end
-    object cdsArticuloIMAGEN: TMemoField
+    object cdsArticuloIMAGEN: TBlobField
       FieldName = 'IMAGEN'
-      BlobType = ftMemo
       Size = 8
     end
     object cdsArticuloNOM_IMG: TWideStringField
@@ -672,44 +694,8 @@ object frmArticulosUt: TfrmArticulosUt
       Required = True
     end
   end
-  object sp: TIBStoredProc
-    Database = DataModule1.DMBaseDatos
-    Transaction = DataModule1.DMTransaction
-    StoredProcName = 'IMAGEN_ART_INS'
-    Left = 304
-    Top = 160
-    ParamData = <
-      item
-        DataType = ftInteger
-        Name = 'ID'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftBlob
-        Name = 'IMAGEN'
-        ParamType = ptInput
-      end>
-  end
-  object OpenPictureDialog1: TOpenPictureDialog
+  object OpenPictureDialog: TOpenPictureDialog
     Left = 336
     Top = 216
-  end
-  object sp1: TIBStoredProc
-    Database = DataModule1.DMBaseDatos
-    Transaction = DataModule1.DMTransaction
-    StoredProcName = 'IMAGEN_ART_INS'
-    Left = 368
-    Top = 168
-    ParamData = <
-      item
-        DataType = ftInteger
-        Name = 'ID'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftBlob
-        Name = 'IMAGEN'
-        ParamType = ptInput
-      end>
   end
 end
