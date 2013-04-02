@@ -33,6 +33,8 @@ type
     dbnvgr1: TDBNavigator;
     qryMaxID: TIBQuery;
     qryMaxIDF_1: TLargeintField;
+    shp1: TShape;
+    lbl1: TLabel;
     procedure btn1Click(Sender: TObject);
     procedure DataSourceDataChange(Sender: TObject; Field: TField);
     procedure btn2Click(Sender: TObject);
@@ -79,7 +81,6 @@ begin
     cds1.Post;
     cds1.ApplyUpdates(0);
     btn2.Enabled:=false;
-
   END
  ELSE
   BEGIN
