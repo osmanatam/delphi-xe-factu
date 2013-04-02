@@ -14,10 +14,23 @@ object Form3: TForm3
   Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
+  object shp1: TShape
+    Left = 2
+    Top = 70
+    Width = 241
+    Height = 179
+  end
+  object lbl1: TLabel
+    Left = 78
+    Top = 152
+    Width = 84
+    Height = 13
+    Caption = 'CARGAR IMAGEN'
+  end
   object Image1: TImage
     Left = 5
     Top = 73
-    Width = 236
+    Width = 235
     Height = 173
     Stretch = True
   end
@@ -66,7 +79,7 @@ object Form3: TForm3
     Top = 223
     Width = 75
     Height = 25
-    Caption = 'SAVE'
+    Caption = 'Guardar'
     Enabled = False
     TabOrder = 4
     OnClick = btn2Click
