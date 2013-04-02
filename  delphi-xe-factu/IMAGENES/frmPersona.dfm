@@ -3,7 +3,7 @@ object Form3: TForm3
   Top = 0
   Caption = 'Imagenes'
   ClientHeight = 299
-  ClientWidth = 331
+  ClientWidth = 335
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -101,15 +101,25 @@ object Form3: TForm3
     Width = 318
     Height = 39
     Caption = 'Formato de Guardado'
+    Color = clBtnFace
     Columns = 2
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
     Items.Strings = (
-      'Compresion de imagen'
-      'Guardar Original')
+      'Comprimir'
+      'Original')
+    ParentBackground = False
+    ParentColor = False
+    ParentFont = False
     TabOrder = 6
   end
   object IBDatabase: TIBDatabase
-    Connected = True
-    DatabaseName = 'localhost:C:\PROYECTO_PATRIA\BD\MARCACION.FDB'
+    DatabaseName = 
+      'localhost:C:\Users\claudio.brignardello\firebird\ delphi-xe-fact' +
+      'u\IMAGENES\BaseDatos\MARCACION.FDB'
     Params.Strings = (
       'user_name=SYSDBA'
       'password=whitelion'
@@ -120,7 +130,6 @@ object Form3: TForm3
     Top = 94
   end
   object IBTransaction: TIBTransaction
-    Active = True
     Left = 37
     Top = 190
   end
