@@ -3,7 +3,7 @@ object Form3: TForm3
   Top = 0
   Caption = 'Imagenes'
   ClientHeight = 256
-  ClientWidth = 334
+  ClientWidth = 323
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -37,24 +37,24 @@ object Form3: TForm3
   object dbeID_PERSONA: TDBEdit
     Left = 5
     Top = 46
-    Width = 81
+    Width = 44
     Height = 21
     DataField = 'ID_PERSONA'
     DataSource = DataSource
     TabOrder = 0
   end
   object dbeNOMBRE: TDBEdit
-    Left = 92
+    Left = 55
     Top = 46
-    Width = 236
+    Width = 265
     Height = 21
     DataField = 'NOMBRE'
     DataSource = DataSource
     TabOrder = 1
   end
   object btn1: TButton
-    Left = 251
-    Top = 100
+    Left = 245
+    Top = 97
     Width = 75
     Height = 25
     Caption = 'Cargar'
@@ -63,9 +63,9 @@ object Form3: TForm3
     OnClick = btn1Click
   end
   object dbeFormato_Foto: TDBEdit
-    Left = 247
-    Top = 73
-    Width = 81
+    Left = 249
+    Top = 70
+    Width = 71
     Height = 21
     Color = clSilver
     DataField = 'FORMATO_FOTO'
@@ -75,8 +75,8 @@ object Form3: TForm3
     TabOrder = 3
   end
   object btn2: TButton
-    Left = 251
-    Top = 223
+    Left = 245
+    Top = 224
     Width = 75
     Height = 25
     Caption = 'Guardar'
@@ -87,7 +87,7 @@ object Form3: TForm3
   object dbnvgr1: TDBNavigator
     Left = 5
     Top = 6
-    Width = 322
+    Width = 315
     Height = 34
     DataSource = DataSource
     VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbCancel]
