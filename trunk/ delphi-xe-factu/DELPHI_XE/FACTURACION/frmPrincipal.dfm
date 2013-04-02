@@ -33,6 +33,7 @@ object frmMenuPrincipal: TfrmMenuPrincipal
       Caption = 'Proveedores'
       object mniMantProveedores: TMenuItem
         Caption = 'Mantenimiento'
+        OnClick = mniMantProveedoresClick
       end
     end
     object mnuArticulos: TMenuItem

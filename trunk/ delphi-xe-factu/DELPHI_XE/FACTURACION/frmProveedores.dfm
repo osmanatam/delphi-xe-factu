@@ -25,7 +25,6 @@ object frmProveedoresUt: TfrmProveedoresUt
     TabOrder = 0
     object ts1: TTabSheet
       Caption = 'Datos Proveedor'
-      ExplicitHeight = 340
       object pnl2: TPanel
         Left = 3
         Top = 3
@@ -136,29 +135,7 @@ object frmProveedoresUt: TfrmProveedoresUt
           TabOrder = 0
           Visible = True
         end
-        object edtMailMAIL: TDBEditEh
-          Left = 117
-          Top = 193
-          Width = 272
-          Height = 21
-          DataField = 'MAIL'
-          DataSource = dsProveedor
-          EditButtons = <>
-          TabOrder = 1
-          Visible = True
-        end
-        object edtMailMAIL1: TDBEditEh
-          Left = 117
-          Top = 220
-          Width = 272
-          Height = 21
-          DataField = 'WEB'
-          DataSource = dsProveedor
-          EditButtons = <>
-          TabOrder = 2
-          Visible = True
-        end
-        object edtMailMAIL2: TDBEditEh
+        object edtRucDV: TDBEditEh
           Left = 251
           Top = 166
           Width = 33
@@ -166,55 +143,11 @@ object frmProveedoresUt: TfrmProveedoresUt
           DataField = 'RUC_DV'
           DataSource = dsProveedor
           EditButtons = <>
-          TabOrder = 3
-          Visible = True
-        end
-        object edtMailMAIL3: TDBEditEh
-          Left = 117
-          Top = 166
-          Width = 105
-          Height = 21
-          DataField = 'RUC'
-          DataSource = dsProveedor
-          EditButtons = <>
-          TabOrder = 4
-          Visible = True
-        end
-        object edtMailMAIL4: TDBEditEh
-          Left = 120
-          Top = 138
-          Width = 272
-          Height = 21
-          DataField = 'TELEFONO'
-          DataSource = dsProveedor
-          EditButtons = <>
-          TabOrder = 5
-          Visible = True
-        end
-        object edtMailMAIL5: TDBEditEh
-          Left = 117
-          Top = 111
-          Width = 272
-          Height = 21
-          DataField = 'DIRECCION'
-          DataSource = dsProveedor
-          EditButtons = <>
-          TabOrder = 6
-          Visible = True
-        end
-        object edtMailMAIL6: TDBEditEh
-          Left = 120
-          Top = 55
-          Width = 272
-          Height = 21
-          DataField = 'NOMBREPROVEEDOR'
-          DataSource = dsProveedor
-          EditButtons = <>
-          TabOrder = 7
+          TabOrder = 1
           Visible = True
         end
         object edtMailNOMBREPROVEEDOR: TDBEditEh
-          Left = 186
+          Left = 170
           Top = 25
           Width = 89
           Height = 24
@@ -227,6 +160,72 @@ object frmProveedoresUt: TfrmProveedoresUt
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
+          TabOrder = 2
+          Visible = True
+        end
+        object edtMailNomProveedor: TDBEditEh
+          Left = 117
+          Top = 55
+          Width = 180
+          Height = 21
+          DataField = 'NOMBREPROVEEDOR'
+          DataSource = dsProveedor
+          EditButtons = <>
+          TabOrder = 3
+          Visible = True
+        end
+        object edtDireccionProveedor: TDBEditEh
+          Left = 111
+          Top = 111
+          Width = 186
+          Height = 21
+          DataField = 'DIRECCION'
+          DataSource = dsProveedor
+          EditButtons = <>
+          TabOrder = 4
+          Visible = True
+        end
+        object edtTelefono: TDBEditEh
+          Left = 111
+          Top = 138
+          Width = 186
+          Height = 21
+          DataField = 'TELEFONO'
+          DataSource = dsProveedor
+          EditButtons = <>
+          TabOrder = 5
+          Visible = True
+        end
+        object edtRucProv: TDBEditEh
+          Left = 111
+          Top = 165
+          Width = 134
+          Height = 21
+          DataField = 'RUC'
+          DataSource = dsProveedor
+          EditButtons = <>
+          TabOrder = 6
+          Visible = True
+        end
+        object edtwebpage: TDBEditEh
+          Left = 111
+          Top = 219
+          Width = 186
+          Height = 21
+          DataField = 'WEB'
+          DataSource = dsProveedor
+          EditButtons = <>
+          TabOrder = 7
+          Visible = True
+        end
+        object edtMailProv: TDBEditEh
+          Left = 111
+          Top = 188
+          Width = 186
+          Height = 21
+          DataField = 'MAIL'
+          DataSource = dsProveedor
+          EditButtons = <>
           TabOrder = 8
           Visible = True
         end
@@ -235,7 +234,6 @@ object frmProveedoresUt: TfrmProveedoresUt
     object ts2: TTabSheet
       Caption = 'Consulta Proveedor'
       ImageIndex = 1
-      ExplicitHeight = 340
       object DBGridEh2: TDBGridEh
         Left = 3
         Top = 0
@@ -312,55 +310,45 @@ object frmProveedoresUt: TfrmProveedoresUt
     Top = 32
     object cdsProveedorCODPROVEEDOR2: TIntegerField
       FieldName = 'CODPROVEEDOR'
-      Origin = '"PROVEEDOR"."CODPROVEEDOR"'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
     object cdsProveedorNOMBREPROVEEDOR: TWideStringField
       FieldName = 'NOMBREPROVEEDOR'
-      Origin = '"PROVEEDOR"."NOMBREPROVEEDOR"'
       FixedChar = True
       Size = 30
     end
     object cdsProveedorTELEFONO: TWideStringField
       FieldName = 'TELEFONO'
-      Origin = '"PROVEEDOR"."TELEFONO"'
       FixedChar = True
       Size = 10
     end
     object cdsProveedorRUC: TWideStringField
       FieldName = 'RUC'
-      Origin = '"PROVEEDOR"."RUC"'
+      Required = True
       FixedChar = True
       Size = 10
     end
     object cdsProveedorRUC_DV: TWideStringField
       FieldName = 'RUC_DV'
-      Origin = '"PROVEEDOR"."RUC_DV"'
       Required = True
       FixedChar = True
       Size = 1
     end
     object cdsProveedorMAIL: TWideStringField
       FieldName = 'MAIL'
-      Origin = '"PROVEEDOR"."MAIL"'
       FixedChar = True
-      Size = 10
     end
     object cdsProveedorWEB: TWideStringField
       FieldName = 'WEB'
-      Origin = '"PROVEEDOR"."WEB"'
       FixedChar = True
-      Size = 30
+      Size = 25
     end
     object cdsProveedorDIRECCION: TWideStringField
       FieldName = 'DIRECCION'
-      Origin = '"PROVEEDOR"."DIRECCION"'
       FixedChar = True
     end
     object cdsProveedorCODCIUDADPRO2: TIntegerField
       FieldName = 'CODCIUDADPRO'
-      Origin = '"PROVEEDOR"."CODCIUDADPRO"'
     end
   end
   object qryProveedor: TIBQuery
@@ -391,6 +379,7 @@ object frmProveedoresUt: TfrmProveedoresUt
     object tbProveedorRUC: TIBStringField
       FieldName = 'RUC'
       Origin = '"PROVEEDOR"."RUC"'
+      Required = True
       FixedChar = True
       Size = 10
     end
@@ -405,13 +394,12 @@ object frmProveedoresUt: TfrmProveedoresUt
       FieldName = 'MAIL'
       Origin = '"PROVEEDOR"."MAIL"'
       FixedChar = True
-      Size = 10
     end
     object tbProveedorWEB: TIBStringField
       FieldName = 'WEB'
       Origin = '"PROVEEDOR"."WEB"'
       FixedChar = True
-      Size = 30
+      Size = 25
     end
     object tbProveedorDIRECCION: TIBStringField
       FieldName = 'DIRECCION'
