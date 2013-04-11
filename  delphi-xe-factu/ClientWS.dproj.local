@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2013/04/09 15:47:10.000.459,=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/04/09 15:48:36.000.328,=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\IwsPruebas1.pas</Transaction>
+    <Transaction>2013/04/09 15:48:57.000.427,C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\IwsPruebas1.pas=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\IwsPruebas1.pas</Transaction>
+    <Transaction>2013/04/09 15:49:12.000.319,C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\frmClienteWS.pas=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/04/09 15:49:12.000.319,C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\frmClienteWS.dfm=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2013/04/09 15:49:23.000.536,C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\ClientWS.dproj=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\Project4.dproj</Transaction>
+    <Transaction>2013/04/10 10:05:58.000.503,=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\IWsPrueba1.pas</Transaction>
+    <Transaction>2013/04/10 10:06:28.000.730,C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\IwsPruebas1.pas=</Transaction>
+    <Transaction>2013/04/10 10:06:32.000.206,C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\IWsPrueba1.pas=</Transaction>
+    <Transaction>2013/04/10 10:06:43.000.726,=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\IWsPrueba1.pas</Transaction>
+    <Transaction>2013/04/10 10:17:19.000.629,=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\IWsPrueba1.pas</Transaction>
+    <Transaction>2013/04/10 10:27:34.000.860,=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\IWsPrueba11.pas</Transaction>
+    <Transaction>2013/04/10 10:28:05.000.283,C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\IWsPrueba1.pas=</Transaction>
+    <Transaction>2013/04/10 10:28:14.000.756,C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\IWsPrueba11.pas=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\IWsPrueba1.pas</Transaction>
+    <Transaction>2013/04/10 10:57:16.000.634,=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\tempconvert.pas</Transaction>
+    <Transaction>2013/04/10 12:03:09.000.360,=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\Unit1.pas</Transaction>
+    <Transaction>2013/04/10 12:03:29.000.969,C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\DMWsDatos.dfm=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\Unit1.dfm</Transaction>
+    <Transaction>2013/04/10 12:03:29.000.969,C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\DMWsDatos.pas=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\Unit1.pas</Transaction>
+    <Transaction>2013/04/10 12:03:46.000.760,C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\DMWsDatos.pas=</Transaction>
+    <Transaction>2013/04/10 16:33:41.000.347,=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\IWsPrueba11.pas</Transaction>
+    <Transaction>2013/04/10 16:33:58.000.922,C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\IWsPrueba1.pas=</Transaction>
+    <Transaction>2013/04/10 16:34:09.000.338,C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\IWsPrueba11.pas=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\IWsPrueba1.pas</Transaction>
+    <Transaction>2013/04/10 16:47:23.000.387,C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\IWsPrueba1.pas=</Transaction>
+    <Transaction>2013/04/10 16:47:30.000.626,=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\IWsPrueba1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
