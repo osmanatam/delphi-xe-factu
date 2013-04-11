@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2013/01/28 09:53:09.000.719,=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/01/28 09:58:02.000.927,=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/01/28 09:58:19.000.449,C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\Modifica.dfm=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2013/01/28 09:58:19.000.449,C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\Modifica.pas=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/01/28 10:16:13.000.662,C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\Marcacion.dfm=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\frmMarcacion.dfm</Transaction>
+    <Transaction>2013/01/28 10:16:13.000.662,C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\Marcacion.pas=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\frmMarcacion.pas</Transaction>
+    <Transaction>2013/01/28 10:16:19.000.949,C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\Modifica.dfm=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\frmModifica.dfm</Transaction>
+    <Transaction>2013/01/28 10:16:19.000.949,C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\Modifica.pas=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\frmModifica.pas</Transaction>
+    <Transaction>2013/04/11 09:22:02.000.373,C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\frmMarcacion.pas=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\MARCACION\frmMarcacion.pas</Transaction>
+    <Transaction>2013/04/11 09:22:02.000.374,C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\frmMarcacion.dfm=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\MARCACION\frmMarcacion.dfm</Transaction>
+    <Transaction>2013/04/11 09:22:12.000.198,C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\MarcacionPatria.dproj=C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\MARCACION\MarcacionPatria.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
