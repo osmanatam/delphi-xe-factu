@@ -13,11 +13,24 @@ type
 
   TDMWsDatos = class(TSoapDataModule, IDMWsDatos, IAppServerSOAP, IAppServer)
     qry1: TSQLQuery;
-    qry1PROD_ACUM: TLargeintField;
-    qry1PROD_MES: TLargeintField;
-    qry1PROD_META: TLargeintField;
-    qry1PROD_SUC: TStringField;
     FBCONNECTION: TSQLConnection;
+    qry1O_PROD_ACUM: TLargeintField;
+    qry1O_PROD_MES: TLargeintField;
+    qry1O_PROD_META: TLargeintField;
+    qry1O_PROD_SUC: TStringField;
+    qryAseg: TSQLQuery;
+    ProvAsegurado: TDataSetProvider;
+    qryAsegurado: TClientDataSet;
+    qryAsegO_CODIGO: TStringField;
+    qryAsegO_NOMBRE: TStringField;
+    qryAsegO_CI: TIntegerField;
+    qryAsegO_RUC: TStringField;
+    qryAsegO_COMERCIAL: TStringField;
+    qryAseguradoO_CODIGO1: TStringField;
+    qryAseguradoO_NOMBRE1: TStringField;
+    qryAseguradoO_CI1: TIntegerField;
+    qryAseguradoO_RUC1: TStringField;
+    qryAseguradoO_COMERCIAL1: TStringField;
     procedure SoapDataModuleCreate(Sender: TObject);
   private
   

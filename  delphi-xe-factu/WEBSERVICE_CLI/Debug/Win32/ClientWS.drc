@@ -8,204 +8,404 @@
   resources were bound to the produced executable.
 */
 
-#define SOAPConst_SCantLoadLocation 65136
-#define DBConsts_SBcdOverflow 65137
-#define DBConsts_SInvalidBcdValue 65138
-#define WebConst_sErrorDecodingURLText 65139
-#define WebConst_sInvalidURLEncodedChar 65140
-#define SOAPAttach_sTempPathCreationException 65141
-#define SOAPConst_SBcdStringTooBig 65152
-#define SOAPConst_SInvalidHexValue 65153
-#define SOAPConst_SInvalidHTTPRequest 65154
-#define SOAPConst_SWideStringOutOfBounds 65155
-#define SOAPConst_SEmptyURL 65156
-#define SOAPConst_SInvalidURL 65157
-#define SOAPConst_SMethNoRTTI 65158
-#define SOAPConst_SUnsupportedVariant 65159
-#define SOAPConst_SNoVarDispatch 65160
-#define SOAPConst_SNoErrorDispatch 65161
-#define SOAPConst_SEmptyStream 65162
-#define SOAPConst_SMethodNotSupported 65163
-#define SOAPConst_SInvalidMethod 65164
-#define SOAPConst_SInvalidContentLength 65165
-#define SOAPConst_SMimeReadError 65166
-#define SOAPConst_STempFileAccessError 65167
-#define SOAPConst_SNoMsgProcessingNode 65168
-#define SOAPConst_SHeaderAttributeError 65169
-#define SOAPConst_SNoRTTI 65170
-#define SOAPConst_SNoRTTIParam 65171
-#define SOAPConst_SInvalidDateString 65172
-#define SOAPConst_SInvalidTimeString 65173
-#define SOAPConst_SInvalidMinute 65174
-#define SOAPConst_SInvalidMillisecond 65175
-#define SOAPConst_SInvalidFractionalSecond 65176
-#define SOAPConst_SInvalidHourOffset 65177
-#define SOAPConst_SInvalidDuration 65178
-#define SOAPConst_SInvalidTimeOffset 65179
-#define SOAPConst_SInvalidDecimalString 65180
-#define SOAPConst_SNoSciNotation 65181
-#define SOAPConst_SNoNAN 65182
-#define SOAPConst_SInvalidBcd 65183
-#define SOAPConst_SDataTypeNotSupported 65184
-#define SOAPConst_SNoSerializeGraphs 65185
-#define SOAPConst_SUnsuportedClassType 65186
-#define SOAPConst_SUnexpectedDataType 65187
-#define SOAPConst_SInvalidContentType 65188
-#define SOAPConst_SArrayTooManyElem 65189
-#define SOAPConst_SWrongDocElem 65190
-#define SOAPConst_STooManyParameters 65191
-#define SOAPConst_SNoArrayElemRTTI 65192
-#define SOAPConst_SInvalidResponse 65193
-#define SOAPConst_SNoInterfacesInClass 65194
-#define SOAPConst_SCantReturnInterface 65195
-#define SOAPConst_SVariantCastNotSupported 65196
-#define SOAPConst_SHeaderError 65197
-#define SOAPConst_SMissingSoapReturn 65198
-#define SOAPConst_SNoMessageConverter 65199
-#define ComConst_STooManyParams 65200
-#define SOAPConst_SUnsupportedEncodingSyle 65201
-#define SOAPConst_SInvalidSoapRequest 65202
-#define SOAPConst_SInvalidSoapResponse 65203
-#define SOAPConst_SMultiBodyNotSupported 65204
-#define SOAPConst_SUnsupportedCCIntfMeth 65205
-#define SOAPConst_SRemTypeNotRegistered 65206
-#define SOAPConst_STypeMismatchInParam 65207
-#define SOAPConst_SNoSuchMethod 65208
-#define SOAPConst_SInterfaceNotReg 65209
-#define SOAPConst_SInterfaceNoRTTI 65210
-#define SOAPConst_SNoWSDL 65211
-#define SOAPConst_SWSDLError 65212
-#define SOAPConst_SEmptyWSDL 65213
-#define SOAPConst_sNoWSDLURL 65214
-#define SOAPConst_sCantGetURL 65215
-#define XMLConst_SUnknownDataType 65216
-#define XMLConst_SInvalidGroupDecl 65217
-#define XMLConst_SMissingName 65218
-#define XMLConst_SInvalidDerivation 65219
-#define XMLConst_SNoNameOnRef 65220
-#define XMLConst_SNoGlobalRef 65221
-#define XMLConst_SNoRefPropSet 65222
-#define XMLConst_SSetGroupRefProp 65223
-#define XMLConst_SNoContentModel 65224
-#define XMLConst_SNoFacetsAllowed 65225
-#define XMLConst_SNotBuiltInType 65226
-#define XMLConst_SInvalidTargetNS 65227
-#define XMLConst_SUndefinedTargetNS 65228
-#define ComConst_SOleError 65229
-#define ComConst_SNoMethod 65230
-#define ComConst_SVarNotObject 65231
-#define XMLConst_SMSDOMNotInstalled 65232
-#define XMLConst_SNotActive 65233
-#define XMLConst_SNodeNotFound 65234
-#define XMLConst_SMissingNode 65235
-#define XMLConst_SNoAttributes 65236
-#define XMLConst_SInvalidNodeType 65237
-#define XMLConst_SMismatchedRegItems 65238
-#define XMLConst_SNotSingleTextNode 65239
-#define XMLConst_SNoDOMParseOptions 65240
-#define XMLConst_SMissingItemTag 65241
-#define XMLConst_SNodeReadOnly 65242
-#define XMLConst_SNoRefresh 65243
-#define XMLConst_SMissingFileName 65244
-#define XMLConst_SLine 65245
-#define XMLConst_SInvalidSchema 65246
-#define XMLConst_SNoLocalTypeName 65247
-#define Consts_SDuplicateMenus 65248
-#define Consts_SDockedCtlNeedsName 65249
-#define Consts_SDockTreeRemoveError 65250
-#define Consts_SDockZoneNotFound 65251
-#define Consts_SDockZoneHasNoCtl 65252
-#define Consts_SDockZoneVersionConflict 65253
-#define Consts_SWindowsVistaRequired 65254
-#define Consts_SXPThemesRequired 65255
-#define Consts_STaskDlgButtonCaption 65256
-#define Consts_STaskDlgRadioButtonCaption 65257
-#define Consts_SInvalidTaskDlgButtonCaption 65258
-#define XMLConst_SDuplicateRegistration 65259
-#define XMLConst_SNoMatchingDOMVendor 65260
-#define XMLConst_SNoDOMNodeEx 65261
-#define XMLConst_SDOMNotSupported 65262
-#define XMLConst_SNodeExpected 65263
-#define Consts_SmkcLeft 65264
-#define Consts_SmkcUp 65265
-#define Consts_SmkcRight 65266
-#define Consts_SmkcDown 65267
-#define Consts_SmkcIns 65268
-#define Consts_SmkcDel 65269
-#define Consts_SmkcShift 65270
-#define Consts_SmkcCtrl 65271
-#define Consts_SmkcAlt 65272
-#define Consts_SOutOfRange 65273
-#define Consts_sAllFilter 65274
-#define Consts_SInvalidClipFmt 65275
-#define Consts_SIconToClipboard 65276
-#define Consts_SCannotOpenClipboard 65277
-#define Consts_SInvalidPrinterOp 65278
-#define Consts_SNoDefaultPrinter 65279
-#define Consts_SMsgDlgAbort 65280
-#define Consts_SMsgDlgRetry 65281
-#define Consts_SMsgDlgIgnore 65282
-#define Consts_SMsgDlgAll 65283
-#define Consts_SMsgDlgNoToAll 65284
-#define Consts_SMsgDlgYesToAll 65285
-#define Consts_SMsgDlgClose 65286
-#define Consts_SmkcBkSp 65287
-#define Consts_SmkcTab 65288
-#define Consts_SmkcEsc 65289
-#define Consts_SmkcEnter 65290
-#define Consts_SmkcSpace 65291
-#define Consts_SmkcPgUp 65292
-#define Consts_SmkcPgDn 65293
-#define Consts_SmkcEnd 65294
-#define Consts_SmkcHome 65295
-#define Consts_STooManyDeleted 65296
-#define Consts_SIndexOutOfRange 65297
-#define Consts_SFixedColTooBig 65298
-#define Consts_SFixedRowTooBig 65299
-#define Consts_SInvalidStringGridOp 65300
-#define Consts_SMaskErr 65301
-#define Consts_SMaskEditErr 65302
-#define Consts_SMsgDlgWarning 65303
-#define Consts_SMsgDlgError 65304
-#define Consts_SMsgDlgInformation 65305
-#define Consts_SMsgDlgConfirm 65306
-#define Consts_SMsgDlgYes 65307
-#define Consts_SMsgDlgNo 65308
-#define Consts_SMsgDlgOK 65309
-#define Consts_SMsgDlgCancel 65310
-#define Consts_SMsgDlgHelp 65311
-#define Consts_SNotPrinting 65312
-#define Consts_SPrinting 65313
-#define Consts_SPrinterIndexError 65314
-#define Consts_SInvalidPrinter 65315
-#define Consts_SDeviceOnPort 65316
-#define Consts_SGroupIndexTooLow 65317
-#define Consts_SNoMDIForm 65318
-#define Consts_SImageCanvasNeedsBitmap 65319
-#define Consts_SControlParentSetToSelf 65320
-#define Consts_SCannotDragForm 65321
-#define Consts_SVMetafiles 65322
-#define Consts_SVEnhMetafiles 65323
-#define Consts_SVIcons 65324
-#define Consts_SVBitmaps 65325
-#define Consts_SVTIFFImages 65326
-#define Consts_SGridTooLarge 65327
-#define Consts_SImageIndexError 65328
-#define Consts_SImageReadFail 65329
-#define Consts_SImageWriteFail 65330
-#define Consts_SWindowDCError 65331
-#define Consts_SWindowClass 65332
-#define Consts_SCannotFocus 65333
-#define Consts_SParentRequired 65334
-#define Consts_SParentGivenNotAParent 65335
-#define Consts_SMDIChildNotVisible 65336
-#define Consts_SVisibleChanged 65337
-#define Consts_SCannotShowModal 65338
-#define Consts_SPropertyOutOfRange 65339
-#define Consts_SMenuIndexError 65340
-#define Consts_SMenuReinserted 65341
-#define Consts_SMenuNotFound 65342
-#define Consts_SNoTimers 65343
+#define SOAPConst_SMethNoRTTI 64944
+#define SOAPConst_SUnsupportedVariant 64945
+#define SOAPConst_SNoVarDispatch 64946
+#define SOAPConst_SNoErrorDispatch 64947
+#define SOAPConst_SEmptyStream 64948
+#define SOAPConst_SMethodNotSupported 64949
+#define SOAPConst_SInvalidMethod 64950
+#define SOAPConst_SInvalidContentLength 64951
+#define SOAPConst_SMimeReadError 64952
+#define SOAPConst_STempFileAccessError 64953
+#define SOAPConst_SCantLoadLocation 64954
+#define DBConsts_SBcdOverflow 64955
+#define DBConsts_SInvalidBcdValue 64956
+#define SOAPAttach_sTempPathCreationException 64957
+#define SOAPConst_SInvalidMinute 64960
+#define SOAPConst_SInvalidMillisecond 64961
+#define SOAPConst_SInvalidFractionalSecond 64962
+#define SOAPConst_SInvalidHourOffset 64963
+#define SOAPConst_SInvalidDuration 64964
+#define SOAPConst_SInvalidTimeOffset 64965
+#define SOAPConst_SInvalidDecimalString 64966
+#define SOAPConst_SNoSciNotation 64967
+#define SOAPConst_SNoNAN 64968
+#define SOAPConst_SInvalidBcd 64969
+#define SOAPConst_SBcdStringTooBig 64970
+#define SOAPConst_SInvalidHexValue 64971
+#define SOAPConst_SInvalidHTTPRequest 64972
+#define SOAPConst_SWideStringOutOfBounds 64973
+#define SOAPConst_SEmptyURL 64974
+#define SOAPConst_SInvalidURL 64975
+#define SOAPConst_SWrongDocElem 64976
+#define SOAPConst_STooManyParameters 64977
+#define SOAPConst_SNoArrayElemRTTI 64978
+#define SOAPConst_SInvalidResponse 64979
+#define SOAPConst_SNoInterfacesInClass 64980
+#define SOAPConst_SCantReturnInterface 64981
+#define SOAPConst_SVariantCastNotSupported 64982
+#define SOAPConst_SHeaderError 64983
+#define SOAPConst_SMissingSoapReturn 64984
+#define SOAPConst_SNoMessageConverter 64985
+#define SOAPConst_SNoMsgProcessingNode 64986
+#define SOAPConst_SHeaderAttributeError 64987
+#define SOAPConst_SNoRTTI 64988
+#define SOAPConst_SNoRTTIParam 64989
+#define SOAPConst_SInvalidDateString 64990
+#define SOAPConst_SInvalidTimeString 64991
+#define SOAPConst_SRemTypeNotRegistered 64992
+#define SOAPConst_STypeMismatchInParam 64993
+#define SOAPConst_SNoSuchMethod 64994
+#define SOAPConst_SInterfaceNotReg 64995
+#define SOAPConst_SInterfaceNoRTTI 64996
+#define SOAPConst_SNoWSDL 64997
+#define SOAPConst_SWSDLError 64998
+#define SOAPConst_SEmptyWSDL 64999
+#define SOAPConst_sNoWSDLURL 65000
+#define SOAPConst_sCantGetURL 65001
+#define SOAPConst_SDataTypeNotSupported 65002
+#define SOAPConst_SNoSerializeGraphs 65003
+#define SOAPConst_SUnsuportedClassType 65004
+#define SOAPConst_SUnexpectedDataType 65005
+#define SOAPConst_SInvalidContentType 65006
+#define SOAPConst_SArrayTooManyElem 65007
+#define XMLConst_SMissingName 65008
+#define XMLConst_SInvalidDerivation 65009
+#define XMLConst_SNoNameOnRef 65010
+#define XMLConst_SNoGlobalRef 65011
+#define XMLConst_SNoRefPropSet 65012
+#define XMLConst_SSetGroupRefProp 65013
+#define XMLConst_SNoContentModel 65014
+#define XMLConst_SNoFacetsAllowed 65015
+#define XMLConst_SNotBuiltInType 65016
+#define XMLConst_SInvalidTargetNS 65017
+#define XMLConst_SUndefinedTargetNS 65018
+#define SOAPConst_SUnsupportedEncodingSyle 65019
+#define SOAPConst_SInvalidSoapRequest 65020
+#define SOAPConst_SInvalidSoapResponse 65021
+#define SOAPConst_SMultiBodyNotSupported 65022
+#define SOAPConst_SUnsupportedCCIntfMeth 65023
+#define XMLConst_SNodeNotFound 65024
+#define XMLConst_SMissingNode 65025
+#define XMLConst_SNoAttributes 65026
+#define XMLConst_SInvalidNodeType 65027
+#define XMLConst_SMismatchedRegItems 65028
+#define XMLConst_SNotSingleTextNode 65029
+#define XMLConst_SNoDOMParseOptions 65030
+#define XMLConst_SMissingItemTag 65031
+#define XMLConst_SNodeReadOnly 65032
+#define XMLConst_SNoRefresh 65033
+#define XMLConst_SMissingFileName 65034
+#define XMLConst_SLine 65035
+#define XMLConst_SInvalidSchema 65036
+#define XMLConst_SNoLocalTypeName 65037
+#define XMLConst_SUnknownDataType 65038
+#define XMLConst_SInvalidGroupDecl 65039
+#define ComConst_SOleError 65040
+#define ComConst_SNoMethod 65041
+#define ComConst_SVarNotObject 65042
+#define ComConst_STooManyParams 65043
+#define WebConst_sErrorDecodingURLText 65044
+#define WebConst_sInvalidURLEncodedChar 65045
+#define JConsts_sChangeJPGSize 65046
+#define JConsts_sJPEGError 65047
+#define JConsts_sJPEGImageFile 65048
+#define XMLConst_SDuplicateRegistration 65049
+#define XMLConst_SNoMatchingDOMVendor 65050
+#define XMLConst_SNoDOMNodeEx 65051
+#define XMLConst_SDOMNotSupported 65052
+#define XMLConst_SNodeExpected 65053
+#define XMLConst_SMSDOMNotInstalled 65054
+#define XMLConst_SNotActive 65055
+#define JvResources_RsClHighlightText 65056
+#define JvResources_RsClBtnFace 65057
+#define JvResources_RsClBtnShadow 65058
+#define JvResources_RsClGrayText 65059
+#define JvResources_RsClBtnText 65060
+#define JvResources_RsClInactiveCaptionText 65061
+#define JvResources_RsClBtnHighlight 65062
+#define JvResources_RsCl3DDkShadow 65063
+#define JvResources_RsCl3DLight 65064
+#define JvResources_RsClInfoText 65065
+#define JvResources_RsClInfoBk 65066
+#define JvResources_RsGradientActiveCaption 65067
+#define JvResources_RsGradientInactiveCaption 65068
+#define JvResources_RsHotLight 65069
+#define JvResources_RsMenuBar 65070
+#define JvResources_RsMenuHighlight 65071
+#define JvResources_RsClPaleBlue 65072
+#define JvResources_RsClLavender 65073
+#define JvResources_RsClScrollBar 65074
+#define JvResources_RsClBackground 65075
+#define JvResources_RsClActiveCaption 65076
+#define JvResources_RsClInactiveCaption 65077
+#define JvResources_RsClMenu 65078
+#define JvResources_RsClWindow 65079
+#define JvResources_RsClWindowFrame 65080
+#define JvResources_RsClMenuText 65081
+#define JvResources_RsClWindowText 65082
+#define JvResources_RsClCaptionText 65083
+#define JvResources_RsClActiveBorder 65084
+#define JvResources_RsClInactiveBorder 65085
+#define JvResources_RsClAppWorkSpace 65086
+#define JvResources_RsClHighlight 65087
+#define JvResources_RsClLightOrange 65088
+#define JvResources_RsClSeaGreen 65089
+#define JvResources_RsClLightBlue 65090
+#define JvResources_RsClViolet 65091
+#define JvResources_RsClGray40 65092
+#define JvResources_RsClPink 65093
+#define JvResources_RsClGold 65094
+#define JvResources_RsClBrightGreen 65095
+#define JvResources_RsClTurquoise 65096
+#define JvResources_RsClPlum 65097
+#define JvResources_RsClGray25 65098
+#define JvResources_RsClRose 65099
+#define JvResources_RsClTan 65100
+#define JvResources_RsClLightYellow 65101
+#define JvResources_RsClLightGreen 65102
+#define JvResources_RsClLightTurquoise 65103
+#define JvResources_RsClMoneyGreen 65104
+#define JvResources_RsClSkyBlue 65105
+#define JvResources_RsClCream 65106
+#define JvResources_RsClMedGray 65107
+#define JvResources_RsClBrown 65108
+#define JvResources_RsClOliveGreen 65109
+#define JvResources_RsClDarkGreen 65110
+#define JvResources_RsClDarkTeal 65111
+#define JvResources_RsClDarkBlue 65112
+#define JvResources_RsClIndigo 65113
+#define JvResources_RsClGray80 65114
+#define JvResources_RsClDarkRed 65115
+#define JvResources_RsClOrange 65116
+#define JvResources_RsClDarkYellow 65117
+#define JvResources_RsClBlueGray 65118
+#define JvResources_RsClGray50 65119
+#define JvResources_RsClBlack 65120
+#define JvResources_RsClMaroon 65121
+#define JvResources_RsClGreen 65122
+#define JvResources_RsClOlive 65123
+#define JvResources_RsClNavy 65124
+#define JvResources_RsClPurple 65125
+#define JvResources_RsClTeal 65126
+#define JvResources_RsClGray 65127
+#define JvResources_RsClSilver 65128
+#define JvResources_RsClRed 65129
+#define JvResources_RsClLime 65130
+#define JvResources_RsClYellow 65131
+#define JvResources_RsClBlue 65132
+#define JvResources_RsClFuchsia 65133
+#define JvResources_RsClAqua 65134
+#define JvResources_RsClWhite 65135
+#define JclResources_RsIntelCacheDescrD7 65136
+#define JclResources_RsIntelCacheDescrD8 65137
+#define JclResources_RsIntelCacheDescrDC 65138
+#define JclResources_RsIntelCacheDescrDD 65139
+#define JclResources_RsIntelCacheDescrDE 65140
+#define JclResources_RsIntelCacheDescrE2 65141
+#define JclResources_RsIntelCacheDescrE3 65142
+#define JclResources_RsIntelCacheDescrE4 65143
+#define JclResources_RsIntelCacheDescrEA 65144
+#define JclResources_RsIntelCacheDescrEB 65145
+#define JclResources_RsIntelCacheDescrEC 65146
+#define JclResources_RsIntelCacheDescrF0 65147
+#define JclResources_RsIntelCacheDescrF1 65148
+#define JclResources_RsIntelCacheDescrFF 65149
+#define JclResources_RsUnknownAMDModel 65150
+#define JvResources_RsEDuplicateDigitClass 65151
+#define JclResources_RsIntelCacheDescr84 65152
+#define JclResources_RsIntelCacheDescr85 65153
+#define JclResources_RsIntelCacheDescr86 65154
+#define JclResources_RsIntelCacheDescr87 65155
+#define JclResources_RsIntelCacheDescrB0 65156
+#define JclResources_RsIntelCacheDescrB1 65157
+#define JclResources_RsIntelCacheDescrB2 65158
+#define JclResources_RsIntelCacheDescrB3 65159
+#define JclResources_RsIntelCacheDescrB4 65160
+#define JclResources_RsIntelCacheDescrBA 65161
+#define JclResources_RsIntelCacheDescrC0 65162
+#define JclResources_RsIntelCacheDescrCA 65163
+#define JclResources_RsIntelCacheDescrD0 65164
+#define JclResources_RsIntelCacheDescrD1 65165
+#define JclResources_RsIntelCacheDescrD2 65166
+#define JclResources_RsIntelCacheDescrD6 65167
+#define JclResources_RsIntelCacheDescr67 65168
+#define JclResources_RsIntelCacheDescr68 65169
+#define JclResources_RsIntelCacheDescr70 65170
+#define JclResources_RsIntelCacheDescr71 65171
+#define JclResources_RsIntelCacheDescr72 65172
+#define JclResources_RsIntelCacheDescr73 65173
+#define JclResources_RsIntelCacheDescr78 65174
+#define JclResources_RsIntelCacheDescr79 65175
+#define JclResources_RsIntelCacheDescr7A 65176
+#define JclResources_RsIntelCacheDescr7B 65177
+#define JclResources_RsIntelCacheDescr7C 65178
+#define JclResources_RsIntelCacheDescr7D 65179
+#define JclResources_RsIntelCacheDescr7F 65180
+#define JclResources_RsIntelCacheDescr80 65181
+#define JclResources_RsIntelCacheDescr82 65182
+#define JclResources_RsIntelCacheDescr83 65183
+#define JclResources_RsIntelCacheDescr4D 65184
+#define JclResources_RsIntelCacheDescr4E 65185
+#define JclResources_RsIntelCacheDescr4F 65186
+#define JclResources_RsIntelCacheDescr50 65187
+#define JclResources_RsIntelCacheDescr51 65188
+#define JclResources_RsIntelCacheDescr52 65189
+#define JclResources_RsIntelCacheDescr55 65190
+#define JclResources_RsIntelCacheDescr56 65191
+#define JclResources_RsIntelCacheDescr57 65192
+#define JclResources_RsIntelCacheDescr59 65193
+#define JclResources_RsIntelCacheDescr5A 65194
+#define JclResources_RsIntelCacheDescr5B 65195
+#define JclResources_RsIntelCacheDescr5C 65196
+#define JclResources_RsIntelCacheDescr5D 65197
+#define JclResources_RsIntelCacheDescr60 65198
+#define JclResources_RsIntelCacheDescr66 65199
+#define JclResources_RsIntelCacheDescr3C 65200
+#define JclResources_RsIntelCacheDescr3D 65201
+#define JclResources_RsIntelCacheDescr3E 65202
+#define JclResources_RsIntelCacheDescr40 65203
+#define JclResources_RsIntelCacheDescr41 65204
+#define JclResources_RsIntelCacheDescr42 65205
+#define JclResources_RsIntelCacheDescr43 65206
+#define JclResources_RsIntelCacheDescr44 65207
+#define JclResources_RsIntelCacheDescr45 65208
+#define JclResources_RsIntelCacheDescr46 65209
+#define JclResources_RsIntelCacheDescr47 65210
+#define JclResources_RsIntelCacheDescr48 65211
+#define JclResources_RsIntelCacheDescr49 65212
+#define JclResources_RsIntelCacheDescr4A 65213
+#define JclResources_RsIntelCacheDescr4B 65214
+#define JclResources_RsIntelCacheDescr4C 65215
+#define JclResources_RsIntelCacheDescr09 65216
+#define JclResources_RsIntelCacheDescr0A 65217
+#define JclResources_RsIntelCacheDescr0B 65218
+#define JclResources_RsIntelCacheDescr0C 65219
+#define JclResources_RsIntelCacheDescr0D 65220
+#define JclResources_RsIntelCacheDescr0E 65221
+#define JclResources_RsIntelCacheDescr21 65222
+#define JclResources_RsIntelCacheDescr22 65223
+#define JclResources_RsIntelCacheDescr23 65224
+#define JclResources_RsIntelCacheDescr25 65225
+#define JclResources_RsIntelCacheDescr29 65226
+#define JclResources_RsIntelCacheDescr2C 65227
+#define JclResources_RsIntelCacheDescr30 65228
+#define JclResources_RsIntelCacheDescr39 65229
+#define JclResources_RsIntelCacheDescr3A 65230
+#define JclResources_RsIntelCacheDescr3B 65231
+#define Consts_SDockZoneHasNoCtl 65232
+#define Consts_SDockZoneVersionConflict 65233
+#define Consts_SWindowsVistaRequired 65234
+#define Consts_SXPThemesRequired 65235
+#define Consts_STaskDlgButtonCaption 65236
+#define Consts_STaskDlgRadioButtonCaption 65237
+#define Consts_SInvalidTaskDlgButtonCaption 65238
+#define JclResources_RsEReplacementChar 65239
+#define JclResources_RsIntelCacheDescr00 65240
+#define JclResources_RsIntelCacheDescr01 65241
+#define JclResources_RsIntelCacheDescr02 65242
+#define JclResources_RsIntelCacheDescr03 65243
+#define JclResources_RsIntelCacheDescr04 65244
+#define JclResources_RsIntelCacheDescr05 65245
+#define JclResources_RsIntelCacheDescr06 65246
+#define JclResources_RsIntelCacheDescr08 65247
+#define Consts_SmkcIns 65248
+#define Consts_SmkcDel 65249
+#define Consts_SmkcShift 65250
+#define Consts_SmkcCtrl 65251
+#define Consts_SmkcAlt 65252
+#define Consts_SOutOfRange 65253
+#define Consts_sAllFilter 65254
+#define Consts_SInvalidClipFmt 65255
+#define Consts_SIconToClipboard 65256
+#define Consts_SCannotOpenClipboard 65257
+#define Consts_SInvalidPrinterOp 65258
+#define Consts_SNoDefaultPrinter 65259
+#define Consts_SDuplicateMenus 65260
+#define Consts_SDockedCtlNeedsName 65261
+#define Consts_SDockTreeRemoveError 65262
+#define Consts_SDockZoneNotFound 65263
+#define Consts_SMsgDlgNoToAll 65264
+#define Consts_SMsgDlgYesToAll 65265
+#define Consts_SMsgDlgClose 65266
+#define Consts_SmkcBkSp 65267
+#define Consts_SmkcTab 65268
+#define Consts_SmkcEsc 65269
+#define Consts_SmkcEnter 65270
+#define Consts_SmkcSpace 65271
+#define Consts_SmkcPgUp 65272
+#define Consts_SmkcPgDn 65273
+#define Consts_SmkcEnd 65274
+#define Consts_SmkcHome 65275
+#define Consts_SmkcLeft 65276
+#define Consts_SmkcUp 65277
+#define Consts_SmkcRight 65278
+#define Consts_SmkcDown 65279
+#define Consts_SInvalidStringGridOp 65280
+#define Consts_SMaskErr 65281
+#define Consts_SMaskEditErr 65282
+#define Consts_SMsgDlgWarning 65283
+#define Consts_SMsgDlgError 65284
+#define Consts_SMsgDlgInformation 65285
+#define Consts_SMsgDlgConfirm 65286
+#define Consts_SMsgDlgYes 65287
+#define Consts_SMsgDlgNo 65288
+#define Consts_SMsgDlgOK 65289
+#define Consts_SMsgDlgCancel 65290
+#define Consts_SMsgDlgHelp 65291
+#define Consts_SMsgDlgAbort 65292
+#define Consts_SMsgDlgRetry 65293
+#define Consts_SMsgDlgIgnore 65294
+#define Consts_SMsgDlgAll 65295
+#define Consts_SCloseButton 65296
+#define Consts_SIgnoreButton 65297
+#define Consts_SRetryButton 65298
+#define Consts_SAbortButton 65299
+#define Consts_SAllButton 65300
+#define Consts_SCannotDragForm 65301
+#define Consts_SVMetafiles 65302
+#define Consts_SVEnhMetafiles 65303
+#define Consts_SVIcons 65304
+#define Consts_SVBitmaps 65305
+#define Consts_SVTIFFImages 65306
+#define Consts_SGridTooLarge 65307
+#define Consts_STooManyDeleted 65308
+#define Consts_SIndexOutOfRange 65309
+#define Consts_SFixedColTooBig 65310
+#define Consts_SFixedRowTooBig 65311
+#define Consts_SMenuNotFound 65312
+#define Consts_SNoTimers 65313
+#define Consts_SNotPrinting 65314
+#define Consts_SPrinting 65315
+#define Consts_SPrinterIndexError 65316
+#define Consts_SInvalidPrinter 65317
+#define Consts_SDeviceOnPort 65318
+#define Consts_SGroupIndexTooLow 65319
+#define Consts_SNoMDIForm 65320
+#define Consts_SImageCanvasNeedsBitmap 65321
+#define Consts_SControlParentSetToSelf 65322
+#define Consts_SOKButton 65323
+#define Consts_SCancelButton 65324
+#define Consts_SYesButton 65325
+#define Consts_SNoButton 65326
+#define Consts_SHelpButton 65327
+#define Consts_SReplaceImage 65328
+#define Consts_SImageIndexError 65329
+#define Consts_SImageReadFail 65330
+#define Consts_SImageWriteFail 65331
+#define Consts_SWindowDCError 65332
+#define Consts_SWindowClass 65333
+#define Consts_SCannotFocus 65334
+#define Consts_SParentRequired 65335
+#define Consts_SParentGivenNotAParent 65336
+#define Consts_SMDIChildNotVisible 65337
+#define Consts_SVisibleChanged 65338
+#define Consts_SCannotShowModal 65339
+#define Consts_SScrollBarRange 65340
+#define Consts_SPropertyOutOfRange 65341
+#define Consts_SMenuIndexError 65342
+#define Consts_SMenuReinserted 65343
 #define RTLConsts_SGenericItemNotFound 65344
 #define RTLConsts_SGenericDuplicateItem 65345
 #define Consts_SInvalidBitmap 65346
@@ -213,15 +413,15 @@
 #define Consts_SInvalidMetafile 65348
 #define Consts_SInvalidPixelFormat 65349
 #define Consts_SInvalidImage 65350
-#define Consts_SChangeIconSize 65351
-#define Consts_SChangeWicSize 65352
-#define Consts_SUnknownExtension 65353
-#define Consts_SUnknownClipboardFormat 65354
-#define Consts_SOutOfResources 65355
-#define Consts_SNoCanvasHandle 65356
-#define Consts_SInvalidImageSize 65357
-#define Consts_SInvalidImageList 65358
-#define Consts_SReplaceImage 65359
+#define Consts_SScanLine 65351
+#define Consts_SChangeIconSize 65352
+#define Consts_SChangeWicSize 65353
+#define Consts_SUnknownExtension 65354
+#define Consts_SUnknownClipboardFormat 65355
+#define Consts_SOutOfResources 65356
+#define Consts_SNoCanvasHandle 65357
+#define Consts_SInvalidImageSize 65358
+#define Consts_SInvalidImageList 65359
 #define RTLConsts_hNoFilterViewer 65360
 #define RTLConsts_sInvalidStringAndObjectArrays 65361
 #define RTLConsts_sInvalidTimeoutValue 65362
@@ -400,18 +600,6 @@
 #define SysConst_SZeroDivide 65535
 STRINGTABLE
 BEGIN
-	SOAPConst_SCantLoadLocation,	"Unable to load WSDL File/Location: %s.  Error [%s]"
-	DBConsts_SBcdOverflow,	"BCD overflow"
-	DBConsts_SInvalidBcdValue,	"%s is not a valid BCD value"
-	WebConst_sErrorDecodingURLText,	"Error decoding URL style (%%XX) encoded string at position %d"
-	WebConst_sInvalidURLEncodedChar,	"Invalid URL encoded character (%s) at position %d"
-	SOAPAttach_sTempPathCreationException,	"Unable to generate temporary path"
-	SOAPConst_SBcdStringTooBig,	"Cannot convert to TBcd: string has more than 64 digits: %s"
-	SOAPConst_SInvalidHexValue,	"%s is not a valid hex string"
-	SOAPConst_SInvalidHTTPRequest,	"Invalid HTTP Request: Length is 0"
-	SOAPConst_SWideStringOutOfBounds,	"WideString index out of bounds"
-	SOAPConst_SEmptyURL,	"No URL was specified for 'GET'"
-	SOAPConst_SInvalidURL,	"Invalid url '%s' - only supports 'http' and 'https' schemes"
 	SOAPConst_SMethNoRTTI,	"Method has no RTTI"
 	SOAPConst_SUnsupportedVariant,	"Unsuppported variant type %d"
 	SOAPConst_SNoVarDispatch,	"varDispatch type not supported"
@@ -422,12 +610,10 @@ BEGIN
 	SOAPConst_SInvalidContentLength,	"Insufficient data for Content-Length"
 	SOAPConst_SMimeReadError,	"Error reading from Mime Request Stream"
 	SOAPConst_STempFileAccessError,	"No access to temporary file"
-	SOAPConst_SNoMsgProcessingNode,	"No Message processing node set"
-	SOAPConst_SHeaderAttributeError,	"Soap header %s with attribute 'mustUnderstand' set to true was not handled"
-	SOAPConst_SNoRTTI,	"Interface %s has no RTTI"
-	SOAPConst_SNoRTTIParam,	"Parameter %s on Method %s of Interface %s has no RTTI"
-	SOAPConst_SInvalidDateString,	"Invalid date string: %s"
-	SOAPConst_SInvalidTimeString,	"Invalid time string: %s"
+	SOAPConst_SCantLoadLocation,	"Unable to load WSDL File/Location: %s.  Error [%s]"
+	DBConsts_SBcdOverflow,	"BCD overflow"
+	DBConsts_SInvalidBcdValue,	"%s is not a valid BCD value"
+	SOAPAttach_sTempPathCreationException,	"Unable to generate temporary path"
 	SOAPConst_SInvalidMinute,	"Invalid minute: %d"
 	SOAPConst_SInvalidMillisecond,	"Invalid millisecond: %d"
 	SOAPConst_SInvalidFractionalSecond,	"Invalid fractional second: %f"
@@ -438,12 +624,12 @@ BEGIN
 	SOAPConst_SNoSciNotation,	"Cannot convert scientific notation to TBcd value"
 	SOAPConst_SNoNAN,	"Cannot convert NAN to TBcd value"
 	SOAPConst_SInvalidBcd,	"Invalid Bcd Precision (%d) or Scale (%d)"
-	SOAPConst_SDataTypeNotSupported,	"Datatype of TypeKind: %s not supported as argument for remote invocation"
-	SOAPConst_SNoSerializeGraphs,	"Must enable multiref output for objects when serializing a graph of objects - (%s)"
-	SOAPConst_SUnsuportedClassType,	"Conversion from class %s to SOAP is not supported - SOAP classes must derive from TRemotable"
-	SOAPConst_SUnexpectedDataType,	"Internal error: data type kind %s cannot be converted to and from text"
-	SOAPConst_SInvalidContentType,	"Received content of invalid Content-Type setting: %s - SOAP expects \"text/xml\""
-	SOAPConst_SArrayTooManyElem,	"Array Node: %s has too many elements"
+	SOAPConst_SBcdStringTooBig,	"Cannot convert to TBcd: string has more than 64 digits: %s"
+	SOAPConst_SInvalidHexValue,	"%s is not a valid hex string"
+	SOAPConst_SInvalidHTTPRequest,	"Invalid HTTP Request: Length is 0"
+	SOAPConst_SWideStringOutOfBounds,	"WideString index out of bounds"
+	SOAPConst_SEmptyURL,	"No URL was specified for 'GET'"
+	SOAPConst_SInvalidURL,	"Invalid url '%s' - only supports 'http' and 'https' schemes"
 	SOAPConst_SWrongDocElem,	"DocumentElement %s:%s expected, %s:%s found"
 	SOAPConst_STooManyParameters,	"Too many parameters in method %s"
 	SOAPConst_SNoArrayElemRTTI,	"Element of Array type %s has no RTTI"
@@ -454,12 +640,12 @@ BEGIN
 	SOAPConst_SHeaderError,	"Error Processing Header (%s)%s"
 	SOAPConst_SMissingSoapReturn,	"SOAP Response Packet: element matching function return not found, received \"%s\""
 	SOAPConst_SNoMessageConverter,	"No Native to Message converter set"
-	ComConst_STooManyParams,	"Dispatch methods do not support more than 64 parameters"
-	SOAPConst_SUnsupportedEncodingSyle,	"Unsupported SOAP encodingStyle %s"
-	SOAPConst_SInvalidSoapRequest,	"Invalid SOAP request"
-	SOAPConst_SInvalidSoapResponse,	"Invalid SOAP response"
-	SOAPConst_SMultiBodyNotSupported,	"Multiple body elements not supported"
-	SOAPConst_SUnsupportedCCIntfMeth,	"Remote Method Call: unsupported calling convention %s for method %s on interface %s"
+	SOAPConst_SNoMsgProcessingNode,	"No Message processing node set"
+	SOAPConst_SHeaderAttributeError,	"Soap header %s with attribute 'mustUnderstand' set to true was not handled"
+	SOAPConst_SNoRTTI,	"Interface %s has no RTTI"
+	SOAPConst_SNoRTTIParam,	"Parameter %s on Method %s of Interface %s has no RTTI"
+	SOAPConst_SInvalidDateString,	"Invalid date string: %s"
+	SOAPConst_SInvalidTimeString,	"Invalid time string: %s"
 	SOAPConst_SRemTypeNotRegistered,	"Remotable Type %s not registered"
 	SOAPConst_STypeMismatchInParam,	"Type mismatch in parameter %s"
 	SOAPConst_SNoSuchMethod,	"No method named '%s' is supported by interface '%s'"
@@ -470,8 +656,12 @@ BEGIN
 	SOAPConst_SEmptyWSDL,	"Empty document"
 	SOAPConst_sNoWSDLURL,	"No WSDL or URL property was set in the THTTPRIO component. You must set the WSDL or URL property before invoking the Web Service"
 	SOAPConst_sCantGetURL,	"Unable to retrieve the URL endpoint for Service/Port '%s'/'%s' from WSDL '%s'"
-	XMLConst_SUnknownDataType,	"Unknown datatype \"%s\""
-	XMLConst_SInvalidGroupDecl,	"Invalid group declaration in \"%s\""
+	SOAPConst_SDataTypeNotSupported,	"Datatype of TypeKind: %s not supported as argument for remote invocation"
+	SOAPConst_SNoSerializeGraphs,	"Must enable multiref output for objects when serializing a graph of objects - (%s)"
+	SOAPConst_SUnsuportedClassType,	"Conversion from class %s to SOAP is not supported - SOAP classes must derive from TRemotable"
+	SOAPConst_SUnexpectedDataType,	"Internal error: data type kind %s cannot be converted to and from text"
+	SOAPConst_SInvalidContentType,	"Received content of invalid Content-Type setting: %s - SOAP expects \"text/xml\""
+	SOAPConst_SArrayTooManyElem,	"Array Node: %s has too many elements"
 	XMLConst_SMissingName,	"Missing Type name"
 	XMLConst_SInvalidDerivation,	"Invalid complex type derivation: %s"
 	XMLConst_SNoNameOnRef,	"Name not allowed on a ref item"
@@ -483,11 +673,11 @@ BEGIN
 	XMLConst_SNotBuiltInType,	"Invalid built-in type name \"%s\""
 	XMLConst_SInvalidTargetNS,	"Included schema file \"%s\" has an invalid targetNamespace.\r\n\r\nExpected: %s\r\nFound: %s"
 	XMLConst_SUndefinedTargetNS,	"No targetNamespace attribute"
-	ComConst_SOleError,	"OLE error %.8x"
-	ComConst_SNoMethod,	"Method '%s' not supported by automation object"
-	ComConst_SVarNotObject,	"Variant does not reference an automation object"
-	XMLConst_SMSDOMNotInstalled,	"Microsoft MSXML is not installed"
-	XMLConst_SNotActive,	"No active document"
+	SOAPConst_SUnsupportedEncodingSyle,	"Unsupported SOAP encodingStyle %s"
+	SOAPConst_SInvalidSoapRequest,	"Invalid SOAP request"
+	SOAPConst_SInvalidSoapResponse,	"Invalid SOAP response"
+	SOAPConst_SMultiBodyNotSupported,	"Multiple body elements not supported"
+	SOAPConst_SUnsupportedCCIntfMeth,	"Remote Method Call: unsupported calling convention %s for method %s on interface %s"
 	XMLConst_SNodeNotFound,	"Node \"%s\" not found"
 	XMLConst_SMissingNode,	"IDOMNode required"
 	XMLConst_SNoAttributes,	"Attributes are not supported on this node type"
@@ -502,10 +692,200 @@ BEGIN
 	XMLConst_SLine,	"Line"
 	XMLConst_SInvalidSchema,	"Invalid or unsupported XML Schema document"
 	XMLConst_SNoLocalTypeName,	"Local type declarations cannot have a name.  Element: %s"
-	Consts_SDuplicateMenus,	"Menu '%s' is already being used by another form"
-	Consts_SDockedCtlNeedsName,	"Docked control must have a name"
-	Consts_SDockTreeRemoveError,	"Error removing control from dock tree"
-	Consts_SDockZoneNotFound,	" - Dock zone not found"
+	XMLConst_SUnknownDataType,	"Unknown datatype \"%s\""
+	XMLConst_SInvalidGroupDecl,	"Invalid group declaration in \"%s\""
+	ComConst_SOleError,	"OLE error %.8x"
+	ComConst_SNoMethod,	"Method '%s' not supported by automation object"
+	ComConst_SVarNotObject,	"Variant does not reference an automation object"
+	ComConst_STooManyParams,	"Dispatch methods do not support more than 64 parameters"
+	WebConst_sErrorDecodingURLText,	"Error decoding URL style (%%XX) encoded string at position %d"
+	WebConst_sInvalidURLEncodedChar,	"Invalid URL encoded character (%s) at position %d"
+	JConsts_sChangeJPGSize,	"Cannot change the size of a JPEG image"
+	JConsts_sJPEGError,	"JPEG error #%d"
+	JConsts_sJPEGImageFile,	"JPEG Image File"
+	XMLConst_SDuplicateRegistration,	"\"%s\" DOMImplementation already registered"
+	XMLConst_SNoMatchingDOMVendor,	"No matching DOM Vendor: \"%s\""
+	XMLConst_SNoDOMNodeEx,	"Selected DOM Vendor does not support this property or method"
+	XMLConst_SDOMNotSupported,	"Property or Method \"%s\" is not supported by DOM Vendor \"%s\""
+	XMLConst_SNodeExpected,	"Node cannot be null"
+	XMLConst_SMSDOMNotInstalled,	"Microsoft MSXML is not installed"
+	XMLConst_SNotActive,	"No active document"
+	JvResources_RsClHighlightText,	"Selection text"
+	JvResources_RsClBtnFace,	"Button face"
+	JvResources_RsClBtnShadow,	"Button shadow"
+	JvResources_RsClGrayText,	"Dimmed text"
+	JvResources_RsClBtnText,	"Button text"
+	JvResources_RsClInactiveCaptionText,	"Inactive window title bar text"
+	JvResources_RsClBtnHighlight,	"Button highlight"
+	JvResources_RsCl3DDkShadow,	"Dark shadow 3D elements"
+	JvResources_RsCl3DLight,	"Highlight 3D elements"
+	JvResources_RsClInfoText,	"Tooltip text"
+	JvResources_RsClInfoBk,	"Tooltip background"
+	JvResources_RsGradientActiveCaption,	"Gradient Active Caption"
+	JvResources_RsGradientInactiveCaption,	"Gradient Inactive Caption"
+	JvResources_RsHotLight,	"Hot Light"
+	JvResources_RsMenuBar,	"Menu Bar"
+	JvResources_RsMenuHighlight,	"Menu Highlight"
+	JvResources_RsClPaleBlue,	"Pale Blue"
+	JvResources_RsClLavender,	"Lavender"
+	JvResources_RsClScrollBar,	"Scrollbar"
+	JvResources_RsClBackground,	"Desktop background"
+	JvResources_RsClActiveCaption,	"Active window title bar"
+	JvResources_RsClInactiveCaption,	"Inactive window title bar"
+	JvResources_RsClMenu,	"Menu background"
+	JvResources_RsClWindow,	"Window background"
+	JvResources_RsClWindowFrame,	"Window frame"
+	JvResources_RsClMenuText,	"Menu text"
+	JvResources_RsClWindowText,	"Window text"
+	JvResources_RsClCaptionText,	"Active window title bar text"
+	JvResources_RsClActiveBorder,	"Active window border"
+	JvResources_RsClInactiveBorder,	"Inactive window border"
+	JvResources_RsClAppWorkSpace,	"Application workspace"
+	JvResources_RsClHighlight,	"Selection background"
+	JvResources_RsClLightOrange,	"Light Orange"
+	JvResources_RsClSeaGreen,	"Sea Green"
+	JvResources_RsClLightBlue,	"Light Blue"
+	JvResources_RsClViolet,	"Violet"
+	JvResources_RsClGray40,	"Gray 40%"
+	JvResources_RsClPink,	"Pink"
+	JvResources_RsClGold,	"Gold"
+	JvResources_RsClBrightGreen,	"Bright Green"
+	JvResources_RsClTurquoise,	"Turquoise"
+	JvResources_RsClPlum,	"Plum"
+	JvResources_RsClGray25,	"Gray 25%"
+	JvResources_RsClRose,	"Rose"
+	JvResources_RsClTan,	"Tan"
+	JvResources_RsClLightYellow,	"Light Yellow"
+	JvResources_RsClLightGreen,	"Light Green"
+	JvResources_RsClLightTurquoise,	"Light Turquoise"
+	JvResources_RsClMoneyGreen,	"Money green"
+	JvResources_RsClSkyBlue,	"Sky blue"
+	JvResources_RsClCream,	"Cream"
+	JvResources_RsClMedGray,	"Medium gray"
+	JvResources_RsClBrown,	"Brown"
+	JvResources_RsClOliveGreen,	"Olive Green"
+	JvResources_RsClDarkGreen,	"Dark Green"
+	JvResources_RsClDarkTeal,	"Dark Teal"
+	JvResources_RsClDarkBlue,	"Dark Blue"
+	JvResources_RsClIndigo,	"Indigo"
+	JvResources_RsClGray80,	"Gray 80%"
+	JvResources_RsClDarkRed,	"Dark Red"
+	JvResources_RsClOrange,	"Orange"
+	JvResources_RsClDarkYellow,	"Dark Yellow"
+	JvResources_RsClBlueGray,	"Blue Gray"
+	JvResources_RsClGray50,	"Gray 50%"
+	JvResources_RsClBlack,	"Black"
+	JvResources_RsClMaroon,	"Maroon"
+	JvResources_RsClGreen,	"Green"
+	JvResources_RsClOlive,	"Olive green"
+	JvResources_RsClNavy,	"Navy blue"
+	JvResources_RsClPurple,	"Purple"
+	JvResources_RsClTeal,	"Teal"
+	JvResources_RsClGray,	"Gray"
+	JvResources_RsClSilver,	"Silver"
+	JvResources_RsClRed,	"Red"
+	JvResources_RsClLime,	"Lime"
+	JvResources_RsClYellow,	"Yellow"
+	JvResources_RsClBlue,	"Blue"
+	JvResources_RsClFuchsia,	"Fuchsia"
+	JvResources_RsClAqua,	"Aqua"
+	JvResources_RsClWhite,	"White"
+	JclResources_RsIntelCacheDescrD7,	"3rd-level cache: 2 MByte, 8-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrD8,	"3rd-level cache: 4 MByte, 8-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrDC,	"3rd-level cache: 1.5 MByte, 12-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrDD,	"3rd-level cache: 3 MByte, 12-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrDE,	"3rd-level cache: 6 MByte, 12-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrE2,	"3rd-level cache: 2 MByte, 16-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrE3,	"3rd-level cache: 4 MByte, 16-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrE4,	"3rd-level cache: 8 MByte, 16-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrEA,	"3rd-level cache: 12 MByte, 24-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrEB,	"3rd-level cache: 18 MByte, 24-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrEC,	"3rd-level cache: 24 MByte, 24-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrF0,	"64-Byte Prefetching"
+	JclResources_RsIntelCacheDescrF1,	"128-Byte Prefetching"
+	JclResources_RsIntelCacheDescrFF,	"CPUID leaf 2 does not report cache descriptor information, use CPUID leaf 4 to query cache parameters"
+	JclResources_RsUnknownAMDModel,	"Unknown AMD (Model %d)"
+	JvResources_RsEDuplicateDigitClass,	"Duplicate DigitClass registered"
+	JclResources_RsIntelCacheDescr84,	"2nd-level cache: 1 MBytes, 8-way associative, 32 byte line size"
+	JclResources_RsIntelCacheDescr85,	"2nd-level cache: 2 MBytes, 8-way associative, 32 byte line size"
+	JclResources_RsIntelCacheDescr86,	"2nd-level cache: 512 KByte, 4-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr87,	"2nd-level cache: 1 MByte, 8-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrB0,	"Instruction TLB: 4 KByte pages, 4-way set associative, 128 entries"
+	JclResources_RsIntelCacheDescrB1,	"Instruction TLB: 2 MByte pages, 4-way, 8 entries or 4 MByte pages, 4-way, 4 entries"
+	JclResources_RsIntelCacheDescrB2,	"Instruction TLB: 4 KByte pages, 4-way set associative, 64 entries"
+	JclResources_RsIntelCacheDescrB3,	"Data TLB: 4 KByte pages, 4-way set associative, 128 entries"
+	JclResources_RsIntelCacheDescrB4,	"Data TLB1: 4 KByte pages, 4-way set associative, 256 entries"
+	JclResources_RsIntelCacheDescrBA,	"Data TLB1: 4 KByte pages, 4-way set associative, 64 entries"
+	JclResources_RsIntelCacheDescrC0,	"Data TLB: 4 KByte and 4 MByte pages, 4-way set associative, 8 entries"
+	JclResources_RsIntelCacheDescrCA,	"Shared 2nd-Level TLB: 4 KByte pages, 4-way associative, 512 entries"
+	JclResources_RsIntelCacheDescrD0,	"3rd-level cache: 512 KByte, 4-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrD1,	"3rd-level cache: 1 MByte, 4-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrD2,	"3rd-level cache: 2 MByte, 4-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescrD6,	"3rd-level cache: 1 MByte, 8-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr67,	"1st-level data cache: 16 KBytes, 4-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr68,	"1st-level data cache: 32 KBytes, 4-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr70,	"Trace cache: 12 K-Ops, 8-way set associative"
+	JclResources_RsIntelCacheDescr71,	"Trace cache: 16 K-Ops, 8-way set associative"
+	JclResources_RsIntelCacheDescr72,	"Trace cache: 32 K-Ops, 8-way set associative"
+	JclResources_RsIntelCacheDescr73,	"Trace cache: 64 K-Ops, 8-way set associative"
+	JclResources_RsIntelCacheDescr78,	"2nd-level cache: 1 MBytes, 4-way set associative, 64 bytes line size"
+	JclResources_RsIntelCacheDescr79,	"2nd-level cache: 128 KBytes, 8-way set associative, 64 bytes line size, 2 lines per sector"
+	JclResources_RsIntelCacheDescr7A,	"2nd-level cache: 256 KBytes, 8-way set associative, 64 bytes line size, 2 lines per sector"
+	JclResources_RsIntelCacheDescr7B,	"2nd-level cache: 512 KBytes, 8-way set associative, 64 bytes line size, 2 lines per sector"
+	JclResources_RsIntelCacheDescr7C,	"2nd-level cache: 1 MBytes, 8-way set associative, 64 bytes line size, 2 lines per sector"
+	JclResources_RsIntelCacheDescr7D,	"2nd-level cache: 2 MBytes, 8-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr7F,	"2nd-level cache: 512 KBytes, 2-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr80,	"2nd-level cache: 512 KBytes, 8-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr82,	"2nd-level cache: 256 KBytes, 8-way associative, 32 byte line size"
+	JclResources_RsIntelCacheDescr83,	"2nd-level cache: 512 KBytes, 8-way associative, 32 byte line size"
+	JclResources_RsIntelCacheDescr4D,	"3rd-level cache: 16MByte, 16-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr4E,	"2nd-level cache: 6MByte, 24-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr4F,	"Instruction TLB: 4 KByte pages, 32 Entries"
+	JclResources_RsIntelCacheDescr50,	"Instruction TLB: 4 KByte and 2 MByte or 4 MByte pages, 64 Entries"
+	JclResources_RsIntelCacheDescr51,	"Instruction TLB: 4 KByte and 2 MByte or 4 MByte pages, 128 Entries"
+	JclResources_RsIntelCacheDescr52,	"Instruction TLB: 4 KByte and 2 MByte or 4 MByte pages, 256 Entries"
+	JclResources_RsIntelCacheDescr55,	"Instruction TLB: 2-MByte or 4-MByte pages, fully associative, 7 entries"
+	JclResources_RsIntelCacheDescr56,	"Data TLB0: 4 MByte pages, 4-way set associative, 16 entries"
+	JclResources_RsIntelCacheDescr57,	"Data TLB0: 4 KByte pages, 4-way associative, 16 entries"
+	JclResources_RsIntelCacheDescr59,	"Data TLB0: 4 KByte pages, fully associative, 16 entries"
+	JclResources_RsIntelCacheDescr5A,	"Data TLB0: 2 MByte or 4 MByte pages, 4-way set associative, 32 entries"
+	JclResources_RsIntelCacheDescr5B,	"Data TLB: 4 KByte and 4 MByte pages, 64 Entries"
+	JclResources_RsIntelCacheDescr5C,	"Data TLB: 4 KByte and 4 MByte pages, 128 Entries"
+	JclResources_RsIntelCacheDescr5D,	"Data TLB: 4 KByte and 4 MByte pages, 256 Entries"
+	JclResources_RsIntelCacheDescr60,	"1st-level data cache: 16 KByte, 8-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr66,	"1st-level data cache: 8 KBytes, 4-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr3C,	"2nd-level cache: 256 KBytes, 4-way set associative, sectored cache, 64-byte line size"
+	JclResources_RsIntelCacheDescr3D,	"2nd-level cache: 384 KBytes, 6-way set associative, sectored cache, 64-byte line size"
+	JclResources_RsIntelCacheDescr3E,	"2nd-level cache: 512 KBytes, 4-way set associative, sectored cache, 64-byte line size"
+	JclResources_RsIntelCacheDescr40,	"No 2nd-level cache or, if processor contains a valid 2nd-level cache, no 3rd-level cache"
+	JclResources_RsIntelCacheDescr41,	"2nd-level cache: 128 KBytes, 4-way set associative, 32 byte line size"
+	JclResources_RsIntelCacheDescr42,	"2nd-level cache: 256 KBytes, 4-way set associative, 32 byte line size"
+	JclResources_RsIntelCacheDescr43,	"2nd-level cache: 512 KBytes, 4-way set associative, 32 byte line size"
+	JclResources_RsIntelCacheDescr44,	"2nd-level cache: 1 MBytes, 4-way set associative, 32 byte line size"
+	JclResources_RsIntelCacheDescr45,	"2nd-level cache: 2 MBytes, 4-way set associative, 32 byte line size"
+	JclResources_RsIntelCacheDescr46,	"3rd-level cache: 4 MBytes, 4-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr47,	"3rd-level cache: 8 MBytes, 4-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr48,	"3rd-level cache: 8 MByte, 8-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr49,	"2nd-level cache: 4 MBytes, 16-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr4A,	"3rd-level cache: 6MByte, 12-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr4B,	"3rd-level cache: 8MByte, 16-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr4C,	"3rd-level cache: 12MByte, 12-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr09,	"1st level instruction cache: 32 KBytes, 4-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr0A,	"1st level data cache: 8 KBytes, 2-way set associative, 32 byte line size"
+	JclResources_RsIntelCacheDescr0B,	"Instruction TLB: 4 MByte pages, 4-way set associative, 4 entries"
+	JclResources_RsIntelCacheDescr0C,	"1st level data cache: 16 KBytes, 4-way set associative, 32 byte line size"
+	JclResources_RsIntelCacheDescr0D,	"1st level data cache: 16 KBytes, 4-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr0E,	"1st level data cache: 24 KBytes, 6-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr21,	"2nd level cache: 256 KBytes, 8-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr22,	"3rd level cache: 512 KBytes, 4-way set associative, 64 byte line size, 2 lines per sector"
+	JclResources_RsIntelCacheDescr23,	"3rd level cache: 1 MBytes, 8-way set associative, 64 byte line size, 2 lines per sector"
+	JclResources_RsIntelCacheDescr25,	"3rd level cache: 2 MBytes, 8-way set associative, 64 byte line size, 2 lines per sector"
+	JclResources_RsIntelCacheDescr29,	"3rd level cache: 4 MBytes, 8-way set associative, 64 byte line size, 2 lines per sector"
+	JclResources_RsIntelCacheDescr2C,	"1st level data cache: 32 KBytes, 8-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr30,	"1st level instruction cache: 32 KBytes, 8-way set associative, 64 byte line size"
+	JclResources_RsIntelCacheDescr39,	"2nd-level cache: 128 KBytes, 4-way set associative, sectored cache, 64-byte line size"
+	JclResources_RsIntelCacheDescr3A,	"2nd-level cache: 192 KBytes, 6-way set associative, sectored cache, 64-byte line size"
+	JclResources_RsIntelCacheDescr3B,	"2nd-level cache: 128 KBytes, 2-way set associative, sectored cache, 64-byte line size"
 	Consts_SDockZoneHasNoCtl,	" - Dock zone has no control"
 	Consts_SDockZoneVersionConflict,	"Error loading dock zone from the stream. Expecting version %d, but found %d."
 	Consts_SWindowsVistaRequired,	"%s requires Windows Vista or later"
@@ -513,15 +893,15 @@ BEGIN
 	Consts_STaskDlgButtonCaption,	"Button%d"
 	Consts_STaskDlgRadioButtonCaption,	"RadioButton%d"
 	Consts_SInvalidTaskDlgButtonCaption,	"Caption cannot be empty"
-	XMLConst_SDuplicateRegistration,	"\"%s\" DOMImplementation already registered"
-	XMLConst_SNoMatchingDOMVendor,	"No matching DOM Vendor: \"%s\""
-	XMLConst_SNoDOMNodeEx,	"Selected DOM Vendor does not support this property or method"
-	XMLConst_SDOMNotSupported,	"Property or Method \"%s\" is not supported by DOM Vendor \"%s\""
-	XMLConst_SNodeExpected,	"Node cannot be null"
-	Consts_SmkcLeft,	"Left"
-	Consts_SmkcUp,	"Up"
-	Consts_SmkcRight,	"Right"
-	Consts_SmkcDown,	"Down"
+	JclResources_RsEReplacementChar,	"Failed to get ANSI replacement character"
+	JclResources_RsIntelCacheDescr00,	"Null descriptor"
+	JclResources_RsIntelCacheDescr01,	"Instruction TLB: 4 KByte pages, 4-way set associative, 32 entries"
+	JclResources_RsIntelCacheDescr02,	"Instruction TLB: 4 MByte pages, 4-way set associative, 2 entries"
+	JclResources_RsIntelCacheDescr03,	"Data TLB: 4 KByte pages, 4-way set associative, 64 entries"
+	JclResources_RsIntelCacheDescr04,	"Data TLB: 4 MByte pages, 4-way set associative, 8 entries"
+	JclResources_RsIntelCacheDescr05,	"Data TLB1: 4 MByte pages, 4-way set associative, 32 entries"
+	JclResources_RsIntelCacheDescr06,	"1st level instruction cache: 8 KBytes, 4-way set associative, 32 byte line size"
+	JclResources_RsIntelCacheDescr08,	"1st level instruction cache: 16 KBytes, 4-way set associative, 32 byte line size"
 	Consts_SmkcIns,	"Ins"
 	Consts_SmkcDel,	"Del"
 	Consts_SmkcShift,	"Shift+"
@@ -534,10 +914,10 @@ BEGIN
 	Consts_SCannotOpenClipboard,	"Cannot open clipboard: %s"
 	Consts_SInvalidPrinterOp,	"Operation not supported on selected printer"
 	Consts_SNoDefaultPrinter,	"There is no default printer currently selected"
-	Consts_SMsgDlgAbort,	"&Abort"
-	Consts_SMsgDlgRetry,	"&Retry"
-	Consts_SMsgDlgIgnore,	"&Ignore"
-	Consts_SMsgDlgAll,	"&All"
+	Consts_SDuplicateMenus,	"Menu '%s' is already being used by another form"
+	Consts_SDockedCtlNeedsName,	"Docked control must have a name"
+	Consts_SDockTreeRemoveError,	"Error removing control from dock tree"
+	Consts_SDockZoneNotFound,	" - Dock zone not found"
 	Consts_SMsgDlgNoToAll,	"N&o to All"
 	Consts_SMsgDlgYesToAll,	"Yes to &All"
 	Consts_SMsgDlgClose,	"&Close"
@@ -550,10 +930,10 @@ BEGIN
 	Consts_SmkcPgDn,	"PgDn"
 	Consts_SmkcEnd,	"End"
 	Consts_SmkcHome,	"Home"
-	Consts_STooManyDeleted,	"Too many rows or columns deleted"
-	Consts_SIndexOutOfRange,	"Grid index out of range"
-	Consts_SFixedColTooBig,	"Fixed column count must be less than column count"
-	Consts_SFixedRowTooBig,	"Fixed row count must be less than row count"
+	Consts_SmkcLeft,	"Left"
+	Consts_SmkcUp,	"Up"
+	Consts_SmkcRight,	"Right"
+	Consts_SmkcDown,	"Down"
 	Consts_SInvalidStringGridOp,	"Cannot insert or delete rows from grid"
 	Consts_SMaskErr,	"Invalid input value"
 	Consts_SMaskEditErr,	"Invalid input value.  Use escape key to abandon changes"
@@ -566,6 +946,28 @@ BEGIN
 	Consts_SMsgDlgOK,	"OK"
 	Consts_SMsgDlgCancel,	"Cancel"
 	Consts_SMsgDlgHelp,	"&Help"
+	Consts_SMsgDlgAbort,	"&Abort"
+	Consts_SMsgDlgRetry,	"&Retry"
+	Consts_SMsgDlgIgnore,	"&Ignore"
+	Consts_SMsgDlgAll,	"&All"
+	Consts_SCloseButton,	"&Close"
+	Consts_SIgnoreButton,	"&Ignore"
+	Consts_SRetryButton,	"&Retry"
+	Consts_SAbortButton,	"Abort"
+	Consts_SAllButton,	"&All"
+	Consts_SCannotDragForm,	"Cannot drag a form"
+	Consts_SVMetafiles,	"Metafiles"
+	Consts_SVEnhMetafiles,	"Enhanced Metafiles"
+	Consts_SVIcons,	"Icons"
+	Consts_SVBitmaps,	"Bitmaps"
+	Consts_SVTIFFImages,	"TIFF Images"
+	Consts_SGridTooLarge,	"Grid too large for operation"
+	Consts_STooManyDeleted,	"Too many rows or columns deleted"
+	Consts_SIndexOutOfRange,	"Grid index out of range"
+	Consts_SFixedColTooBig,	"Fixed column count must be less than column count"
+	Consts_SFixedRowTooBig,	"Fixed row count must be less than row count"
+	Consts_SMenuNotFound,	"Sub-menu is not in menu"
+	Consts_SNoTimers,	"Not enough timers available"
 	Consts_SNotPrinting,	"Printer is not currently printing"
 	Consts_SPrinting,	"Printing in progress"
 	Consts_SPrinterIndexError,	"Printer index out of range"
@@ -575,13 +977,12 @@ BEGIN
 	Consts_SNoMDIForm,	"Cannot create form. No MDI forms are currently active"
 	Consts_SImageCanvasNeedsBitmap,	"Can only modify an image if it contains a bitmap"
 	Consts_SControlParentSetToSelf,	"A control cannot have itself as its parent"
-	Consts_SCannotDragForm,	"Cannot drag a form"
-	Consts_SVMetafiles,	"Metafiles"
-	Consts_SVEnhMetafiles,	"Enhanced Metafiles"
-	Consts_SVIcons,	"Icons"
-	Consts_SVBitmaps,	"Bitmaps"
-	Consts_SVTIFFImages,	"TIFF Images"
-	Consts_SGridTooLarge,	"Grid too large for operation"
+	Consts_SOKButton,	"OK"
+	Consts_SCancelButton,	"Cancel"
+	Consts_SYesButton,	"&Yes"
+	Consts_SNoButton,	"&No"
+	Consts_SHelpButton,	"&Help"
+	Consts_SReplaceImage,	"Unable to Replace Image"
 	Consts_SImageIndexError,	"Invalid ImageList Index"
 	Consts_SImageReadFail,	"Failed to read ImageList data from stream"
 	Consts_SImageWriteFail,	"Failed to write ImageList data to stream"
@@ -593,11 +994,10 @@ BEGIN
 	Consts_SMDIChildNotVisible,	"Cannot hide an MDI Child Form"
 	Consts_SVisibleChanged,	"Cannot change Visible in OnShow or OnHide"
 	Consts_SCannotShowModal,	"Cannot make a visible window modal"
+	Consts_SScrollBarRange,	"Scrollbar property out of range"
 	Consts_SPropertyOutOfRange,	"%s property out of range"
 	Consts_SMenuIndexError,	"Menu index out of range"
 	Consts_SMenuReinserted,	"Menu inserted twice"
-	Consts_SMenuNotFound,	"Sub-menu is not in menu"
-	Consts_SNoTimers,	"Not enough timers available"
 	RTLConsts_SGenericItemNotFound,	"Item not found"
 	RTLConsts_SGenericDuplicateItem,	"Duplicates not allowed"
 	Consts_SInvalidBitmap,	"Bitmap image is not valid"
@@ -605,6 +1005,7 @@ BEGIN
 	Consts_SInvalidMetafile,	"Metafile is not valid"
 	Consts_SInvalidPixelFormat,	"Invalid pixel format"
 	Consts_SInvalidImage,	"Invalid image"
+	Consts_SScanLine,	"Scan line index out of range"
 	Consts_SChangeIconSize,	"Cannot change the size of an icon"
 	Consts_SChangeWicSize,	"Cannot change the size of a WIC Image"
 	Consts_SUnknownExtension,	"Unknown picture file extension (.%s)"
@@ -613,7 +1014,6 @@ BEGIN
 	Consts_SNoCanvasHandle,	"Canvas does not allow drawing"
 	Consts_SInvalidImageSize,	"Invalid image size"
 	Consts_SInvalidImageList,	"Invalid ImageList"
-	Consts_SReplaceImage,	"Unable to Replace Image"
 	RTLConsts_hNoFilterViewer,	"No help viewer that supports filters"
 	RTLConsts_sInvalidStringAndObjectArrays,	"Length of Strings and Objects arrays must be equal"
 	RTLConsts_sInvalidTimeoutValue,	"Invalid Timeout value: %s"
@@ -794,6 +1194,14 @@ END
 
 /* C:\Program Files\EurekaLab\EurekaLog 6\Delphi15\DIALOG.RES */
 /* c:\program files\embarcadero\rad studio\8.0\lib\Win32\release\Controls.res */
-/* C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\frmClienteWS.dfm */
-/* C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\ClientWS.res */
-/* C:\Users\claudio.brignardello\Documents\RAD Studio\Projects\CLIWEBSERVICE\ClientWS.drf */
+/* c:\program files\embarcadero\rad studio\8.0\lib\Win32\release\Buttons.res */
+/* C:\Componentes XE\Jedi\jcl\lib\d15\JclUnicode.res */
+/* C:\Componentes XE\Jedi\jvcl\Resources\JvSegmentedLEDDisplay.res */
+/* C:\Componentes XE\Jedi\jvcl\Resources\JvLED.res */
+/* c:\program files\embarcadero\rad studio\8.0\lib\Win32\release\KeyboardLayouts.res */
+/* c:\program files\embarcadero\rad studio\8.0\lib\Win32\release\SPIN.RES */
+/* c:\program files\embarcadero\rad studio\8.0\lib\Win32\release\TeeFonts.res */
+/* c:\program files\embarcadero\rad studio\8.0\lib\Win32\release\TeeResou.res */
+/* C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\WEBSERVICE_CLI\frmClienteWS.dfm */
+/* C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\WEBSERVICE_CLI\ClientWS.res */
+/* C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\WEBSERVICE_CLI\ClientWS.drf */
