@@ -4,7 +4,9 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Grids, ComCtrls;
+  Dialogs, StdCtrls, Grids, ComCtrls, ExtCtrls, JvSegmentedLEDDisplay,
+  JvExControls, JvLED, Keyboard, HTTPApp, JimZoomImage, Spin, Gauges, jpeg,
+  TeeProcs, TeeDraw3D;
 
 type
   TForm1 = class(TForm)
@@ -23,11 +25,14 @@ type
     StringGrid1: TStringGrid;
     btn5: TButton;
     pb1: TProgressBar;
+    btn6: TButton;
+    Edit6: TEdit;
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
     procedure btn3Click(Sender: TObject);
     procedure btn4Click(Sender: TObject);
     procedure btn5Click(Sender: TObject);
+    procedure btn6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -102,6 +107,53 @@ begin
            Cells[1,i+1] := FloatToStr(ParamResp.DET_produccion[i].DET_Prod_Acumulada);
            Cells[2,i+1] := FloatToStr(ParamResp.DET_produccion[i].DET_Prod_Mes );
            Cells[3,i+1] := FloatToStr(ParamResp.DET_produccion[i].DET_Prod_Meta);
+         End;
+      end;
+   end;
+   pb1.Position:=100;
+   ParamResp.Free;
+end;
+
+procedure TForm1.btn6Click(Sender: TObject);
+var
+    ParamResp : trRet_Asegurado;
+    ParametroPedido : trParametroConsAsegurado;
+    I,j : Integer;
+    Deta : TArrayAsegurado;
+begin
+   ParametroPedido := trParametroConsAsegurado.Create;
+   ParametroPedido.NombreAsegurado:= trim(Edit6.Text);
+   ParamResp := GetIWsPrueba().ConsultaAsegurado(ParametroPedido);
+  //Vacia los datos de las tablas
+  for I := 1 to 200 do
+    for j := 0 to 3 do
+      StringGrid1.Cells[j,i] := '';
+  //Cabeceras
+  With StringGrid1 do
+   Begin
+     Cells[0,0] := 'Codigo';
+     Cells[1,0] := 'Nombre Asegurado';
+     Cells[2,0] := 'Documento';
+     Cells[3,0] := 'Comercial';
+   End;
+   //Rellena con los datos que arroja el WebSerice
+   pb1.Step := 10;
+   for I := 0  to High(ParamResp.DetAsegurado) do
+   begin
+      pb1.StepIt;
+      sleep(300);
+      Deta := ParamResp.DetAsegurado[I];
+      if Deta <> nil then
+      begin
+       With StringGrid1 do
+         Begin
+           if (trim(ParamResp.DetAsegurado[i].DET_Codigo)='') then
+               Break;
+
+           Cells[0,i+1] := ParamResp.DetAsegurado[i].DET_Codigo;
+           Cells[1,i+1] := ParamResp.DetAsegurado[i].DET_Nombre;
+           Cells[2,i+1] := ParamResp.DetAsegurado[i].DET_DOC;
+           Cells[3,i+1] := ParamResp.DetAsegurado[i].DET_Comercial;
          End;
       end;
    end;

@@ -11,17 +11,17 @@ object DMWsDatos: TDMWsDatos
     SQLConnection = FBCONNECTION
     Left = 104
     Top = 81
-    object qry1PROD_ACUM: TLargeintField
-      FieldName = 'PROD_ACUM'
+    object qry1O_PROD_ACUM: TLargeintField
+      FieldName = 'O_PROD_ACUM'
     end
-    object qry1PROD_MES: TLargeintField
-      FieldName = 'PROD_MES'
+    object qry1O_PROD_MES: TLargeintField
+      FieldName = 'O_PROD_MES'
     end
-    object qry1PROD_META: TLargeintField
-      FieldName = 'PROD_META'
+    object qry1O_PROD_META: TLargeintField
+      FieldName = 'O_PROD_META'
     end
-    object qry1PROD_SUC: TStringField
-      FieldName = 'PROD_SUC'
+    object qry1O_PROD_SUC: TStringField
+      FieldName = 'O_PROD_SUC'
       FixedChar = True
       Size = 100
     end
@@ -73,5 +73,86 @@ object DMWsDatos: TDMWsDatos
     Connected = True
     Left = 40
     Top = 17
+  end
+  object qryAseg: TSQLQuery
+    Active = True
+    MaxBlobSize = -1
+    Params = <
+      item
+        DataType = ftWideString
+        Name = 'aseg'
+        ParamType = ptInput
+        Value = 'claudio'
+      end>
+    SQL.Strings = (
+      ''
+      'select a.* from ws_cons_aseg(:aseg) a')
+    SQLConnection = FBCONNECTION
+    Left = 224
+    Top = 113
+    object qryAsegO_CODIGO: TStringField
+      FieldName = 'O_CODIGO'
+      FixedChar = True
+      Size = 15
+    end
+    object qryAsegO_NOMBRE: TStringField
+      FieldName = 'O_NOMBRE'
+      FixedChar = True
+      Size = 100
+    end
+    object qryAsegO_CI: TIntegerField
+      FieldName = 'O_CI'
+    end
+    object qryAsegO_RUC: TStringField
+      FieldName = 'O_RUC'
+      FixedChar = True
+      Size = 11
+    end
+    object qryAsegO_COMERCIAL: TStringField
+      FieldName = 'O_COMERCIAL'
+      FixedChar = True
+      Size = 50
+    end
+  end
+  object ProvAsegurado: TDataSetProvider
+    DataSet = qryAseg
+    Left = 222
+    Top = 85
+  end
+  object qryAsegurado: TClientDataSet
+    Aggregates = <>
+    Params = <
+      item
+        DataType = ftWideString
+        Name = 'aseg'
+        ParamType = ptInput
+        Value = 'claudio'
+      end>
+    ProviderName = 'ProvAsegurado'
+    Left = 223
+    Top = 42
+    object qryAseguradoO_CODIGO1: TStringField
+      FieldName = 'O_CODIGO'
+      FixedChar = True
+      Size = 15
+    end
+    object qryAseguradoO_NOMBRE1: TStringField
+      FieldName = 'O_NOMBRE'
+      FixedChar = True
+      Size = 100
+    end
+    object qryAseguradoO_CI1: TIntegerField
+      FieldName = 'O_CI'
+    end
+    object qryAseguradoO_RUC1: TStringField
+      FieldName = 'O_RUC'
+      FixedChar = True
+      Size = 11
+    end
+    object qryAseguradoO_COMERCIAL1: TStringField
+      FieldName = 'O_COMERCIAL'
+      FixedChar = True
+      Size = 50
+    end
   end
 end
