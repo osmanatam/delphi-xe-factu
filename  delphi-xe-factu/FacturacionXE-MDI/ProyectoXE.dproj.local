@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2013/04/30 16:24:24.920,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\ProyectoXE.dproj=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\MDIAPP.dproj</Transaction>
+    <Transaction>2013/04/30 16:25:37.967,=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Unit1.pas</Transaction>
+    <Transaction>2013/04/30 16:26:52.394,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmBase.pas=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Unit1.pas</Transaction>
+    <Transaction>2013/04/30 16:26:52.394,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmBase.dfm=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Unit1.dfm</Transaction>
+    <Transaction>2013/04/30 16:27:40.632,=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Unit1.pas</Transaction>
+    <Transaction>2013/04/30 16:28:24.129,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmArticulos.dfm=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Unit1.dfm</Transaction>
+    <Transaction>2013/04/30 16:28:24.129,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmArticulos.pas=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Unit1.pas</Transaction>
+    <Transaction>2013/04/30 16:29:01.725,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmPrincipalMain.dfm=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Main.dfm</Transaction>
+    <Transaction>2013/04/30 16:29:01.725,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmPrincipalMain.pas=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Main.pas</Transaction>
+    <Transaction>2013/04/30 16:54:17.605,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\CHILDWIN.PAS=</Transaction>
+  </Transactions>
+</BorlandProject>

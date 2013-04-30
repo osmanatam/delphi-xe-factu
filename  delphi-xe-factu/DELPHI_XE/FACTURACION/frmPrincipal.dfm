@@ -2,8 +2,8 @@ object frmMenuPrincipal: TfrmMenuPrincipal
   Left = 0
   Top = 0
   Caption = 'Menu'
-  ClientHeight = 311
-  ClientWidth = 813
+  ClientHeight = 348
+  ClientWidth = 912
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,8 +18,8 @@ object frmMenuPrincipal: TfrmMenuPrincipal
   object img1: TImage
     Left = 0
     Top = 0
-    Width = 812
-    Height = 313
+    Width = 913
+    Height = 345
   end
   object MainMenu1: TMainMenu
     Left = 40
