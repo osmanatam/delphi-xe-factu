@@ -12,6 +12,7 @@ object frmCiudad2: TfrmCiudad2
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
+  Visible = True
   OnClose = FormClose
   OnShow = FormShow
   PixelsPerInch = 96
@@ -25,6 +26,10 @@ object frmCiudad2: TfrmCiudad2
     TabOrder = 0
     object tsABM: TTabSheet
       Caption = 'DATOS'
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object lbl1: TLabel
         Left = 30
         Top = 57

@@ -1,0 +1,9 @@
+//----------------------------------------------------------
+// NOTA:  Después de añadir un recurso nuevo de debe
+//        compilar con el fichero rc.cmd del directorio
+//        y comprobar que se ha creado el fichero
+//----------------------------------------------------------
+
+// recurso HTML
+RES_HTML_PAGEMAP     				RCDATA  "_mapa.txt"
+MAINICON 		  							ICON 	  "Main.ICO"

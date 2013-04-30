@@ -39,6 +39,8 @@ type
     procedure mnuManArticulosClick(Sender: TObject);
     procedure PEEImagenesClick(Sender: TObject);
     procedure mniMantProveedoresClick(Sender: TObject);
+    procedure AlCerrar ( Sender: TObject; var Action: TCloseAction );
+
   private
     { Private declarations }
   public
@@ -54,10 +56,14 @@ implementation
 
 procedure TfrmMenuPrincipal.mniCiudadClick(Sender: TObject);
 begin
-
    frmciudad2:=Tfrmciudad2.Create(SELF);
    frmciudad2.pnl1.Caption:='Mantenimiento Ciudad';
    frmciudad2.Show;
+end;
+
+procedure TfrmMenuPrincipal.AlCerrar( Sender: TObject; var Action: TCloseAction );
+begin
+  Action := caFree;
 end;
 
 procedure TfrmMenuPrincipal.mniEmpresaClick(Sender: TObject);

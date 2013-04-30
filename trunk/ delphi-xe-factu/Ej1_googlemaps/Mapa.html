@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>Visualizacion del mapa - SICMAR</title>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2.x&amp;key=ABQIAAAAFVb255bTSpn4DC0nkcIz3hTgmueMIh62ahlPS2dC-DIXqzciAxRZItsH3Fy4UcBpz0Q4D8XHzbxt3A" type="text/javascript"></script>
+    <script type="text/javascript">
+
+    var map = null;
+    var geocoder = null;
+    var TipoMapa = 'Mapa';
+    function load() {
+      if (GBrowserIsCompatible()) {
+        map = new GMap2(document.getElementById("map"));	
+        map.addControl(new GMapTypeControl());
+        map.addControl(new GLargeMapControl());
+        map.setMapType(G_SATELLITE_MAP);
+        
+		// POSICION RAL = 41.33651,2.103968  ALTURA=15            41.33651,2.103968),15);
+		//map.setCenter(new GLatLng(39.97712,-5.185547),6);     // ESPAIN
+		//map.setCenter(new GLatLng(41.33651,2.103968),15);   // RAL
+        map.setCenter(new GLatLng(-25.38376433383011,-57.467615604400635),17);
+		
+		// ADD MARCA
+		// var point = new GLatLng(41.3363171017184,2.1025514602661133);
+		// var marker = new GMarker(point);
+		// map.addOverlay(marker);
+
+		// VENTANA
+		var html="<img src='http://www.ral.es/bola.gif'" +
+         "width='61' height='51'/> <br/>" +
+         //"<b><a href='http://www.ral.es' target='_blank'>RAL Asistencia Informatica</b></a><br/>" +
+		 "<b><a href='http://www.ral.es' target='_blank'>c/ Balmes, 125, Barcelona</b></a><br/>" +
+         "Telefono : 93 264 98 65";		
+		
+		//##MARCA##
+		
+		// Bocadillo
+		//map.openInfoWindow(map.getCenter(),
+    //                   document.createTextNode("Arrastra la marca / Drag the marker"));
+		
+
+		
+		// No añadimos la marca
+		// map.addOverlay(marker);
+		GEvent.addListener(map, "click", function (overlay,point){
+          if (point){
+            document.posicion.x.value=point.x
+            document.posicion.y.value=point.y
+            document.posicion.z.value=map.getZoom()
+            TipoMapa = map.getCurrentMapType().getName()
+            document.posicion.t.value=TipoMapa
+          }
+        });
+    
+    GEvent.addListener(map, "zoomend", function (oldLevel, newLevel){           
+            document.posicion.z.value=map.getZoom()
+            TipoMapa = map.getCurrentMapType().getName()
+            document.posicion.t.value=TipoMapa
+        });
+          
+        
+    GEvent.addListener(map, "mousemove", function(latlng) {      							
+					point = map.getCenter();
+					if (point){
+            document.posicion.x.value=point.x
+            document.posicion.y.value=point.y
+            document.posicion.z.value=map.getZoom()
+            TipoMapa = map.getCurrentMapType().getName()
+            document.posicion.t.value=TipoMapa
+          }
+        });             
+		
+        geocoder = new GClientGeocoder();
+      }
+    }
+	window.onload=load
+
+    </script>
+  </head>
+
+  <body>
+<div id="map" style="width: 617px; height: 233px"></div>
+	<div id="formulario" >
+    <form action="#" id="posicion" name="posicion">
+    <input type="text" name="x" value=""/>
+    <input type="text" name="y" value=""/>
+    <input type="text" name="z" value=""/>
+    <input type="text" name="t" value=""/>
+    </form>
+    </div>
+ </body>
+</html>
+
+
+
+

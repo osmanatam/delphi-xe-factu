@@ -2846,59 +2846,59 @@ BEGIN
 	SysConst_SInvalidOp,	"Invalid floating point operation"
 END
 
-/* C:\Program Files\EurekaLab\EurekaLog 6\Delphi15\DIALOG.RES */
-/* c:\program files\embarcadero\rad studio\8.0\lib\Win32\release\Controls.res */
-/* C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\DataModule.dfm */
-/* c:\program files\embarcadero\rad studio\8.0\lib\Win32\release\Buttons.res */
-/* c:\program files\embarcadero\rad studio\8.0\lib\Win32\release\DBLogDlg.dfm */
-/* c:\program files\embarcadero\rad studio\8.0\lib\Win32\release\DBPWDlg.dfm */
-/* c:\program files\embarcadero\rad studio\8.0\lib\Win32\release\DBCtrls.res */
-/* C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmTablaMenor.dfm */
-/* C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmPais.dfm */
-/* C:\Program Files\Embarcadero\RAD Studio\8.0\Components\EhLib\Lib\CalculatorEh.DFM */
-/* C:\Program Files\Embarcadero\RAD Studio\8.0\Components\EhLib\Lib\DBGridEhFindDlgs.dfm */
-/* C:\Program Files\Embarcadero\RAD Studio\8.0\Components\EhLib\Lib\DBGridEhSimpleFilterDlg.DFM */
-/* C:\Program Files\Embarcadero\RAD Studio\8.0\Components\EhLib\Lib\DBGRIDEH.RES */
-/* C:\Program Files\Embarcadero\RAD Studio\8.0\Components\EhLib\Lib\PrvFrmEh.DFM */
-/* C:\Program Files\Embarcadero\RAD Studio\8.0\Components\EhLib\Lib\PrViewEh.RES */
-/* c:\program files\embarcadero\rad studio\8.0\lib\Win32\release\FileCtrl.res */
-/* c:\program files\embarcadero\rad studio\8.0\lib\Win32\release\ExtDlgs.res */
-/* C:\Componentes XE\Jedi\jcl\lib\d15\JclUnicode.res */
-/* C:\Componentes XE\Jedi\jvcl\Resources\JvConsts.res */
-/* C:\Componentes XE\Jedi\jvcl\Resources\JvToolEdit.res */
-/* c:\program files\embarcadero\rad studio\8.0\lib\Win32\release\DBGrids.res */
-/* C:\Componentes XE\ExpressForumLibraryXE\Sources\DXFLIB.RES */
-/* c:\program files\embarcadero\rad studio\8.0\RBuilder\Lib\ppTmDlg.DFM */
-/* c:\program files\embarcadero\rad studio\8.0\RBuilder\Lib\ppPrvBmp.res */
-/* c:\program files\embarcadero\rad studio\8.0\RBuilder\Lib\ppPrvDlg.DFM */
-/* c:\program files\embarcadero\rad studio\8.0\RBuilder\Lib\ppCDlg.DFM */
-/* c:\program files\embarcadero\rad studio\8.0\RBuilder\Lib\ppPDlg.DFM */
-/* c:\program files\embarcadero\rad studio\8.0\RBuilder\Lib\rbsRGB.res */
-/* c:\program files\embarcadero\rad studio\8.0\RBuilder\Lib\ppEmailLoginDlg.dfm */
-/* c:\program files\embarcadero\rad studio\8.0\RBuilder\Lib\ppEmailDlg.dfm */
-/* c:\program files\embarcadero\rad studio\8.0\RBuilder\Lib\rbPrint.res */
-/* c:\program files\embarcadero\rad studio\8.0\RBuilder\Lib\ppNoDataDlg.DFM */
-/* c:\program files\embarcadero\rad studio\8.0\RBuilder\Lib\ppTmEDlg.DFM */
-/* c:\program files\embarcadero\rad studio\8.0\RBuilder\Lib\ppASDlg.DFM */
-/* C:\Program Files\WPTools\XE\WPRulerRes.RES */
-/* C:\Program Files\WPTools\XE\WPPrTab1.DFM */
-/* C:\Program Files\WPTools\XE\WPFillBits.res */
-/* C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmModeloFormulario.dfm */
-/* C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmPaisUlt.dfm */
-/* C:\Componentes XE\Jedi\jvcl\Resources\JvCalc.Res */
-/* C:\Componentes XE\Jedi\jvcl\Resources\JvBaseEdits.Res */
-/* C:\Componentes XE\Jedi\jvcl\Resources\JvDBControls.res */
-/* C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmCiudad.dfm */
-/* C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmTipoIVA.dfm */
-/* C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmUnidadMedida.dfm */
-/* C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmEmpresa.dfm */
-/* C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmAgencia.dfm */
-/* C:\Componentes XE\Jedi\jvcl\lib\D15\JvDBGridSelectColumnForm.dfm */
-/* C:\Componentes XE\Jedi\jvcl\Resources\JvDBGrid.res */
-/* C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmProveedores.dfm */
-/* C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmArticulos.dfm */
-/* C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmMostrarImagenes.dfm */
-/* C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmPrincipal.dfm */
-/* C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmLogin.dfm */
-/* C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\ProyectoFacturacionXE.res */
-/* C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\DELPHI_XE\FACTURACION\ProyectoFacturacionXE.drf */
+/* C:\Program Files (x86)\EurekaLab\EurekaLog 6\Delphi15\DIALOG.RES */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\lib\Win32\release\Controls.res */
+/* C:\FACTURACIONXE\ delphi-xe-factu\DELPHI_XE\FACTURACION\DataModule.dfm */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\lib\Win32\release\Buttons.res */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\lib\Win32\release\DBLogDlg.dfm */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\lib\Win32\release\DBPWDlg.dfm */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\lib\Win32\release\DBCtrls.res */
+/* C:\FACTURACIONXE\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmTablaMenor.dfm */
+/* C:\FACTURACIONXE\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmPais.dfm */
+/* C:\Program Files (x86)\Embarcadero\RAD Studio\8.0\Components\EhLib\Lib\CalculatorEh.DFM */
+/* C:\Program Files (x86)\Embarcadero\RAD Studio\8.0\Components\EhLib\Lib\DBGridEhFindDlgs.dfm */
+/* C:\Program Files (x86)\Embarcadero\RAD Studio\8.0\Components\EhLib\Lib\DBGridEhSimpleFilterDlg.DFM */
+/* C:\Program Files (x86)\Embarcadero\RAD Studio\8.0\Components\EhLib\Lib\DBGRIDEH.RES */
+/* C:\Program Files (x86)\Embarcadero\RAD Studio\8.0\Components\EhLib\Lib\PrvFrmEh.DFM */
+/* C:\Program Files (x86)\Embarcadero\RAD Studio\8.0\Components\EhLib\Lib\PrViewEh.RES */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\lib\Win32\release\FileCtrl.res */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\lib\Win32\release\ExtDlgs.res */
+/* C:\SEBAOT DESARROLL\Componentes XE\Jedi\jcl\lib\d15\JclUnicode.res */
+/* C:\SEBAOT DESARROLL\Componentes XE\Jedi\jvcl\Resources\JvConsts.res */
+/* C:\SEBAOT DESARROLL\Componentes XE\Jedi\jvcl\Resources\JvToolEdit.res */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\lib\Win32\release\DBGrids.res */
+/* C:\SEBAOT DESARROLL\Componentes XE\ExpressForumLibraryXE\Sources\DXFLIB.RES */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\RBuilder\Lib\ppTmDlg.DFM */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\RBuilder\Lib\ppPrvBmp.res */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\RBuilder\Lib\ppPrvDlg.DFM */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\RBuilder\Lib\ppCDlg.DFM */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\RBuilder\Lib\ppPDlg.DFM */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\RBuilder\Lib\rbsRGB.res */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\RBuilder\Lib\ppEmailLoginDlg.dfm */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\RBuilder\Lib\ppEmailDlg.dfm */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\RBuilder\Lib\rbPrint.res */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\RBuilder\Lib\ppNoDataDlg.DFM */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\RBuilder\Lib\ppTmEDlg.DFM */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\RBuilder\Lib\ppASDlg.DFM */
+/* C:\Program Files (x86)\WPTools\XE\WPRulerRes.RES */
+/* C:\Program Files (x86)\WPTools\XE\WPPrTab1.DFM */
+/* C:\Program Files (x86)\WPTools\XE\WPFillBits.res */
+/* C:\FACTURACIONXE\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmModeloFormulario.dfm */
+/* C:\FACTURACIONXE\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmPaisUlt.dfm */
+/* C:\SEBAOT DESARROLL\Componentes XE\Jedi\jvcl\Resources\JvCalc.Res */
+/* C:\SEBAOT DESARROLL\Componentes XE\Jedi\jvcl\Resources\JvBaseEdits.Res */
+/* C:\SEBAOT DESARROLL\Componentes XE\Jedi\jvcl\Resources\JvDBControls.res */
+/* C:\FACTURACIONXE\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmCiudad.dfm */
+/* C:\FACTURACIONXE\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmTipoIVA.dfm */
+/* C:\FACTURACIONXE\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmUnidadMedida.dfm */
+/* C:\FACTURACIONXE\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmEmpresa.dfm */
+/* C:\FACTURACIONXE\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmAgencia.dfm */
+/* C:\SEBAOT DESARROLL\Componentes XE\Jedi\jvcl\lib\D15\JvDBGridSelectColumnForm.dfm */
+/* C:\SEBAOT DESARROLL\Componentes XE\Jedi\jvcl\Resources\JvDBGrid.res */
+/* C:\FACTURACIONXE\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmProveedores.dfm */
+/* C:\FACTURACIONXE\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmArticulos.dfm */
+/* C:\FACTURACIONXE\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmMostrarImagenes.dfm */
+/* C:\FACTURACIONXE\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmPrincipal.dfm */
+/* C:\FACTURACIONXE\ delphi-xe-factu\DELPHI_XE\FACTURACION\frmLogin.dfm */
+/* C:\FACTURACIONXE\ delphi-xe-factu\DELPHI_XE\FACTURACION\ProyectoFacturacionXE.res */
+/* C:\FACTURACIONXE\ delphi-xe-factu\DELPHI_XE\FACTURACION\ProyectoFacturacionXE.drf */
