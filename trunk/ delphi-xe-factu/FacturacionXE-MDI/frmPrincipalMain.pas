@@ -17,17 +17,19 @@ type
     WindowTileItem: TMenuItem;
     HelpAboutItem: TMenuItem;
     Edit1: TMenuItem;
-    CutItem: TMenuItem;
+    mnuMantenimientoArt: TMenuItem;
     CopyItem: TMenuItem;
     PasteItem: TMenuItem;
     WindowMinimizeItem: TMenuItem;
     StatusBar: TStatusBar;
     WindowTileItem2: TMenuItem;
-    MantenerAgencia1: TMenuItem;
+    mnuMantenerAgencia: TMenuItem;
     ConsultaAgencia1: TMenuItem;
-    procedure MantenerAgencia1Click(Sender: TObject);
+    procedure mnuMantenerAgenciaClick(Sender: TObject);
     procedure AlCerrar( Sender: TObject; var Action: TCloseAction );
     procedure HelpAboutItemClick(Sender: TObject);
+    procedure mnuMantenimientoArtClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -41,8 +43,24 @@ implementation
 
 {$R *.dfm}
 
-uses about, frmArticulos;
+uses Utilidades, about, frmArticulo, frmAgencia, frmLogin;
 
+
+
+
+procedure TfrmMain.FormCreate(Sender: TObject);
+begin
+   frmMain.Visible:=False;
+   FLogin:=TFLogin.Create(self);
+   FLogin.ShowModal;
+   if FLogin.LoginOK then
+       frmMain.Visible:=True
+   else
+     begin
+       Application.Terminate;
+       Exit;
+     end;
+end;
 
 procedure TfrmMain.HelpAboutItemClick(Sender: TObject);
 begin
@@ -50,20 +68,15 @@ begin
    AboutBox.Show;
 end;
 
-procedure TfrmMain.MantenerAgencia1Click(Sender: TObject);
+procedure TfrmMain.mnuMantenimientoArtClick(Sender: TObject);
 begin
-  if not Assigned(frmBaseArticulo) then
-    begin
-      frmBaseArticulo := TfrmBaseArticulo.Create( Self );
-      frmBaseArticulo.FormStyle := fsMDIChild;
-      frmBaseArticulo.Caption := 'Articulos Facturables';
-      frmBaseArticulo.OnClose := AlCerrar;
-      frmBaseArticulo.Show;
-    end
-  else
-    begin
-      frmBaseArticulo.Show;
-    end;
+  if CrearFormulario(frmArticuloUt) then
+     frmArticuloUt := TfrmArticuloUt.Create(Self);
+end;
+procedure TfrmMain.mnuMantenerAgenciaClick(Sender: TObject);
+begin
+  if CrearFormulario(frmAgenciaUt) then
+     frmAgenciaUt := TfrmAgenciaUt.Create(Self);
 end;
 
 procedure TfrmMain.AlCerrar( Sender: TObject; var Action: TCloseAction );

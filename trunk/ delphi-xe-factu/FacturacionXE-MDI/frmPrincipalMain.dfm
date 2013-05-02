@@ -3,7 +3,7 @@ object frmMain: TfrmMain
   Top = 111
   Caption = 'Facturacion XE - V1.0.0'
   ClientHeight = 338
-  ClientWidth = 717
+  ClientWidth = 710
   Color = clAppWorkSpace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
@@ -15,22 +15,28 @@ object frmMain: TfrmMain
   OldCreateOrder = False
   Position = poDefault
   WindowMenu = Window1
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object StatusBar: TStatusBar
     Left = 0
     Top = 319
-    Width = 717
+    Width = 710
     Height = 19
     Margins.Left = 2
     Margins.Top = 2
     Margins.Right = 2
     Margins.Bottom = 2
     AutoHint = True
-    Panels = <>
+    Panels = <
+      item
+        Width = 50
+      end
+      item
+        Text = 'Sistema de Facuracion'
+        Width = 50
+      end>
     SimplePanel = True
-    ExplicitTop = 224
-    ExplicitWidth = 360
   end
   object MainMenu1: TMainMenu
     Left = 16
@@ -38,9 +44,9 @@ object frmMain: TfrmMain
     object File1: TMenuItem
       Caption = 'Agencia'
       Hint = 'Sistema de la Agencia '
-      object MantenerAgencia1: TMenuItem
+      object mnuMantenerAgencia: TMenuItem
         Caption = 'Mantener Agencia'
-        OnClick = MantenerAgencia1Click
+        OnClick = mnuMantenerAgenciaClick
       end
       object ConsultaAgencia1: TMenuItem
         Caption = 'Consulta Agencia'
@@ -52,10 +58,10 @@ object frmMain: TfrmMain
     object Edit1: TMenuItem
       Caption = 'Articulos'
       Hint = 'Seccion Articulos'
-      object CutItem: TMenuItem
+      object mnuMantenimientoArt: TMenuItem
         Caption = 'Mantenimiento'
-        Hint = 'Cut|Cuts the selection and puts it on the Clipboard'
         ImageIndex = 0
+        OnClick = mnuMantenimientoArtClick
       end
       object CopyItem: TMenuItem
         Caption = 'Consulta'

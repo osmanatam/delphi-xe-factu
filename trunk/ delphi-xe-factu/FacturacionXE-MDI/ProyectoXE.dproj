@@ -59,8 +59,19 @@
 			<DCCReference Include="frmBase.pas">
 				<Form>frmBaseUt</Form>
 			</DCCReference>
-			<DCCReference Include="frmArticulos.pas">
-				<Form>frmBaseArticulo</Form>
+			<DCCReference Include="frmArticulo.pas">
+				<Form>frmArticuloUt</Form>
+			</DCCReference>
+			<DCCReference Include="frmAgencia.pas">
+				<Form>frmAgenciaUt</Form>
+			</DCCReference>
+			<DCCReference Include="Utilidades.pas"/>
+			<DCCReference Include="DataModule.pas">
+				<Form>DataModule1</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="frmLogin.pas">
+				<Form>FLogin</Form>
 			</DCCReference>
 			<BuildConfiguration Include="Debug">
 				<Key>Cfg_2</Key>
