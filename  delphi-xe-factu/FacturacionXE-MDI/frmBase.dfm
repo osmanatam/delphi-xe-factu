@@ -26,11 +26,13 @@ object frmBaseUt: TfrmBaseUt
     Height = 57
     Align = alTop
     Caption = 'Titulo Base'
+    Color = clMoneyGreen
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -15
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
+    ParentBackground = False
     ParentFont = False
     TabOrder = 0
   end
