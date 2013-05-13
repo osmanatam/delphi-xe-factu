@@ -2,8 +2,8 @@ object frmMain: TfrmMain
   Left = 194
   Top = 111
   Caption = 'Facturacion XE - V1.0.0'
-  ClientHeight = 338
-  ClientWidth = 710
+  ClientHeight = 593
+  ClientWidth = 821
   Color = clAppWorkSpace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
@@ -20,8 +20,8 @@ object frmMain: TfrmMain
   TextHeight = 13
   object StatusBar: TStatusBar
     Left = 0
-    Top = 319
-    Width = 710
+    Top = 574
+    Width = 821
     Height = 19
     Margins.Left = 2
     Margins.Top = 2
@@ -37,11 +37,14 @@ object frmMain: TfrmMain
         Width = 50
       end>
     SimplePanel = True
+    ExplicitLeft = 7
+    ExplicitTop = 711
+    ExplicitWidth = 820
   end
   object dsTaskBar1: TdsTaskBar
     Left = 0
-    Top = 296
-    Width = 710
+    Top = 551
+    Width = 821
     Height = 23
     AutoCreateButtons = True
     AlwaysMaximized = False
@@ -57,6 +60,8 @@ object frmMain: TfrmMain
     SyncCaptions = False
     DragDropReorder = False
     Align = alBottom
+    ExplicitTop = 296
+    ExplicitWidth = 710
   end
   object mnuMainMenu: TMainMenu
     Images = ImageList1
@@ -246,7 +251,7 @@ object frmMain: TfrmMain
     Left = 72
     Top = 24
     Bitmap = {
-      494C010168008000200010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010168008000240010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000040000000B0010000010020000000000000B0
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

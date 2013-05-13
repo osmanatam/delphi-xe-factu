@@ -4,7 +4,7 @@ interface
 
 uses
   SysUtils, Classes, IBDatabase, DB, IBCustomDataSet, IBQuery, DBXFirebird,
-  SqlExpr,IniFiles,Forms;
+  SqlExpr,IniFiles,Forms, ImgList, Controls;
 
 
 type
@@ -13,6 +13,7 @@ type
     dsDMDataSourse: TDataSource;
     DMQuery: TIBQuery;
     DMTransaction: TIBTransaction;
+    ilImageList: TImageList;
     procedure DataModuleCreate(Sender: TObject);
 
 

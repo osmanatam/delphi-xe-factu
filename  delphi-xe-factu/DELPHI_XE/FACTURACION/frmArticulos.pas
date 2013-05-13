@@ -134,62 +134,11 @@ begin
 end;
 
 procedure TfrmArticulosUt.btnProveedClick(Sender: TObject);
- { var
-  BlobField: TField;
- BS: TStream; }
 begin
       frmProveedoresUt:=TfrmProveedoresUt.Create(SELF);
       frmProveedoresUt.Show;
-
-
-{
-   SQLQRY.SQL.Clear;
-    SQLQRY.SQL.Add('SELECT IMAGEN FROM articulo WHERE codarticulo=:COD');
-    SQLQRY.ParamByName('COD').AsInteger:= StrToInt(Trim(dbedtCodArt.Text));
-    SQLQRY.Open;
-    SQLQRY.First;
-  with SQLQRY do
-    begin
-       BlobField := FieldByName('IMAGEN');
-       BS := CreateBlobStream(BlobField,bmRead);
-       Image.Picture.Graphic:= TJpegImage.Create;
-    Try
-       Image.Picture.Graphic.LoadFromStream(BS);
-      Except
-         BS.Free;
-         Image.Picture.Graphic:= nil;
-         BlobField := FieldByName('IMAGEN');
-         BS := CreateBlobStream(BlobField,bmRead);
-         Image.Picture.Graphic:= TBitMap.Create;
-         Image.Picture.Graphic.LoadFromStream(BS);
-      end;
-      BS.Free;
-    end; }
 end;
-{
-procedure TfrmArticulosUt.btn2Click(Sender: TObject);
-var
-    Jpeg:TJpegImage;
-    Corriente:TMemoryStream;
-begin
-  imgFoto.Picture := nil;
-  if cdsArticuloIMAGEN.BlobSize > 0  then begin
-    Jpeg:=TJpegImage.create;
-    Corriente:=TMemoryStream.create;
-    try
-      cdsArticulo.SaveToStream(Corriente);
-      Corriente.Seek(0,soFromBeginning);
-      Jpeg.LoadFromStream(Corriente);
-      //Jpeg.LoadFromStream(Corriente, ftBlob);
-      imgFoto.Picture.Assign(Jpeg);
-      imgFoto.Visible:=TRUE;
-      imgFoto.Stretch:=TRUE;
-    finally
-      Jpeg.Free;
-      Corriente.Free;
-    end;
-  end;
-end;}
+
 
 procedure TfrmArticulosUt.DBGridEh1DblClick(Sender: TObject);
 begin
@@ -242,28 +191,6 @@ begin
    qryGrillaArticulos.Close;
    qryGrillaArticulos.Open;
    DBGridEh1.Refresh;
-
-
-  { with SQLQRY do
-   begin
-        SQL.Clear;
-        SQL.Add('SELECT DIR_IMAGENES FROM PARAMETROS');
-        Open;
-        try
-         image.Picture.LoadFromFile(TRIM(FieldByName('DIR_IMAGENES').AsString)+TRIM(dbedtCodArt.Text)+'.JPG');
-
-
-        except
-         image.Picture.LoadFromFile(TRIM(FieldByName('DIR_IMAGENES').AsString)+TRIM(dbedtCodArt.Text)+'.JPG');
-        END;
-       Close;
-    END}
-
-
-
-
-
-
 end;
 
 procedure TfrmArticulosUt.dsArticuloDataChange(Sender: TObject; Field: TField);
