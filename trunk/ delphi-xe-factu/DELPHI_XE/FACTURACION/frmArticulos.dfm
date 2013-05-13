@@ -27,7 +27,6 @@ object frmArticulosUt: TfrmArticulosUt
     TabOrder = 0
     object tsDatos: TTabSheet
       Caption = 'Datos Articulos'
-      ExplicitHeight = 310
       object pnl1: TPanel
         Left = 3
         Top = 3
@@ -342,7 +341,6 @@ object frmArticulosUt: TfrmArticulosUt
     object tsConsulta: TTabSheet
       Caption = 'Consulta Articulos'
       ImageIndex = 1
-      ExplicitHeight = 293
       object DBGridEh1: TDBGridEh
         Left = 3
         Top = 3
@@ -487,25 +485,25 @@ object frmArticulosUt: TfrmArticulosUt
       ' join proveedor p on p.codproveedor=a.codproveedor'
       ' join Ramo r on r.codramo=a.codramo'
       ' order by 1')
-    Left = 624
+    Left = 648
     Top = 112
   end
   object dsGrillaArt: TDataSource
     DataSet = qryGrillaArticulos
-    Left = 628
+    Left = 644
     Top = 64
   end
   object qryAux: TIBQuery
     Database = DataModule1.DMBaseDatos
     Transaction = DataModule1.DMTransaction
     Left = 712
-    Top = 176
+    Top = 144
   end
   object SQLQRY: TIBQuery
     Database = DataModule1.DMBaseDatos
     Transaction = DataModule1.DMTransaction
-    Left = 712
-    Top = 224
+    Left = 688
+    Top = 192
   end
   object qryArticulo: TIBQuery
     Database = DataModule1.DMBaseDatos

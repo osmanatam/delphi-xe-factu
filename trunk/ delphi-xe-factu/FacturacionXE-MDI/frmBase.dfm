@@ -15,7 +15,6 @@ object frmBaseUt: TfrmBaseUt
   Position = poScreenCenter
   Scaled = False
   Visible = True
-  WindowState = wsMaximized
   OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
@@ -35,7 +34,6 @@ object frmBaseUt: TfrmBaseUt
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 639
   end
   object PageControl1: TPageControl
     Left = 0
@@ -53,6 +51,7 @@ object frmBaseUt: TfrmBaseUt
     TabOrder = 1
     object tgDatos: TTabSheet
       Caption = 'Datos'
+      ExplicitLeft = 0
       object DBNavigator1: TDBNavigator
         Left = 0
         Top = 200
