@@ -12,25 +12,28 @@ inherited frmArticuloUt: TfrmArticuloUt
   inherited Panel1: TPanel
     Width = 705
     Caption = 'Articulos'
-    ExplicitWidth = 695
+    ExplicitTop = -16
+    ExplicitWidth = 705
   end
   inherited PageControl1: TPageControl
     Width = 705
     Height = 339
-    ExplicitWidth = 695
-    ExplicitHeight = 297
+    ExplicitTop = 63
+    ExplicitWidth = 705
+    ExplicitHeight = 339
     inherited tgDatos: TTabSheet
       ExplicitLeft = 4
-      ExplicitWidth = 687
-      ExplicitHeight = 269
+      ExplicitTop = 24
+      ExplicitWidth = 697
+      ExplicitHeight = 311
       inherited DBNavigator1: TDBNavigator
         Top = 272
         Width = 697
         DataSource = dsArticulo
         VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
         Hints.Strings = ()
-        ExplicitTop = 230
-        ExplicitWidth = 687
+        ExplicitTop = 272
+        ExplicitWidth = 697
       end
       object grpArticulo: TGroupBox
         Left = 0
@@ -40,7 +43,6 @@ inherited frmArticuloUt: TfrmArticuloUt
         Align = alClient
         Caption = 'Datos Rapidos'
         Color = cl3DLight
-        Enabled = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
         Font.Height = -11
@@ -50,6 +52,7 @@ inherited frmArticuloUt: TfrmArticuloUt
         ParentColor = False
         ParentFont = False
         TabOrder = 1
+        ExplicitTop = -6
         object Label1: TLabel
           Left = 7
           Top = 21
@@ -457,10 +460,63 @@ inherited frmArticuloUt: TfrmArticuloUt
           TabOrder = 15
         end
       end
+      object btnEditar: TBitBtn
+        Left = 513
+        Top = 232
+        Width = 84
+        Height = 34
+        Caption = 'Editar'
+        DoubleBuffered = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clMaroon
+        Font.Height = -12
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentDoubleBuffered = False
+        ParentFont = False
+        TabOrder = 2
+        OnClick = btnEditarClick
+      end
+      object btnEliminar: TBitBtn
+        Left = 606
+        Top = 232
+        Width = 84
+        Height = 34
+        Caption = 'Eliminar'
+        DoubleBuffered = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clMaroon
+        Font.Height = -12
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentDoubleBuffered = False
+        ParentFont = False
+        TabOrder = 3
+        OnClick = btnEliminarClick
+      end
+      object btnNuevo: TBitBtn
+        Left = 418
+        Top = 231
+        Width = 84
+        Height = 35
+        Caption = 'Nuevo'
+        DoubleBuffered = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clMaroon
+        Font.Height = -12
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentDoubleBuffered = False
+        ParentFont = False
+        TabOrder = 4
+        OnClick = btnNuevoClick
+      end
     end
     inherited tgConsulta: TTabSheet
-      ExplicitWidth = 687
-      ExplicitHeight = 269
+      ExplicitLeft = 4
+      ExplicitTop = 24
+      ExplicitWidth = 697
+      ExplicitHeight = 311
       object Panel2: TPanel
         Left = 0
         Top = 0
@@ -468,7 +524,6 @@ inherited frmArticuloUt: TfrmArticuloUt
         Height = 81
         Align = alTop
         TabOrder = 0
-        ExplicitWidth = 687
         object Button1: TButton
           Left = 16
           Top = 16
@@ -480,7 +535,7 @@ inherited frmArticuloUt: TfrmArticuloUt
         object DBEdit2: TDBEdit
           Left = 79
           Top = 16
-          Width = 89
+          Width = 210
           Height = 21
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -530,136 +585,104 @@ inherited frmArticuloUt: TfrmArticuloUt
       end
     end
   end
-  object btnEliminar: TBitBtn
-    Left = 598
-    Top = 313
-    Width = 84
-    Height = 34
-    Caption = 'Eliminar'
-    DoubleBuffered = True
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clMaroon
-    Font.Height = -12
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    ParentDoubleBuffered = False
-    ParentFont = False
-    TabOrder = 2
-    OnClick = btnEliminarClick
-  end
-  object btnNuevo: TBitBtn
-    Left = 410
-    Top = 312
-    Width = 84
-    Height = 35
-    Caption = 'Nuevo'
-    DoubleBuffered = True
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clMaroon
-    Font.Height = -12
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    ParentDoubleBuffered = False
-    ParentFont = False
-    TabOrder = 3
-    OnClick = btnNuevoClick
-  end
-  object btnEditar: TBitBtn
-    Left = 505
-    Top = 313
-    Width = 84
-    Height = 34
-    Caption = 'Editar'
-    DoubleBuffered = True
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clMaroon
-    Font.Height = -12
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    ParentDoubleBuffered = False
-    ParentFont = False
-    TabOrder = 4
-    OnClick = btnEditarClick
-  end
   object OpenPictureDialog: TOpenPictureDialog
     Left = 480
     Top = 184
   end
   object dspvArticulo: TDataSetProvider
     DataSet = qryArticulo
-    Left = 248
-    Top = 48
+    Left = 256
+    Top = 24
   end
   object cdsArticulo: TClientDataSet
+    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspvArticulo'
     Left = 224
-    Top = 48
+    Top = 24
     object cdsArticuloCODARTICULO: TLargeintField
       FieldName = 'CODARTICULO'
+      Origin = '"ARTICULO"."CODARTICULO"'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
     object cdsArticuloAVISAR_EXIST_MIN: TWideStringField
       FieldName = 'AVISAR_EXIST_MIN'
+      Origin = '"ARTICULO"."AVISAR_EXIST_MIN"'
       FixedChar = True
       Size = 1
     end
     object cdsArticuloCODPROVEEDOR2: TIntegerField
       FieldName = 'CODPROVEEDOR'
+      Origin = '"ARTICULO"."CODPROVEEDOR"'
     end
     object cdsArticuloCODRAMO2: TIntegerField
       FieldName = 'CODRAMO'
+      Origin = '"ARTICULO"."CODRAMO"'
     end
     object cdsArticuloCODTIPOIVA2: TIntegerField
       FieldName = 'CODTIPOIVA'
+      Origin = '"ARTICULO"."CODTIPOIVA"'
       Required = True
     end
     object cdsArticuloCODUNIDADMEDIDA2: TIntegerField
       FieldName = 'CODUNIDADMEDIDA'
+      Origin = '"ARTICULO"."CODUNIDADMEDIDA"'
       Required = True
     end
     object cdsArticuloDESCRIPCION: TWideStringField
       FieldName = 'DESCRIPCION'
+      Origin = '"ARTICULO"."DESCRIPCION"'
       Required = True
       FixedChar = True
     end
     object cdsArticuloEXISTENCIA2: TIntegerField
       FieldName = 'EXISTENCIA'
+      Origin = '"ARTICULO"."EXISTENCIA"'
       Required = True
     end
     object cdsArticuloEXISTENCIA_MIN2: TIntegerField
       FieldName = 'EXISTENCIA_MIN'
+      Origin = '"ARTICULO"."EXISTENCIA_MIN"'
     end
     object cdsArticuloIMG_EXT: TWideStringField
       FieldName = 'IMG_EXT'
+      Origin = '"ARTICULO"."IMG_EXT"'
       FixedChar = True
-      Size = 5
+      Size = 3
     end
     object cdsArticuloIMAGEN: TBlobField
       FieldName = 'IMAGEN'
+      Origin = '"ARTICULO"."IMAGEN"'
+      ProviderFlags = [pfInUpdate]
       Size = 8
     end
     object cdsArticuloNOM_IMG: TWideStringField
       FieldName = 'NOM_IMG'
+      Origin = '"ARTICULO"."NOM_IMG"'
       FixedChar = True
       Size = 33
     end
     object cdsArticuloOBSERVACION: TWideStringField
       FieldName = 'OBSERVACION'
+      Origin = '"ARTICULO"."OBSERVACION"'
       Size = 50
     end
     object cdsArticuloPRECIO_MODIFICABLE: TWideStringField
       FieldName = 'PRECIO_MODIFICABLE'
+      Origin = '"ARTICULO"."PRECIO_MODIFICABLE"'
       FixedChar = True
       Size = 1
     end
     object cdsArticuloPRECIOCOMPRA: TLargeintField
       FieldName = 'PRECIOCOMPRA'
+      Origin = '"ARTICULO"."PRECIOCOMPRA"'
       Required = True
     end
     object cdsArticuloPRECIOVTA: TLargeintField
       FieldName = 'PRECIOVTA'
+      Origin = '"ARTICULO"."PRECIOVTA"'
       Required = True
     end
   end
@@ -686,7 +709,7 @@ inherited frmArticuloUt: TfrmArticuloUt
       'from ARTICULO'
       'order by 1')
     Left = 192
-    Top = 48
+    Top = 24
     object qryArticuloCODARTICULO: TLargeintField
       FieldName = 'CODARTICULO'
       Origin = '"ARTICULO"."CODARTICULO"'
@@ -736,7 +759,7 @@ inherited frmArticuloUt: TfrmArticuloUt
       FieldName = 'IMG_EXT'
       Origin = '"ARTICULO"."IMG_EXT"'
       FixedChar = True
-      Size = 5
+      Size = 3
     end
     object qryArticuloIMAGEN: TBlobField
       FieldName = 'IMAGEN'
@@ -775,8 +798,8 @@ inherited frmArticuloUt: TfrmArticuloUt
   object dsArticulo: TDataSource
     DataSet = cdsArticulo
     OnDataChange = dsArticuloDataChange
-    Left = 168
-    Top = 48
+    Left = 160
+    Top = 24
   end
   object dsUM: TDataSource
     DataSet = qryUnidadMedida

@@ -92,10 +92,10 @@ type
     qryRamo: TIBQuery;
     IBQuery1: TIBQuery;
     qryAux: TIBQuery;
+    lbl1: TLabel;
+    btnEditar: TBitBtn;
     btnEliminar: TBitBtn;
     btnNuevo: TBitBtn;
-    btnEditar: TBitBtn;
-    lbl1: TLabel;
     procedure Image1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -155,7 +155,7 @@ end;
 procedure TfrmArticuloUt.btnNuevoClick(Sender: TObject);
 begin
   inherited;
-  if btnNuevo.Caption='Nuevo' then
+ if btnNuevo.Caption='Nuevo' then
    begin
       grpArticulo.Enabled:=True;
       cdsArticulo.Insert;
@@ -204,7 +204,7 @@ end;
 procedure TfrmArticuloUt.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   inherited;
-  cdsArticulo.Close;
+  cdsArticulo.Active:=false;
   qryUnidadMedida.Active:=false;
   qryTipoIva.Active:=false;
   qryRamo.Active:=false;
@@ -214,7 +214,7 @@ end;
 procedure TfrmArticuloUt.FormShow(Sender: TObject);
 begin
   inherited;
-  cdsArticulo.Open;
+  cdsArticulo.Active:=true;
   qryUnidadMedida.Active:=true;
   qryTipoIva.Active:=true;
   qryRamo.Active:=true;
