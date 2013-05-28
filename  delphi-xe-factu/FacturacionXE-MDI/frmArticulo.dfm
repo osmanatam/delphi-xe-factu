@@ -397,7 +397,7 @@ inherited frmArticuloUt: TfrmArticuloUt
           Width = 211
           Height = 17
           Caption = 'Permitir Modificar Precio en Facturacion?'
-          DataField = 'PRECIO_MODIFICABLE'
+          DataField = 'ES_MODIFICABLE_PRECIO'
           DataSource = dsArticulo
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clMaroon
@@ -636,86 +636,69 @@ inherited frmArticuloUt: TfrmArticuloUt
     Top = 24
     object cdsArticuloCODARTICULO: TLargeintField
       FieldName = 'CODARTICULO'
-      Origin = '"ARTICULO"."CODARTICULO"'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
     object cdsArticuloAVISAR_EXIST_MIN: TWideStringField
       FieldName = 'AVISAR_EXIST_MIN'
-      Origin = '"ARTICULO"."AVISAR_EXIST_MIN"'
       FixedChar = True
       Size = 1
     end
-    object cdsArticuloCODPROVEEDOR2: TIntegerField
+    object cdsArticuloCODPROVEEDOR: TIntegerField
       FieldName = 'CODPROVEEDOR'
-      Origin = '"ARTICULO"."CODPROVEEDOR"'
     end
-    object cdsArticuloCODRAMO2: TIntegerField
+    object cdsArticuloCODRAMO: TIntegerField
       FieldName = 'CODRAMO'
-      Origin = '"ARTICULO"."CODRAMO"'
     end
-    object cdsArticuloCODTIPOIVA2: TIntegerField
+    object cdsArticuloCODTIPOIVA: TIntegerField
       FieldName = 'CODTIPOIVA'
-      Origin = '"ARTICULO"."CODTIPOIVA"'
       Required = True
     end
-    object cdsArticuloCODUNIDADMEDIDA2: TIntegerField
+    object cdsArticuloCODUNIDADMEDIDA: TIntegerField
       FieldName = 'CODUNIDADMEDIDA'
-      Origin = '"ARTICULO"."CODUNIDADMEDIDA"'
       Required = True
     end
     object cdsArticuloDESCRIPCION: TWideStringField
       FieldName = 'DESCRIPCION'
-      Origin = '"ARTICULO"."DESCRIPCION"'
       Required = True
       FixedChar = True
     end
-    object cdsArticuloEXISTENCIA2: TIntegerField
+    object cdsArticuloEXISTENCIA: TIntegerField
       FieldName = 'EXISTENCIA'
-      Origin = '"ARTICULO"."EXISTENCIA"'
       Required = True
     end
-    object cdsArticuloEXISTENCIA_MIN2: TIntegerField
+    object cdsArticuloEXISTENCIA_MIN: TIntegerField
       FieldName = 'EXISTENCIA_MIN'
-      Origin = '"ARTICULO"."EXISTENCIA_MIN"'
     end
     object cdsArticuloIMG_EXT: TWideStringField
       FieldName = 'IMG_EXT'
-      Origin = '"ARTICULO"."IMG_EXT"'
       FixedChar = True
       Size = 3
     end
     object cdsArticuloIMAGEN: TBlobField
       FieldName = 'IMAGEN'
-      Origin = '"ARTICULO"."IMAGEN"'
-      ProviderFlags = [pfInUpdate]
       Size = 8
     end
     object cdsArticuloNOM_IMG: TWideStringField
       FieldName = 'NOM_IMG'
-      Origin = '"ARTICULO"."NOM_IMG"'
       FixedChar = True
       Size = 33
     end
     object cdsArticuloOBSERVACION: TWideStringField
       FieldName = 'OBSERVACION'
-      Origin = '"ARTICULO"."OBSERVACION"'
-      Size = 50
+      FixedChar = True
+      Size = 100
     end
-    object cdsArticuloPRECIO_MODIFICABLE: TWideStringField
-      FieldName = 'PRECIO_MODIFICABLE'
-      Origin = '"ARTICULO"."PRECIO_MODIFICABLE"'
+    object cdsArticuloES_MODIFICABLE_PRECIO: TWideStringField
+      FieldName = 'ES_MODIFICABLE_PRECIO'
       FixedChar = True
       Size = 1
     end
     object cdsArticuloPRECIOCOMPRA: TLargeintField
       FieldName = 'PRECIOCOMPRA'
-      Origin = '"ARTICULO"."PRECIOCOMPRA"'
       Required = True
     end
     object cdsArticuloPRECIOVTA: TLargeintField
       FieldName = 'PRECIOVTA'
-      Origin = '"ARTICULO"."PRECIOVTA"'
       Required = True
     end
   end
@@ -737,96 +720,12 @@ inherited frmArticuloUt: TfrmArticuloUt
       'IMAGEN, '
       'NOM_IMG, '
       'OBSERVACION,'
-      'PRECIO_MODIFICABLE, '
+      'ES_MODIFICABLE_PRECIO, '
       'PRECIOCOMPRA, PRECIOVTA '
       'from ARTICULO'
       'order by 1')
     Left = 192
     Top = 24
-    object qryArticuloCODARTICULO: TLargeintField
-      FieldName = 'CODARTICULO'
-      Origin = '"ARTICULO"."CODARTICULO"'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object tbArticuloAVISAR_EXIST_MIN: TIBStringField
-      FieldName = 'AVISAR_EXIST_MIN'
-      Origin = '"ARTICULO"."AVISAR_EXIST_MIN"'
-      FixedChar = True
-      Size = 1
-    end
-    object cdsArticuloCODPROVEEDOR: TIntegerField
-      FieldName = 'CODPROVEEDOR'
-      Origin = '"ARTICULO"."CODPROVEEDOR"'
-    end
-    object cdsArticuloCODRAMO: TIntegerField
-      FieldName = 'CODRAMO'
-      Origin = '"ARTICULO"."CODRAMO"'
-    end
-    object cdsArticuloCODTIPOIVA: TIntegerField
-      FieldName = 'CODTIPOIVA'
-      Origin = '"ARTICULO"."CODTIPOIVA"'
-      Required = True
-    end
-    object cdsArticuloCODUNIDADMEDIDA: TIntegerField
-      FieldName = 'CODUNIDADMEDIDA'
-      Origin = '"ARTICULO"."CODUNIDADMEDIDA"'
-      Required = True
-    end
-    object tbArticuloDESCRIPCION: TIBStringField
-      FieldName = 'DESCRIPCION'
-      Origin = '"ARTICULO"."DESCRIPCION"'
-      Required = True
-      FixedChar = True
-    end
-    object cdsArticuloEXISTENCIA: TIntegerField
-      FieldName = 'EXISTENCIA'
-      Origin = '"ARTICULO"."EXISTENCIA"'
-      Required = True
-    end
-    object cdsArticuloEXISTENCIA_MIN: TIntegerField
-      FieldName = 'EXISTENCIA_MIN'
-      Origin = '"ARTICULO"."EXISTENCIA_MIN"'
-    end
-    object tbArticuloIMG_EXT: TIBStringField
-      FieldName = 'IMG_EXT'
-      Origin = '"ARTICULO"."IMG_EXT"'
-      FixedChar = True
-      Size = 3
-    end
-    object qryArticuloIMAGEN: TBlobField
-      FieldName = 'IMAGEN'
-      Origin = '"ARTICULO"."IMAGEN"'
-      ProviderFlags = [pfInUpdate]
-      Size = 8
-    end
-    object tbArticuloNOM_IMG: TIBStringField
-      FieldName = 'NOM_IMG'
-      Origin = '"ARTICULO"."NOM_IMG"'
-      FixedChar = True
-      Size = 33
-    end
-    object tbArticuloOBSERVACION: TIBStringField
-      FieldName = 'OBSERVACION'
-      Origin = '"ARTICULO"."OBSERVACION"'
-      Size = 50
-    end
-    object tbArticuloPRECIO_MODIFICABLE: TIBStringField
-      FieldName = 'PRECIO_MODIFICABLE'
-      Origin = '"ARTICULO"."PRECIO_MODIFICABLE"'
-      FixedChar = True
-      Size = 1
-    end
-    object qryArticuloPRECIOCOMPRA: TLargeintField
-      FieldName = 'PRECIOCOMPRA'
-      Origin = '"ARTICULO"."PRECIOCOMPRA"'
-      Required = True
-    end
-    object qryArticuloPRECIOVTA: TLargeintField
-      FieldName = 'PRECIOVTA'
-      Origin = '"ARTICULO"."PRECIOVTA"'
-      Required = True
-    end
   end
   object dsArticulo: TDataSource
     DataSet = cdsArticulo
