@@ -9,6 +9,31 @@ inherited frmAgenciaUt: TfrmAgenciaUt
   inherited Panel1: TPanel
     Width = 615
     Caption = 'Agencia'
-    ExplicitWidth = 116
+    ExplicitWidth = 615
+  end
+  inherited PageControl1: TPageControl
+    Width = 615
+    Height = 254
+    ExplicitWidth = 615
+    ExplicitHeight = 254
+    inherited tgDatos: TTabSheet
+      ExplicitLeft = 4
+      ExplicitTop = 24
+      ExplicitWidth = 607
+      ExplicitHeight = 226
+      inherited DBNavigator1: TDBNavigator
+        Top = 187
+        Width = 607
+        Hints.Strings = ()
+        ExplicitTop = 187
+        ExplicitWidth = 607
+      end
+    end
+    inherited tgConsulta: TTabSheet
+      ExplicitLeft = 4
+      ExplicitTop = 24
+      ExplicitWidth = 607
+      ExplicitHeight = 226
+    end
   end
 end

@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, frmBase, ExtCtrls;
+  Dialogs, frmBase, ExtCtrls, DBCtrls, ComCtrls;
 
 type
   TfrmAgenciaUt = class(TfrmBaseUt)

@@ -5,6 +5,7 @@ inherited frmArticuloUt: TfrmArticuloUt
   ClientWidth = 705
   Position = poMainFormCenter
   OnShow = FormShow
+  ExplicitTop = -35
   ExplicitWidth = 711
   ExplicitHeight = 424
   PixelsPerInch = 96
@@ -12,13 +13,11 @@ inherited frmArticuloUt: TfrmArticuloUt
   inherited Panel1: TPanel
     Width = 705
     Caption = 'Articulos'
-    ExplicitTop = -16
     ExplicitWidth = 705
   end
   inherited PageControl1: TPageControl
     Width = 705
     Height = 339
-    ExplicitTop = 63
     ExplicitWidth = 705
     ExplicitHeight = 339
     inherited tgDatos: TTabSheet
@@ -43,6 +42,7 @@ inherited frmArticuloUt: TfrmArticuloUt
         Align = alClient
         Caption = 'Datos Rapidos'
         Color = cl3DLight
+        Enabled = False
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
         Font.Height = -11
@@ -52,7 +52,6 @@ inherited frmArticuloUt: TfrmArticuloUt
         ParentColor = False
         ParentFont = False
         TabOrder = 1
-        ExplicitTop = -6
         object Label1: TLabel
           Left = 7
           Top = 21
@@ -195,9 +194,9 @@ inherited frmArticuloUt: TfrmArticuloUt
         end
         object shp1: TShape
           Left = 513
-          Top = 14
+          Top = 13
           Width = 165
-          Height = 138
+          Height = 140
         end
         object lbl1: TLabel
           Left = 522
@@ -237,6 +236,7 @@ inherited frmArticuloUt: TfrmArticuloUt
           Width = 298
           Height = 21
           Align = alCustom
+          Color = clWhite
           DataField = 'DESCRIPCION'
           DataSource = dsArticulo
           Font.Charset = DEFAULT_CHARSET
@@ -459,6 +459,15 @@ inherited frmArticuloUt: TfrmArticuloUt
           Caption = '+'
           TabOrder = 15
         end
+        object btn1: TButton
+          Left = 315
+          Top = 17
+          Width = 54
+          Height = 25
+          Caption = 'Cambiar'
+          TabOrder = 16
+          OnClick = btn1Click
+        end
       end
       object btnEditar: TBitBtn
         Left = 513
@@ -475,7 +484,7 @@ inherited frmArticuloUt: TfrmArticuloUt
         ParentDoubleBuffered = False
         ParentFont = False
         TabOrder = 2
-        OnClick = btnEditarClick
+        OnClick = btnAccionesClick
       end
       object btnEliminar: TBitBtn
         Left = 606
@@ -492,7 +501,7 @@ inherited frmArticuloUt: TfrmArticuloUt
         ParentDoubleBuffered = False
         ParentFont = False
         TabOrder = 3
-        OnClick = btnEliminarClick
+        OnClick = btnAccionesClick
       end
       object btnNuevo: TBitBtn
         Left = 418
@@ -509,7 +518,7 @@ inherited frmArticuloUt: TfrmArticuloUt
         ParentDoubleBuffered = False
         ParentFont = False
         TabOrder = 4
-        OnClick = btnNuevoClick
+        OnClick = btnAccionesClick
       end
     end
     inherited tgConsulta: TTabSheet
@@ -532,40 +541,23 @@ inherited frmArticuloUt: TfrmArticuloUt
           Caption = 'Buscar:'
           TabOrder = 0
         end
-        object DBEdit2: TDBEdit
+        object edt1: TEdit
           Left = 79
-          Top = 16
-          Width = 210
+          Top = 18
+          Width = 330
           Height = 21
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -11
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
           TabOrder = 1
-        end
-        object DBEdit3: TDBEdit
-          Left = 79
-          Top = 43
-          Width = 210
-          Height = 21
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -11
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-          TabOrder = 2
+          Text = 'edt1'
         end
       end
       object DBGridEh1: TDBGridEh
         Left = 0
         Top = 81
         Width = 697
-        Height = 193
-        Align = alTop
+        Height = 230
+        Align = alClient
         DataGrouping.GroupLevels = <>
+        DataSource = dsGrilla
         Flat = False
         FooterColor = clWindow
         FooterFont.Charset = DEFAULT_CHARSET
@@ -580,6 +572,48 @@ inherited frmArticuloUt: TfrmArticuloUt
         TitleFont.Height = -11
         TitleFont.Name = 'Tahoma'
         TitleFont.Style = [fsBold]
+        Columns = <
+          item
+            EditButtons = <>
+            FieldName = 'CODARTICULO'
+            Footers = <>
+            Title.Caption = 'Codigo'
+            Width = 69
+          end
+          item
+            EditButtons = <>
+            FieldName = 'DESCRIPCION'
+            Footers = <>
+            Title.Caption = 'Articulo'
+            Width = 163
+          end
+          item
+            EditButtons = <>
+            FieldName = 'DESCRIPCION1'
+            Footers = <>
+            Title.Caption = 'Unidad Medida'
+          end
+          item
+            EditButtons = <>
+            FieldName = 'NOMBREPROVEEDOR'
+            Footers = <>
+            Title.Caption = 'Proveedor'
+            Width = 134
+          end
+          item
+            EditButtons = <>
+            FieldName = 'PRECIOVTA'
+            Footers = <>
+            Title.Caption = 'Precio Venta'
+            Width = 79
+          end
+          item
+            EditButtons = <>
+            FieldName = 'DESCRIPCIONRAMO'
+            Footers = <>
+            Title.Caption = 'Ramo'
+            Width = 106
+          end>
         object RowDetailData: TRowDetailPanelControlEh
         end
       end
@@ -595,7 +629,6 @@ inherited frmArticuloUt: TfrmArticuloUt
     Top = 24
   end
   object cdsArticulo: TClientDataSet
-    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspvArticulo'
@@ -803,7 +836,8 @@ inherited frmArticuloUt: TfrmArticuloUt
   end
   object dsUM: TDataSource
     DataSet = qryUnidadMedida
-    Left = 364
+    Left = 348
+    Top = 8
   end
   object qryUnidadMedida: TIBQuery
     Database = DataModule1.DMBaseDatos
@@ -860,5 +894,29 @@ inherited frmArticuloUt: TfrmArticuloUt
     Transaction = DataModule1.DMTransaction
     Left = 632
     Top = 112
+  end
+  object dsGrilla: TDataSource
+    DataSet = qryGrilla
+    Left = 516
+    Top = 56
+  end
+  object qryGrilla: TIBQuery
+    Database = DataModule1.DMBaseDatos
+    Transaction = DataModule1.DMTransaction
+    SQL.Strings = (
+      'select a.codarticulo,'
+      '   a.descripcion,'
+      '   p.nombreproveedor,'
+      '   r.descripcionramo,'
+      '   u.descripcion,'
+      '   A.preciovta'
+      '   from articulo a'
+      '   join proveedor p on a.codproveedor=p.codproveedor'
+      '   join ramo r on a.codramo=r.codramo'
+      
+        '   INNER join unidadmedida u on a.codunidadmedida=u.codunidadmed' +
+        'ida')
+    Left = 560
+    Top = 56
   end
 end
