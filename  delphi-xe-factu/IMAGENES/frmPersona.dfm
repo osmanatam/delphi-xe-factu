@@ -118,8 +118,8 @@ object Form3: TForm3
   end
   object IBDatabase: TIBDatabase
     DatabaseName = 
-      'localhost:C:\Users\claudio.brignardello\firebird\ delphi-xe-fact' +
-      'u\IMAGENES\BaseDatos\MARCACION.FDB'
+      'localhost:C:\FACTURACIONXE\ delphi-xe-factu\IMAGENES\BaseDatos\M' +
+      'ARCACION.FDB'
     Params.Strings = (
       'user_name=SYSDBA'
       'password=whitelion'

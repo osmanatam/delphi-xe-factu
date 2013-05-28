@@ -80,19 +80,19 @@ begin
       if OpenPictureDialog.Execute then
       begin
        try
-         jpg := TJPEGImage.Create;
+         jpg:=TJPEGImage.Create;
          jpg.LoadFromFile(OpenPictureDialog.FileName);
-         bmp := TBitmap.Create;
+         bmp:=TBitmap.Create;
          bmp.Assign(jpg);
-         bmp.Width := Image1.Width;
-         bmp.Height := Image1.Height;
+         bmp.Width:=Image1.Width;
+         bmp.Height:=Image1.Height;
          bmp.Canvas.StretchDraw(bmp.Canvas.Cliprect, jpg);
          jpg.Assign(bmp);
          bmp.Destroy;
          jpg.SaveToFile(ExtractFilePath(ParamStr(0))+'\tempimagen.jpg');
          cds1.Edit; //tendria que dar error sin esto
-        cds1FOTO.LoadFromFile(ExtractFilePath(ParamStr(0))+'\tempimagen.jpg');
-        cds1FORMATO_FOTO.AsString:= 'JPG';
+         cds1FOTO.LoadFromFile(ExtractFilePath(ParamStr(0))+'\tempimagen.jpg');
+         cds1FORMATO_FOTO.AsString:='JPG';
         //cds1.Post;
         DeleteFile(ExtractFilePath(ParamStr(0))+'\tempimagen.jpg');
         btn2.Enabled:=true;
@@ -111,9 +111,6 @@ begin
       rg1.SetFocus;
      end;
  end;
-
-
-
 
 procedure TForm3.btn2Click(Sender: TObject);
 begin

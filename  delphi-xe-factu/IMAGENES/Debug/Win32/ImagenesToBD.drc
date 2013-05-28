@@ -1830,17 +1830,17 @@ BEGIN
 	SysConst_SZeroDivide,	"Floating point division by zero"
 END
 
-/* C:\Program Files\EurekaLab\EurekaLog 6\Delphi15\DIALOG.RES */
-/* c:\program files\embarcadero\rad studio\8.0\lib\Win32\release\Controls.res */
-/* c:\program files\embarcadero\rad studio\8.0\lib\Win32\release\Buttons.res */
-/* c:\program files\embarcadero\rad studio\8.0\lib\Win32\release\ExtDlgs.res */
-/* c:\program files\embarcadero\rad studio\8.0\lib\Win32\release\DBLogDlg.dfm */
-/* c:\program files\embarcadero\rad studio\8.0\lib\Win32\release\DBPWDlg.dfm */
-/* c:\program files\embarcadero\rad studio\8.0\lib\Win32\release\DBCtrls.res */
-/* C:\Componentes XE\Jedi\jcl\lib\d15\JclUnicode.res */
-/* C:\Componentes XE\Jedi\jvcl\Resources\JvConsts.res */
-/* C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\IMAGENES\frmVerImagen.dfm */
-/* C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\IMAGENES\frmImagen.dfm */
-/* C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\IMAGENES\frmPersona.dfm */
-/* C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\IMAGENES\ImagenesToBD.res */
-/* C:\Users\claudio.brignardello\firebird\ delphi-xe-factu\IMAGENES\ImagenesToBD.drf */
+/* C:\Program Files (x86)\EurekaLab\EurekaLog 6\Delphi15\DIALOG.RES */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\lib\Win32\release\Controls.res */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\lib\Win32\release\Buttons.res */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\lib\Win32\release\ExtDlgs.res */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\lib\Win32\release\DBLogDlg.dfm */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\lib\Win32\release\DBPWDlg.dfm */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\lib\Win32\release\DBCtrls.res */
+/* C:\SEBAOT DESARROLL\Componentes XE\Jedi\jcl\lib\d15\JclUnicode.res */
+/* C:\SEBAOT DESARROLL\Componentes XE\Jedi\jvcl\Resources\JvConsts.res */
+/* C:\FACTURACIONXE\ delphi-xe-factu\IMAGENES\frmVerImagen.dfm */
+/* C:\FACTURACIONXE\ delphi-xe-factu\IMAGENES\frmImagen.dfm */
+/* C:\FACTURACIONXE\ delphi-xe-factu\IMAGENES\frmPersona.dfm */
+/* C:\FACTURACIONXE\ delphi-xe-factu\IMAGENES\ImagenesToBD.res */
+/* C:\FACTURACIONXE\ delphi-xe-factu\IMAGENES\ImagenesToBD.drf */
