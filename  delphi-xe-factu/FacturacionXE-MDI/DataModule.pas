@@ -42,8 +42,6 @@ Var
  BBDDName : String;
  Usuario : String;
  Password : String;
-
-
 begin
     {//crear por 1era vez
     ini := TIniFile.Create(ExtractFilePath(ParamStr(0)) +'\ServerXE.ini');
@@ -67,6 +65,8 @@ begin
     DMBaseDatos.LoginPrompt := false;
    // DMBaseDatos.Params.Add('USER NAME=' + Usuario);
    // DMBaseDatos.Params.Add('PASSWORD=' + Password);
-
- END;
+ end;
+ initialization
+  sysutils.Decimalseparator := ',';
+  sysutils.ThousandSeparator := '.';
 end.

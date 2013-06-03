@@ -14,6 +14,7 @@ type
     tgConsulta: TTabSheet;
     DBNavigator1: TDBNavigator;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -30,6 +31,11 @@ implementation
 procedure TfrmBaseUt.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
      Action:= caFree;
+end;
+
+procedure TfrmBaseUt.FormShow(Sender: TObject);
+begin
+ PageControl1.ActivePageIndex:=0;
 end;
 
 end.
