@@ -3,9 +3,6 @@ inherited frmArticuloUt: TfrmArticuloUt
   Caption = 'Articulos'
   ClientHeight = 396
   ClientWidth = 705
-  Position = poMainFormCenter
-  OnShow = FormShow
-  ExplicitTop = -35
   ExplicitWidth = 711
   ExplicitHeight = 424
   PixelsPerInch = 96
@@ -21,8 +18,6 @@ inherited frmArticuloUt: TfrmArticuloUt
     ExplicitWidth = 705
     ExplicitHeight = 339
     inherited tgDatos: TTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
       ExplicitWidth = 697
       ExplicitHeight = 311
       inherited DBNavigator1: TDBNavigator
@@ -665,9 +660,11 @@ inherited frmArticuloUt: TfrmArticuloUt
     object cdsArticuloEXISTENCIA: TIntegerField
       FieldName = 'EXISTENCIA'
       Required = True
+      DisplayFormat = ',#'
     end
     object cdsArticuloEXISTENCIA_MIN: TIntegerField
       FieldName = 'EXISTENCIA_MIN'
+      DisplayFormat = ',#'
     end
     object cdsArticuloIMG_EXT: TWideStringField
       FieldName = 'IMG_EXT'
@@ -696,10 +693,12 @@ inherited frmArticuloUt: TfrmArticuloUt
     object cdsArticuloPRECIOCOMPRA: TLargeintField
       FieldName = 'PRECIOCOMPRA'
       Required = True
+      DisplayFormat = ',#'
     end
     object cdsArticuloPRECIOVTA: TLargeintField
       FieldName = 'PRECIOVTA'
       Required = True
+      DisplayFormat = ',#'
     end
   end
   object qryArticulo: TIBQuery

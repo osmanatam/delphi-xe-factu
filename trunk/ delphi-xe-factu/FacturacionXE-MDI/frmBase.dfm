@@ -12,10 +12,11 @@ object frmBaseUt: TfrmBaseUt
   Font.Style = []
   FormStyle = fsMDIChild
   OldCreateOrder = False
-  Position = poScreenCenter
+  Position = poMainFormCenter
   Scaled = False
   Visible = True
   OnClose = FormClose
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -51,7 +52,6 @@ object frmBaseUt: TfrmBaseUt
     TabOrder = 1
     object tgDatos: TTabSheet
       Caption = 'Datos'
-      ExplicitLeft = 0
       object DBNavigator1: TDBNavigator
         Left = 0
         Top = 200
@@ -64,6 +64,10 @@ object frmBaseUt: TfrmBaseUt
     object tgConsulta: TTabSheet
       Caption = 'Consulta'
       ImageIndex = 1
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
     end
   end
 end
