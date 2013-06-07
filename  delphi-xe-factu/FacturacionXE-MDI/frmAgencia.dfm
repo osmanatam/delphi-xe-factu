@@ -17,6 +17,8 @@ inherited frmAgenciaUt: TfrmAgenciaUt
     ExplicitWidth = 473
     ExplicitHeight = 235
     inherited tgDatos: TTabSheet
+      ExplicitLeft = 4
+      ExplicitTop = 24
       ExplicitWidth = 465
       ExplicitHeight = 207
       inherited DBNavigator1: TDBNavigator
@@ -124,6 +126,7 @@ inherited frmAgenciaUt: TfrmAgenciaUt
           Width = 298
           Height = 21
           Align = alCustom
+          CharCase = ecUpperCase
           Color = clWhite
           DataField = 'NOMBREAGENCIA'
           DataSource = dsAgencia
@@ -178,6 +181,7 @@ inherited frmAgenciaUt: TfrmAgenciaUt
           Width = 190
           Height = 21
           Align = alCustom
+          CharCase = ecUpperCase
           Color = clWhite
           DataField = 'RUC'
           DataSource = dsAgencia
