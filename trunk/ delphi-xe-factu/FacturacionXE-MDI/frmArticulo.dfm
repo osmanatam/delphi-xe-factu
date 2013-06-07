@@ -15,9 +15,12 @@ inherited frmArticuloUt: TfrmArticuloUt
   inherited PageControl1: TPageControl
     Width = 705
     Height = 339
+    ActivePage = tgConsulta
     ExplicitWidth = 705
     ExplicitHeight = 339
     inherited tgDatos: TTabSheet
+      ExplicitLeft = 4
+      ExplicitTop = 24
       ExplicitWidth = 697
       ExplicitHeight = 311
       inherited DBNavigator1: TDBNavigator

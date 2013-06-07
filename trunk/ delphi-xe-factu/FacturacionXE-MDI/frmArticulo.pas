@@ -248,6 +248,7 @@ begin
   qryTipoIva.Active:=false;
   qryRamo.Active:=false;
   qryProveedor.Active:=false;
+  qryGrilla.Active:=False;
 end;
 
 procedure TfrmArticuloUt.FormShow(Sender: TObject);
@@ -259,6 +260,7 @@ begin
   qryRamo.Active:=true;
   qryProveedor.Active:=true;
   PageControl1.ActivePageIndex:=0;
+  qryGrilla.Active:=True;
 end;
 
 procedure TfrmArticuloUt.Image1Click(Sender: TObject);
