@@ -50,6 +50,7 @@ begin
   inherited;
   qryeMPRESA.Active:=False;
   cdsAgencia.Active:=False;
+  Action := caFree;
 end;
 
 procedure TfrmAgenciaUt.FormShow(Sender: TObject);

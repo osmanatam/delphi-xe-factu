@@ -11,7 +11,7 @@ interface
   Menus, //TMenuItems
   Variants, //Null
   ComCtrls,  Buttons,   // TTreeView
-  DBGrids, SebaotListView,
+  DBGrids,
   ExtCtrls,   //TPanel
   DateUtils,   //Utilitario para manejo de fecha
   DBCtrlsEh, DBGridEh,  ToolCtrlsEh, DBLookupEh,  //Grilla EhLib
@@ -22,7 +22,6 @@ interface
   dxfCheckBox, //dfxcheckbox
   Registry ,TlHelp32,  Wpdbrich, psapi,
   pngimage,//para png imagen
-  //psapi,
    ShellAPI;
    procedure HoraDelServidor;
    procedure msError (mensaje, titulo : String);
@@ -126,7 +125,4 @@ function CrearFormulario(vPrg: TForm): Boolean;
     end;
     Result := True;
   end;
-
-
-
 end.

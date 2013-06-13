@@ -68,6 +68,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure Image1Click(Sender: TObject);
     procedure dsTaskBar1AddButton(Sender: TObject; Button: TTaskBarButton);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -90,6 +91,16 @@ procedure TfrmMain.dsTaskBar1AddButton(Sender: TObject; Button: TTaskBarButton);
 begin
   Button.Glyph := nil;
   Button.Hint := Button.Caption;
+end;
+
+procedure TfrmMain.FormClose(Sender: TObject; var Action: TCloseAction);
+var
+  i: integer;
+begin
+  with Self do//Sale de todos los prg abiertos
+      for I:= MDIChildCount-1 downto 0 do
+          MDIChildren[I].Close;
+    Action := caFree;
 end;
 
 procedure TfrmMain.FormCreate(Sender: TObject);
