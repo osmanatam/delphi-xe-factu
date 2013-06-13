@@ -249,6 +249,7 @@ begin
   qryRamo.Active:=false;
   qryProveedor.Active:=false;
   qryGrilla.Active:=False;
+  Action := caFree;
 end;
 
 procedure TfrmArticuloUt.FormShow(Sender: TObject);
