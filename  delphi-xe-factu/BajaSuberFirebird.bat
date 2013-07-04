@@ -1,0 +1,4 @@
+net stop FirebirdGuardianDefaultInstance
+net stop FirebirdServerDefaultInstance
+net start FirebirdGuardianDefaultInstance
+net start FirebirdServerDefaultInstance
