@@ -25,7 +25,7 @@ var
   frmBaseUt: TfrmBaseUt;
 
 implementation
-
+    uses Utilidades;
 {$R *.dfm}
 
 procedure TfrmBaseUt.FormClose(Sender: TObject; var Action: TCloseAction);

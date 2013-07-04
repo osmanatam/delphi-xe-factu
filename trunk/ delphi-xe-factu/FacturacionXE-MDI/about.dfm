@@ -4,7 +4,7 @@ object AboutBox: TAboutBox
   ActiveControl = OKButton
   BorderStyle = bsDialog
   Caption = 'About'
-  ClientHeight = 218
+  ClientHeight = 168
   ClientWidth = 298
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -17,15 +17,17 @@ object AboutBox: TAboutBox
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
-    Left = 7
+    Left = 8
     Top = 7
     Width = 281
-    Height = 161
+    Height = 130
     Margins.Left = 2
     Margins.Top = 2
     Margins.Right = 2
     Margins.Bottom = 2
     BevelOuter = bvLowered
+    Color = clMoneyGreen
+    ParentBackground = False
     TabOrder = 0
     object ProgramIcon: TImage
       Left = 8
@@ -4469,24 +4471,24 @@ object AboutBox: TAboutBox
       IsControl = True
     end
     object Comments: TLabel
-      Left = 8
-      Top = 104
-      Width = 49
-      Height = 13
+      Left = 64
+      Top = 110
+      Width = 153
+      Height = 25
       Margins.Left = 2
       Margins.Top = 2
       Margins.Right = 2
       Margins.Bottom = 2
-      Caption = 'Comments'
+      Caption = 'Desing by Claudio Brignardello'
       WordWrap = True
       IsControl = True
     end
   end
   object OKButton: TButton
-    Left = 120
-    Top = 178
+    Left = 111
+    Top = 141
     Width = 65
-    Height = 33
+    Height = 20
     Margins.Left = 2
     Margins.Top = 2
     Margins.Right = 2
