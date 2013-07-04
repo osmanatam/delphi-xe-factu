@@ -1,40 +1,40 @@
 inherited frmAgenciaUt: TfrmAgenciaUt
+  Hint = 'Mantenimiento de Agencia'
   Caption = 'Agencias'
-  ClientHeight = 292
-  ClientWidth = 473
-  ExplicitWidth = 489
-  ExplicitHeight = 330
+  ClientHeight = 254
+  ClientWidth = 411
+  ExplicitWidth = 427
+  ExplicitHeight = 292
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    Width = 473
+    Width = 411
     Caption = 'Agencia'
-    ExplicitWidth = 473
+    ExplicitWidth = 411
   end
   inherited PageControl1: TPageControl
-    Width = 473
-    Height = 235
-    ExplicitWidth = 473
-    ExplicitHeight = 235
+    Width = 411
+    Height = 221
+    ExplicitWidth = 411
+    ExplicitHeight = 221
     inherited tgDatos: TTabSheet
       ExplicitLeft = 4
       ExplicitTop = 24
-      ExplicitWidth = 465
-      ExplicitHeight = 207
+      ExplicitWidth = 403
+      ExplicitHeight = 193
       inherited DBNavigator1: TDBNavigator
-        Top = 168
-        Width = 465
+        Top = 154
+        Width = 403
         DataSource = dsAgencia
-        VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
-        Hints.Strings = ()
-        ExplicitTop = 168
-        ExplicitWidth = 465
+        OnClick = DBNavigator1Click
+        ExplicitTop = 154
+        ExplicitWidth = 403
       end
       object grpAgencia: TGroupBox
         Left = 0
         Top = 0
-        Width = 465
-        Height = 168
+        Width = 403
+        Height = 154
         Align = alClient
         Caption = 'Datos Rapidos'
         Color = cl3DLight
@@ -48,7 +48,7 @@ inherited frmAgenciaUt: TfrmAgenciaUt
         ParentFont = False
         TabOrder = 1
         object lbl2: TLabel
-          Left = 7
+          Left = 16
           Top = 21
           Width = 37
           Height = 13
@@ -62,7 +62,7 @@ inherited frmAgenciaUt: TfrmAgenciaUt
           ParentFont = False
         end
         object lbl3: TLabel
-          Left = 7
+          Left = 11
           Top = 58
           Width = 42
           Height = 13
@@ -76,8 +76,8 @@ inherited frmAgenciaUt: TfrmAgenciaUt
           ParentFont = False
         end
         object lbl4: TLabel
-          Left = 7
-          Top = 97
+          Left = 8
+          Top = 89
           Width = 45
           Height = 13
           Align = alCustom
@@ -90,8 +90,8 @@ inherited frmAgenciaUt: TfrmAgenciaUt
           ParentFont = False
         end
         object lbl1: TLabel
-          Left = 7
-          Top = 132
+          Left = 16
+          Top = 124
           Width = 37
           Height = 13
           Align = alCustom
@@ -121,8 +121,8 @@ inherited frmAgenciaUt: TfrmAgenciaUt
           TabOrder = 0
         end
         object dbedtNombreAgencia: TDBEdit
-          Left = 71
-          Top = 55
+          Left = 60
+          Top = 50
           Width = 298
           Height = 21
           Align = alCustom
@@ -139,8 +139,8 @@ inherited frmAgenciaUt: TfrmAgenciaUt
           TabOrder = 1
         end
         object dbeEmpresa: TDBLookupComboboxEh
-          Left = 71
-          Top = 92
+          Left = 58
+          Top = 81
           Width = 298
           Height = 21
           DataField = 'CODEMPRESA'
@@ -159,25 +159,24 @@ inherited frmAgenciaUt: TfrmAgenciaUt
           Visible = True
         end
         object btn2: TButton
-          Left = 371
-          Top = 96
+          Left = 357
+          Top = 81
           Width = 20
-          Height = 17
+          Height = 21
           Caption = '+'
           TabOrder = 3
         end
         object btn1: TButton
-          Left = 315
-          Top = 17
-          Width = 54
+          Left = 310
+          Top = 15
+          Width = 48
           Height = 25
           Caption = 'Cambiar'
-          Enabled = False
           TabOrder = 4
         end
         object dbedtUC: TDBEdit
-          Left = 71
-          Top = 129
+          Left = 58
+          Top = 116
           Width = 190
           Height = 21
           Align = alCustom
@@ -198,28 +197,72 @@ inherited frmAgenciaUt: TfrmAgenciaUt
     inherited tgConsulta: TTabSheet
       ExplicitLeft = 4
       ExplicitTop = 24
-      ExplicitWidth = 465
-      ExplicitHeight = 207
+      ExplicitWidth = 403
+      ExplicitHeight = 193
+      object DBGridEh1: TDBGridEh
+        Left = 3
+        Top = 16
+        Width = 397
+        Height = 174
+        DataGrouping.GroupLevels = <>
+        DataSource = dsAgencia
+        Flat = False
+        FooterColor = clWindow
+        FooterFont.Charset = DEFAULT_CHARSET
+        FooterFont.Color = clRed
+        FooterFont.Height = -11
+        FooterFont.Name = 'Tahoma'
+        FooterFont.Style = [fsBold]
+        IndicatorOptions = [gioShowRowIndicatorEh]
+        TabOrder = 0
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clRed
+        TitleFont.Height = -11
+        TitleFont.Name = 'Tahoma'
+        TitleFont.Style = [fsBold]
+        OnDblClick = DBGridEh1DblClick
+        Columns = <
+          item
+            EditButtons = <>
+            FieldName = 'CODAGENCIA'
+            Footers = <>
+            Title.Caption = 'Id'
+            Width = 40
+          end
+          item
+            EditButtons = <>
+            FieldName = 'NOMBREAGENCIA'
+            Footers = <>
+            Title.Caption = 'Agencia'
+            Width = 209
+          end
+          item
+            EditButtons = <>
+            FieldName = 'RUC'
+            Footers = <>
+          end>
+        object RowDetailData: TRowDetailPanelControlEh
+        end
+      end
     end
   end
   object dsAgencia: TDataSource
     DataSet = cdsAgencia
-    Left = 16
-    Top = 8
+    Left = 64
   end
   object qryAgencia: TIBQuery
     Database = DataModule1.DMBaseDatos
     Transaction = DataModule1.DMTransaction
     SQL.Strings = (
       'select CODAGENCIA, NOMBREAGENCIA, CODEMPRESA, RUC from AGENCIA')
-    Left = 48
+    Left = 104
     Top = 8
   end
   object cdsAgencia: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dspvAgencia'
-    Left = 80
+    Left = 136
     Top = 8
     object cdsAgenciaCODAGENCIA: TIntegerField
       FieldName = 'CODAGENCIA'
@@ -241,20 +284,31 @@ inherited frmAgenciaUt: TfrmAgenciaUt
   end
   object dspvAgencia: TDataSetProvider
     DataSet = qryAgencia
-    Left = 112
+    Left = 160
     Top = 8
   end
   object dsEmpresa: TDataSource
     DataSet = qryeMPRESA
-    Left = 348
-    Top = 8
+    Left = 300
   end
   object qryeMPRESA: TIBQuery
     Database = DataModule1.DMBaseDatos
     Transaction = DataModule1.DMTransaction
     SQL.Strings = (
       'select CODEMPRESA, NOMBREMPRESA from EMPRESA')
-    Left = 384
-    Top = 8
+    Left = 336
+  end
+  object qryAux: TIBQuery
+    Database = DataModule1.DMBaseDatos
+    Transaction = DataModule1.DMTransaction
+    SQL.Strings = (
+      'select max( CODAGENCIA) +1 from AGENCIA')
+    Left = 320
+    Top = 160
+  end
+  object dsAux: TDataSource
+    DataSet = qryAux
+    Left = 284
+    Top = 160
   end
 end

@@ -89,6 +89,7 @@ type
     procedure btnAccionesClick(Sender: TObject);
     procedure coloreo(SN: Boolean);
     procedure btn1Click(Sender: TObject);
+    procedure DBGridEh1DblClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -216,6 +217,19 @@ procedure TfrmArticuloUt.coloreo(SN: Boolean);
        dbedtEXISTENCIA_MIN.Color:=clWhite;
       end;
    end;
+
+procedure TfrmArticuloUt.DBGridEh1DblClick(Sender: TObject);
+begin
+  inherited;
+  PageControl1.ActivePageIndex:=0;
+  cdsArticulo.First;
+  while not cdsArticulo.Eof do
+   begin
+    if cdsArticuloCODARTICULO.AsInteger=DBGridEh1.Columns[0].Field.AsInteger then
+       Exit;
+    cdsArticulo.Next;
+   end;
+end;
 
 procedure TfrmArticuloUt.dsArticuloDataChange(Sender: TObject; Field: TField);
 var

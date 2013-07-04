@@ -4,8 +4,7 @@ object DataModule1: TDataModule1
   Height = 282
   Width = 370
   object DMBaseDatos: TIBDatabase
-    Connected = True
-    DatabaseName = 'LOCALHOST:C:\FACTURACIONXE\ delphi-xe-factu\FACTURACION.FDB'
+    DatabaseName = 'localhost:C:\FACTURACIONXE\delphi-xe-factu\FACTURACION.FDB'
     Params.Strings = (
       'user_name=SYSDBA'
       'password=whitelion')
@@ -27,7 +26,6 @@ object DataModule1: TDataModule1
     Top = 64
   end
   object DMTransaction: TIBTransaction
-    Active = True
     Left = 48
     Top = 16
   end
@@ -35,7 +33,7 @@ object DataModule1: TDataModule1
     Left = 72
     Top = 120
     Bitmap = {
-      494C010168008000280010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010168008000300010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000040000000B0010000010020000000000000B0
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

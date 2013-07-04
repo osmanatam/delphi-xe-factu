@@ -1,6 +1,7 @@
 object FLogin: TFLogin
   Left = 550
   Top = 200
+  BorderIcons = []
   Caption = 'Entrada al sistema'
   ClientHeight = 148
   ClientWidth = 330

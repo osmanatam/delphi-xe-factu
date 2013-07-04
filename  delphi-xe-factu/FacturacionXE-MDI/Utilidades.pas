@@ -16,12 +16,13 @@ interface
   DateUtils,   //Utilitario para manejo de fecha
   DBCtrlsEh, DBGridEh,  ToolCtrlsEh, DBLookupEh,  //Grilla EhLib
   ScktComp,   //Cambio de Fecha de la Maq. desde el Servidor
-  ATexto,
+  ATexto, dsTaskBar,
   Printers, //por busqueda de Impresora
   dxfOutlookBar, //por barra de outlook CambiarTituloSeleccion(
   dxfCheckBox, //dfxcheckbox
   Registry ,TlHelp32,  Wpdbrich, psapi,
   pngimage,//para png imagen
+  //psapi,
    ShellAPI;
    procedure HoraDelServidor;
    procedure msError (mensaje, titulo : String);

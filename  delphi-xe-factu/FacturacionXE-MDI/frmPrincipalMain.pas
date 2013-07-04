@@ -4,25 +4,21 @@ interface
 
 uses Windows, SysUtils, Classes, Graphics, Forms, Controls, Menus,
   StdCtrls, Dialogs, Buttons, Messages, ExtCtrls, ComCtrls, StdActns,
-  ActnList, ToolWin, ImgList, dsTaskBar;
+  ActnList, ToolWin, ImgList, dsTaskBar, DSCommonServer, DSTCPServerTransport ;
 
 type
   TfrmMain = class(TForm)
     mnuMainMenu: TMainMenu;
     File1: TMenuItem;
-    Window1: TMenuItem;
+    nmuVentanasAbiertas: TMenuItem;
     Help1: TMenuItem;
     N1: TMenuItem;
-    WindowCascadeItem: TMenuItem;
-    WindowTileItem: TMenuItem;
     HelpAboutItem: TMenuItem;
     Edit1: TMenuItem;
     mnuArticulo: TMenuItem;
     mnuUnidadMedida: TMenuItem;
     mnuSecciones: TMenuItem;
-    WindowMinimizeItem: TMenuItem;
     StatusBar: TStatusBar;
-    WindowTileItem2: TMenuItem;
     mnuMantenerAgencia: TMenuItem;
     mnuConsultaAgencia: TMenuItem;
     mnuInventario: TMenuItem;
@@ -61,6 +57,13 @@ type
     FacturasAnuladas1: TMenuItem;
     ImageList1: TImageList;
     dsTaskBar1: TdsTaskBar;
+    mnuClientes: TMenuItem;
+    Mantenimiento1: TMenuItem;
+    ConsultaCliente1: TMenuItem;
+    LimitesdeCredito1: TMenuItem;
+    ListaNegra1: TMenuItem;
+    Hola1: TMenuItem;
+    mnuProveedores: TMenuItem;
     procedure mnuMantenerAgenciaClick(Sender: TObject);
     procedure AlCerrar( Sender: TObject; var Action: TCloseAction );
     procedure HelpAboutItemClick(Sender: TObject);
@@ -69,6 +72,7 @@ type
     procedure Image1Click(Sender: TObject);
     procedure dsTaskBar1AddButton(Sender: TObject; Button: TTaskBarButton);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure mnuProveedoresClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -82,7 +86,7 @@ implementation
 
 {$R *.dfm}
 
-uses Utilidades, about, frmArticulo, frmAgencia, frmLogin;
+uses Utilidades, about, frmArticulo, frmAgencia, frmLogin, frmProveedorUt;
 
 
 
@@ -139,6 +143,12 @@ procedure TfrmMain.mnuMantenerAgenciaClick(Sender: TObject);
 begin
   if CrearFormulario(frmAgenciaUt) then
      frmAgenciaUt := TfrmAgenciaUt.Create(Self);
+end;
+
+procedure TfrmMain.mnuProveedoresClick(Sender: TObject);
+begin
+  if CrearFormulario(frmProveedor) then
+   frmProveedor := TfrmProveedor.Create(Self);
 end;
 
 procedure TfrmMain.AlCerrar( Sender: TObject; var Action: TCloseAction );

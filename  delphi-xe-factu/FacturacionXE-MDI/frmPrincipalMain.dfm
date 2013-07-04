@@ -14,7 +14,7 @@ object frmMain: TfrmMain
   Menu = mnuMainMenu
   OldCreateOrder = False
   Position = poScreenCenter
-  WindowMenu = Window1
+  WindowMenu = nmuVentanasAbiertas
   OnClose = FormClose
   OnCreate = FormCreate
   PixelsPerInch = 96
@@ -32,32 +32,28 @@ object frmMain: TfrmMain
     Panels = <
       item
         Width = 50
-      end
-      item
-        Text = 'Sistema de Facuracion'
-        Width = 50
       end>
     SimplePanel = True
   end
   object dsTaskBar1: TdsTaskBar
     Left = 0
-    Top = 551
+    Top = 552
     Width = 821
-    Height = 23
+    Height = 22
     AutoCreateButtons = True
     AlwaysMaximized = False
-    ButtonWidth = 170
-    Flat = True
-    OnAddButton = dsTaskBar1AddButton
+    ButtonWidth = 160
+    Flat = False
     ScrollType = stNone
     HideMinimizedMDI = False
-    Color1 = clAppWorkSpace
-    Color2 = clRed
+    Color1 = clBtnFace
+    Color2 = clBtnFace
     GradOrientation = goNone
     GroupSimilar = False
     SyncCaptions = False
     DragDropReorder = False
     Align = alBottom
+    ShowHint = True
   end
   object mnuMainMenu: TMainMenu
     Images = ImageList1
@@ -113,27 +109,36 @@ object frmMain: TfrmMain
         end
       end
     end
-    object Window1: TMenuItem
+    object Proveedores1: TMenuItem
+      Caption = 'Proveedores'
+      object mnuProveedores: TMenuItem
+        Caption = 'Mantenimiento Proveedor'
+        OnClick = mnuProveedoresClick
+      end
+      object Facturasdecompra1: TMenuItem
+        Caption = 'Facturas de compra'
+        ImageIndex = 90
+      end
+      object RecepciondeMercaderia1: TMenuItem
+        Caption = 'Recepcion de Mercaderia'
+      end
+    end
+    object mnuClientes: TMenuItem
       Caption = 'Clientes'
-      Hint = 'Seccion Cliente'
-      object WindowCascadeItem: TMenuItem
+      object Mantenimiento1: TMenuItem
         Caption = 'Mantenimiento'
-        Hint = 'Cascade'
+        ImageIndex = 11
+      end
+      object ConsultaCliente1: TMenuItem
+        Caption = 'Consulta Cliente'
         ImageIndex = 70
       end
-      object WindowTileItem: TMenuItem
-        Caption = 'Consulta Cliente'
-        Hint = 'Tile Horizontally'
-        ImageIndex = 101
+      object LimitesdeCredito1: TMenuItem
+        Caption = 'Limites de Credito'
+        ImageIndex = 3
       end
-      object WindowTileItem2: TMenuItem
-        Caption = 'Limite de Credito'
-        Hint = 'Tile Vertically'
-        ImageIndex = 16
-      end
-      object WindowMinimizeItem: TMenuItem
+      object ListaNegra1: TMenuItem
         Caption = 'Lista Negra'
-        Hint = 'Minimize All'
         ImageIndex = 29
       end
     end
@@ -160,16 +165,6 @@ object frmMain: TfrmMain
       object Presupuestos1: TMenuItem
         Caption = 'Presupuestos'
         ImageIndex = 82
-      end
-    end
-    object Proveedores1: TMenuItem
-      Caption = 'Proveedores'
-      object Facturasdecompra1: TMenuItem
-        Caption = 'Facturas de compra'
-        ImageIndex = 90
-      end
-      object RecepciondeMercaderia1: TMenuItem
-        Caption = 'Recepcion de Mercaderia'
       end
     end
     object esoreria1: TMenuItem
@@ -209,6 +204,14 @@ object frmMain: TfrmMain
     end
     object Reportes2: TMenuItem
       Caption = 'Varios'
+      object nmuVentanasAbiertas: TMenuItem
+        Caption = 'Ventanas'
+        Hint = 'Seccion Cliente'
+        ImageIndex = 0
+        object Hola1: TMenuItem
+          Caption = 'Activas'
+        end
+      end
       object PedidoPendientes1: TMenuItem
         Caption = 'Pedido Pendientes'
       end
@@ -247,7 +250,7 @@ object frmMain: TfrmMain
     Left = 72
     Top = 24
     Bitmap = {
-      494C0101680080002C0010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010168008000500010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000040000000B0010000010020000000000000B0
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

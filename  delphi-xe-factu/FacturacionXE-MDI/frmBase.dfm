@@ -23,7 +23,7 @@ object frmBaseUt: TfrmBaseUt
     Left = 0
     Top = 0
     Width = 634
-    Height = 57
+    Height = 33
     Align = alTop
     Caption = 'Titulo Base'
     Color = clMoneyGreen
@@ -38,9 +38,9 @@ object frmBaseUt: TfrmBaseUt
   end
   object PageControl1: TPageControl
     Left = 0
-    Top = 57
+    Top = 33
     Width = 634
-    Height = 267
+    Height = 291
     ActivePage = tgDatos
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
@@ -54,20 +54,32 @@ object frmBaseUt: TfrmBaseUt
       Caption = 'Datos'
       object DBNavigator1: TDBNavigator
         Left = 0
-        Top = 200
+        Top = 224
         Width = 626
         Height = 39
+        ParentCustomHint = False
+        VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
         Align = alBottom
+        Hints.Strings = (
+          'Primero'
+          'Anterior'
+          'Siguiente'
+          'Ultimo'
+          'Insertar'
+          'Eliminar'
+          'Editar'
+          'Guardar'
+          'Cancelar'
+          'Refrescar')
+        ParentShowHint = False
+        ConfirmDelete = False
+        ShowHint = False
         TabOrder = 0
       end
     end
     object tgConsulta: TTabSheet
       Caption = 'Consulta'
       ImageIndex = 1
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
     end
   end
 end

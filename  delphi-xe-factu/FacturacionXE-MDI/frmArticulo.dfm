@@ -1,42 +1,45 @@
 inherited frmArticuloUt: TfrmArticuloUt
   BorderStyle = bsSingle
   Caption = 'Articulos'
-  ClientHeight = 396
+  ClientHeight = 368
   ClientWidth = 705
   ExplicitWidth = 711
-  ExplicitHeight = 424
+  ExplicitHeight = 396
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
     Width = 705
+    Height = 25
     Caption = 'Articulos'
     ExplicitWidth = 705
+    ExplicitHeight = 25
   end
   inherited PageControl1: TPageControl
+    Top = 25
     Width = 705
-    Height = 339
+    Height = 343
     ActivePage = tgConsulta
+    ExplicitTop = 25
     ExplicitWidth = 705
-    ExplicitHeight = 339
+    ExplicitHeight = 343
     inherited tgDatos: TTabSheet
       ExplicitLeft = 4
       ExplicitTop = 24
       ExplicitWidth = 697
-      ExplicitHeight = 311
+      ExplicitHeight = 315
       inherited DBNavigator1: TDBNavigator
-        Top = 272
+        Top = 276
         Width = 697
         DataSource = dsArticulo
         VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
-        Hints.Strings = ()
-        ExplicitTop = 272
+        ExplicitTop = 276
         ExplicitWidth = 697
       end
       object grpArticulo: TGroupBox
         Left = 0
         Top = 0
         Width = 697
-        Height = 272
+        Height = 276
         Align = alClient
         Caption = 'Datos Rapidos'
         Color = cl3DLight
@@ -45,11 +48,17 @@ inherited frmArticuloUt: TfrmArticuloUt
         Font.Color = clBlue
         Font.Height = -11
         Font.Name = 'Tahoma'
-        Font.Style = []
+        Font.Style = [fsBold]
         ParentBackground = False
         ParentColor = False
         ParentFont = False
         TabOrder = 1
+        object shp1: TShape
+          Left = 418
+          Top = 13
+          Width = 272
+          Height = 213
+        end
         object Label1: TLabel
           Left = 7
           Top = 21
@@ -190,24 +199,18 @@ inherited frmArticuloUt: TfrmArticuloUt
           Font.Style = []
           ParentFont = False
         end
-        object shp1: TShape
-          Left = 513
-          Top = 13
-          Width = 165
-          Height = 140
-        end
         object lbl1: TLabel
-          Left = 522
-          Top = 76
-          Width = 146
+          Left = 488
+          Top = 112
+          Width = 175
           Height = 13
           Caption = 'Click aqui para insertar imagen'
         end
         object Image1: TImage
-          Left = 517
-          Top = 16
-          Width = 157
-          Height = 133
+          Left = 422
+          Top = 17
+          Width = 264
+          Height = 205
           Stretch = True
           OnClick = Image1Click
         end
@@ -523,12 +526,12 @@ inherited frmArticuloUt: TfrmArticuloUt
       ExplicitLeft = 4
       ExplicitTop = 24
       ExplicitWidth = 697
-      ExplicitHeight = 311
+      ExplicitHeight = 315
       object Panel2: TPanel
         Left = 0
         Top = 0
         Width = 697
-        Height = 81
+        Height = 57
         Align = alTop
         TabOrder = 0
         object Button1: TButton
@@ -550,9 +553,9 @@ inherited frmArticuloUt: TfrmArticuloUt
       end
       object DBGridEh1: TDBGridEh
         Left = 0
-        Top = 81
+        Top = 57
         Width = 697
-        Height = 230
+        Height = 258
         Align = alClient
         DataGrouping.GroupLevels = <>
         DataSource = dsGrilla
@@ -570,6 +573,7 @@ inherited frmArticuloUt: TfrmArticuloUt
         TitleFont.Height = -11
         TitleFont.Name = 'Tahoma'
         TitleFont.Style = [fsBold]
+        OnDblClick = DBGridEh1DblClick
         Columns = <
           item
             EditButtons = <>
@@ -590,6 +594,7 @@ inherited frmArticuloUt: TfrmArticuloUt
             FieldName = 'DESCRIPCION1'
             Footers = <>
             Title.Caption = 'Unidad Medida'
+            Width = 90
           end
           item
             EditButtons = <>
