@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, frmBase, DBCtrls, ComCtrls, ExtCtrls, StdCtrls, DBGridEh, DB,
   Provider, DBClient, IBCustomDataSet, IBQuery, DBCtrlsEh, DBLookupEh, Mask,
-  DBGridEhGrouping, GridsEh;
+  DBGridEhGrouping, GridsEh, Buttons;
 
 type
   TfrmProveedor = class(TfrmBaseUt)

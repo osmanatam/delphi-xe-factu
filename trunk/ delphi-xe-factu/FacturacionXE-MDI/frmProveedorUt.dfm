@@ -9,31 +9,29 @@ inherited frmProveedor: TfrmProveedor
   inherited Panel1: TPanel
     Width = 585
     Caption = 'Proveedores'
-    ExplicitWidth = 641
+    ExplicitWidth = 585
   end
   inherited PageControl1: TPageControl
     Width = 585
     Height = 281
-    ExplicitWidth = 641
-    ExplicitHeight = 346
+    ExplicitWidth = 585
+    ExplicitHeight = 281
     inherited tgDatos: TTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
-      ExplicitWidth = 633
-      ExplicitHeight = 318
+      ExplicitWidth = 577
+      ExplicitHeight = 253
       inherited DBNavigator1: TDBNavigator
         Top = 214
         Width = 577
         DataSource = dsProveedor
         OnClick = DBNavigator1Click
-        ExplicitTop = 285
+        ExplicitTop = 214
         ExplicitWidth = 577
       end
       object GroupBox1: TGroupBox
         Left = 0
         Top = 0
         Width = 577
-        Height = 214
+        Height = 253
         Align = alClient
         Caption = 'Datos Proveedor'
         Color = cl3DLight
@@ -46,9 +44,7 @@ inherited frmProveedor: TfrmProveedor
         ParentColor = False
         ParentFont = False
         TabOrder = 1
-        ExplicitLeft = 3
-        ExplicitTop = -6
-        ExplicitHeight = 279
+        ExplicitHeight = 214
         object Label1: TLabel
           Left = 97
           Top = 21
@@ -409,10 +405,8 @@ inherited frmProveedor: TfrmProveedor
       end
     end
     inherited tgConsulta: TTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
-      ExplicitWidth = 633
-      ExplicitHeight = 318
+      ExplicitWidth = 577
+      ExplicitHeight = 253
       object DBGridEh1: TDBGridEh
         Left = 0
         Top = 74

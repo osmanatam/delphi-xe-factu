@@ -18,13 +18,10 @@ inherited frmArticuloUt: TfrmArticuloUt
     Top = 25
     Width = 705
     Height = 343
-    ActivePage = tgConsulta
     ExplicitTop = 25
     ExplicitWidth = 705
     ExplicitHeight = 343
     inherited tgDatos: TTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
       ExplicitWidth = 697
       ExplicitHeight = 315
       inherited DBNavigator1: TDBNavigator
@@ -35,11 +32,18 @@ inherited frmArticuloUt: TfrmArticuloUt
         ExplicitTop = 276
         ExplicitWidth = 697
       end
+      inherited pnl3: TPanel
+        Top = 235
+        Width = 697
+        TabOrder = 5
+        ExplicitTop = 235
+        ExplicitWidth = 697
+      end
       object grpArticulo: TGroupBox
         Left = 0
         Top = 0
         Width = 697
-        Height = 276
+        Height = 235
         Align = alClient
         Caption = 'Datos Rapidos'
         Color = cl3DLight
@@ -460,15 +464,6 @@ inherited frmArticuloUt: TfrmArticuloUt
           Caption = '+'
           TabOrder = 15
         end
-        object btn1: TButton
-          Left = 315
-          Top = 17
-          Width = 54
-          Height = 25
-          Caption = 'Cambiar'
-          TabOrder = 16
-          OnClick = btn1Click
-        end
       end
       object btnEditar: TBitBtn
         Left = 513
@@ -523,8 +518,6 @@ inherited frmArticuloUt: TfrmArticuloUt
       end
     end
     inherited tgConsulta: TTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
       ExplicitWidth = 697
       ExplicitHeight = 315
       object Panel2: TPanel

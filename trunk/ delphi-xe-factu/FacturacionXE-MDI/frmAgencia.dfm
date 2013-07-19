@@ -18,8 +18,6 @@ inherited frmAgenciaUt: TfrmAgenciaUt
     ExplicitWidth = 411
     ExplicitHeight = 221
     inherited tgDatos: TTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
       ExplicitWidth = 403
       ExplicitHeight = 193
       inherited DBNavigator1: TDBNavigator
@@ -166,14 +164,6 @@ inherited frmAgenciaUt: TfrmAgenciaUt
           Caption = '+'
           TabOrder = 3
         end
-        object btn1: TButton
-          Left = 310
-          Top = 15
-          Width = 48
-          Height = 25
-          Caption = 'Cambiar'
-          TabOrder = 4
-        end
         object dbedtUC: TDBEdit
           Left = 58
           Top = 116
@@ -190,13 +180,11 @@ inherited frmAgenciaUt: TfrmAgenciaUt
           Font.Name = 'Tahoma'
           Font.Style = []
           ParentFont = False
-          TabOrder = 5
+          TabOrder = 4
         end
       end
     end
     inherited tgConsulta: TTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
       ExplicitWidth = 403
       ExplicitHeight = 193
       object DBGridEh1: TDBGridEh
