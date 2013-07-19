@@ -65,7 +65,6 @@ type
     dsGrilla: TDataSource;
     qryGrilla: TIBQuery;
     DBGridEh1: TDBGridEh;
-    btn1: TButton;
     cdsArticuloCODARTICULO: TLargeintField;
     cdsArticuloAVISAR_EXIST_MIN: TWideStringField;
     cdsArticuloCODPROVEEDOR: TIntegerField;
@@ -107,7 +106,7 @@ implementation
 procedure TfrmArticuloUt.btn1Click(Sender: TObject);
 begin
   inherited;
-  if btn1.Caption='Cambiar' then
+ { if btn1.Caption='Cambiar' then
    begin
      dbeCodArt.Enabled:=True;
      dbeCodArt.Enabled:=True;
@@ -118,7 +117,7 @@ begin
      dbeCodArt.Enabled:=False;
      cdsArticuloCODARTICULO.AsInteger:=StrToInt(dbeCodArt.Text);
      btn1.Caption:='Cambiar'
-   end;
+   end;    }
 end;
 
 procedure TfrmArticuloUt.btnAccionesClick(Sender: TObject);

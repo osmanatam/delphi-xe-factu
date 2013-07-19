@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, frmBase, ExtCtrls, DBCtrls, ComCtrls, DBGridEh, DB, Provider,
   DBClient, IBCustomDataSet, IBQuery, StdCtrls, DBCtrlsEh, DBLookupEh, Mask,
-  DBGridEhGrouping, GridsEh;
+  DBGridEhGrouping, GridsEh, Buttons;
 
 type
   TfrmAgenciaUt = class(TfrmBaseUt)
@@ -18,7 +18,6 @@ type
     dbedtNombreAgencia: TDBEdit;
     dbeEmpresa: TDBLookupComboboxEh;
     btn2: TButton;
-    btn1: TButton;
     dsAgencia: TDataSource;
     qryAgencia: TIBQuery;
     cdsAgencia: TClientDataSet;
