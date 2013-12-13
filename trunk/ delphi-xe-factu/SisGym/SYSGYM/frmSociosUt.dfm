@@ -1,35 +1,37 @@
 inherited frmSocios: TfrmSocios
   Caption = 'Socios'
-  ClientHeight = 258
-  ClientWidth = 471
-  ExplicitWidth = 487
-  ExplicitHeight = 296
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
-  object edt1: TEdit
-    Left = 152
-    Top = 40
-    Width = 121
-    Height = 21
-    TabOrder = 0
+  inherited pnlPie: TPanel
+    inherited btnAnterior: TSpeedButton
+      OnClick = nil
+    end
+    inherited btnSiguiente: TSpeedButton
+      OnClick = nil
+    end
+    inherited btnUltimo: TSpeedButton
+      OnClick = nil
+    end
   end
-  object edt2: TEdit
-    Left = 152
-    Top = 67
-    Width = 121
-    Height = 21
-    TabOrder = 1
-  end
-  object cbb1: TComboBox
-    Left = 152
-    Top = 94
-    Width = 121
-    Height = 21
-    ItemIndex = 0
-    TabOrder = 2
-    Text = 'Masculino'
-    Items.Strings = (
-      'Masculino'
-      'Femenino')
+  inherited pgc1: TPageControl
+    inherited tsConsulta: TTabSheet
+      inherited pnlPnlParametrosBus: TPanel
+        Height = 57
+        ExplicitTop = 0
+        ExplicitHeight = 57
+      end
+      inherited pnlBuscar: TPanel
+        Top = 57
+      end
+      inherited dbGrillaConsulta: TDBGridEh
+        Top = 101
+        Height = 171
+        OnDblClick = nil
+      end
+    end
+    inherited tsMantenimiento: TTabSheet
+      ExplicitHeight = 272
+    end
   end
 end

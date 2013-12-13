@@ -8,6 +8,7 @@ object dmIniDatos: TdmIniDatos
     DriverName = 'Firebird'
     GetDriverFunc = 'getSQLDriverINTERBASE'
     LibraryName = 'dbxfb.dll'
+    LoginPrompt = False
     Params.Strings = (
       'DriverUnit=DBXFirebird'
       

@@ -6,10 +6,11 @@ uses
   frmPrincipalUt in 'frmPrincipalUt.pas' {frmPrincipal},
   frmBaseUt in 'frmBaseUt.pas' {frmBase},
   frmEstudiosCorporeosUt in 'frmEstudiosCorporeosUt.pas' {frmEstudiosCorporeos},
-  frmSociosUt in 'frmSociosUt.pas' {frmSocios},
   dmIniDatosUt in 'dmIniDatosUt.pas' {dmIniDatos: TDataModule},
   frmAcercaDeUt in 'frmAcercaDeUt.pas' {frmAcercaDe},
-  UtilidadesGlobales in 'UtilidadesGlobales.pas';
+  UtilidadesGlobales in 'UtilidadesGlobales.pas',
+  frmABMCUt in 'frmABMCUt.pas' {frmBaseABMC},
+  frmSociosUt in 'frmSociosUt.pas' {frmSocios};
 
 {$R *.res}
 
