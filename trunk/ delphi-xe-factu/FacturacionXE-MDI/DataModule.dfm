@@ -33,7 +33,7 @@ object DataModule1: TDataModule1
     Left = 72
     Top = 120
     Bitmap = {
-      494C010168008000300010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010168008000340010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000040000000B0010000010020000000000000B0
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -3603,5 +3603,50 @@ object DataModule1: TDataModule1
       0000000000000000000000000000000000008001000000000000FF0F00000000
       0000FF0F000000000000FFFF8001800100000000000000000000000000000000
       000000000000}
+  end
+  object conDMBaseDatos: TSQLConnection
+    ConnectionName = 'FacturacionXE'
+    DriverName = 'Firebird'
+    GetDriverFunc = 'getSQLDriverINTERBASE'
+    LibraryName = 'dbxfb.dll'
+    LoginPrompt = False
+    Params.Strings = (
+      'Database=database.fdb'
+      'DriverUnit=DBXFirebird'
+      
+        'DriverPackageLoader=TDBXDynalinkDriverLoader,DbxCommonDriver150.' +
+        'bpl'
+      
+        'DriverAssemblyLoader=Borland.Data.TDBXDynalinkDriverLoader,Borla' +
+        'nd.Data.DbxCommonDriver,Version=15.0.0.0,Culture=neutral,PublicK' +
+        'eyToken=91d62ebb5b0d1b1b'
+      
+        'MetaDataPackageLoader=TDBXFirebirdMetaDataCommandFactory,DbxFire' +
+        'birdDriver150.bpl'
+      
+        'MetaDataAssemblyLoader=Borland.Data.TDBXFirebirdMetaDataCommandF' +
+        'actory,Borland.Data.DbxFirebirdDriver,Version=15.0.0.0,Culture=n' +
+        'eutral,PublicKeyToken=91d62ebb5b0d1b1b'
+      'GetDriverFunc=getSQLDriverINTERBASE'
+      'LibraryName=dbxfb.dll'
+      'VendorLib=fbclient.DLL'
+      'User_Name=sysdba'
+      'Password=whitelion'
+      'Role=RoleName'
+      'MaxBlobSize=-1'
+      'LocaleCode=0000'
+      'IsolationLevel=ReadCommitted'
+      'SQLDialect=3'
+      'CommitRetain=False'
+      'WaitOnLocks=True'
+      'TrimChar=False'
+      'BlobSize=-1'
+      'ErrorResourceFile='
+      'RoleName=RoleName'
+      'ServerCharSet=ISO8859_1'
+      'Trim Char=False')
+    VendorLib = 'fbclient.DLL'
+    Left = 184
+    Top = 128
   end
 end

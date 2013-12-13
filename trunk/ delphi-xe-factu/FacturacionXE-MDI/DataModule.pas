@@ -14,6 +14,7 @@ type
     DMQuery: TIBQuery;
     DMTransaction: TIBTransaction;
     ilImageList: TImageList;
+    conDMBaseDatos: TSQLConnection;
     procedure DataModuleCreate(Sender: TObject);
 
 
@@ -61,6 +62,7 @@ begin
     End;
 
     DMBaseDatos.DatabaseName:= BBDDName;
+    conDMBaseDatos.Params.Values['Database']:=BBDDName;
     //Para que no aparezca el dialogo de conexion.
     DMBaseDatos.LoginPrompt := false;
    // DMBaseDatos.Params.Add('USER NAME=' + Usuario);

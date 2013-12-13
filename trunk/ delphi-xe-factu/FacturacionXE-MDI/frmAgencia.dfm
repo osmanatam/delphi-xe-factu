@@ -20,19 +20,15 @@ inherited frmAgenciaUt: TfrmAgenciaUt
     inherited tgDatos: TTabSheet
       ExplicitWidth = 403
       ExplicitHeight = 193
-      inherited DBNavigator1: TDBNavigator
-        Top = 154
+      inherited pnl3: TPanel
+        Top = 152
         Width = 403
-        DataSource = dsAgencia
-        OnClick = DBNavigator1Click
-        ExplicitTop = 154
-        ExplicitWidth = 403
       end
       object grpAgencia: TGroupBox
         Left = 0
         Top = 0
         Width = 403
-        Height = 154
+        Height = 152
         Align = alClient
         Caption = 'Datos Rapidos'
         Color = cl3DLight
@@ -185,6 +181,8 @@ inherited frmAgenciaUt: TfrmAgenciaUt
       end
     end
     inherited tgConsulta: TTabSheet
+      ExplicitLeft = 0
+      ExplicitTop = 0
       ExplicitWidth = 403
       ExplicitHeight = 193
       object DBGridEh1: TDBGridEh

@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, frmBase, ExtCtrls, DBCtrls, ComCtrls, DBGridEh, DB, Provider,
   DBClient, IBCustomDataSet, IBQuery, StdCtrls, DBCtrlsEh, DBLookupEh, Mask,
-  DBGridEhGrouping, GridsEh, Buttons;
+  DBGridEhGrouping, GridsEh, Buttons, DBActns, ActnList;
 
 type
   TfrmAgenciaUt = class(TfrmBaseUt)

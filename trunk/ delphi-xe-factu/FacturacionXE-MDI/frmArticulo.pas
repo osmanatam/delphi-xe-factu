@@ -7,7 +7,7 @@ uses
   Dialogs, frmBase, ExtCtrls, DBGridEhGrouping, GridsEh, DBGridEh, StdCtrls,
   Mask, DBCtrls, ComCtrls, DBCtrlsEh, DBLookupEh, ExtDlgs, DB, IBCustomDataSet,
   IBQuery, DBClient, Provider,
-  jpeg,pngimage, GIFImg, Buttons;
+  jpeg,pngimage, GIFImg, Buttons, DBActns, ActnList;
 
 type
   TfrmArticuloUt = class(TfrmBaseUt)

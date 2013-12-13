@@ -4,12 +4,13 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, DB, ADODB, StdCtrls, IBCustomDataSet, IBQuery, jpeg, ExtCtrls;
+  Dialogs, DB, ADODB, StdCtrls, IBCustomDataSet, IBQuery, jpeg, ExtCtrls,
+  FMTBcd, SqlExpr;
 
 type
   TFLogin = class(TForm)
     dsLogin: TDataSource;
-    qryLogin: TIBQuery;
+    ibqryLogin1: TIBQuery;
     grp1: TGroupBox;
     lbl1: TLabel;
     edtEUsuario: TEdit;
@@ -19,6 +20,7 @@ type
     btnBtnOk: TButton;
     btnBtnCancel: TButton;
     img1: TImage;
+    qryLogin: TSQLQuery;
     procedure FormCreate(Sender: TObject);
     procedure btnBtnOkClick(Sender: TObject);
     procedure btnBtnCancelClick(Sender: TObject);
@@ -51,14 +53,15 @@ begin
 end;
 
 procedure TFLogin.btnBtnOkClick(Sender: TObject);
+var pass: string;
 begin
    LoginOK := False;
    qryLogin.SQL.Clear;
-   qryLogin.SQL.Add('SELECT CodUser, Nombreuser, Clave  FROM Usuario where nombreuser=:nom');
-   qryLogin.ParamByName('nom').asstring:= trim(edtEUsuario.Text);
+   qryLogin.SQL.Add('select coduser, nombreuser, clave  from usuario where nombreuser=:nom');
+   qryLogin.Params.ParamByName('nom').asstring:= trim(edtEUsuario.Text);
    qryLogin.Open;
    qryLogin.First;
-   If qryLogin.RecordCount < 1 then
+   If Trim(qryLogin.FieldValues['CodUser']) = '' then
     Begin
        Cuenta := Cuenta + 1;
        MessageDlg('Usuario no encontrado',mtError, [mbOK], 0);
@@ -71,28 +74,27 @@ begin
            Close;
          end;
     end
+   else if trim(qryLogin.FieldValues['clave']) = trim(edtEClave.Text) then
+    Begin
+       LoginOk := True;
+       Nombre := TRIM(qryLogin.FieldValues['nombreuser']);
+       qryLogin.Active := False;
+       try
+       FLogin.Visible:= False;
+       FLogin.Close;
+    finally
+       //frmMain.Free;
+       end;
+       //Close;
+    end
    else
-       If trim(qryLogin.FieldValues['CLAVE']) = trim(edtEClave.Text) then
-        Begin
-           LoginOk := True;
-           Nombre := TRIM(qryLogin.FieldValues['NOMBREUSER']);
-           qryLogin.Active := False;
-           try
-           FLogin.Visible:= False;
-           FLogin.Close;
-        finally
-           //frmMain.Free;
-           end;
-           //Close;
-        end
-     else
-         Begin
-           Cuenta := Cuenta + 1;
-           MessageDlg('Clave Inválida',mtError, [mbOK], 0);
-           edtEClave.Text := '';
-           qryLogin.Active := False;
-           If Cuenta = 3 then Close;
-         end;
+   Begin
+     Cuenta := Cuenta + 1;
+     MessageDlg('Clave Inválida',mtError, [mbOK], 0);
+     edtEClave.Text := '';
+     qryLogin.Active := False;
+     If Cuenta = 3 then Close;
+   end;
 
 end;
 
