@@ -59,9 +59,6 @@
 			<DCCReference Include="frmEstudiosCorporeosUt.pas">
 				<Form>frmEstudiosCorporeos</Form>
 			</DCCReference>
-			<DCCReference Include="frmSociosUt.pas">
-				<Form>frmSocios</Form>
-			</DCCReference>
 			<DCCReference Include="dmIniDatosUt.pas">
 				<Form>dmIniDatos</Form>
 				<DesignClass>TDataModule</DesignClass>
@@ -70,6 +67,12 @@
 				<Form>frmAcercaDe</Form>
 			</DCCReference>
 			<DCCReference Include="UtilidadesGlobales.pas"/>
+			<DCCReference Include="frmABMCUt.pas">
+				<Form>frmBaseABMC</Form>
+			</DCCReference>
+			<DCCReference Include="frmSociosUt.pas">
+				<Form>frmSocios</Form>
+			</DCCReference>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>

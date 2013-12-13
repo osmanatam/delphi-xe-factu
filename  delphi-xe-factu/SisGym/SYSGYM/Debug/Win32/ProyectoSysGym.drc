@@ -8,676 +8,861 @@
   resources were bound to the produced executable.
 */
 
-#define SqlConst_SNOTABLE 64864
-#define SqlConst_SMISSINGPARAMINSQL 64865
-#define SqlConst_SNOTIMPLEMENTED 64866
-#define SqlConst_SDRIVERINCOMPATIBLE 64867
-#define SqlConst_SObjectTypenameRequired 64868
-#define SqlConst_SCannotCreateFile 64869
-#define SqlConst_SINVALIDPARAM 64880
-#define SqlConst_SEOF 64881
-#define SqlConst_SSQLPARAMNOTSET 64882
-#define SqlConst_SINVALIDUSRPASS 64883
-#define SqlConst_SINVALIDPRECISION 64884
-#define SqlConst_SINVALIDLEN 64885
-#define SqlConst_SINVALIDXISOLEVEL 64886
-#define SqlConst_SINVALIDTXNID 64887
-#define SqlConst_SDUPLICATETXNID 64888
-#define SqlConst_SDRIVERRESTRICTED 64889
-#define SqlConst_SLOCALTRANSACTIVE 64890
-#define SqlConst_SMULTIPLETRANSNOTENABLED 64891
-#define SqlConst_SCONNECTIONFAILED 64892
-#define SqlConst_SDRIVERINITFAILED 64893
-#define SqlConst_SOPTLOCKFAILED 64894
-#define SqlConst_SINVALIDREF 64895
-#define SqlConst_SActiveTrans 64896
-#define SqlConst_SMissingDriverRegFile 64897
-#define SqlConst_SNoCursor 64898
-#define SqlConst_SErrorMappingError 64899
-#define SqlConst_SStoredProcsNotSupported 64900
-#define SqlConst_SPackagesNotSupported 64901
-#define SqlConst_STooManyActualParam 64902
-#define SqlConst_SNOERROR 64903
-#define SqlConst_SWARNING 64904
-#define SqlConst_SNOMEMORY 64905
-#define SqlConst_SINVALIDFLDTYPE 64906
-#define SqlConst_SINVALIDHNDL 64907
-#define SqlConst_SNOTSUPPORTED 64908
-#define SqlConst_SINVALIDTIME 64909
-#define SqlConst_SINVALIDXLATION 64910
-#define SqlConst_SOUTOFRANGE 64911
-#define MidConst_SConnectionMissing 64912
-#define MidConst_SNoCircularConnection 64913
-#define SqlConst_SLoginError 64914
-#define SqlConst_SMonitorActive 64915
-#define SqlConst_SDatabaseOpen 64916
-#define SqlConst_SDatabaseClosed 64917
-#define SqlConst_SMissingSQLConnection 64918
-#define SqlConst_SConnectionNameMissing 64919
-#define SqlConst_SEmptySQLStatement 64920
-#define SqlConst_SNoParameterValue 64921
-#define SqlConst_SNoSqlStatement 64922
-#define SqlConst_SMissingDriverName 64923
-#define SqlConst_SPrepareError 64924
-#define SqlConst_SObjectNameError 64925
-#define SqlConst_SSQLDataSetOpen 64926
-#define SqlConst_SNoActiveTrans 64927
-#define MidConst_SInvalidOptParamType 64928
-#define MidConst_SMissingDataSet 64929
-#define MidConst_SConstraintFailed 64930
-#define MidConst_SField 64931
-#define MidConst_SReadOnlyProvider 64932
-#define MidConst_SNoKeySpecified 64933
-#define MidConst_SNoDataSets 64934
-#define MidConst_SRecConstFail 64935
-#define MidConst_SFieldConstFail 64936
-#define MidConst_SDefExprFail 64937
-#define MidConst_SArrayElementError 64938
-#define MidConst_SNoTableName 64939
-#define MidConst_SNoEditsAllowed 64940
-#define MidConst_SNoDeletesAllowed 64941
-#define MidConst_SNoInsertsAllowed 64942
-#define MidConst_SCannotChangeCommandText 64943
-#define DBXCommonResStrs_SUnknownColumnName 64944
-#define ComConst_SOleError 64945
-#define ComConst_SNoMethod 64946
-#define ComConst_SVarNotObject 64947
-#define ComConst_STooManyParams 64948
-#define MidConst_SNoDataProvider 64949
-#define MidConst_SInvalidDataPacket 64950
-#define MidConst_SRefreshError 64951
-#define MidConst_SAggsNoSuchLevel 64952
-#define MidConst_SNoCircularReference 64953
-#define MidConst_SErrorLoadingMidas 64954
-#define MidConst_SCannotCreateDataSet 64955
-#define MidConst_SNoConnectToBroker 64956
-#define MidConst_SNoParentConnection 64957
-#define MidConst_SInvalidResponse 64958
-#define MidConst_STooManyRecordsModified 64959
-#define DBXCommonResStrs_STableName 64960
-#define DBXCommonResStrs_SProcedureName 64961
-#define DBXCommonResStrs_SIsAutoIncrementable 64962
-#define DBXCommonResStrs_SPastEndOfCursor 64963
-#define DBXCommonResStrs_SDefinition 64964
-#define DBXCommonResStrs_SNoTypeWithEnoughPrecision 64965
-#define DBXCommonResStrs_SCannotBeUsedForAutoIncrement 64966
-#define DBXCommonResStrs_SNoBlobTypeFound 64967
-#define DBXCommonResStrs_STypeNameNotFound 64968
-#define DBXCommonResStrs_SWrongViewDefinition 64969
-#define DBXCommonResStrs_SNoSignedTypeFound 64970
-#define DBXCommonResStrs_SCannotHoldWantedPrecision 64971
-#define DBXCommonResStrs_SCannotHoldWantedScale 64972
-#define DBXCommonResStrs_STypeNotFound 64973
-#define DBXCommonResStrs_SCannotHoldUnicodeChars 64974
-#define DBXCommonResStrs_SCannotRecreateConstraint 64975
-#define DBXCommonResStrs_SIsFixedPrecisionScale 64976
-#define DBXCommonResStrs_SUnexpectedSymbol 64977
-#define DBXCommonResStrs_SUnknownTableType 64978
-#define DBXCommonResStrs_SMetaDataCommandExpected 64979
-#define DBXCommonResStrs_SLiteralPrefix 64980
-#define DBXCommonResStrs_SIsPrimary 64981
-#define DBXCommonResStrs_SSynonymName 64982
-#define DBXCommonResStrs_SRoleName 64983
-#define DBXCommonResStrs_STableCatalogName 64984
-#define DBXCommonResStrs_SMaximumScale 64985
-#define DBXCommonResStrs_SPrimarySchemaName 64986
-#define DBXCommonResStrs_SMustCallNextFirst 64987
-#define DBXCommonResStrs_SDbxDataType 64988
-#define DBXCommonResStrs_SIsLong 64989
-#define DBXCommonResStrs_SPrimaryTableName 64990
-#define DBXCommonResStrs_SMaxInline 64991
-#define DBXCommonResStrs_SReservedWord 64992
-#define DBXCommonResStrs_SPrimaryCatalogName 64993
-#define DBXCommonResStrs_SUserName 64994
-#define DBXCommonResStrs_SExternalDefinition 64995
-#define DBXCommonResStrs_STypeName 64996
-#define DBXCommonResStrs_SIsNullable 64997
-#define DBXCommonResStrs_SProviderDbType 64998
-#define DBXCommonResStrs_SIsFixedLength 64999
-#define DBXCommonResStrs_SIsSearchable 65000
-#define DBXCommonResStrs_SConstraintName 65001
-#define DBXCommonResStrs_SParameterName 65002
-#define DBXCommonResStrs_STableType 65003
-#define DBXCommonResStrs_SViewName 65004
-#define DBXCommonResStrs_SMinimumScale 65005
-#define DBXCommonResStrs_SColumnSize 65006
-#define DBXCommonResStrs_SIsUnicode 65007
-#define DBXCommonResStrs_SOrdinal 65008
-#define DBXCommonResStrs_SIsCaseSensitive 65009
-#define DBXCommonResStrs_SMinimumVersion 65010
-#define DBXCommonResStrs_SIsSearchableWithLike 65011
-#define DBXCommonResStrs_SCreateParameters 65012
-#define DBXCommonResStrs_SPackageName 65013
-#define DBXCommonResStrs_SParameterMode 65014
-#define DBXCommonResStrs_SPrecision 65015
-#define DBXCommonResStrs_SIsBestMatch 65016
-#define DBXCommonResStrs_SMissingImplementation 65017
-#define DBXCommonResStrs_SMaximumVersion 65018
-#define DBXCommonResStrs_SIsAutoIncrement 65019
-#define DBXCommonResStrs_SLiteralSuffix 65020
-#define DBXCommonResStrs_SCreateFormat 65021
-#define DBXCommonResStrs_SSchemaName 65022
-#define DBXCommonResStrs_SIsConcurrencyType 65023
-#define DBXCommonResStrs_SDataType 65024
-#define DBXCommonResStrs_SCatalogName 65025
-#define DBXCommonResStrs_SProcedureType 65026
-#define DBXCommonResStrs_SUnclosedQuotes 65027
-#define DBXCommonResStrs_SDefaultValue 65028
-#define DBXCommonResStrs_SForeignKeyName 65029
-#define DBXCommonResStrs_SIndexName 65030
-#define DBXCommonResStrs_SIsUnsigned 65031
-#define DBXCommonResStrs_SIsUnique 65032
-#define DBXCommonResStrs_SPrimaryKeyName 65033
-#define DBXCommonResStrs_SIsAscending 65034
-#define DBXCommonResStrs_SOrdinalOutOfRange 65035
-#define DBXCommonResStrs_SScale 65036
-#define DBXCommonResStrs_SColumnName 65037
-#define DBXCommonResStrs_STableSchemaName 65038
-#define DBXCommonResStrs_SPrimaryColumnName 65039
-#define DBXCommonResStrs_SDBXErrInvalidArgument 65040
-#define DBXCommonResStrs_SDBXErrNoData 65041
-#define DBXCommonResStrs_SDBXErrVendorError 65042
-#define DBXCommonResStrs_SDBXErrUnrecognizedCommandType 65043
-#define DBXCommonResStrs_SDBXErrSchemaNameUnspecified 65044
-#define DBXCommonResStrs_SDBXErrDatabaseUnspecified 65045
-#define DBXCommonResStrs_SDBXErrLibraryNameUnspecified 65046
-#define DBXCommonResStrs_SDBXErrGetDriverFuncUnspecified 65047
-#define DBXCommonResStrs_SDBXErrVendorLibUnspecified 65048
-#define DBXCommonResStrs_SIllegalArgument 65049
-#define DBXCommonResStrs_SUnsupportedOperation 65050
-#define DBXCommonResStrs_SUnexpectedStringOverflow 65051
-#define DBXCommonResStrs_SUTF8InvalidHeaderByte 65052
-#define DBXCommonResStrs_SUTF8UnexpectedByte 65053
-#define DBXCommonResStrs_SUTF8Start 65054
-#define DBXCommonResStrs_SIsLiteralSupported 65055
-#define DBXCommonResStrs_SDBXErrInvalidPrecision 65056
-#define DBXCommonResStrs_SDBXErrInvalidLength 65057
-#define DBXCommonResStrs_SDBXErrInvalidIsolationLevel 65058
-#define DBXCommonResStrs_SDBXErrInvalidTransactionId 65059
-#define DBXCommonResStrs_SDBXErrDuplicateTransactionId 65060
-#define DBXCommonResStrs_SDBXErrDriverRestricted 65061
-#define DBXCommonResStrs_SDBXErrTransactionActive 65062
-#define DBXCommonResStrs_SDBXErrMultipleTransactionNotEnabled 65063
-#define DBXCommonResStrs_SDBXErrConnectionFailed 65064
-#define DBXCommonResStrs_SDBXErrDriverInitFailed 65065
-#define DBXCommonResStrs_SDBXErrOptimisticLockFailed 65066
-#define DBXCommonResStrs_SDBXErrInvalidReference 65067
-#define DBXCommonResStrs_SDBXErrNoTable 65068
-#define DBXCommonResStrs_SDBXErrMissingParameterMarker 65069
-#define DBXCommonResStrs_SDBXErrNotImplemented 65070
-#define DBXCommonResStrs_SDBXErrDriverIncompatible 65071
-#define DBXCommonResStrs_SUnexpectedDataType 65072
-#define DBXCommonResStrs_SDriverAlreadyRegistered 65073
-#define DBXCommonResStrs_SNotDefinedIn 65074
-#define DBXCommonResStrs_SDBXErrNone 65075
-#define DBXCommonResStrs_SDBXErrWarning 65076
-#define DBXCommonResStrs_SDBXErrNoMemory 65077
-#define DBXCommonResStrs_SDBXErrUnsupportedFieldType 65078
-#define DBXCommonResStrs_SDBXErrInvalidHandle 65079
-#define DBXCommonResStrs_SDBXErrNotSupported 65080
-#define DBXCommonResStrs_SDBXErrInvalidTime 65081
-#define DBXCommonResStrs_SDBXErrInvalidType 65082
-#define DBXCommonResStrs_SDBXErrInvalidOrdinal 65083
-#define DBXCommonResStrs_SDBXErrInvalidParameter 65084
-#define DBXCommonResStrs_SDBXErrEOF 65085
-#define DBXCommonResStrs_SDBXErrParameterNotSet 65086
-#define DBXCommonResStrs_SDBXErrInvalidUserOrPassword 65087
-#define DBXCommonResStrs_SNoConversionAvailableForValue 65088
-#define DBXCommonResStrs_SInvalidTypeForField 65089
-#define DBXCommonResStrs_SCannotCreateType 65090
-#define DBXCommonResStrs_SObjectNotFound 65091
-#define DBXCommonResStrs_SUnexpectedPairName 65092
-#define DBXCommonResStrs_SInvalidJSONFieldType 65093
-#define DBXCommonResStrs_SObjectExpectedInArray 65094
-#define DBXCommonResStrs_SStringExpectedInArray 65095
-#define DBXCommonResStrs_SArrayExpectedForField 65096
-#define DBXCommonResStrs_SObjectExpectedForField 65097
-#define DBXCommonResStrs_SUnknownDataType 65098
-#define DBXCommonResStrs_SNoMetadataProvider 65099
-#define DBXCommonResStrs_SUnexpectedMetaDataType 65100
-#define DBXCommonResStrs_SInsertNotCalled 65101
-#define DBXCommonResStrs_SPostNotCalled 65102
-#define DBXCommonResStrs_SMustKeepOriginalColumnOrder 65103
-#define DBXCommonResStrs_SFieldValueMissing 65104
-#define DBXCommonResStrs_SFieldExpected 65105
-#define DBXCommonResStrs_SArrayExpected 65106
-#define DBXCommonResStrs_SNoArray 65107
-#define DBXCommonResStrs_STypeExpected 65108
-#define DBXCommonResStrs_STypeFieldsPairExpected 65109
-#define DBXCommonResStrs_SValueExpected 65110
-#define DBXCommonResStrs_SInvalidContext 65111
-#define DBXCommonResStrs_SObjectExpectedForPair 65112
-#define DBXCommonResStrs_SInvalidContextForPair 65113
-#define DBXCommonResStrs_STypeNotSupported 65114
-#define DBXCommonResStrs_SNoTypeInterceptorExpected 65115
-#define DBXCommonResStrs_SInconsistentConversion 65116
-#define DBXCommonResStrs_SNoConversionForType 65117
-#define DBXCommonResStrs_SNoFieldFoundForType 65118
-#define DBXCommonResStrs_SNoValueConversionForField 65119
-#define DBXCommonResStrs_SSetSingletonOnce 65120
-#define DBXCommonResStrs_SConnectionFactoryInitFailed 65121
-#define DBXCommonResStrs_SInvalidDelegationDepth 65122
-#define DBXCommonResStrs_SInvalidOrdinal 65123
-#define DBXCommonResStrs_SDefaultErrorMessage 65124
-#define DBXCommonResStrs_SErrorCode 65125
-#define DBXCommonResStrs_SAlreadyPrepared 65126
-#define DBXCommonResStrs_SInvalidTypeAccess 65127
-#define DBXCommonResStrs_SConnectionClosed 65128
-#define DBXCommonResStrs_SMetaDataLoadError 65129
-#define DBXCommonResStrs_SJSONByteStream 65130
-#define DBXCommonResStrs_SNoStatementToExecute 65131
-#define DBXCommonResStrs_SAdditionalInfo 65132
-#define DBXCommonResStrs_SInvalidDataType 65133
-#define DBXCommonResStrs_SUnmatchedBrace 65134
-#define DBXCommonResStrs_SParameterIndexOutOfRange 65135
-#define DBConsts_SInvalidSqlTimeStamp 65136
-#define DBXCommonResStrs_SBadVariantType 65137
-#define DBXCommonResStrs_SAlreadyRegistered 65138
-#define DBXCommonResStrs_SNotRegistered 65139
-#define DBXCommonResStrs_SInvalidClassRegister 65140
-#define DBXCommonResStrs_SCannotFreeClassRegistry 65141
-#define DBXCommonResStrs_SDllLoadError 65142
-#define DBXCommonResStrs_SDllProcLoadError 65143
-#define DBXCommonResStrs_SUnknownDriver 65144
-#define DBXCommonResStrs_SInvalidArgument 65145
-#define DBXCommonResStrs_SInvalidTransaction 65146
-#define DBXCommonResStrs_SNotImplemented 65147
-#define DBXCommonResStrs_SRequiredProperty 65148
-#define DBXCommonResStrs_SReaderNew 65149
-#define DBXCommonResStrs_SReaderClosed 65150
-#define DBXCommonResStrs_SReadOnlyType 65151
-#define DBConsts_SParameterNotFound 65152
-#define DBConsts_SInvalidVersion 65153
-#define DBConsts_SBadFieldType 65154
-#define DBConsts_SAggActive 65155
-#define DBConsts_SProviderSQLNotSupported 65156
-#define DBConsts_SProviderExecuteNotSupported 65157
-#define DBConsts_SExprNoAggOnCalcs 65158
-#define DBConsts_SRecordChanged 65159
-#define DBConsts_SDataSetUnidirectional 65160
-#define DBConsts_SUnassignedVar 65161
-#define DBConsts_SRecordNotFound 65162
-#define DBConsts_SFileNameBlank 65163
-#define DBConsts_SBcdOverflow 65164
-#define DBConsts_SInvalidBcdValue 65165
-#define DBConsts_SInvalidFormatType 65166
-#define DBConsts_SCouldNotParseTimeStamp 65167
-#define DBConsts_SExprExpected 65168
-#define DBConsts_SExprBadField 65169
-#define DBConsts_SExprBadNullTest 65170
-#define DBConsts_SExprRangeError 65171
-#define DBConsts_SExprIncorrect 65172
-#define DBConsts_SExprNothing 65173
-#define DBConsts_SExprTypeMis 65174
-#define DBConsts_SExprBadScope 65175
-#define DBConsts_SExprNoArith 65176
-#define DBConsts_SExprNotAgg 65177
-#define DBConsts_SExprBadConst 65178
-#define DBConsts_SExprNoAggFilter 65179
-#define DBConsts_SExprEmptyInList 65180
-#define DBConsts_SInvalidKeywordUse 65181
-#define DBConsts_STextFalse 65182
-#define DBConsts_STextTrue 65183
-#define DBConsts_SLookupInfoError 65184
-#define DBConsts_SDataSourceChange 65185
-#define DBConsts_SNoNestedMasterSource 65186
-#define DBConsts_SDataSetOpen 65187
-#define DBConsts_SNotEditing 65188
-#define DBConsts_SDataSetClosed 65189
-#define DBConsts_SDataSetEmpty 65190
-#define DBConsts_SDataSetReadOnly 65191
-#define DBConsts_SNestedDataSetClass 65192
-#define DBConsts_SExprTermination 65193
-#define DBConsts_SExprNameError 65194
-#define DBConsts_SExprStringError 65195
-#define DBConsts_SExprInvalidChar 65196
-#define DBConsts_SExprNoLParen 65197
-#define DBConsts_SExprNoRParen 65198
-#define DBConsts_SExprNoRParenOrComma 65199
-#define DBConsts_SFieldSizeMismatch 65200
-#define DBConsts_SInvalidVarByteArray 65201
-#define DBConsts_SFieldOutOfRange 65202
-#define DBConsts_SFieldRequired 65203
-#define DBConsts_SDataSetMissing 65204
-#define DBConsts_SInvalidCalcType 65205
-#define DBConsts_SFieldReadOnly 65206
-#define DBConsts_SFieldIndexError 65207
-#define DBConsts_SNoFieldIndexes 65208
-#define DBConsts_SNotIndexField 65209
-#define DBConsts_SIndexFieldMissing 65210
-#define DBConsts_SDuplicateIndexName 65211
-#define DBConsts_SNoIndexForFields 65212
-#define DBConsts_SIndexNotFound 65213
-#define DBConsts_SDBDuplicateName 65214
-#define DBConsts_SCircularDataLink 65215
-#define JConsts_sJPEGError 65216
-#define JConsts_sJPEGImageFile 65217
-#define DBConsts_SInvalidFieldSize 65218
-#define DBConsts_SInvalidFieldKind 65219
-#define DBConsts_SUnknownFieldType 65220
-#define DBConsts_SFieldNameMissing 65221
-#define DBConsts_SDuplicateFieldName 65222
-#define DBConsts_SFieldNotFound 65223
-#define DBConsts_SFieldAccessError 65224
-#define DBConsts_SFieldValueError 65225
-#define DBConsts_SFieldRangeError 65226
-#define DBConsts_SBcdFieldRangeError 65227
-#define DBConsts_SInvalidIntegerValue 65228
-#define DBConsts_SInvalidBoolValue 65229
-#define DBConsts_SInvalidFloatValue 65230
-#define DBConsts_SFieldTypeMismatch 65231
-#define Consts_SDockZoneVersionConflict 65232
-#define Consts_SPageControlNotSet 65233
-#define Consts_SWindowsVistaRequired 65234
-#define Consts_SXPThemesRequired 65235
-#define Consts_STaskDlgButtonCaption 65236
-#define Consts_STaskDlgRadioButtonCaption 65237
-#define Consts_SInvalidTaskDlgButtonCaption 65238
-#define ComStrs_sTabFailClear 65239
-#define ComStrs_sTabFailDelete 65240
-#define ComStrs_sTabFailRetrieve 65241
-#define ComStrs_sTabFailGetObject 65242
-#define ComStrs_sTabFailSet 65243
-#define ComStrs_sTabFailSetObject 65244
-#define ComStrs_sTabMustBeMultiLine 65245
-#define ComStrs_sPageIndexError 65246
-#define JConsts_sChangeJPGSize 65247
-#define Consts_SmkcDel 65248
-#define Consts_SmkcShift 65249
-#define Consts_SmkcCtrl 65250
-#define Consts_SmkcAlt 65251
-#define Consts_SOutOfRange 65252
-#define Consts_sAllFilter 65253
-#define Consts_SInsertLineError 65254
-#define Consts_SIconToClipboard 65255
-#define Consts_SCannotOpenClipboard 65256
-#define Consts_SInvalidPrinterOp 65257
-#define Consts_SNoDefaultPrinter 65258
-#define Consts_SDuplicateMenus 65259
-#define Consts_SDockedCtlNeedsName 65260
-#define Consts_SDockTreeRemoveError 65261
-#define Consts_SDockZoneNotFound 65262
-#define Consts_SDockZoneHasNoCtl 65263
-#define Consts_SMsgDlgYesToAll 65264
-#define Consts_SMsgDlgClose 65265
-#define Consts_SmkcBkSp 65266
-#define Consts_SmkcTab 65267
-#define Consts_SmkcEsc 65268
-#define Consts_SmkcEnter 65269
-#define Consts_SmkcSpace 65270
-#define Consts_SmkcPgUp 65271
-#define Consts_SmkcPgDn 65272
-#define Consts_SmkcEnd 65273
-#define Consts_SmkcHome 65274
-#define Consts_SmkcLeft 65275
-#define Consts_SmkcUp 65276
-#define Consts_SmkcRight 65277
-#define Consts_SmkcDown 65278
-#define Consts_SmkcIns 65279
-#define Consts_SVBitmaps 65280
-#define Consts_SVTIFFImages 65281
-#define Consts_SMsgDlgWarning 65282
-#define Consts_SMsgDlgError 65283
-#define Consts_SMsgDlgInformation 65284
-#define Consts_SMsgDlgConfirm 65285
-#define Consts_SMsgDlgYes 65286
-#define Consts_SMsgDlgNo 65287
-#define Consts_SMsgDlgOK 65288
-#define Consts_SMsgDlgCancel 65289
-#define Consts_SMsgDlgHelp 65290
-#define Consts_SMsgDlgAbort 65291
-#define Consts_SMsgDlgRetry 65292
-#define Consts_SMsgDlgIgnore 65293
-#define Consts_SMsgDlgAll 65294
-#define Consts_SMsgDlgNoToAll 65295
-#define Consts_SMenuReinserted 65296
-#define Consts_SMenuNotFound 65297
-#define Consts_SNoTimers 65298
-#define Consts_SNotPrinting 65299
-#define Consts_SPrinting 65300
-#define Consts_SPrinterIndexError 65301
-#define Consts_SInvalidPrinter 65302
-#define Consts_SDeviceOnPort 65303
-#define Consts_SGroupIndexTooLow 65304
-#define Consts_SNoMDIForm 65305
-#define Consts_SImageCanvasNeedsBitmap 65306
-#define Consts_SControlParentSetToSelf 65307
-#define Consts_SCannotDragForm 65308
-#define Consts_SVMetafiles 65309
-#define Consts_SVEnhMetafiles 65310
-#define Consts_SVIcons 65311
-#define Consts_SInvalidImageSize 65312
-#define Consts_SInvalidImageList 65313
-#define Consts_SReplaceImage 65314
-#define Consts_SImageIndexError 65315
-#define Consts_SImageReadFail 65316
-#define Consts_SImageWriteFail 65317
-#define Consts_SWindowDCError 65318
-#define Consts_SWindowClass 65319
-#define Consts_SCannotFocus 65320
-#define Consts_SParentRequired 65321
-#define Consts_SParentGivenNotAParent 65322
-#define Consts_SMDIChildNotVisible 65323
-#define Consts_SVisibleChanged 65324
-#define Consts_SCannotShowModal 65325
-#define Consts_SPropertyOutOfRange 65326
-#define Consts_SMenuIndexError 65327
-#define RTLConsts_SNonPublicType 65328
-#define RTLConsts_SByRefArgMismatch 65329
-#define Consts_SInvalidTabPosition 65330
-#define Consts_SInvalidTabStyle 65331
-#define Consts_SInvalidBitmap 65332
-#define Consts_SInvalidIcon 65333
-#define Consts_SInvalidMetafile 65334
-#define Consts_SInvalidPixelFormat 65335
-#define Consts_SInvalidImage 65336
-#define Consts_SScanLine 65337
-#define Consts_SChangeIconSize 65338
-#define Consts_SChangeWicSize 65339
-#define Consts_SUnknownExtension 65340
-#define Consts_SUnknownClipboardFormat 65341
-#define Consts_SOutOfResources 65342
-#define Consts_SNoCanvasHandle 65343
-#define RTLConsts_SInvalidInteger 65344
-#define RTLConsts_SInvalidTime 65345
-#define RTLConsts_STimeEncodeError 65346
-#define RTLConsts_SNoContext 65347
-#define RTLConsts_SNoContextFound 65348
-#define RTLConsts_SNoIndex 65349
-#define RTLConsts_SNoSearch 65350
-#define RTLConsts_SNoTableOfContents 65351
-#define RTLConsts_SNoTopics 65352
-#define RTLConsts_SNothingFound 65353
-#define RTLConsts_SArgumentOutOfRange 65354
-#define RTLConsts_SUnbalancedOperation 65355
-#define RTLConsts_SGenericItemNotFound 65356
-#define RTLConsts_SGenericDuplicateItem 65357
-#define RTLConsts_SInsufficientRtti 65358
-#define RTLConsts_SParameterCountMismatch 65359
-#define RTLConsts_SThreadExternalSetReturnValue 65360
-#define RTLConsts_SParamIsNegative 65361
-#define RTLConsts_SInputBufferExceed 65362
-#define RTLConsts_SInvalidCharsInPath 65363
-#define RTLConsts_SPathTooLong 65364
-#define RTLConsts_SPathNotFound 65365
-#define RTLConsts_SPathFormatNotSupported 65366
-#define RTLConsts_SFileNotFound 65367
-#define RTLConsts_SLocalTimeInvalid 65368
-#define RTLConsts_hNoFilterViewer 65369
-#define RTLConsts_sInvalidStringAndObjectArrays 65370
-#define RTLConsts_sInvalidTimeoutValue 65371
-#define RTLConsts_sTimespanTooLong 65372
-#define RTLConsts_sTimespanValueCannotBeNan 65373
-#define RTLConsts_SInvalidDate 65374
-#define RTLConsts_SInvalidDateTime 65375
-#define RTLConsts_SReadOnlyProperty 65376
-#define RTLConsts_SRegCreateFailed 65377
-#define RTLConsts_SRegGetDataFailed 65378
-#define RTLConsts_SRegSetDataFailed 65379
-#define RTLConsts_SResNotFound 65380
-#define RTLConsts_SSeekNotImplemented 65381
-#define RTLConsts_SSortedListError 65382
-#define RTLConsts_SUnknownGroup 65383
-#define RTLConsts_SUnknownProperty 65384
-#define RTLConsts_SWriteError 65385
-#define RTLConsts_SThreadCreateError 65386
-#define RTLConsts_SThreadError 65387
-#define RTLConsts_SThreadExternalTerminate 65388
-#define RTLConsts_SThreadExternalWait 65389
-#define RTLConsts_SThreadStartError 65390
-#define RTLConsts_SThreadExternalCheckTerminated 65391
-#define RTLConsts_SInvalidFileName 65392
-#define RTLConsts_SInvalidImage 65393
-#define RTLConsts_SInvalidName 65394
-#define RTLConsts_SInvalidProperty 65395
-#define RTLConsts_SInvalidPropertyElement 65396
-#define RTLConsts_SInvalidPropertyPath 65397
-#define RTLConsts_SInvalidPropertyType 65398
-#define RTLConsts_SInvalidPropertyValue 65399
-#define RTLConsts_SInvalidRegType 65400
-#define RTLConsts_SListCapacityError 65401
-#define RTLConsts_SListCountError 65402
-#define RTLConsts_SListIndexError 65403
-#define RTLConsts_SMemoryStreamError 65404
-#define RTLConsts_SNoComSupport 65405
-#define RTLConsts_SPropertyException 65406
-#define RTLConsts_SReadError 65407
-#define SysConst_SInvalidDestinationIndex 65408
-#define SysConst_SInvalidCodePage 65409
-#define SysConst_SInvalidEncodingName 65410
-#define RTLConsts_SAncestorNotFound 65411
-#define RTLConsts_SAssignError 65412
-#define RTLConsts_SBitsIndexError 65413
-#define RTLConsts_SCantWriteResourceStreamError 65414
-#define RTLConsts_SCheckSynchronizeError 65415
-#define RTLConsts_SClassNotFound 65416
-#define RTLConsts_SDuplicateClass 65417
-#define RTLConsts_SDuplicateItem 65418
-#define RTLConsts_SDuplicateName 65419
-#define RTLConsts_SDuplicateString 65420
-#define RTLConsts_SFCreateErrorEx 65421
-#define RTLConsts_SFOpenErrorEx 65422
-#define RTLConsts_SIniFileWriteError 65423
-#define SysConst_SShortDayNameWed 65424
-#define SysConst_SShortDayNameThu 65425
-#define SysConst_SShortDayNameFri 65426
-#define SysConst_SShortDayNameSat 65427
-#define SysConst_SLongDayNameSun 65428
-#define SysConst_SLongDayNameMon 65429
-#define SysConst_SLongDayNameTue 65430
-#define SysConst_SLongDayNameWed 65431
-#define SysConst_SLongDayNameThu 65432
-#define SysConst_SLongDayNameFri 65433
-#define SysConst_SLongDayNameSat 65434
-#define SysConst_SInvalidSourceArray 65435
-#define SysConst_SInvalidDestinationArray 65436
-#define SysConst_SCharIndexOutOfBounds 65437
-#define SysConst_SByteIndexOutOfBounds 65438
-#define SysConst_SInvalidCharCount 65439
-#define SysConst_SShortMonthNameDec 65440
-#define SysConst_SLongMonthNameJan 65441
-#define SysConst_SLongMonthNameFeb 65442
-#define SysConst_SLongMonthNameMar 65443
-#define SysConst_SLongMonthNameApr 65444
-#define SysConst_SLongMonthNameMay 65445
-#define SysConst_SLongMonthNameJun 65446
-#define SysConst_SLongMonthNameJul 65447
-#define SysConst_SLongMonthNameAug 65448
-#define SysConst_SLongMonthNameSep 65449
-#define SysConst_SLongMonthNameOct 65450
-#define SysConst_SLongMonthNameNov 65451
-#define SysConst_SLongMonthNameDec 65452
-#define SysConst_SShortDayNameSun 65453
-#define SysConst_SShortDayNameMon 65454
-#define SysConst_SShortDayNameTue 65455
-#define SysConst_SInvalidPackageHandle 65456
-#define SysConst_SDuplicatePackageUnit 65457
-#define SysConst_SOSError 65458
-#define SysConst_SUnkOSError 65459
-#define SysConst_SNL 65460
-#define SysConst_SShortMonthNameJan 65461
-#define SysConst_SShortMonthNameFeb 65462
-#define SysConst_SShortMonthNameMar 65463
-#define SysConst_SShortMonthNameApr 65464
-#define SysConst_SShortMonthNameMay 65465
-#define SysConst_SShortMonthNameJun 65466
-#define SysConst_SShortMonthNameJul 65467
-#define SysConst_SShortMonthNameAug 65468
-#define SysConst_SShortMonthNameSep 65469
-#define SysConst_SShortMonthNameOct 65470
-#define SysConst_SShortMonthNameNov 65471
-#define SysConst_SVarInvalid 65472
-#define SysConst_SVarBadType 65473
-#define SysConst_SVarNotImplemented 65474
-#define SysConst_SVarUnexpected 65475
-#define SysConst_SExternalException 65476
-#define SysConst_SAssertionFailed 65477
-#define SysConst_SIntfCastError 65478
-#define SysConst_SSafecallException 65479
-#define SysConst_SMonitorLockException 65480
-#define SysConst_SNoMonitorSupportException 65481
-#define SysConst_SNotImplemented 65482
-#define SysConst_SAssertError 65483
-#define SysConst_SAbstractError 65484
-#define SysConst_SModuleAccessViolation 65485
-#define SysConst_sErrorLoadingPackage 65486
-#define SysConst_SInvalidPackageFile 65487
-#define SysConst_SFormatTooLong 65488
-#define SysConst_SVarArrayCreate 65489
-#define SysConst_SVarArrayBounds 65490
-#define SysConst_SVarArrayLocked 65491
-#define SysConst_SVarArrayWithHResult 65492
-#define SysConst_SInvalidVarCast 65493
-#define SysConst_SInvalidVarOp 65494
-#define SysConst_SInvalidVarNullOp 65495
-#define SysConst_SInvalidVarOpWithHResultWithPrefix 65496
-#define SysConst_SVarTypeOutOfRangeWithPrefix 65497
-#define SysConst_SVarTypeAlreadyUsedWithPrefix 65498
-#define SysConst_SVarTypeNotUsableWithPrefix 65499
-#define SysConst_SVarTypeTooManyCustom 65500
-#define SysConst_SVarTypeCouldNotConvert 65501
-#define SysConst_SVarTypeConvertOverflow 65502
-#define SysConst_SVarOverflow 65503
-#define SysConst_SUnderflow 65504
-#define SysConst_SInvalidPointer 65505
-#define SysConst_SInvalidCast 65506
-#define SysConst_SAccessViolationArg3 65507
-#define SysConst_SAccessViolationNoArg 65508
-#define SysConst_SStackOverflow 65509
-#define SysConst_SControlC 65510
-#define SysConst_SPrivilege 65511
-#define SysConst_SOperationAborted 65512
-#define SysConst_SException 65513
-#define SysConst_SExceptTitle 65514
-#define SysConst_SInvalidFormat 65515
-#define SysConst_SArgumentMissing 65516
-#define SysConst_SDispatchError 65517
-#define SysConst_SReadAccess 65518
-#define SysConst_SWriteAccess 65519
+#define DbUtilsEh_SNotOperatorEh 64768
+#define DbUtilsEh_SAndOperatorEh 64769
+#define DbUtilsEh_SOrOperatorEh 64770
+#define DbUtilsEh_SLikePredicatEh 64771
+#define DbUtilsEh_SInPredicatEh 64772
+#define DbUtilsEh_SNullConstEh 64773
+#define DbUtilsEh_SQuoteIsAbsentEh 64774
+#define DbUtilsEh_SLeftBracketExpectedEh 64775
+#define DbUtilsEh_SErrorInExpressionEh 64776
+#define DbUtilsEh_SUnexpectedExpressionBeforeNullEh 64777
+#define DbUtilsEh_SUnexpectedExpressionAfterOperatorEh 64778
+#define DbUtilsEh_SIncorrectExpressionEh 64779
+#define DbUtilsEh_SUnexpectedANDorOREh 64780
+#define JConsts_sChangeJPGSize 64781
+#define JConsts_sJPEGError 64782
+#define JConsts_sJPEGImageFile 64783
+#define EhLibConsts_SSimpFilter_is_less_than 64784
+#define EhLibConsts_SSimpFilter_is_less_than_or_equall_to 64785
+#define EhLibConsts_SSimpFilter_begins_with 64786
+#define EhLibConsts_SSimpFilter_does_not_begin_with 64787
+#define EhLibConsts_SSimpFilter_ends_with 64788
+#define EhLibConsts_SSimpFilter_does_not_end_with 64789
+#define EhLibConsts_SSimpFilter_contains 64790
+#define EhLibConsts_SSimpFilter_does_not_contain 64791
+#define EhLibConsts_SSimpFilter_like 64792
+#define EhLibConsts_SSimpFilter_not_like 64793
+#define EhLibConsts_SSimpFilter_in_list 64794
+#define EhLibConsts_SSimpFilter_not_in_list 64795
+#define EhLibConsts_SSimpFilter_is_blank 64796
+#define EhLibConsts_SSimpFilter_is_not_blank 64797
+#define EhLibConsts_SGroupingPanelText 64798
+#define EhLibConsts_SNoData 64799
+#define EhLibConsts_SCopyEh 64800
+#define EhLibConsts_SPasteEh 64801
+#define EhLibConsts_SDeleteEh 64802
+#define EhLibConsts_SSelectAllEh 64803
+#define EhLibConsts_SSTFilterListItem_Empties 64804
+#define EhLibConsts_SSTFilterListItem_NotEmpties 64805
+#define EhLibConsts_SSTFilterListItem_All 64806
+#define EhLibConsts_SSTFilterListItem_ClearFilter 64807
+#define EhLibConsts_SSTFilterListItem_SortingByAscend 64808
+#define EhLibConsts_SSTFilterListItem_SortingByDescend 64809
+#define EhLibConsts_SSTFilterListItem_ApplyFilter 64810
+#define EhLibConsts_SSTFilterListItem_CustomFilter 64811
+#define EhLibConsts_SSimpFilter_equals 64812
+#define EhLibConsts_SSimpFilter_does_not_equal 64813
+#define EhLibConsts_SSimpFilter_is_greate_than 64814
+#define EhLibConsts_SSimpFilter_is_greate_than_or_equall_to 64815
+#define VDBConsts_SDeleteRecord 64816
+#define VDBConsts_SEditRecord 64817
+#define VDBConsts_SPostEdit 64818
+#define VDBConsts_SCancelEdit 64819
+#define VDBConsts_SRefreshRecord 64820
+#define VDBConsts_SDataSourceFixed 64821
+#define VDBConsts_SPropDefByLookup 64822
+#define VDBConsts_SRemoteLogin 64823
+#define EhLibConsts_SClearSelectedCellsEh 64824
+#define EhLibConsts_SInvalidTextFormatEh 64825
+#define EhLibConsts_SInvalidVCLDBIFFormatEh 64826
+#define EhLibConsts_SErrorDuringInsertValueEh 64827
+#define EhLibConsts_SIgnoreErrorEh 64828
+#define EhLibConsts_SFieldNameNotFoundEh 64829
+#define EhLibConsts_SVisibleColumnsEh 64830
+#define EhLibConsts_SCutEh 64831
+#define SqlConst_SMULTIPLETRANSNOTENABLED 64832
+#define SqlConst_SCONNECTIONFAILED 64833
+#define SqlConst_SDRIVERINITFAILED 64834
+#define SqlConst_SOPTLOCKFAILED 64835
+#define SqlConst_SINVALIDREF 64836
+#define SqlConst_SNOTABLE 64837
+#define SqlConst_SMISSINGPARAMINSQL 64838
+#define SqlConst_SNOTIMPLEMENTED 64839
+#define SqlConst_SDRIVERINCOMPATIBLE 64840
+#define SqlConst_SObjectTypenameRequired 64841
+#define SqlConst_SCannotCreateFile 64842
+#define VDBConsts_SFirstRecord 64843
+#define VDBConsts_SPriorRecord 64844
+#define VDBConsts_SNextRecord 64845
+#define VDBConsts_SLastRecord 64846
+#define VDBConsts_SInsertRecord 64847
+#define SqlConst_SINVALIDHNDL 64848
+#define SqlConst_SNOTSUPPORTED 64849
+#define SqlConst_SINVALIDTIME 64850
+#define SqlConst_SINVALIDXLATION 64851
+#define SqlConst_SOUTOFRANGE 64852
+#define SqlConst_SINVALIDPARAM 64853
+#define SqlConst_SEOF 64854
+#define SqlConst_SSQLPARAMNOTSET 64855
+#define SqlConst_SINVALIDUSRPASS 64856
+#define SqlConst_SINVALIDPRECISION 64857
+#define SqlConst_SINVALIDLEN 64858
+#define SqlConst_SINVALIDXISOLEVEL 64859
+#define SqlConst_SINVALIDTXNID 64860
+#define SqlConst_SDUPLICATETXNID 64861
+#define SqlConst_SDRIVERRESTRICTED 64862
+#define SqlConst_SLOCALTRANSACTIVE 64863
+#define SqlConst_SMissingDriverName 64864
+#define SqlConst_SPrepareError 64865
+#define SqlConst_SObjectNameError 64866
+#define SqlConst_SSQLDataSetOpen 64867
+#define SqlConst_SNoActiveTrans 64868
+#define SqlConst_SActiveTrans 64869
+#define SqlConst_SMissingDriverRegFile 64870
+#define SqlConst_SNoCursor 64871
+#define SqlConst_SErrorMappingError 64872
+#define SqlConst_SStoredProcsNotSupported 64873
+#define SqlConst_SPackagesNotSupported 64874
+#define SqlConst_STooManyActualParam 64875
+#define SqlConst_SNOERROR 64876
+#define SqlConst_SWARNING 64877
+#define SqlConst_SNOMEMORY 64878
+#define SqlConst_SINVALIDFLDTYPE 64879
+#define DBXCommonResStrs_SNoSignedTypeFound 64880
+#define DBXCommonResStrs_SCannotHoldWantedPrecision 64881
+#define DBXCommonResStrs_SCannotHoldWantedScale 64882
+#define DBXCommonResStrs_STypeNotFound 64883
+#define DBXCommonResStrs_SCannotHoldUnicodeChars 64884
+#define DBXCommonResStrs_SCannotRecreateConstraint 64885
+#define DBXCommonResStrs_SUnknownColumnName 64886
+#define SqlConst_SLoginError 64887
+#define SqlConst_SMonitorActive 64888
+#define SqlConst_SDatabaseOpen 64889
+#define SqlConst_SDatabaseClosed 64890
+#define SqlConst_SMissingSQLConnection 64891
+#define SqlConst_SConnectionNameMissing 64892
+#define SqlConst_SEmptySQLStatement 64893
+#define SqlConst_SNoParameterValue 64894
+#define SqlConst_SNoSqlStatement 64895
+#define DBXCommonResStrs_SPrimarySchemaName 64896
+#define DBXCommonResStrs_SMustCallNextFirst 64897
+#define DBXCommonResStrs_SDbxDataType 64898
+#define DBXCommonResStrs_SIsLong 64899
+#define DBXCommonResStrs_SPrimaryTableName 64900
+#define DBXCommonResStrs_SMaxInline 64901
+#define DBXCommonResStrs_STableName 64902
+#define DBXCommonResStrs_SProcedureName 64903
+#define DBXCommonResStrs_SIsAutoIncrementable 64904
+#define DBXCommonResStrs_SPastEndOfCursor 64905
+#define DBXCommonResStrs_SDefinition 64906
+#define DBXCommonResStrs_SNoTypeWithEnoughPrecision 64907
+#define DBXCommonResStrs_SCannotBeUsedForAutoIncrement 64908
+#define DBXCommonResStrs_SNoBlobTypeFound 64909
+#define DBXCommonResStrs_STypeNameNotFound 64910
+#define DBXCommonResStrs_SWrongViewDefinition 64911
+#define DBXCommonResStrs_SParameterName 64912
+#define DBXCommonResStrs_STableType 64913
+#define DBXCommonResStrs_SViewName 64914
+#define DBXCommonResStrs_SMinimumScale 64915
+#define DBXCommonResStrs_SColumnSize 64916
+#define DBXCommonResStrs_SIsUnicode 64917
+#define DBXCommonResStrs_SIsFixedPrecisionScale 64918
+#define DBXCommonResStrs_SUnexpectedSymbol 64919
+#define DBXCommonResStrs_SUnknownTableType 64920
+#define DBXCommonResStrs_SMetaDataCommandExpected 64921
+#define DBXCommonResStrs_SLiteralPrefix 64922
+#define DBXCommonResStrs_SIsPrimary 64923
+#define DBXCommonResStrs_SSynonymName 64924
+#define DBXCommonResStrs_SRoleName 64925
+#define DBXCommonResStrs_STableCatalogName 64926
+#define DBXCommonResStrs_SMaximumScale 64927
+#define DBXCommonResStrs_SMaximumVersion 64928
+#define DBXCommonResStrs_SIsAutoIncrement 64929
+#define DBXCommonResStrs_SLiteralSuffix 64930
+#define DBXCommonResStrs_SCreateFormat 64931
+#define DBXCommonResStrs_SSchemaName 64932
+#define DBXCommonResStrs_SIsConcurrencyType 64933
+#define DBXCommonResStrs_SReservedWord 64934
+#define DBXCommonResStrs_SPrimaryCatalogName 64935
+#define DBXCommonResStrs_SUserName 64936
+#define DBXCommonResStrs_SExternalDefinition 64937
+#define DBXCommonResStrs_STypeName 64938
+#define DBXCommonResStrs_SIsNullable 64939
+#define DBXCommonResStrs_SProviderDbType 64940
+#define DBXCommonResStrs_SIsFixedLength 64941
+#define DBXCommonResStrs_SIsSearchable 64942
+#define DBXCommonResStrs_SConstraintName 64943
+#define DBXCommonResStrs_SIsAscending 64944
+#define DBXCommonResStrs_SOrdinalOutOfRange 64945
+#define DBXCommonResStrs_SScale 64946
+#define DBXCommonResStrs_SColumnName 64947
+#define DBXCommonResStrs_STableSchemaName 64948
+#define DBXCommonResStrs_SPrimaryColumnName 64949
+#define DBXCommonResStrs_SOrdinal 64950
+#define DBXCommonResStrs_SIsCaseSensitive 64951
+#define DBXCommonResStrs_SMinimumVersion 64952
+#define DBXCommonResStrs_SIsSearchableWithLike 64953
+#define DBXCommonResStrs_SCreateParameters 64954
+#define DBXCommonResStrs_SPackageName 64955
+#define DBXCommonResStrs_SParameterMode 64956
+#define DBXCommonResStrs_SPrecision 64957
+#define DBXCommonResStrs_SIsBestMatch 64958
+#define DBXCommonResStrs_SMissingImplementation 64959
+#define DBXCommonResStrs_SUnsupportedOperation 64960
+#define DBXCommonResStrs_SUnexpectedStringOverflow 64961
+#define DBXCommonResStrs_SUTF8InvalidHeaderByte 64962
+#define DBXCommonResStrs_SUTF8UnexpectedByte 64963
+#define DBXCommonResStrs_SUTF8Start 64964
+#define DBXCommonResStrs_SIsLiteralSupported 64965
+#define DBXCommonResStrs_SDataType 64966
+#define DBXCommonResStrs_SCatalogName 64967
+#define DBXCommonResStrs_SProcedureType 64968
+#define DBXCommonResStrs_SUnclosedQuotes 64969
+#define DBXCommonResStrs_SDefaultValue 64970
+#define DBXCommonResStrs_SForeignKeyName 64971
+#define DBXCommonResStrs_SIndexName 64972
+#define DBXCommonResStrs_SIsUnsigned 64973
+#define DBXCommonResStrs_SIsUnique 64974
+#define DBXCommonResStrs_SPrimaryKeyName 64975
+#define DBXCommonResStrs_SDBXErrOptimisticLockFailed 64976
+#define DBXCommonResStrs_SDBXErrInvalidReference 64977
+#define DBXCommonResStrs_SDBXErrNoTable 64978
+#define DBXCommonResStrs_SDBXErrMissingParameterMarker 64979
+#define DBXCommonResStrs_SDBXErrNotImplemented 64980
+#define DBXCommonResStrs_SDBXErrDriverIncompatible 64981
+#define DBXCommonResStrs_SDBXErrInvalidArgument 64982
+#define DBXCommonResStrs_SDBXErrNoData 64983
+#define DBXCommonResStrs_SDBXErrVendorError 64984
+#define DBXCommonResStrs_SDBXErrUnrecognizedCommandType 64985
+#define DBXCommonResStrs_SDBXErrSchemaNameUnspecified 64986
+#define DBXCommonResStrs_SDBXErrDatabaseUnspecified 64987
+#define DBXCommonResStrs_SDBXErrLibraryNameUnspecified 64988
+#define DBXCommonResStrs_SDBXErrGetDriverFuncUnspecified 64989
+#define DBXCommonResStrs_SDBXErrVendorLibUnspecified 64990
+#define DBXCommonResStrs_SIllegalArgument 64991
+#define DBXCommonResStrs_SDBXErrInvalidType 64992
+#define DBXCommonResStrs_SDBXErrInvalidOrdinal 64993
+#define DBXCommonResStrs_SDBXErrInvalidParameter 64994
+#define DBXCommonResStrs_SDBXErrEOF 64995
+#define DBXCommonResStrs_SDBXErrParameterNotSet 64996
+#define DBXCommonResStrs_SDBXErrInvalidUserOrPassword 64997
+#define DBXCommonResStrs_SDBXErrInvalidPrecision 64998
+#define DBXCommonResStrs_SDBXErrInvalidLength 64999
+#define DBXCommonResStrs_SDBXErrInvalidIsolationLevel 65000
+#define DBXCommonResStrs_SDBXErrInvalidTransactionId 65001
+#define DBXCommonResStrs_SDBXErrDuplicateTransactionId 65002
+#define DBXCommonResStrs_SDBXErrDriverRestricted 65003
+#define DBXCommonResStrs_SDBXErrTransactionActive 65004
+#define DBXCommonResStrs_SDBXErrMultipleTransactionNotEnabled 65005
+#define DBXCommonResStrs_SDBXErrConnectionFailed 65006
+#define DBXCommonResStrs_SDBXErrDriverInitFailed 65007
+#define DBXCommonResStrs_SUnknownDataType 65008
+#define DBXCommonResStrs_SNoMetadataProvider 65009
+#define DBXCommonResStrs_SUnexpectedMetaDataType 65010
+#define DBXCommonResStrs_SInsertNotCalled 65011
+#define DBXCommonResStrs_SPostNotCalled 65012
+#define DBXCommonResStrs_SMustKeepOriginalColumnOrder 65013
+#define DBXCommonResStrs_SUnexpectedDataType 65014
+#define DBXCommonResStrs_SDriverAlreadyRegistered 65015
+#define DBXCommonResStrs_SNotDefinedIn 65016
+#define DBXCommonResStrs_SDBXErrNone 65017
+#define DBXCommonResStrs_SDBXErrWarning 65018
+#define DBXCommonResStrs_SDBXErrNoMemory 65019
+#define DBXCommonResStrs_SDBXErrUnsupportedFieldType 65020
+#define DBXCommonResStrs_SDBXErrInvalidHandle 65021
+#define DBXCommonResStrs_SDBXErrNotSupported 65022
+#define DBXCommonResStrs_SDBXErrInvalidTime 65023
+#define DBXCommonResStrs_STypeNotSupported 65024
+#define DBXCommonResStrs_SNoTypeInterceptorExpected 65025
+#define DBXCommonResStrs_SInconsistentConversion 65026
+#define DBXCommonResStrs_SNoConversionForType 65027
+#define DBXCommonResStrs_SNoFieldFoundForType 65028
+#define DBXCommonResStrs_SNoValueConversionForField 65029
+#define DBXCommonResStrs_SNoConversionAvailableForValue 65030
+#define DBXCommonResStrs_SInvalidTypeForField 65031
+#define DBXCommonResStrs_SCannotCreateType 65032
+#define DBXCommonResStrs_SObjectNotFound 65033
+#define DBXCommonResStrs_SUnexpectedPairName 65034
+#define DBXCommonResStrs_SInvalidJSONFieldType 65035
+#define DBXCommonResStrs_SObjectExpectedInArray 65036
+#define DBXCommonResStrs_SStringExpectedInArray 65037
+#define DBXCommonResStrs_SArrayExpectedForField 65038
+#define DBXCommonResStrs_SObjectExpectedForField 65039
+#define DBXCommonResStrs_SJSONByteStream 65040
+#define DBXCommonResStrs_SNoStatementToExecute 65041
+#define DBXCommonResStrs_SAdditionalInfo 65042
+#define DBXCommonResStrs_SInvalidDataType 65043
+#define DBXCommonResStrs_SUnmatchedBrace 65044
+#define DBXCommonResStrs_SParameterIndexOutOfRange 65045
+#define DBXCommonResStrs_SFieldValueMissing 65046
+#define DBXCommonResStrs_SFieldExpected 65047
+#define DBXCommonResStrs_SArrayExpected 65048
+#define DBXCommonResStrs_SNoArray 65049
+#define DBXCommonResStrs_STypeExpected 65050
+#define DBXCommonResStrs_STypeFieldsPairExpected 65051
+#define DBXCommonResStrs_SValueExpected 65052
+#define DBXCommonResStrs_SInvalidContext 65053
+#define DBXCommonResStrs_SObjectExpectedForPair 65054
+#define DBXCommonResStrs_SInvalidContextForPair 65055
+#define DBXCommonResStrs_SInvalidTransaction 65056
+#define DBXCommonResStrs_SNotImplemented 65057
+#define DBXCommonResStrs_SRequiredProperty 65058
+#define DBXCommonResStrs_SReaderNew 65059
+#define DBXCommonResStrs_SReaderClosed 65060
+#define DBXCommonResStrs_SReadOnlyType 65061
+#define DBXCommonResStrs_SSetSingletonOnce 65062
+#define DBXCommonResStrs_SConnectionFactoryInitFailed 65063
+#define DBXCommonResStrs_SInvalidDelegationDepth 65064
+#define DBXCommonResStrs_SInvalidOrdinal 65065
+#define DBXCommonResStrs_SDefaultErrorMessage 65066
+#define DBXCommonResStrs_SErrorCode 65067
+#define DBXCommonResStrs_SAlreadyPrepared 65068
+#define DBXCommonResStrs_SInvalidTypeAccess 65069
+#define DBXCommonResStrs_SConnectionClosed 65070
+#define DBXCommonResStrs_SMetaDataLoadError 65071
+#define MidConst_SNoTableName 65072
+#define MidConst_SNoEditsAllowed 65073
+#define MidConst_SNoDeletesAllowed 65074
+#define MidConst_SNoInsertsAllowed 65075
+#define MidConst_SCannotChangeCommandText 65076
+#define MidConst_SConnectionMissing 65077
+#define MidConst_SNoCircularConnection 65078
+#define DBXCommonResStrs_SBadVariantType 65079
+#define DBXCommonResStrs_SAlreadyRegistered 65080
+#define DBXCommonResStrs_SNotRegistered 65081
+#define DBXCommonResStrs_SInvalidClassRegister 65082
+#define DBXCommonResStrs_SCannotFreeClassRegistry 65083
+#define DBXCommonResStrs_SDllLoadError 65084
+#define DBXCommonResStrs_SDllProcLoadError 65085
+#define DBXCommonResStrs_SUnknownDriver 65086
+#define DBXCommonResStrs_SInvalidArgument 65087
+#define MidConst_SCannotCreateDataSet 65088
+#define MidConst_SNoConnectToBroker 65089
+#define MidConst_SNoParentConnection 65090
+#define MidConst_SInvalidResponse 65091
+#define MidConst_STooManyRecordsModified 65092
+#define MidConst_SInvalidOptParamType 65093
+#define MidConst_SMissingDataSet 65094
+#define MidConst_SConstraintFailed 65095
+#define MidConst_SField 65096
+#define MidConst_SReadOnlyProvider 65097
+#define MidConst_SNoKeySpecified 65098
+#define MidConst_SNoDataSets 65099
+#define MidConst_SRecConstFail 65100
+#define MidConst_SFieldConstFail 65101
+#define MidConst_SDefExprFail 65102
+#define MidConst_SArrayElementError 65103
+#define DBConsts_SInvalidFormatType 65104
+#define DBConsts_SCouldNotParseTimeStamp 65105
+#define DBConsts_SInvalidSqlTimeStamp 65106
+#define DBConsts_SDeleteRecordQuestion 65107
+#define DBConsts_SDeleteMultipleRecordsQuestion 65108
+#define DBConsts_STooManyColumns 65109
+#define ComConst_SOleError 65110
+#define ComConst_SNoMethod 65111
+#define ComConst_SVarNotObject 65112
+#define ComConst_STooManyParams 65113
+#define MidConst_SNoDataProvider 65114
+#define MidConst_SInvalidDataPacket 65115
+#define MidConst_SRefreshError 65116
+#define MidConst_SAggsNoSuchLevel 65117
+#define MidConst_SNoCircularReference 65118
+#define MidConst_SErrorLoadingMidas 65119
+#define DBConsts_STextFalse 65120
+#define DBConsts_STextTrue 65121
+#define DBConsts_SParameterNotFound 65122
+#define DBConsts_SInvalidVersion 65123
+#define DBConsts_SBadFieldType 65124
+#define DBConsts_SAggActive 65125
+#define DBConsts_SProviderSQLNotSupported 65126
+#define DBConsts_SProviderExecuteNotSupported 65127
+#define DBConsts_SExprNoAggOnCalcs 65128
+#define DBConsts_SRecordChanged 65129
+#define DBConsts_SDataSetUnidirectional 65130
+#define DBConsts_SUnassignedVar 65131
+#define DBConsts_SRecordNotFound 65132
+#define DBConsts_SFileNameBlank 65133
+#define DBConsts_SBcdOverflow 65134
+#define DBConsts_SInvalidBcdValue 65135
+#define DBConsts_SExprNoRParen 65136
+#define DBConsts_SExprNoRParenOrComma 65137
+#define DBConsts_SExprExpected 65138
+#define DBConsts_SExprBadField 65139
+#define DBConsts_SExprBadNullTest 65140
+#define DBConsts_SExprRangeError 65141
+#define DBConsts_SExprIncorrect 65142
+#define DBConsts_SExprNothing 65143
+#define DBConsts_SExprTypeMis 65144
+#define DBConsts_SExprBadScope 65145
+#define DBConsts_SExprNoArith 65146
+#define DBConsts_SExprNotAgg 65147
+#define DBConsts_SExprBadConst 65148
+#define DBConsts_SExprNoAggFilter 65149
+#define DBConsts_SExprEmptyInList 65150
+#define DBConsts_SInvalidKeywordUse 65151
+#define DBConsts_SDBDuplicateName 65152
+#define DBConsts_SCircularDataLink 65153
+#define DBConsts_SLookupInfoError 65154
+#define DBConsts_SDataSourceChange 65155
+#define DBConsts_SNoNestedMasterSource 65156
+#define DBConsts_SDataSetOpen 65157
+#define DBConsts_SNotEditing 65158
+#define DBConsts_SDataSetClosed 65159
+#define DBConsts_SDataSetEmpty 65160
+#define DBConsts_SDataSetReadOnly 65161
+#define DBConsts_SNestedDataSetClass 65162
+#define DBConsts_SExprTermination 65163
+#define DBConsts_SExprNameError 65164
+#define DBConsts_SExprStringError 65165
+#define DBConsts_SExprInvalidChar 65166
+#define DBConsts_SExprNoLParen 65167
+#define DBConsts_SInvalidFloatValue 65168
+#define DBConsts_SFieldTypeMismatch 65169
+#define DBConsts_SFieldSizeMismatch 65170
+#define DBConsts_SInvalidVarByteArray 65171
+#define DBConsts_SFieldOutOfRange 65172
+#define DBConsts_SFieldRequired 65173
+#define DBConsts_SDataSetMissing 65174
+#define DBConsts_SInvalidCalcType 65175
+#define DBConsts_SFieldReadOnly 65176
+#define DBConsts_SFieldIndexError 65177
+#define DBConsts_SNoFieldIndexes 65178
+#define DBConsts_SNotIndexField 65179
+#define DBConsts_SIndexFieldMissing 65180
+#define DBConsts_SDuplicateIndexName 65181
+#define DBConsts_SNoIndexForFields 65182
+#define DBConsts_SIndexNotFound 65183
+#define ComStrs_sFailSetCalDateTime 65184
+#define ComStrs_sFailSetCalMaxSelRange 65185
+#define ComStrs_sFailSetCalMinMaxRange 65186
+#define ComStrs_sFailsetCalSelRange 65187
+#define DBConsts_SInvalidFieldSize 65188
+#define DBConsts_SInvalidFieldKind 65189
+#define DBConsts_SUnknownFieldType 65190
+#define DBConsts_SFieldNameMissing 65191
+#define DBConsts_SDuplicateFieldName 65192
+#define DBConsts_SFieldNotFound 65193
+#define DBConsts_SFieldAccessError 65194
+#define DBConsts_SFieldValueError 65195
+#define DBConsts_SFieldRangeError 65196
+#define DBConsts_SBcdFieldRangeError 65197
+#define DBConsts_SInvalidIntegerValue 65198
+#define DBConsts_SInvalidBoolValue 65199
+#define Consts_SInvalidTaskDlgButtonCaption 65200
+#define ComStrs_sTabFailClear 65201
+#define ComStrs_sTabFailDelete 65202
+#define ComStrs_sTabFailRetrieve 65203
+#define ComStrs_sTabFailGetObject 65204
+#define ComStrs_sTabFailSet 65205
+#define ComStrs_sTabFailSetObject 65206
+#define ComStrs_sTabMustBeMultiLine 65207
+#define ComStrs_sInvalidLevel 65208
+#define ComStrs_sInvalidLevelEx 65209
+#define ComStrs_sInvalidIndex 65210
+#define ComStrs_sInsertError 65211
+#define ComStrs_sPageIndexError 65212
+#define ComStrs_sInvalidComCtl32 65213
+#define ComStrs_sDateTimeMax 65214
+#define ComStrs_sDateTimeMin 65215
+#define Consts_SInvalidPrinterOp 65216
+#define Consts_SNoDefaultPrinter 65217
+#define Consts_SDuplicateMenus 65218
+#define Consts_SDockedCtlNeedsName 65219
+#define Consts_SDockTreeRemoveError 65220
+#define Consts_SDockZoneNotFound 65221
+#define Consts_SDockZoneHasNoCtl 65222
+#define Consts_SDockZoneVersionConflict 65223
+#define Consts_SMultiSelectRequired 65224
+#define Consts_SErrorSettingCount 65225
+#define Consts_SListBoxMustBeVirtual 65226
+#define Consts_SPageControlNotSet 65227
+#define Consts_SWindowsVistaRequired 65228
+#define Consts_SXPThemesRequired 65229
+#define Consts_STaskDlgButtonCaption 65230
+#define Consts_STaskDlgRadioButtonCaption 65231
+#define Consts_SmkcHome 65232
+#define Consts_SmkcLeft 65233
+#define Consts_SmkcUp 65234
+#define Consts_SmkcRight 65235
+#define Consts_SmkcDown 65236
+#define Consts_SmkcIns 65237
+#define Consts_SmkcDel 65238
+#define Consts_SmkcShift 65239
+#define Consts_SmkcCtrl 65240
+#define Consts_SmkcAlt 65241
+#define Consts_SOutOfRange 65242
+#define Consts_sAllFilter 65243
+#define Consts_SInsertLineError 65244
+#define Consts_SInvalidClipFmt 65245
+#define Consts_SIconToClipboard 65246
+#define Consts_SCannotOpenClipboard 65247
+#define Consts_SMsgDlgHelp 65248
+#define Consts_SMsgDlgAbort 65249
+#define Consts_SMsgDlgRetry 65250
+#define Consts_SMsgDlgIgnore 65251
+#define Consts_SMsgDlgAll 65252
+#define Consts_SMsgDlgNoToAll 65253
+#define Consts_SMsgDlgYesToAll 65254
+#define Consts_SMsgDlgClose 65255
+#define Consts_SmkcBkSp 65256
+#define Consts_SmkcTab 65257
+#define Consts_SmkcEsc 65258
+#define Consts_SmkcEnter 65259
+#define Consts_SmkcSpace 65260
+#define Consts_SmkcPgUp 65261
+#define Consts_SmkcPgDn 65262
+#define Consts_SmkcEnd 65263
+#define Consts_SVTIFFImages 65264
+#define Consts_SGridTooLarge 65265
+#define Consts_STooManyDeleted 65266
+#define Consts_SIndexOutOfRange 65267
+#define Consts_SFixedColTooBig 65268
+#define Consts_SFixedRowTooBig 65269
+#define Consts_SMaskErr 65270
+#define Consts_SMaskEditErr 65271
+#define Consts_SMsgDlgWarning 65272
+#define Consts_SMsgDlgError 65273
+#define Consts_SMsgDlgInformation 65274
+#define Consts_SMsgDlgConfirm 65275
+#define Consts_SMsgDlgYes 65276
+#define Consts_SMsgDlgNo 65277
+#define Consts_SMsgDlgOK 65278
+#define Consts_SMsgDlgCancel 65279
+#define Consts_SControlParentSetToSelf 65280
+#define Consts_SOKButton 65281
+#define Consts_SCancelButton 65282
+#define Consts_SYesButton 65283
+#define Consts_SNoButton 65284
+#define Consts_SHelpButton 65285
+#define Consts_SCloseButton 65286
+#define Consts_SIgnoreButton 65287
+#define Consts_SRetryButton 65288
+#define Consts_SAbortButton 65289
+#define Consts_SAllButton 65290
+#define Consts_SCannotDragForm 65291
+#define Consts_SVMetafiles 65292
+#define Consts_SVEnhMetafiles 65293
+#define Consts_SVIcons 65294
+#define Consts_SVBitmaps 65295
+#define Consts_SVisibleChanged 65296
+#define Consts_SCannotShowModal 65297
+#define Consts_SScrollBarRange 65298
+#define Consts_SPropertyOutOfRange 65299
+#define Consts_SMenuIndexError 65300
+#define Consts_SMenuReinserted 65301
+#define Consts_SMenuNotFound 65302
+#define Consts_SNoTimers 65303
+#define Consts_SNotPrinting 65304
+#define Consts_SPrinting 65305
+#define Consts_SPrinterIndexError 65306
+#define Consts_SInvalidPrinter 65307
+#define Consts_SDeviceOnPort 65308
+#define Consts_SGroupIndexTooLow 65309
+#define Consts_SNoMDIForm 65310
+#define Consts_SImageCanvasNeedsBitmap 65311
+#define Consts_SUnknownExtension 65312
+#define Consts_SUnknownClipboardFormat 65313
+#define Consts_SOutOfResources 65314
+#define Consts_SNoCanvasHandle 65315
+#define Consts_SInvalidImageSize 65316
+#define Consts_SInvalidImageList 65317
+#define Consts_SReplaceImage 65318
+#define Consts_SImageIndexError 65319
+#define Consts_SImageReadFail 65320
+#define Consts_SImageWriteFail 65321
+#define Consts_SWindowDCError 65322
+#define Consts_SWindowClass 65323
+#define Consts_SCannotFocus 65324
+#define Consts_SParentRequired 65325
+#define Consts_SParentGivenNotAParent 65326
+#define Consts_SMDIChildNotVisible 65327
+#define RTLConsts_SGenericItemNotFound 65328
+#define RTLConsts_SGenericDuplicateItem 65329
+#define RTLConsts_SInsufficientRtti 65330
+#define RTLConsts_SParameterCountMismatch 65331
+#define RTLConsts_SNonPublicType 65332
+#define RTLConsts_SByRefArgMismatch 65333
+#define Consts_SInvalidTabPosition 65334
+#define Consts_SInvalidTabStyle 65335
+#define Consts_SInvalidBitmap 65336
+#define Consts_SInvalidIcon 65337
+#define Consts_SInvalidMetafile 65338
+#define Consts_SInvalidPixelFormat 65339
+#define Consts_SInvalidImage 65340
+#define Consts_SScanLine 65341
+#define Consts_SChangeIconSize 65342
+#define Consts_SChangeWicSize 65343
+#define RTLConsts_sTimespanTooLong 65344
+#define RTLConsts_sTimespanValueCannotBeNan 65345
+#define RTLConsts_SInvalidDate 65346
+#define RTLConsts_SInvalidDateTime 65347
+#define RTLConsts_SInvalidInteger 65348
+#define RTLConsts_SInvalidTime 65349
+#define RTLConsts_STimeEncodeError 65350
+#define RTLConsts_SNoContext 65351
+#define RTLConsts_SNoContextFound 65352
+#define RTLConsts_SNoIndex 65353
+#define RTLConsts_SNoSearch 65354
+#define RTLConsts_SNoTableOfContents 65355
+#define RTLConsts_SNoTopics 65356
+#define RTLConsts_SNothingFound 65357
+#define RTLConsts_SArgumentOutOfRange 65358
+#define RTLConsts_SUnbalancedOperation 65359
+#define RTLConsts_SThreadExternalCheckTerminated 65360
+#define RTLConsts_SThreadExternalSetReturnValue 65361
+#define RTLConsts_SParamIsNegative 65362
+#define RTLConsts_SInputBufferExceed 65363
+#define RTLConsts_SInvalidCharsInPath 65364
+#define RTLConsts_SPathTooLong 65365
+#define RTLConsts_SPathNotFound 65366
+#define RTLConsts_SPathFormatNotSupported 65367
+#define RTLConsts_SFileNotFound 65368
+#define RTLConsts_SMissingDateTimeField 65369
+#define RTLConsts_SLocalTimeInvalid 65370
+#define RTLConsts_SConvUnknownFamily 65371
+#define RTLConsts_SConvUnknownDescriptionWithPrefix 65372
+#define RTLConsts_hNoFilterViewer 65373
+#define RTLConsts_sInvalidStringAndObjectArrays 65374
+#define RTLConsts_sInvalidTimeoutValue 65375
+#define RTLConsts_SReadError 65376
+#define RTLConsts_SReadOnlyProperty 65377
+#define RTLConsts_SRegCreateFailed 65378
+#define RTLConsts_SRegGetDataFailed 65379
+#define RTLConsts_SRegSetDataFailed 65380
+#define RTLConsts_SResNotFound 65381
+#define RTLConsts_SSeekNotImplemented 65382
+#define RTLConsts_SSortedListError 65383
+#define RTLConsts_SUnknownGroup 65384
+#define RTLConsts_SUnknownProperty 65385
+#define RTLConsts_SWriteError 65386
+#define RTLConsts_SThreadCreateError 65387
+#define RTLConsts_SThreadError 65388
+#define RTLConsts_SThreadExternalTerminate 65389
+#define RTLConsts_SThreadExternalWait 65390
+#define RTLConsts_SThreadStartError 65391
+#define RTLConsts_SIniFileWriteError 65392
+#define RTLConsts_SInvalidFileName 65393
+#define RTLConsts_SInvalidImage 65394
+#define RTLConsts_SInvalidName 65395
+#define RTLConsts_SInvalidProperty 65396
+#define RTLConsts_SInvalidPropertyElement 65397
+#define RTLConsts_SInvalidPropertyPath 65398
+#define RTLConsts_SInvalidPropertyType 65399
+#define RTLConsts_SInvalidPropertyValue 65400
+#define RTLConsts_SInvalidRegType 65401
+#define RTLConsts_SListCapacityError 65402
+#define RTLConsts_SListCountError 65403
+#define RTLConsts_SListIndexError 65404
+#define RTLConsts_SMemoryStreamError 65405
+#define RTLConsts_SNoComSupport 65406
+#define RTLConsts_SPropertyException 65407
+#define SysConst_SInvalidCharCount 65408
+#define SysConst_SInvalidDestinationIndex 65409
+#define SysConst_SInvalidCodePage 65410
+#define SysConst_SInvalidEncodingName 65411
+#define RTLConsts_SAncestorNotFound 65412
+#define RTLConsts_SAssignError 65413
+#define RTLConsts_SBitsIndexError 65414
+#define RTLConsts_SCantWriteResourceStreamError 65415
+#define RTLConsts_SCheckSynchronizeError 65416
+#define RTLConsts_SClassNotFound 65417
+#define RTLConsts_SDuplicateClass 65418
+#define RTLConsts_SDuplicateItem 65419
+#define RTLConsts_SDuplicateName 65420
+#define RTLConsts_SDuplicateString 65421
+#define RTLConsts_SFCreateErrorEx 65422
+#define RTLConsts_SFOpenErrorEx 65423
+#define SysConst_SShortDayNameTue 65424
+#define SysConst_SShortDayNameWed 65425
+#define SysConst_SShortDayNameThu 65426
+#define SysConst_SShortDayNameFri 65427
+#define SysConst_SShortDayNameSat 65428
+#define SysConst_SLongDayNameSun 65429
+#define SysConst_SLongDayNameMon 65430
+#define SysConst_SLongDayNameTue 65431
+#define SysConst_SLongDayNameWed 65432
+#define SysConst_SLongDayNameThu 65433
+#define SysConst_SLongDayNameFri 65434
+#define SysConst_SLongDayNameSat 65435
+#define SysConst_SInvalidSourceArray 65436
+#define SysConst_SInvalidDestinationArray 65437
+#define SysConst_SCharIndexOutOfBounds 65438
+#define SysConst_SByteIndexOutOfBounds 65439
+#define SysConst_SShortMonthNameNov 65440
+#define SysConst_SShortMonthNameDec 65441
+#define SysConst_SLongMonthNameJan 65442
+#define SysConst_SLongMonthNameFeb 65443
+#define SysConst_SLongMonthNameMar 65444
+#define SysConst_SLongMonthNameApr 65445
+#define SysConst_SLongMonthNameMay 65446
+#define SysConst_SLongMonthNameJun 65447
+#define SysConst_SLongMonthNameJul 65448
+#define SysConst_SLongMonthNameAug 65449
+#define SysConst_SLongMonthNameSep 65450
+#define SysConst_SLongMonthNameOct 65451
+#define SysConst_SLongMonthNameNov 65452
+#define SysConst_SLongMonthNameDec 65453
+#define SysConst_SShortDayNameSun 65454
+#define SysConst_SShortDayNameMon 65455
+#define SysConst_SInvalidPackageFile 65456
+#define SysConst_SInvalidPackageHandle 65457
+#define SysConst_SDuplicatePackageUnit 65458
+#define SysConst_SOSError 65459
+#define SysConst_SUnkOSError 65460
+#define SysConst_SNL 65461
+#define SysConst_SShortMonthNameJan 65462
+#define SysConst_SShortMonthNameFeb 65463
+#define SysConst_SShortMonthNameMar 65464
+#define SysConst_SShortMonthNameApr 65465
+#define SysConst_SShortMonthNameMay 65466
+#define SysConst_SShortMonthNameJun 65467
+#define SysConst_SShortMonthNameJul 65468
+#define SysConst_SShortMonthNameAug 65469
+#define SysConst_SShortMonthNameSep 65470
+#define SysConst_SShortMonthNameOct 65471
+#define SysConst_SVarOverflow 65472
+#define SysConst_SVarInvalid 65473
+#define SysConst_SVarBadType 65474
+#define SysConst_SVarNotImplemented 65475
+#define SysConst_SVarUnexpected 65476
+#define SysConst_SExternalException 65477
+#define SysConst_SAssertionFailed 65478
+#define SysConst_SIntfCastError 65479
+#define SysConst_SSafecallException 65480
+#define SysConst_SMonitorLockException 65481
+#define SysConst_SNoMonitorSupportException 65482
+#define SysConst_SNotImplemented 65483
+#define SysConst_SAssertError 65484
+#define SysConst_SAbstractError 65485
+#define SysConst_SModuleAccessViolation 65486
+#define SysConst_sErrorLoadingPackage 65487
+#define SysConst_SWriteAccess 65488
+#define SysConst_SFormatTooLong 65489
+#define SysConst_SVarArrayCreate 65490
+#define SysConst_SVarArrayBounds 65491
+#define SysConst_SVarArrayLocked 65492
+#define SysConst_SVarArrayWithHResult 65493
+#define SysConst_SInvalidVarCast 65494
+#define SysConst_SInvalidVarOp 65495
+#define SysConst_SInvalidVarNullOp 65496
+#define SysConst_SInvalidVarOpWithHResultWithPrefix 65497
+#define SysConst_SVarTypeOutOfRangeWithPrefix 65498
+#define SysConst_SVarTypeAlreadyUsedWithPrefix 65499
+#define SysConst_SVarTypeNotUsableWithPrefix 65500
+#define SysConst_SVarTypeTooManyCustom 65501
+#define SysConst_SVarTypeCouldNotConvert 65502
+#define SysConst_SVarTypeConvertOverflow 65503
+#define SysConst_SOverflow 65504
+#define SysConst_SUnderflow 65505
+#define SysConst_SInvalidPointer 65506
+#define SysConst_SInvalidCast 65507
+#define SysConst_SAccessViolationArg3 65508
+#define SysConst_SAccessViolationNoArg 65509
+#define SysConst_SStackOverflow 65510
+#define SysConst_SControlC 65511
+#define SysConst_SPrivilege 65512
+#define SysConst_SOperationAborted 65513
+#define SysConst_SException 65514
+#define SysConst_SExceptTitle 65515
+#define SysConst_SInvalidFormat 65516
+#define SysConst_SArgumentMissing 65517
+#define SysConst_SDispatchError 65518
+#define SysConst_SReadAccess 65519
 #define SysConst_SInvalidFloat 65520
-#define SysConst_SInvalidTimeStamp 65521
-#define SysConst_SDateEncodeError 65522
-#define SysConst_SOutOfMemory 65523
-#define SysConst_SInOutError 65524
-#define SysConst_STooManyOpenFiles 65525
-#define SysConst_SAccessDenied 65526
-#define SysConst_SEndOfFile 65527
-#define SysConst_SDiskFull 65528
-#define SysConst_SInvalidInput 65529
-#define SysConst_SDivByZero 65530
-#define SysConst_SRangeError 65531
-#define SysConst_SIntOverflow 65532
-#define SysConst_SInvalidOp 65533
-#define SysConst_SZeroDivide 65534
-#define SysConst_SOverflow 65535
+#define SysConst_SInvalidDateTime 65521
+#define SysConst_SInvalidTimeStamp 65522
+#define SysConst_SDateEncodeError 65523
+#define SysConst_SOutOfMemory 65524
+#define SysConst_SInOutError 65525
+#define SysConst_STooManyOpenFiles 65526
+#define SysConst_SAccessDenied 65527
+#define SysConst_SEndOfFile 65528
+#define SysConst_SDiskFull 65529
+#define SysConst_SInvalidInput 65530
+#define SysConst_SDivByZero 65531
+#define SysConst_SRangeError 65532
+#define SysConst_SIntOverflow 65533
+#define SysConst_SInvalidOp 65534
+#define SysConst_SZeroDivide 65535
 STRINGTABLE
 BEGIN
+	DbUtilsEh_SNotOperatorEh,	"Not"
+	DbUtilsEh_SAndOperatorEh,	"AND"
+	DbUtilsEh_SOrOperatorEh,	"OR"
+	DbUtilsEh_SLikePredicatEh,	""
+	DbUtilsEh_SInPredicatEh,	"In"
+	DbUtilsEh_SNullConstEh,	"Null"
+	DbUtilsEh_SQuoteIsAbsentEh,	"Quote is absent: "
+	DbUtilsEh_SLeftBracketExpectedEh,	"'(' expected: "
+	DbUtilsEh_SErrorInExpressionEh,	"Error in expression: "
+	DbUtilsEh_SUnexpectedExpressionBeforeNullEh,	"Unexpected expression before Null: "
+	DbUtilsEh_SUnexpectedExpressionAfterOperatorEh,	"Unexpected expression after operator: "
+	DbUtilsEh_SIncorrectExpressionEh,	"Incorrect expression: "
+	DbUtilsEh_SUnexpectedANDorOREh,	"Unexpected AND or OR: "
+	JConsts_sChangeJPGSize,	"Cannot change the size of a JPEG image"
+	JConsts_sJPEGError,	"JPEG error #%d"
+	JConsts_sJPEGImageFile,	"JPEG Image File"
+	EhLibConsts_SSimpFilter_is_less_than,	"is less than"
+	EhLibConsts_SSimpFilter_is_less_than_or_equall_to,	"is less than or equall to"
+	EhLibConsts_SSimpFilter_begins_with,	"begins with"
+	EhLibConsts_SSimpFilter_does_not_begin_with,	"does not begin with"
+	EhLibConsts_SSimpFilter_ends_with,	"ends with"
+	EhLibConsts_SSimpFilter_does_not_end_with,	"does not end with"
+	EhLibConsts_SSimpFilter_contains,	"contains"
+	EhLibConsts_SSimpFilter_does_not_contain,	"does not contain"
+	EhLibConsts_SSimpFilter_like,	"like"
+	EhLibConsts_SSimpFilter_not_like,	"not like"
+	EhLibConsts_SSimpFilter_in_list,	"in list"
+	EhLibConsts_SSimpFilter_not_in_list,	"not in list"
+	EhLibConsts_SSimpFilter_is_blank,	"is blank"
+	EhLibConsts_SSimpFilter_is_not_blank,	"is not blank"
+	EhLibConsts_SGroupingPanelText,	"Drag a column header here to group by that column"
+	EhLibConsts_SNoData,	"No data"
+	EhLibConsts_SCopyEh,	"Copy"
+	EhLibConsts_SPasteEh,	"Paste"
+	EhLibConsts_SDeleteEh,	"Delete"
+	EhLibConsts_SSelectAllEh,	"Select All"
+	EhLibConsts_SSTFilterListItem_Empties,	"(Empty)"
+	EhLibConsts_SSTFilterListItem_NotEmpties,	"(Not empty)"
+	EhLibConsts_SSTFilterListItem_All,	"(All)"
+	EhLibConsts_SSTFilterListItem_ClearFilter,	"(Clear filter)"
+	EhLibConsts_SSTFilterListItem_SortingByAscend,	"(Order by ascending)"
+	EhLibConsts_SSTFilterListItem_SortingByDescend,	"(Order by descending)"
+	EhLibConsts_SSTFilterListItem_ApplyFilter,	"(Apply filter)"
+	EhLibConsts_SSTFilterListItem_CustomFilter,	"(Custom...)"
+	EhLibConsts_SSimpFilter_equals,	"equals"
+	EhLibConsts_SSimpFilter_does_not_equal,	"does not equal"
+	EhLibConsts_SSimpFilter_is_greate_than,	"is greate than"
+	EhLibConsts_SSimpFilter_is_greate_than_or_equall_to,	"is greate than or equall to"
+	VDBConsts_SDeleteRecord,	"Delete record"
+	VDBConsts_SEditRecord,	"Edit record"
+	VDBConsts_SPostEdit,	"Post edit"
+	VDBConsts_SCancelEdit,	"Cancel edit"
+	VDBConsts_SRefreshRecord,	"Refresh data"
+	VDBConsts_SDataSourceFixed,	"Operation not allowed in a DBCtrlGrid"
+	VDBConsts_SPropDefByLookup,	"Property already defined by lookup field"
+	VDBConsts_SRemoteLogin,	"Remote Login"
+	EhLibConsts_SClearSelectedCellsEh,	"¿Desea borrar las celdas seleccionadas?"
+	EhLibConsts_SInvalidTextFormatEh,	"Formato de texto inválido"
+	EhLibConsts_SInvalidVCLDBIFFormatEh,	"Formato VCLDBIF inválido"
+	EhLibConsts_SErrorDuringInsertValueEh,	"Error durante la insercción del valor:"
+	EhLibConsts_SIgnoreErrorEh,	"¿Ignorar el error?"
+	EhLibConsts_SFieldNameNotFoundEh,	"El nombre de campo '%s' no se encuentra"
+	EhLibConsts_SVisibleColumnsEh,	"Visible columns"
+	EhLibConsts_SCutEh,	"Cut"
+	SqlConst_SMULTIPLETRANSNOTENABLED,	"[0x0014]: Multiple Transactions not Enabled"
+	SqlConst_SCONNECTIONFAILED,	"[0x0015]: Connection failed"
+	SqlConst_SDRIVERINITFAILED,	"[0x0016]: Driver initialization failed"
+	SqlConst_SOPTLOCKFAILED,	"[0x0017]: Optimistic Locking failed"
+	SqlConst_SINVALIDREF,	"[0x0018]: Invalid REF"
 	SqlConst_SNOTABLE,	"[0x0019]: No table found"
 	SqlConst_SMISSINGPARAMINSQL,	"[0x001A] Missing parameter marker in SQL"
 	SqlConst_SNOTIMPLEMENTED,	"[0x001B] Not implemented"
 	SqlConst_SDRIVERINCOMPATIBLE,	"[0x001C] Incompatible driver"
 	SqlConst_SObjectTypenameRequired,	"Object type name required as parameter value"
 	SqlConst_SCannotCreateFile,	"Cannot create file %s"
+	VDBConsts_SFirstRecord,	"First record"
+	VDBConsts_SPriorRecord,	"Prior record"
+	VDBConsts_SNextRecord,	"Next record"
+	VDBConsts_SLastRecord,	"Last record"
+	VDBConsts_SInsertRecord,	"Insert record"
+	SqlConst_SINVALIDHNDL,	"[0x0004]: Invalid Handle"
+	SqlConst_SNOTSUPPORTED,	"[0x0005]: Operation Not Supported"
+	SqlConst_SINVALIDTIME,	"[0x0006]: Invalid Time"
+	SqlConst_SINVALIDXLATION,	"[0x0007]: Invalid Data Translation"
+	SqlConst_SOUTOFRANGE,	"[0x0008]: Parameter/Column out of Range"
 	SqlConst_SINVALIDPARAM,	"[0x0009]: Invalid Parameter"
 	SqlConst_SEOF,	"[0x000A]: Result set at EOF"
 	SqlConst_SSQLPARAMNOTSET,	"dbExpress Error [0x000B]: Parameter Not Set"
@@ -689,11 +874,11 @@ BEGIN
 	SqlConst_SDUPLICATETXNID,	"[0x0011]: Duplicate Transaction ID"
 	SqlConst_SDRIVERRESTRICTED,	"[0x0012]: Application is not licensed to use this feature"
 	SqlConst_SLOCALTRANSACTIVE,	"[0x0013]: Local Transaction already active"
-	SqlConst_SMULTIPLETRANSNOTENABLED,	"[0x0014]: Multiple Transactions not Enabled"
-	SqlConst_SCONNECTIONFAILED,	"[0x0015]: Connection failed"
-	SqlConst_SDRIVERINITFAILED,	"[0x0016]: Driver initialization failed"
-	SqlConst_SOPTLOCKFAILED,	"[0x0017]: Optimistic Locking failed"
-	SqlConst_SINVALIDREF,	"[0x0018]: Invalid REF"
+	SqlConst_SMissingDriverName,	"Missing DriverName property"
+	SqlConst_SPrepareError,	"Unable to execute Query"
+	SqlConst_SObjectNameError,	"Table/Procedure not found"
+	SqlConst_SSQLDataSetOpen,	"Unable to determine field names for %s"
+	SqlConst_SNoActiveTrans,	"There is no active transaction"
 	SqlConst_SActiveTrans,	"A transaction is already active"
 	SqlConst_SMissingDriverRegFile,	"Driver/Connection Registry File '%s' not found"
 	SqlConst_SNoCursor,	"Cursor not returned from Query"
@@ -705,13 +890,13 @@ BEGIN
 	SqlConst_SWARNING,	"[0x0001]: Warning"
 	SqlConst_SNOMEMORY,	"[0x0002]: Insufficient Memory for Operation"
 	SqlConst_SINVALIDFLDTYPE,	"[0x0003]: Invalid Field Type"
-	SqlConst_SINVALIDHNDL,	"[0x0004]: Invalid Handle"
-	SqlConst_SNOTSUPPORTED,	"[0x0005]: Operation Not Supported"
-	SqlConst_SINVALIDTIME,	"[0x0006]: Invalid Time"
-	SqlConst_SINVALIDXLATION,	"[0x0007]: Invalid Data Translation"
-	SqlConst_SOUTOFRANGE,	"[0x0008]: Parameter/Column out of Range"
-	MidConst_SConnectionMissing,	"Requires Connection before opening"
-	MidConst_SNoCircularConnection,	"Circular reference to Connection not allowed"
+	DBXCommonResStrs_SNoSignedTypeFound,	"The best type match in %s for the column: %s is %s. But it is unsigned."
+	DBXCommonResStrs_SCannotHoldWantedPrecision,	"The best type match in %s for the column: %s is %s. But the max precision is: %s which is less than the specified: %s."
+	DBXCommonResStrs_SCannotHoldWantedScale,	"The best type match in %s for the column: %s is %s. But the max scale is: %s which is less than the specified: %s."
+	DBXCommonResStrs_STypeNotFound,	"No %2:s type found for the column: %1:s in %0:s."
+	DBXCommonResStrs_SCannotHoldUnicodeChars,	"The best type match in %s for the column: %s is %s. But it cannot hold unicode characters."
+	DBXCommonResStrs_SCannotRecreateConstraint,	"The constraint: %s could not be recreated, because the column: %s was dropped."
+	DBXCommonResStrs_SUnknownColumnName,	"The Data type: %s requires a column: %s, which does not exist on the Column collection."
 	SqlConst_SLoginError,	"Cannot connect to database '%s'"
 	SqlConst_SMonitorActive,	"Cannot change connection on Active Monitor"
 	SqlConst_SDatabaseOpen,	"Cannot perform this operation on an open connection"
@@ -721,11 +906,203 @@ BEGIN
 	SqlConst_SEmptySQLStatement,	"No SQL statement available"
 	SqlConst_SNoParameterValue,	"No value for parameter '%s'"
 	SqlConst_SNoSqlStatement,	"Missing query, table name or procedure name"
-	SqlConst_SMissingDriverName,	"Missing DriverName property"
-	SqlConst_SPrepareError,	"Unable to execute Query"
-	SqlConst_SObjectNameError,	"Table/Procedure not found"
-	SqlConst_SSQLDataSetOpen,	"Unable to determine field names for %s"
-	SqlConst_SNoActiveTrans,	"There is no active transaction"
+	DBXCommonResStrs_SPrimarySchemaName,	"Primary Schema Name"
+	DBXCommonResStrs_SMustCallNextFirst,	"Cursor is positioned before the first row, move to the next row before getting data"
+	DBXCommonResStrs_SDbxDataType,	"DbxType"
+	DBXCommonResStrs_SIsLong,	"Long"
+	DBXCommonResStrs_SPrimaryTableName,	"Primary Table Name"
+	DBXCommonResStrs_SMaxInline,	"Max Inline"
+	DBXCommonResStrs_STableName,	"Table Name"
+	DBXCommonResStrs_SProcedureName,	"Procedure Name"
+	DBXCommonResStrs_SIsAutoIncrementable,	"AutoIncrementable"
+	DBXCommonResStrs_SPastEndOfCursor,	"No more data."
+	DBXCommonResStrs_SDefinition,	"Definition"
+	DBXCommonResStrs_SNoTypeWithEnoughPrecision,	"The best type match in %s for the column: %s is %s. But it is does not have sufficient precision."
+	DBXCommonResStrs_SCannotBeUsedForAutoIncrement,	"The best type match in %s for the column: %s is %s. But is cannot be used for an auto increment column."
+	DBXCommonResStrs_SNoBlobTypeFound,	"No long %2:s type found for the column: %1:s in %0:s."
+	DBXCommonResStrs_STypeNameNotFound,	"Data type: %s is not recognized for SQL dialect."
+	DBXCommonResStrs_SWrongViewDefinition,	"A view definition must start with the CREATE keyword."
+	DBXCommonResStrs_SParameterName,	"Parameter Name"
+	DBXCommonResStrs_STableType,	"Table Type"
+	DBXCommonResStrs_SViewName,	"View Name"
+	DBXCommonResStrs_SMinimumScale,	"Minimum Scale"
+	DBXCommonResStrs_SColumnSize,	"Column Size"
+	DBXCommonResStrs_SIsUnicode,	"Unicode"
+	DBXCommonResStrs_SIsFixedPrecisionScale,	"Fixed Precision"
+	DBXCommonResStrs_SUnexpectedSymbol,	"Could not parse the %1:s metadata command. Problem found near: %0:s. Original query: %2:s."
+	DBXCommonResStrs_SUnknownTableType,	"Unknown table type specified:"
+	DBXCommonResStrs_SMetaDataCommandExpected,	"A MetaData command was expected here e.g. GetTables."
+	DBXCommonResStrs_SLiteralPrefix,	"Literal Prefix"
+	DBXCommonResStrs_SIsPrimary,	"Primary"
+	DBXCommonResStrs_SSynonymName,	"Synonym Name"
+	DBXCommonResStrs_SRoleName,	"Role Name"
+	DBXCommonResStrs_STableCatalogName,	"Table Catalog Name"
+	DBXCommonResStrs_SMaximumScale,	"Maximum Scale"
+	DBXCommonResStrs_SMaximumVersion,	"Maximum Version"
+	DBXCommonResStrs_SIsAutoIncrement,	"Auto Increment"
+	DBXCommonResStrs_SLiteralSuffix,	"Literal Suffix"
+	DBXCommonResStrs_SCreateFormat,	"Create Format"
+	DBXCommonResStrs_SSchemaName,	"Schema Name"
+	DBXCommonResStrs_SIsConcurrencyType,	"Concurrency"
+	DBXCommonResStrs_SReservedWord,	"Reserved Word"
+	DBXCommonResStrs_SPrimaryCatalogName,	"Primary Catalog Name"
+	DBXCommonResStrs_SUserName,	"User Name"
+	DBXCommonResStrs_SExternalDefinition,	"External Definition"
+	DBXCommonResStrs_STypeName,	"Type Name"
+	DBXCommonResStrs_SIsNullable,	"Nullable"
+	DBXCommonResStrs_SProviderDbType,	"Provider Type"
+	DBXCommonResStrs_SIsFixedLength,	"Fixed Length"
+	DBXCommonResStrs_SIsSearchable,	"Searchable"
+	DBXCommonResStrs_SConstraintName,	"Constraint Name"
+	DBXCommonResStrs_SIsAscending,	"Ascending"
+	DBXCommonResStrs_SOrdinalOutOfRange,	"Ordinal is outside the bounds of this cursor."
+	DBXCommonResStrs_SScale,	"Scale"
+	DBXCommonResStrs_SColumnName,	"Column Name"
+	DBXCommonResStrs_STableSchemaName,	"Table Schema Name"
+	DBXCommonResStrs_SPrimaryColumnName,	"Primary Column Name"
+	DBXCommonResStrs_SOrdinal,	"Ordinal"
+	DBXCommonResStrs_SIsCaseSensitive,	"Case Sensitive"
+	DBXCommonResStrs_SMinimumVersion,	"Minimum Version"
+	DBXCommonResStrs_SIsSearchableWithLike,	"Searchable With Like"
+	DBXCommonResStrs_SCreateParameters,	"Create Parameters"
+	DBXCommonResStrs_SPackageName,	"Package Name"
+	DBXCommonResStrs_SParameterMode,	"Parameter Mode"
+	DBXCommonResStrs_SPrecision,	"Precision"
+	DBXCommonResStrs_SIsBestMatch,	"Best Match"
+	DBXCommonResStrs_SMissingImplementation,	"This method must be implemented in a derived class."
+	DBXCommonResStrs_SUnsupportedOperation,	"Unsupported operation"
+	DBXCommonResStrs_SUnexpectedStringOverflow,	"Unexpected string overflow.  Length('%s') >= %s)"
+	DBXCommonResStrs_SUTF8InvalidHeaderByte,	"UTF8: Type cannot be determined out of header byte at position %s"
+	DBXCommonResStrs_SUTF8UnexpectedByte,	"UTF8: An unexpected continuation byte in %s-byte UTF8 in position %s"
+	DBXCommonResStrs_SUTF8Start,	"UTF8: A start byte not followed by enough continuation bytes in position %s"
+	DBXCommonResStrs_SIsLiteralSupported,	"Literal Supported"
+	DBXCommonResStrs_SDataType,	"Platform Type Name"
+	DBXCommonResStrs_SCatalogName,	"Catalog Name"
+	DBXCommonResStrs_SProcedureType,	"Procedure Type"
+	DBXCommonResStrs_SUnclosedQuotes,	"Unclosed quotes were found in the metadata query: %s."
+	DBXCommonResStrs_SDefaultValue,	"Default Value"
+	DBXCommonResStrs_SForeignKeyName,	"Foreign Key Name"
+	DBXCommonResStrs_SIndexName,	"Index Name"
+	DBXCommonResStrs_SIsUnsigned,	"Unsigned"
+	DBXCommonResStrs_SIsUnique,	"Unique"
+	DBXCommonResStrs_SPrimaryKeyName,	"Primary Key Name"
+	DBXCommonResStrs_SDBXErrOptimisticLockFailed,	"Optimistic lock failed"
+	DBXCommonResStrs_SDBXErrInvalidReference,	"Invalid reference"
+	DBXCommonResStrs_SDBXErrNoTable,	"No table"
+	DBXCommonResStrs_SDBXErrMissingParameterMarker,	"Missing parameter marker"
+	DBXCommonResStrs_SDBXErrNotImplemented,	"Not implemented"
+	DBXCommonResStrs_SDBXErrDriverIncompatible,	"Driver incompatible"
+	DBXCommonResStrs_SDBXErrInvalidArgument,	"Invalid argument"
+	DBXCommonResStrs_SDBXErrNoData,	"No data"
+	DBXCommonResStrs_SDBXErrVendorError,	"Vendor error"
+	DBXCommonResStrs_SDBXErrUnrecognizedCommandType,	"Unrecognized command type."
+	DBXCommonResStrs_SDBXErrSchemaNameUnspecified,	"Schema or user name separated by a '.' must be specified."
+	DBXCommonResStrs_SDBXErrDatabaseUnspecified,	"Database must be specified."
+	DBXCommonResStrs_SDBXErrLibraryNameUnspecified,	"LibraryName must be specified."
+	DBXCommonResStrs_SDBXErrGetDriverFuncUnspecified,	"GetDriverFunc must be specified."
+	DBXCommonResStrs_SDBXErrVendorLibUnspecified,	"VendorLib must be specified"
+	DBXCommonResStrs_SIllegalArgument,	"Illegal argument"
+	DBXCommonResStrs_SDBXErrInvalidType,	"Invalid type"
+	DBXCommonResStrs_SDBXErrInvalidOrdinal,	"Invalid ordinal"
+	DBXCommonResStrs_SDBXErrInvalidParameter,	"Invalid parameter"
+	DBXCommonResStrs_SDBXErrEOF,	"No more rows"
+	DBXCommonResStrs_SDBXErrParameterNotSet,	"Parameter not set"
+	DBXCommonResStrs_SDBXErrInvalidUserOrPassword,	"Invalid username or password"
+	DBXCommonResStrs_SDBXErrInvalidPrecision,	"Invalid precision"
+	DBXCommonResStrs_SDBXErrInvalidLength,	"Invalid length"
+	DBXCommonResStrs_SDBXErrInvalidIsolationLevel,	"Invalid isolation level"
+	DBXCommonResStrs_SDBXErrInvalidTransactionId,	"Invalid transaction id"
+	DBXCommonResStrs_SDBXErrDuplicateTransactionId,	"Duplicate transaction id"
+	DBXCommonResStrs_SDBXErrDriverRestricted,	"Driver restricted"
+	DBXCommonResStrs_SDBXErrTransactionActive,	"Transaction active"
+	DBXCommonResStrs_SDBXErrMultipleTransactionNotEnabled,	"Multiple transaction not enabled"
+	DBXCommonResStrs_SDBXErrConnectionFailed,	"Connection failed"
+	DBXCommonResStrs_SDBXErrDriverInitFailed,	"Driver could not be properly initialized.  Client library may be missing, not installed properly, of the wrong version, or the driver may be missing from the system path."
+	DBXCommonResStrs_SUnknownDataType,	"Unknown Data Type"
+	DBXCommonResStrs_SNoMetadataProvider,	"Cannot load metadata for %s."
+	DBXCommonResStrs_SUnexpectedMetaDataType,	"Unexpected metadata type"
+	DBXCommonResStrs_SInsertNotCalled,	"Must call Insert before Post."
+	DBXCommonResStrs_SPostNotCalled,	"Must call Post before moving away from a new row."
+	DBXCommonResStrs_SMustKeepOriginalColumnOrder,	"Additional columns must be added after the prescribed columns."
+	DBXCommonResStrs_SUnexpectedDataType,	"Unexpected data type %s"
+	DBXCommonResStrs_SDriverAlreadyRegistered,	"Driver already registered:  "
+	DBXCommonResStrs_SNotDefinedIn,	"No \"%s\" defined in %s"
+	DBXCommonResStrs_SDBXErrNone,	"None"
+	DBXCommonResStrs_SDBXErrWarning,	"Warning"
+	DBXCommonResStrs_SDBXErrNoMemory,	"Insufficient memory to complete the operation"
+	DBXCommonResStrs_SDBXErrUnsupportedFieldType,	"Unsupported field type"
+	DBXCommonResStrs_SDBXErrInvalidHandle,	"Unexpected internal error. DBX Object such as a connection, command, or reader may already be closed."
+	DBXCommonResStrs_SDBXErrNotSupported,	"Not supported"
+	DBXCommonResStrs_SDBXErrInvalidTime,	"Invalid time"
+	DBXCommonResStrs_STypeNotSupported,	"Internal: Type %s is not currently supported"
+	DBXCommonResStrs_SNoTypeInterceptorExpected,	"Field attribute should provide a field interceptor instead of a type one on field %s"
+	DBXCommonResStrs_SInconsistentConversion,	"Internal: Conversion failed, converted object is most likely incomplete"
+	DBXCommonResStrs_SNoConversionForType,	"Internal: No conversion possible for type: %s"
+	DBXCommonResStrs_SNoFieldFoundForType,	"Internal: Field %s cannot be found in type %s"
+	DBXCommonResStrs_SNoValueConversionForField,	"Internal: Value %s cannot be converted to be assigned to field %s in type %s"
+	DBXCommonResStrs_SNoConversionAvailableForValue,	"Value %s cannot be converted into %s. You may use a user-defined reverter"
+	DBXCommonResStrs_SInvalidTypeForField,	"Cannot set value for field %s as it is expected to be an array instead of %s"
+	DBXCommonResStrs_SCannotCreateType,	"Internal: Cannot instantiate type %s"
+	DBXCommonResStrs_SObjectNotFound,	"Internal: Object type %s not found for id: %s"
+	DBXCommonResStrs_SUnexpectedPairName,	"Internal: Invalid pair name %s: expected %s or %s"
+	DBXCommonResStrs_SInvalidJSONFieldType,	"Un-marshaled array cannot be set as a field value. A reverter may be missing for field %s of %s"
+	DBXCommonResStrs_SObjectExpectedInArray,	"Object expected at position %d in JSON array %s"
+	DBXCommonResStrs_SStringExpectedInArray,	"String expected at position %d in JSON array %s"
+	DBXCommonResStrs_SArrayExpectedForField,	"JSON array expected for field %s in JSON %s"
+	DBXCommonResStrs_SObjectExpectedForField,	"JSON object expected for field %s in JSON %s"
+	DBXCommonResStrs_SJSONByteStream,	"JSON byte stream cannot be parsed correctly into a JSON value"
+	DBXCommonResStrs_SNoStatementToExecute,	"No statement to execute"
+	DBXCommonResStrs_SAdditionalInfo,	"%s.  Vendor error message:  %s."
+	DBXCommonResStrs_SInvalidDataType,	"dbExpress driver does not support the %s data type"
+	DBXCommonResStrs_SUnmatchedBrace,	"Unmatched brace found in format string: %s"
+	DBXCommonResStrs_SParameterIndexOutOfRange,	"Unmatched brace found in format string: %d"
+	DBXCommonResStrs_SFieldValueMissing,	"Internal: Field %s has no serialized value"
+	DBXCommonResStrs_SFieldExpected,	"Internal: Field %s conversion is incomplete"
+	DBXCommonResStrs_SArrayExpected,	"Internal: Array expected instead of %s"
+	DBXCommonResStrs_SNoArray,	"Internal: Array expected instead of nil"
+	DBXCommonResStrs_STypeExpected,	"Internal: Type expected"
+	DBXCommonResStrs_STypeFieldsPairExpected,	"Internal: Type fields pair expected"
+	DBXCommonResStrs_SValueExpected,	"Internal: JSON value expected instead of %s"
+	DBXCommonResStrs_SInvalidContext,	"Internal: Current context cannot accept a value"
+	DBXCommonResStrs_SObjectExpectedForPair,	"Internal: Object context expected when processing a pair"
+	DBXCommonResStrs_SInvalidContextForPair,	"Internal: Current context cannot accept a pair"
+	DBXCommonResStrs_SInvalidTransaction,	"Invalid transaction Object"
+	DBXCommonResStrs_SNotImplemented,	"Feature not implemented"
+	DBXCommonResStrs_SRequiredProperty,	"%s property not set"
+	DBXCommonResStrs_SReaderNew,	"Reader Next method has not been called"
+	DBXCommonResStrs_SReaderClosed,	"Reader has no more rows"
+	DBXCommonResStrs_SReadOnlyType,	"%s type cannot be modified"
+	DBXCommonResStrs_SSetSingletonOnce,	"Cannot set this singleton instance more than once or after it has been retrieved one or more times"
+	DBXCommonResStrs_SConnectionFactoryInitFailed,	"Cannot find connection files from application directory (%s) or the system registry (%s)."
+	DBXCommonResStrs_SInvalidDelegationDepth,	"Cannot delegate a connection more than 16 times:  %s"
+	DBXCommonResStrs_SInvalidOrdinal,	"Invalid Ordinal:  %d"
+	DBXCommonResStrs_SDefaultErrorMessage,	"DBX Error:  %s"
+	DBXCommonResStrs_SErrorCode,	"Error Code:  "
+	DBXCommonResStrs_SAlreadyPrepared,	"Command can only be prepared once"
+	DBXCommonResStrs_SInvalidTypeAccess,	"%s value type cannot be accessed as %s value type"
+	DBXCommonResStrs_SConnectionClosed,	"Operation failed.  Connection was closed"
+	DBXCommonResStrs_SMetaDataLoadError,	"Could not find metadata: %s; package: %s. Add %s to your uses."
+	MidConst_SNoTableName,	"Unable to resolve records.  Table name not found."
+	MidConst_SNoEditsAllowed,	"Modifications are not allowed"
+	MidConst_SNoDeletesAllowed,	"Deletes are not allowed"
+	MidConst_SNoInsertsAllowed,	"Inserts are not allowed"
+	MidConst_SCannotChangeCommandText,	"CommandText changes are not allowed"
+	MidConst_SConnectionMissing,	"Requires Connection before opening"
+	MidConst_SNoCircularConnection,	"Circular reference to Connection not allowed"
+	DBXCommonResStrs_SBadVariantType,	"Unsupported variant type: %s"
+	DBXCommonResStrs_SAlreadyRegistered,	"%s class already registered"
+	DBXCommonResStrs_SNotRegistered,	"%s class is not registered"
+	DBXCommonResStrs_SInvalidClassRegister,	"%s class registered with a nil class reference"
+	DBXCommonResStrs_SCannotFreeClassRegistry,	"Cannot free TClassRegistry.ClassRegistry"
+	DBXCommonResStrs_SDllLoadError,	"Unable to load %s (ErrorCode %d).  It may be missing from the system path."
+	DBXCommonResStrs_SDllProcLoadError,	"Unable to find procedure %s"
+	DBXCommonResStrs_SUnknownDriver,	"Unknown driver:  %s"
+	DBXCommonResStrs_SInvalidArgument,	"Invalid argument:  %s"
+	MidConst_SCannotCreateDataSet,	"No fields defined.  Cannot create dataset"
+	MidConst_SNoConnectToBroker,	"Connection not allowed to TConnectionBroker"
+	MidConst_SNoParentConnection,	"ParentConnection is not assigned"
+	MidConst_SInvalidResponse,	"Invalid response"
+	MidConst_STooManyRecordsModified,	"Update affected more than 1 record."
 	MidConst_SInvalidOptParamType,	"Value cannot be stored in an optional parameter"
 	MidConst_SMissingDataSet,	"Missing DataSet property"
 	MidConst_SConstraintFailed,	"Record or field constraint failed."
@@ -737,12 +1114,12 @@ BEGIN
 	MidConst_SFieldConstFail,	"Preparation of field constraint failed with error \"%s\""
 	MidConst_SDefExprFail,	"Preparation of default expression failed with error \"%s\""
 	MidConst_SArrayElementError,	"Array elements of type %s are not supported"
-	MidConst_SNoTableName,	"Unable to resolve records.  Table name not found."
-	MidConst_SNoEditsAllowed,	"Modifications are not allowed"
-	MidConst_SNoDeletesAllowed,	"Deletes are not allowed"
-	MidConst_SNoInsertsAllowed,	"Inserts are not allowed"
-	MidConst_SCannotChangeCommandText,	"CommandText changes are not allowed"
-	DBXCommonResStrs_SUnknownColumnName,	"The Data type: %s requires a column: %s, which does not exist on the Column collection."
+	DBConsts_SInvalidFormatType,	"Invalid format type for BCD"
+	DBConsts_SCouldNotParseTimeStamp,	"Could not parse SQL TimeStamp string"
+	DBConsts_SInvalidSqlTimeStamp,	"Invalid SQL date/time values"
+	DBConsts_SDeleteRecordQuestion,	"Delete record?"
+	DBConsts_SDeleteMultipleRecordsQuestion,	"Delete all selected records?"
+	DBConsts_STooManyColumns,	"Grid requested to display more than 256 columns"
 	ComConst_SOleError,	"OLE error %.8x"
 	ComConst_SNoMethod,	"Method '%s' not supported by automation object"
 	ComConst_SVarNotObject,	"Variant does not reference an automation object"
@@ -753,203 +1130,8 @@ BEGIN
 	MidConst_SAggsNoSuchLevel,	"Grouping level not defined"
 	MidConst_SNoCircularReference,	"Circular provider references not allowed"
 	MidConst_SErrorLoadingMidas,	"Error loading MIDAS.DLL"
-	MidConst_SCannotCreateDataSet,	"No fields defined.  Cannot create dataset"
-	MidConst_SNoConnectToBroker,	"Connection not allowed to TConnectionBroker"
-	MidConst_SNoParentConnection,	"ParentConnection is not assigned"
-	MidConst_SInvalidResponse,	"Invalid response"
-	MidConst_STooManyRecordsModified,	"Update affected more than 1 record."
-	DBXCommonResStrs_STableName,	"Table Name"
-	DBXCommonResStrs_SProcedureName,	"Procedure Name"
-	DBXCommonResStrs_SIsAutoIncrementable,	"AutoIncrementable"
-	DBXCommonResStrs_SPastEndOfCursor,	"No more data."
-	DBXCommonResStrs_SDefinition,	"Definition"
-	DBXCommonResStrs_SNoTypeWithEnoughPrecision,	"The best type match in %s for the column: %s is %s. But it is does not have sufficient precision."
-	DBXCommonResStrs_SCannotBeUsedForAutoIncrement,	"The best type match in %s for the column: %s is %s. But is cannot be used for an auto increment column."
-	DBXCommonResStrs_SNoBlobTypeFound,	"No long %2:s type found for the column: %1:s in %0:s."
-	DBXCommonResStrs_STypeNameNotFound,	"Data type: %s is not recognized for SQL dialect."
-	DBXCommonResStrs_SWrongViewDefinition,	"A view definition must start with the CREATE keyword."
-	DBXCommonResStrs_SNoSignedTypeFound,	"The best type match in %s for the column: %s is %s. But it is unsigned."
-	DBXCommonResStrs_SCannotHoldWantedPrecision,	"The best type match in %s for the column: %s is %s. But the max precision is: %s which is less than the specified: %s."
-	DBXCommonResStrs_SCannotHoldWantedScale,	"The best type match in %s for the column: %s is %s. But the max scale is: %s which is less than the specified: %s."
-	DBXCommonResStrs_STypeNotFound,	"No %2:s type found for the column: %1:s in %0:s."
-	DBXCommonResStrs_SCannotHoldUnicodeChars,	"The best type match in %s for the column: %s is %s. But it cannot hold unicode characters."
-	DBXCommonResStrs_SCannotRecreateConstraint,	"The constraint: %s could not be recreated, because the column: %s was dropped."
-	DBXCommonResStrs_SIsFixedPrecisionScale,	"Fixed Precision"
-	DBXCommonResStrs_SUnexpectedSymbol,	"Could not parse the %1:s metadata command. Problem found near: %0:s. Original query: %2:s."
-	DBXCommonResStrs_SUnknownTableType,	"Unknown table type specified:"
-	DBXCommonResStrs_SMetaDataCommandExpected,	"A MetaData command was expected here e.g. GetTables."
-	DBXCommonResStrs_SLiteralPrefix,	"Literal Prefix"
-	DBXCommonResStrs_SIsPrimary,	"Primary"
-	DBXCommonResStrs_SSynonymName,	"Synonym Name"
-	DBXCommonResStrs_SRoleName,	"Role Name"
-	DBXCommonResStrs_STableCatalogName,	"Table Catalog Name"
-	DBXCommonResStrs_SMaximumScale,	"Maximum Scale"
-	DBXCommonResStrs_SPrimarySchemaName,	"Primary Schema Name"
-	DBXCommonResStrs_SMustCallNextFirst,	"Cursor is positioned before the first row, move to the next row before getting data"
-	DBXCommonResStrs_SDbxDataType,	"DbxType"
-	DBXCommonResStrs_SIsLong,	"Long"
-	DBXCommonResStrs_SPrimaryTableName,	"Primary Table Name"
-	DBXCommonResStrs_SMaxInline,	"Max Inline"
-	DBXCommonResStrs_SReservedWord,	"Reserved Word"
-	DBXCommonResStrs_SPrimaryCatalogName,	"Primary Catalog Name"
-	DBXCommonResStrs_SUserName,	"User Name"
-	DBXCommonResStrs_SExternalDefinition,	"External Definition"
-	DBXCommonResStrs_STypeName,	"Type Name"
-	DBXCommonResStrs_SIsNullable,	"Nullable"
-	DBXCommonResStrs_SProviderDbType,	"Provider Type"
-	DBXCommonResStrs_SIsFixedLength,	"Fixed Length"
-	DBXCommonResStrs_SIsSearchable,	"Searchable"
-	DBXCommonResStrs_SConstraintName,	"Constraint Name"
-	DBXCommonResStrs_SParameterName,	"Parameter Name"
-	DBXCommonResStrs_STableType,	"Table Type"
-	DBXCommonResStrs_SViewName,	"View Name"
-	DBXCommonResStrs_SMinimumScale,	"Minimum Scale"
-	DBXCommonResStrs_SColumnSize,	"Column Size"
-	DBXCommonResStrs_SIsUnicode,	"Unicode"
-	DBXCommonResStrs_SOrdinal,	"Ordinal"
-	DBXCommonResStrs_SIsCaseSensitive,	"Case Sensitive"
-	DBXCommonResStrs_SMinimumVersion,	"Minimum Version"
-	DBXCommonResStrs_SIsSearchableWithLike,	"Searchable With Like"
-	DBXCommonResStrs_SCreateParameters,	"Create Parameters"
-	DBXCommonResStrs_SPackageName,	"Package Name"
-	DBXCommonResStrs_SParameterMode,	"Parameter Mode"
-	DBXCommonResStrs_SPrecision,	"Precision"
-	DBXCommonResStrs_SIsBestMatch,	"Best Match"
-	DBXCommonResStrs_SMissingImplementation,	"This method must be implemented in a derived class."
-	DBXCommonResStrs_SMaximumVersion,	"Maximum Version"
-	DBXCommonResStrs_SIsAutoIncrement,	"Auto Increment"
-	DBXCommonResStrs_SLiteralSuffix,	"Literal Suffix"
-	DBXCommonResStrs_SCreateFormat,	"Create Format"
-	DBXCommonResStrs_SSchemaName,	"Schema Name"
-	DBXCommonResStrs_SIsConcurrencyType,	"Concurrency"
-	DBXCommonResStrs_SDataType,	"Platform Type Name"
-	DBXCommonResStrs_SCatalogName,	"Catalog Name"
-	DBXCommonResStrs_SProcedureType,	"Procedure Type"
-	DBXCommonResStrs_SUnclosedQuotes,	"Unclosed quotes were found in the metadata query: %s."
-	DBXCommonResStrs_SDefaultValue,	"Default Value"
-	DBXCommonResStrs_SForeignKeyName,	"Foreign Key Name"
-	DBXCommonResStrs_SIndexName,	"Index Name"
-	DBXCommonResStrs_SIsUnsigned,	"Unsigned"
-	DBXCommonResStrs_SIsUnique,	"Unique"
-	DBXCommonResStrs_SPrimaryKeyName,	"Primary Key Name"
-	DBXCommonResStrs_SIsAscending,	"Ascending"
-	DBXCommonResStrs_SOrdinalOutOfRange,	"Ordinal is outside the bounds of this cursor."
-	DBXCommonResStrs_SScale,	"Scale"
-	DBXCommonResStrs_SColumnName,	"Column Name"
-	DBXCommonResStrs_STableSchemaName,	"Table Schema Name"
-	DBXCommonResStrs_SPrimaryColumnName,	"Primary Column Name"
-	DBXCommonResStrs_SDBXErrInvalidArgument,	"Invalid argument"
-	DBXCommonResStrs_SDBXErrNoData,	"No data"
-	DBXCommonResStrs_SDBXErrVendorError,	"Vendor error"
-	DBXCommonResStrs_SDBXErrUnrecognizedCommandType,	"Unrecognized command type."
-	DBXCommonResStrs_SDBXErrSchemaNameUnspecified,	"Schema or user name separated by a '.' must be specified."
-	DBXCommonResStrs_SDBXErrDatabaseUnspecified,	"Database must be specified."
-	DBXCommonResStrs_SDBXErrLibraryNameUnspecified,	"LibraryName must be specified."
-	DBXCommonResStrs_SDBXErrGetDriverFuncUnspecified,	"GetDriverFunc must be specified."
-	DBXCommonResStrs_SDBXErrVendorLibUnspecified,	"VendorLib must be specified"
-	DBXCommonResStrs_SIllegalArgument,	"Illegal argument"
-	DBXCommonResStrs_SUnsupportedOperation,	"Unsupported operation"
-	DBXCommonResStrs_SUnexpectedStringOverflow,	"Unexpected string overflow.  Length('%s') >= %s)"
-	DBXCommonResStrs_SUTF8InvalidHeaderByte,	"UTF8: Type cannot be determined out of header byte at position %s"
-	DBXCommonResStrs_SUTF8UnexpectedByte,	"UTF8: An unexpected continuation byte in %s-byte UTF8 in position %s"
-	DBXCommonResStrs_SUTF8Start,	"UTF8: A start byte not followed by enough continuation bytes in position %s"
-	DBXCommonResStrs_SIsLiteralSupported,	"Literal Supported"
-	DBXCommonResStrs_SDBXErrInvalidPrecision,	"Invalid precision"
-	DBXCommonResStrs_SDBXErrInvalidLength,	"Invalid length"
-	DBXCommonResStrs_SDBXErrInvalidIsolationLevel,	"Invalid isolation level"
-	DBXCommonResStrs_SDBXErrInvalidTransactionId,	"Invalid transaction id"
-	DBXCommonResStrs_SDBXErrDuplicateTransactionId,	"Duplicate transaction id"
-	DBXCommonResStrs_SDBXErrDriverRestricted,	"Driver restricted"
-	DBXCommonResStrs_SDBXErrTransactionActive,	"Transaction active"
-	DBXCommonResStrs_SDBXErrMultipleTransactionNotEnabled,	"Multiple transaction not enabled"
-	DBXCommonResStrs_SDBXErrConnectionFailed,	"Connection failed"
-	DBXCommonResStrs_SDBXErrDriverInitFailed,	"Driver could not be properly initialized.  Client library may be missing, not installed properly, of the wrong version, or the driver may be missing from the system path."
-	DBXCommonResStrs_SDBXErrOptimisticLockFailed,	"Optimistic lock failed"
-	DBXCommonResStrs_SDBXErrInvalidReference,	"Invalid reference"
-	DBXCommonResStrs_SDBXErrNoTable,	"No table"
-	DBXCommonResStrs_SDBXErrMissingParameterMarker,	"Missing parameter marker"
-	DBXCommonResStrs_SDBXErrNotImplemented,	"Not implemented"
-	DBXCommonResStrs_SDBXErrDriverIncompatible,	"Driver incompatible"
-	DBXCommonResStrs_SUnexpectedDataType,	"Unexpected data type %s"
-	DBXCommonResStrs_SDriverAlreadyRegistered,	"Driver already registered:  "
-	DBXCommonResStrs_SNotDefinedIn,	"No \"%s\" defined in %s"
-	DBXCommonResStrs_SDBXErrNone,	"None"
-	DBXCommonResStrs_SDBXErrWarning,	"Warning"
-	DBXCommonResStrs_SDBXErrNoMemory,	"Insufficient memory to complete the operation"
-	DBXCommonResStrs_SDBXErrUnsupportedFieldType,	"Unsupported field type"
-	DBXCommonResStrs_SDBXErrInvalidHandle,	"Unexpected internal error. DBX Object such as a connection, command, or reader may already be closed."
-	DBXCommonResStrs_SDBXErrNotSupported,	"Not supported"
-	DBXCommonResStrs_SDBXErrInvalidTime,	"Invalid time"
-	DBXCommonResStrs_SDBXErrInvalidType,	"Invalid type"
-	DBXCommonResStrs_SDBXErrInvalidOrdinal,	"Invalid ordinal"
-	DBXCommonResStrs_SDBXErrInvalidParameter,	"Invalid parameter"
-	DBXCommonResStrs_SDBXErrEOF,	"No more rows"
-	DBXCommonResStrs_SDBXErrParameterNotSet,	"Parameter not set"
-	DBXCommonResStrs_SDBXErrInvalidUserOrPassword,	"Invalid username or password"
-	DBXCommonResStrs_SNoConversionAvailableForValue,	"Value %s cannot be converted into %s. You may use a user-defined reverter"
-	DBXCommonResStrs_SInvalidTypeForField,	"Cannot set value for field %s as it is expected to be an array instead of %s"
-	DBXCommonResStrs_SCannotCreateType,	"Internal: Cannot instantiate type %s"
-	DBXCommonResStrs_SObjectNotFound,	"Internal: Object type %s not found for id: %s"
-	DBXCommonResStrs_SUnexpectedPairName,	"Internal: Invalid pair name %s: expected %s or %s"
-	DBXCommonResStrs_SInvalidJSONFieldType,	"Un-marshaled array cannot be set as a field value. A reverter may be missing for field %s of %s"
-	DBXCommonResStrs_SObjectExpectedInArray,	"Object expected at position %d in JSON array %s"
-	DBXCommonResStrs_SStringExpectedInArray,	"String expected at position %d in JSON array %s"
-	DBXCommonResStrs_SArrayExpectedForField,	"JSON array expected for field %s in JSON %s"
-	DBXCommonResStrs_SObjectExpectedForField,	"JSON object expected for field %s in JSON %s"
-	DBXCommonResStrs_SUnknownDataType,	"Unknown Data Type"
-	DBXCommonResStrs_SNoMetadataProvider,	"Cannot load metadata for %s."
-	DBXCommonResStrs_SUnexpectedMetaDataType,	"Unexpected metadata type"
-	DBXCommonResStrs_SInsertNotCalled,	"Must call Insert before Post."
-	DBXCommonResStrs_SPostNotCalled,	"Must call Post before moving away from a new row."
-	DBXCommonResStrs_SMustKeepOriginalColumnOrder,	"Additional columns must be added after the prescribed columns."
-	DBXCommonResStrs_SFieldValueMissing,	"Internal: Field %s has no serialized value"
-	DBXCommonResStrs_SFieldExpected,	"Internal: Field %s conversion is incomplete"
-	DBXCommonResStrs_SArrayExpected,	"Internal: Array expected instead of %s"
-	DBXCommonResStrs_SNoArray,	"Internal: Array expected instead of nil"
-	DBXCommonResStrs_STypeExpected,	"Internal: Type expected"
-	DBXCommonResStrs_STypeFieldsPairExpected,	"Internal: Type fields pair expected"
-	DBXCommonResStrs_SValueExpected,	"Internal: JSON value expected instead of %s"
-	DBXCommonResStrs_SInvalidContext,	"Internal: Current context cannot accept a value"
-	DBXCommonResStrs_SObjectExpectedForPair,	"Internal: Object context expected when processing a pair"
-	DBXCommonResStrs_SInvalidContextForPair,	"Internal: Current context cannot accept a pair"
-	DBXCommonResStrs_STypeNotSupported,	"Internal: Type %s is not currently supported"
-	DBXCommonResStrs_SNoTypeInterceptorExpected,	"Field attribute should provide a field interceptor instead of a type one on field %s"
-	DBXCommonResStrs_SInconsistentConversion,	"Internal: Conversion failed, converted object is most likely incomplete"
-	DBXCommonResStrs_SNoConversionForType,	"Internal: No conversion possible for type: %s"
-	DBXCommonResStrs_SNoFieldFoundForType,	"Internal: Field %s cannot be found in type %s"
-	DBXCommonResStrs_SNoValueConversionForField,	"Internal: Value %s cannot be converted to be assigned to field %s in type %s"
-	DBXCommonResStrs_SSetSingletonOnce,	"Cannot set this singleton instance more than once or after it has been retrieved one or more times"
-	DBXCommonResStrs_SConnectionFactoryInitFailed,	"Cannot find connection files from application directory (%s) or the system registry (%s)."
-	DBXCommonResStrs_SInvalidDelegationDepth,	"Cannot delegate a connection more than 16 times:  %s"
-	DBXCommonResStrs_SInvalidOrdinal,	"Invalid Ordinal:  %d"
-	DBXCommonResStrs_SDefaultErrorMessage,	"DBX Error:  %s"
-	DBXCommonResStrs_SErrorCode,	"Error Code:  "
-	DBXCommonResStrs_SAlreadyPrepared,	"Command can only be prepared once"
-	DBXCommonResStrs_SInvalidTypeAccess,	"%s value type cannot be accessed as %s value type"
-	DBXCommonResStrs_SConnectionClosed,	"Operation failed.  Connection was closed"
-	DBXCommonResStrs_SMetaDataLoadError,	"Could not find metadata: %s; package: %s. Add %s to your uses."
-	DBXCommonResStrs_SJSONByteStream,	"JSON byte stream cannot be parsed correctly into a JSON value"
-	DBXCommonResStrs_SNoStatementToExecute,	"No statement to execute"
-	DBXCommonResStrs_SAdditionalInfo,	"%s.  Vendor error message:  %s."
-	DBXCommonResStrs_SInvalidDataType,	"dbExpress driver does not support the %s data type"
-	DBXCommonResStrs_SUnmatchedBrace,	"Unmatched brace found in format string: %s"
-	DBXCommonResStrs_SParameterIndexOutOfRange,	"Unmatched brace found in format string: %d"
-	DBConsts_SInvalidSqlTimeStamp,	"Invalid SQL date/time values"
-	DBXCommonResStrs_SBadVariantType,	"Unsupported variant type: %s"
-	DBXCommonResStrs_SAlreadyRegistered,	"%s class already registered"
-	DBXCommonResStrs_SNotRegistered,	"%s class is not registered"
-	DBXCommonResStrs_SInvalidClassRegister,	"%s class registered with a nil class reference"
-	DBXCommonResStrs_SCannotFreeClassRegistry,	"Cannot free TClassRegistry.ClassRegistry"
-	DBXCommonResStrs_SDllLoadError,	"Unable to load %s (ErrorCode %d).  It may be missing from the system path."
-	DBXCommonResStrs_SDllProcLoadError,	"Unable to find procedure %s"
-	DBXCommonResStrs_SUnknownDriver,	"Unknown driver:  %s"
-	DBXCommonResStrs_SInvalidArgument,	"Invalid argument:  %s"
-	DBXCommonResStrs_SInvalidTransaction,	"Invalid transaction Object"
-	DBXCommonResStrs_SNotImplemented,	"Feature not implemented"
-	DBXCommonResStrs_SRequiredProperty,	"%s property not set"
-	DBXCommonResStrs_SReaderNew,	"Reader Next method has not been called"
-	DBXCommonResStrs_SReaderClosed,	"Reader has no more rows"
-	DBXCommonResStrs_SReadOnlyType,	"%s type cannot be modified"
+	DBConsts_STextFalse,	"False"
+	DBConsts_STextTrue,	"True"
 	DBConsts_SParameterNotFound,	"Parameter '%s' not found"
 	DBConsts_SInvalidVersion,	"Unable to load bind parameters"
 	DBConsts_SBadFieldType,	"Field '%s' is of an unsupported type"
@@ -964,8 +1146,8 @@ BEGIN
 	DBConsts_SFileNameBlank,	"FileName property cannot be blank"
 	DBConsts_SBcdOverflow,	"BCD overflow"
 	DBConsts_SInvalidBcdValue,	"%s is not a valid BCD value"
-	DBConsts_SInvalidFormatType,	"Invalid format type for BCD"
-	DBConsts_SCouldNotParseTimeStamp,	"Could not parse SQL TimeStamp string"
+	DBConsts_SExprNoRParen,	"')' expected but %s found"
+	DBConsts_SExprNoRParenOrComma,	"')' or ',' expected but %s found"
 	DBConsts_SExprExpected,	"Expression expected but %s found"
 	DBConsts_SExprBadField,	"Field '%s' cannot be used in a filter expression"
 	DBConsts_SExprBadNullTest,	"NULL only allowed with '=' and '<>'"
@@ -980,8 +1162,8 @@ BEGIN
 	DBConsts_SExprNoAggFilter,	"Aggregate expressions not allowed in filters"
 	DBConsts_SExprEmptyInList,	"IN predicate list may not be empty"
 	DBConsts_SInvalidKeywordUse,	"Invalid use of keyword"
-	DBConsts_STextFalse,	"False"
-	DBConsts_STextTrue,	"True"
+	DBConsts_SDBDuplicateName,	"Duplicate name '%s' in %s"
+	DBConsts_SCircularDataLink,	"Circular datalinks are not allowed"
 	DBConsts_SLookupInfoError,	"Lookup information for field '%s' is incomplete"
 	DBConsts_SDataSourceChange,	"DataSource cannot be changed"
 	DBConsts_SNoNestedMasterSource,	"Nested datasets cannot have a MasterSource"
@@ -996,8 +1178,8 @@ BEGIN
 	DBConsts_SExprStringError,	"Unterminated string constant"
 	DBConsts_SExprInvalidChar,	"Invalid filter expression character: '%s'"
 	DBConsts_SExprNoLParen,	"'(' expected but %s found"
-	DBConsts_SExprNoRParen,	"')' expected but %s found"
-	DBConsts_SExprNoRParenOrComma,	"')' or ',' expected but %s found"
+	DBConsts_SInvalidFloatValue,	"'%s' is not a valid floating point value for field '%s'"
+	DBConsts_SFieldTypeMismatch,	"Type mismatch for field '%s', expecting: %s actual: %s"
 	DBConsts_SFieldSizeMismatch,	"Size mismatch for field '%s', expecting: %d actual: %d"
 	DBConsts_SInvalidVarByteArray,	"Invalid variant type or size for field '%s'"
 	DBConsts_SFieldOutOfRange,	"Value of field '%s' is out of range"
@@ -1012,10 +1194,10 @@ BEGIN
 	DBConsts_SDuplicateIndexName,	"Duplicate index name '%s'"
 	DBConsts_SNoIndexForFields,	"No index for fields '%s'"
 	DBConsts_SIndexNotFound,	"Index '%s' not found"
-	DBConsts_SDBDuplicateName,	"Duplicate name '%s' in %s"
-	DBConsts_SCircularDataLink,	"Circular datalinks are not allowed"
-	JConsts_sJPEGError,	"JPEG error #%d"
-	JConsts_sJPEGImageFile,	"JPEG Image File"
+	ComStrs_sFailSetCalDateTime,	"Failed to set calendar date or time"
+	ComStrs_sFailSetCalMaxSelRange,	"Failed to set maximum selection range"
+	ComStrs_sFailSetCalMinMaxRange,	"Failed to set calendar min/max range"
+	ComStrs_sFailsetCalSelRange,	"Failed to set calendar selected range"
 	DBConsts_SInvalidFieldSize,	"Invalid field size"
 	DBConsts_SInvalidFieldKind,	"Invalid FieldKind"
 	DBConsts_SUnknownFieldType,	"Field '%s' is of an unknown type"
@@ -1028,14 +1210,6 @@ BEGIN
 	DBConsts_SBcdFieldRangeError,	"%s is not a valid value for field '%s'. The allowed range is %s to %s"
 	DBConsts_SInvalidIntegerValue,	"'%s' is not a valid integer value for field '%s'"
 	DBConsts_SInvalidBoolValue,	"'%s' is not a valid boolean value for field '%s'"
-	DBConsts_SInvalidFloatValue,	"'%s' is not a valid floating point value for field '%s'"
-	DBConsts_SFieldTypeMismatch,	"Type mismatch for field '%s', expecting: %s actual: %s"
-	Consts_SDockZoneVersionConflict,	"Error loading dock zone from the stream. Expecting version %d, but found %d."
-	Consts_SPageControlNotSet,	"PageControl must first be assigned"
-	Consts_SWindowsVistaRequired,	"%s requires Windows Vista or later"
-	Consts_SXPThemesRequired,	"%s requires themes to be enabled"
-	Consts_STaskDlgButtonCaption,	"Button%d"
-	Consts_STaskDlgRadioButtonCaption,	"RadioButton%d"
 	Consts_SInvalidTaskDlgButtonCaption,	"Caption cannot be empty"
 	ComStrs_sTabFailClear,	"Failed to clear tab control"
 	ComStrs_sTabFailDelete,	"Failed to delete tab at index %d"
@@ -1044,17 +1218,14 @@ BEGIN
 	ComStrs_sTabFailSet,	"Failed to set tab \"%s\" at index %d"
 	ComStrs_sTabFailSetObject,	"Failed to set object at index %d"
 	ComStrs_sTabMustBeMultiLine,	"MultiLine must be True when TabPosition is tpLeft or tpRight"
+	ComStrs_sInvalidLevel,	"Invalid item level assignment"
+	ComStrs_sInvalidLevelEx,	"Invalid level (%d) for item \"%s\""
+	ComStrs_sInvalidIndex,	"Invalid index"
+	ComStrs_sInsertError,	"Unable to insert an item"
 	ComStrs_sPageIndexError,	"%d is an invalid PageIndex value.  PageIndex must be between 0 and %d"
-	JConsts_sChangeJPGSize,	"Cannot change the size of a JPEG image"
-	Consts_SmkcDel,	"Del"
-	Consts_SmkcShift,	"Shift+"
-	Consts_SmkcCtrl,	"Ctrl+"
-	Consts_SmkcAlt,	"Alt+"
-	Consts_SOutOfRange,	"Value must be between %d and %d"
-	Consts_sAllFilter,	"All"
-	Consts_SInsertLineError,	"Unable to insert a line"
-	Consts_SIconToClipboard,	"Clipboard does not support Icons"
-	Consts_SCannotOpenClipboard,	"Cannot open clipboard: %s"
+	ComStrs_sInvalidComCtl32,	"This control requires version 4.70 or greater of COMCTL32.DLL"
+	ComStrs_sDateTimeMax,	"Date exceeds maximum of %s"
+	ComStrs_sDateTimeMin,	"Date is less than minimum of %s"
 	Consts_SInvalidPrinterOp,	"Operation not supported on selected printer"
 	Consts_SNoDefaultPrinter,	"There is no default printer currently selected"
 	Consts_SDuplicateMenus,	"Menu '%s' is already being used by another form"
@@ -1062,6 +1233,37 @@ BEGIN
 	Consts_SDockTreeRemoveError,	"Error removing control from dock tree"
 	Consts_SDockZoneNotFound,	" - Dock zone not found"
 	Consts_SDockZoneHasNoCtl,	" - Dock zone has no control"
+	Consts_SDockZoneVersionConflict,	"Error loading dock zone from the stream. Expecting version %d, but found %d."
+	Consts_SMultiSelectRequired,	"Multiselect mode must be on for this feature"
+	Consts_SErrorSettingCount,	"Error setting %s.Count"
+	Consts_SListBoxMustBeVirtual,	"Listbox (%s) style must be virtual in order to set Count"
+	Consts_SPageControlNotSet,	"PageControl must first be assigned"
+	Consts_SWindowsVistaRequired,	"%s requires Windows Vista or later"
+	Consts_SXPThemesRequired,	"%s requires themes to be enabled"
+	Consts_STaskDlgButtonCaption,	"Button%d"
+	Consts_STaskDlgRadioButtonCaption,	"RadioButton%d"
+	Consts_SmkcHome,	"Home"
+	Consts_SmkcLeft,	"Left"
+	Consts_SmkcUp,	"Up"
+	Consts_SmkcRight,	"Right"
+	Consts_SmkcDown,	"Down"
+	Consts_SmkcIns,	"Ins"
+	Consts_SmkcDel,	"Del"
+	Consts_SmkcShift,	"Shift+"
+	Consts_SmkcCtrl,	"Ctrl+"
+	Consts_SmkcAlt,	"Alt+"
+	Consts_SOutOfRange,	"Value must be between %d and %d"
+	Consts_sAllFilter,	"All"
+	Consts_SInsertLineError,	"Unable to insert a line"
+	Consts_SInvalidClipFmt,	"Invalid clipboard format"
+	Consts_SIconToClipboard,	"Clipboard does not support Icons"
+	Consts_SCannotOpenClipboard,	"Cannot open clipboard: %s"
+	Consts_SMsgDlgHelp,	"&Help"
+	Consts_SMsgDlgAbort,	"&Abort"
+	Consts_SMsgDlgRetry,	"&Retry"
+	Consts_SMsgDlgIgnore,	"&Ignore"
+	Consts_SMsgDlgAll,	"&All"
+	Consts_SMsgDlgNoToAll,	"N&o to All"
 	Consts_SMsgDlgYesToAll,	"Yes to &All"
 	Consts_SMsgDlgClose,	"&Close"
 	Consts_SmkcBkSp,	"BkSp"
@@ -1072,14 +1274,14 @@ BEGIN
 	Consts_SmkcPgUp,	"PgUp"
 	Consts_SmkcPgDn,	"PgDn"
 	Consts_SmkcEnd,	"End"
-	Consts_SmkcHome,	"Home"
-	Consts_SmkcLeft,	"Left"
-	Consts_SmkcUp,	"Up"
-	Consts_SmkcRight,	"Right"
-	Consts_SmkcDown,	"Down"
-	Consts_SmkcIns,	"Ins"
-	Consts_SVBitmaps,	"Bitmaps"
 	Consts_SVTIFFImages,	"TIFF Images"
+	Consts_SGridTooLarge,	"Grid too large for operation"
+	Consts_STooManyDeleted,	"Too many rows or columns deleted"
+	Consts_SIndexOutOfRange,	"Grid index out of range"
+	Consts_SFixedColTooBig,	"Fixed column count must be less than column count"
+	Consts_SFixedRowTooBig,	"Fixed row count must be less than row count"
+	Consts_SMaskErr,	"Invalid input value"
+	Consts_SMaskEditErr,	"Invalid input value.  Use escape key to abandon changes"
 	Consts_SMsgDlgWarning,	"Warning"
 	Consts_SMsgDlgError,	"Error"
 	Consts_SMsgDlgInformation,	"Information"
@@ -1088,12 +1290,27 @@ BEGIN
 	Consts_SMsgDlgNo,	"&No"
 	Consts_SMsgDlgOK,	"OK"
 	Consts_SMsgDlgCancel,	"Cancel"
-	Consts_SMsgDlgHelp,	"&Help"
-	Consts_SMsgDlgAbort,	"&Abort"
-	Consts_SMsgDlgRetry,	"&Retry"
-	Consts_SMsgDlgIgnore,	"&Ignore"
-	Consts_SMsgDlgAll,	"&All"
-	Consts_SMsgDlgNoToAll,	"N&o to All"
+	Consts_SControlParentSetToSelf,	"A control cannot have itself as its parent"
+	Consts_SOKButton,	"OK"
+	Consts_SCancelButton,	"Cancel"
+	Consts_SYesButton,	"&Yes"
+	Consts_SNoButton,	"&No"
+	Consts_SHelpButton,	"&Help"
+	Consts_SCloseButton,	"&Close"
+	Consts_SIgnoreButton,	"&Ignore"
+	Consts_SRetryButton,	"&Retry"
+	Consts_SAbortButton,	"Abort"
+	Consts_SAllButton,	"&All"
+	Consts_SCannotDragForm,	"Cannot drag a form"
+	Consts_SVMetafiles,	"Metafiles"
+	Consts_SVEnhMetafiles,	"Enhanced Metafiles"
+	Consts_SVIcons,	"Icons"
+	Consts_SVBitmaps,	"Bitmaps"
+	Consts_SVisibleChanged,	"Cannot change Visible in OnShow or OnHide"
+	Consts_SCannotShowModal,	"Cannot make a visible window modal"
+	Consts_SScrollBarRange,	"Scrollbar property out of range"
+	Consts_SPropertyOutOfRange,	"%s property out of range"
+	Consts_SMenuIndexError,	"Menu index out of range"
 	Consts_SMenuReinserted,	"Menu inserted twice"
 	Consts_SMenuNotFound,	"Sub-menu is not in menu"
 	Consts_SNoTimers,	"Not enough timers available"
@@ -1105,11 +1322,10 @@ BEGIN
 	Consts_SGroupIndexTooLow,	"GroupIndex cannot be less than a previous menu item's GroupIndex"
 	Consts_SNoMDIForm,	"Cannot create form. No MDI forms are currently active"
 	Consts_SImageCanvasNeedsBitmap,	"Can only modify an image if it contains a bitmap"
-	Consts_SControlParentSetToSelf,	"A control cannot have itself as its parent"
-	Consts_SCannotDragForm,	"Cannot drag a form"
-	Consts_SVMetafiles,	"Metafiles"
-	Consts_SVEnhMetafiles,	"Enhanced Metafiles"
-	Consts_SVIcons,	"Icons"
+	Consts_SUnknownExtension,	"Unknown picture file extension (.%s)"
+	Consts_SUnknownClipboardFormat,	"Unsupported clipboard format"
+	Consts_SOutOfResources,	"Out of system resources"
+	Consts_SNoCanvasHandle,	"Canvas does not allow drawing"
 	Consts_SInvalidImageSize,	"Invalid image size"
 	Consts_SInvalidImageList,	"Invalid ImageList"
 	Consts_SReplaceImage,	"Unable to Replace Image"
@@ -1122,10 +1338,10 @@ BEGIN
 	Consts_SParentRequired,	"Control '%s' has no parent window"
 	Consts_SParentGivenNotAParent,	"Parent given is not a parent of '%s'"
 	Consts_SMDIChildNotVisible,	"Cannot hide an MDI Child Form"
-	Consts_SVisibleChanged,	"Cannot change Visible in OnShow or OnHide"
-	Consts_SCannotShowModal,	"Cannot make a visible window modal"
-	Consts_SPropertyOutOfRange,	"%s property out of range"
-	Consts_SMenuIndexError,	"Menu index out of range"
+	RTLConsts_SGenericItemNotFound,	"Item not found"
+	RTLConsts_SGenericDuplicateItem,	"Duplicates not allowed"
+	RTLConsts_SInsufficientRtti,	"Insufficient RTTI available to support this operation"
+	RTLConsts_SParameterCountMismatch,	"Parameter count mismatch"
 	RTLConsts_SNonPublicType,	"Type '%s' is not declared in the interface section of a unit"
 	RTLConsts_SByRefArgMismatch,	"VAR and OUT arguments must match parameter type exactly"
 	Consts_SInvalidTabPosition,	"Tab position incompatible with current tab style"
@@ -1138,10 +1354,10 @@ BEGIN
 	Consts_SScanLine,	"Scan line index out of range"
 	Consts_SChangeIconSize,	"Cannot change the size of an icon"
 	Consts_SChangeWicSize,	"Cannot change the size of a WIC Image"
-	Consts_SUnknownExtension,	"Unknown picture file extension (.%s)"
-	Consts_SUnknownClipboardFormat,	"Unsupported clipboard format"
-	Consts_SOutOfResources,	"Out of system resources"
-	Consts_SNoCanvasHandle,	"Canvas does not allow drawing"
+	RTLConsts_sTimespanTooLong,	"Timespan too long"
+	RTLConsts_sTimespanValueCannotBeNan,	"Value cannot be NaN"
+	RTLConsts_SInvalidDate,	"''%s'' is not a valid date"
+	RTLConsts_SInvalidDateTime,	"''%s'' is not a valid date and time"
 	RTLConsts_SInvalidInteger,	"''%s'' is not a valid integer value"
 	RTLConsts_SInvalidTime,	"''%s'' is not a valid time"
 	RTLConsts_STimeEncodeError,	"Invalid argument to time encode"
@@ -1154,10 +1370,7 @@ BEGIN
 	RTLConsts_SNothingFound,	"No help found for %s"
 	RTLConsts_SArgumentOutOfRange,	"Argument out of range"
 	RTLConsts_SUnbalancedOperation,	"Unbalanced stack or queue operation"
-	RTLConsts_SGenericItemNotFound,	"Item not found"
-	RTLConsts_SGenericDuplicateItem,	"Duplicates not allowed"
-	RTLConsts_SInsufficientRtti,	"Insufficient RTTI available to support this operation"
-	RTLConsts_SParameterCountMismatch,	"Parameter count mismatch"
+	RTLConsts_SThreadExternalCheckTerminated,	"Cannot call CheckTerminated on an externally created thread"
 	RTLConsts_SThreadExternalSetReturnValue,	"Cannot call SetReturnValue on an externally create thread"
 	RTLConsts_SParamIsNegative,	"Parameter %s cannot be a negative value"
 	RTLConsts_SInputBufferExceed,	"Input buffer exceeded for %s = %d, %s = %d"
@@ -1166,14 +1379,14 @@ BEGIN
 	RTLConsts_SPathNotFound,	"The specified path was not found"
 	RTLConsts_SPathFormatNotSupported,	"The path format is not supported"
 	RTLConsts_SFileNotFound,	"The specified file was not found"
+	RTLConsts_SMissingDateTimeField,	"?"
 	RTLConsts_SLocalTimeInvalid,	"The given \"%s\" local time is invalid (situated within the missing period prior to DST)."
+	RTLConsts_SConvUnknownFamily,	"Unknown conversion family %s"
+	RTLConsts_SConvUnknownDescriptionWithPrefix,	"[%s%.8x]"
 	RTLConsts_hNoFilterViewer,	"No help viewer that supports filters"
 	RTLConsts_sInvalidStringAndObjectArrays,	"Length of Strings and Objects arrays must be equal"
 	RTLConsts_sInvalidTimeoutValue,	"Invalid Timeout value: %s"
-	RTLConsts_sTimespanTooLong,	"Timespan too long"
-	RTLConsts_sTimespanValueCannotBeNan,	"Value cannot be NaN"
-	RTLConsts_SInvalidDate,	"''%s'' is not a valid date"
-	RTLConsts_SInvalidDateTime,	"''%s'' is not a valid date and time"
+	RTLConsts_SReadError,	"Stream read error"
 	RTLConsts_SReadOnlyProperty,	"Property is read-only"
 	RTLConsts_SRegCreateFailed,	"Failed to create key %s"
 	RTLConsts_SRegGetDataFailed,	"Failed to get data for '%s'"
@@ -1189,7 +1402,7 @@ BEGIN
 	RTLConsts_SThreadExternalTerminate,	"Cannot terminate an externally created thread"
 	RTLConsts_SThreadExternalWait,	"Cannot wait for an externally created thread"
 	RTLConsts_SThreadStartError,	"Cannot call Start on a running or suspended thread"
-	RTLConsts_SThreadExternalCheckTerminated,	"Cannot call CheckTerminated on an externally created thread"
+	RTLConsts_SIniFileWriteError,	"Unable to write to %s"
 	RTLConsts_SInvalidFileName,	"Invalid file name - %s"
 	RTLConsts_SInvalidImage,	"Invalid stream format"
 	RTLConsts_SInvalidName,	"''%s'' is not a valid component name"
@@ -1205,7 +1418,7 @@ BEGIN
 	RTLConsts_SMemoryStreamError,	"Out of memory while expanding memory stream"
 	RTLConsts_SNoComSupport,	"%s has not been registered as a COM class"
 	RTLConsts_SPropertyException,	"Error reading %s%s%s: %s"
-	RTLConsts_SReadError,	"Stream read error"
+	SysConst_SInvalidCharCount,	"Invalid count (%d)"
 	SysConst_SInvalidDestinationIndex,	"Invalid destination index (%d)"
 	SysConst_SInvalidCodePage,	"Invalid code page"
 	SysConst_SInvalidEncodingName,	"Invalid encoding name"
@@ -1221,7 +1434,7 @@ BEGIN
 	RTLConsts_SDuplicateString,	"String list does not allow duplicates"
 	RTLConsts_SFCreateErrorEx,	"Cannot create file \"%s\". %s"
 	RTLConsts_SFOpenErrorEx,	"Cannot open file \"%s\". %s"
-	RTLConsts_SIniFileWriteError,	"Unable to write to %s"
+	SysConst_SShortDayNameTue,	"Tue"
 	SysConst_SShortDayNameWed,	"Wed"
 	SysConst_SShortDayNameThu,	"Thu"
 	SysConst_SShortDayNameFri,	"Fri"
@@ -1237,7 +1450,7 @@ BEGIN
 	SysConst_SInvalidDestinationArray,	"Invalid destination array"
 	SysConst_SCharIndexOutOfBounds,	"Character index out of bounds (%d)"
 	SysConst_SByteIndexOutOfBounds,	"Start index out of bounds (%d)"
-	SysConst_SInvalidCharCount,	"Invalid count (%d)"
+	SysConst_SShortMonthNameNov,	"Nov"
 	SysConst_SShortMonthNameDec,	"Dec"
 	SysConst_SLongMonthNameJan,	"January"
 	SysConst_SLongMonthNameFeb,	"February"
@@ -1253,7 +1466,7 @@ BEGIN
 	SysConst_SLongMonthNameDec,	"December"
 	SysConst_SShortDayNameSun,	"Sun"
 	SysConst_SShortDayNameMon,	"Mon"
-	SysConst_SShortDayNameTue,	"Tue"
+	SysConst_SInvalidPackageFile,	"Invalid package file '%s'"
 	SysConst_SInvalidPackageHandle,	"Invalid package handle"
 	SysConst_SDuplicatePackageUnit,	"Cannot load package '%s.'  It contains unit '%s', which is also contained in package '%s'"
 	SysConst_SOSError,	"System Error.  Code: %d.\r\n%s"
@@ -1269,7 +1482,7 @@ BEGIN
 	SysConst_SShortMonthNameAug,	"Aug"
 	SysConst_SShortMonthNameSep,	"Sep"
 	SysConst_SShortMonthNameOct,	"Oct"
-	SysConst_SShortMonthNameNov,	"Nov"
+	SysConst_SVarOverflow,	"Variant overflow"
 	SysConst_SVarInvalid,	"Invalid argument"
 	SysConst_SVarBadType,	"Invalid variant type"
 	SysConst_SVarNotImplemented,	"Operation not supported"
@@ -1285,7 +1498,7 @@ BEGIN
 	SysConst_SAbstractError,	"Abstract Error"
 	SysConst_SModuleAccessViolation,	"Access violation at address %p in module '%s'. %s of address %p"
 	SysConst_sErrorLoadingPackage,	"Can't load package %s.\r\n%s"
-	SysConst_SInvalidPackageFile,	"Invalid package file '%s'"
+	SysConst_SWriteAccess,	"Write"
 	SysConst_SFormatTooLong,	"Format string too long"
 	SysConst_SVarArrayCreate,	"Error creating variant or safe array"
 	SysConst_SVarArrayBounds,	"Variant or safe array index out of bounds"
@@ -1301,7 +1514,7 @@ BEGIN
 	SysConst_SVarTypeTooManyCustom,	"Too many custom variant types have been registered"
 	SysConst_SVarTypeCouldNotConvert,	"Could not convert variant of type (%s) into type (%s)"
 	SysConst_SVarTypeConvertOverflow,	"Overflow while converting variant of type (%s) into type (%s)"
-	SysConst_SVarOverflow,	"Variant overflow"
+	SysConst_SOverflow,	"Floating point overflow"
 	SysConst_SUnderflow,	"Floating point underflow"
 	SysConst_SInvalidPointer,	"Invalid pointer operation"
 	SysConst_SInvalidCast,	"Invalid class typecast"
@@ -1317,8 +1530,8 @@ BEGIN
 	SysConst_SArgumentMissing,	"No argument for format '%s'"
 	SysConst_SDispatchError,	"Variant method calls not supported"
 	SysConst_SReadAccess,	"Read"
-	SysConst_SWriteAccess,	"Write"
 	SysConst_SInvalidFloat,	"'%s' is not a valid floating point value"
+	SysConst_SInvalidDateTime,	"'%s' is not a valid date and time"
 	SysConst_SInvalidTimeStamp,	"'%d.%d' is not a valid timestamp"
 	SysConst_SDateEncodeError,	"Invalid argument to date encode"
 	SysConst_SOutOfMemory,	"Out of memory"
@@ -1333,16 +1546,24 @@ BEGIN
 	SysConst_SIntOverflow,	"Integer overflow"
 	SysConst_SInvalidOp,	"Invalid floating point operation"
 	SysConst_SZeroDivide,	"Floating point division by zero"
-	SysConst_SOverflow,	"Floating point overflow"
 END
 
 /* C:\Program Files (x86)\EurekaLab\EurekaLog 6\Delphi15\DIALOG.RES */
 /* c:\program files (x86)\embarcadero\rad studio\8.0\lib\Win32\release\Controls.res */
-/* C:\FACTURACIONXE\SisGym\SYSGYM\frmBaseUt.dfm */
-/* C:\FACTURACIONXE\SisGym\SYSGYM\frmSociosUt.dfm */
-/* C:\FACTURACIONXE\SisGym\SYSGYM\frmEstudiosCorporeosUt.dfm */
-/* C:\FACTURACIONXE\SisGym\SYSGYM\frmAcercaDeUt.dfm */
-/* C:\FACTURACIONXE\SisGym\SYSGYM\frmPrincipalUt.dfm */
-/* C:\FACTURACIONXE\SisGym\SYSGYM\dmIniDatosUt.dfm */
-/* C:\FACTURACIONXE\SisGym\SYSGYM\ProyectoSysGym.res */
-/* C:\FACTURACIONXE\SisGym\SYSGYM\ProyectoSysGym.drf */
+/* C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\frmBaseUt.dfm */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\lib\Win32\release\Buttons.res */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\lib\Win32\release\DBLogDlg.dfm */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\lib\Win32\release\DBPWDlg.dfm */
+/* c:\program files (x86)\embarcadero\rad studio\8.0\lib\Win32\release\DBCtrls.res */
+/* C:\Program Files (x86)\Embarcadero\RAD Studio\8.0\Components\EhLib\Lib\CalculatorEh.DFM */
+/* C:\Program Files (x86)\Embarcadero\RAD Studio\8.0\Components\EhLib\Lib\DBGridEhFindDlgs.dfm */
+/* C:\Program Files (x86)\Embarcadero\RAD Studio\8.0\Components\EhLib\Lib\DBGridEhSimpleFilterDlg.DFM */
+/* C:\Program Files (x86)\Embarcadero\RAD Studio\8.0\Components\EhLib\Lib\DBGRIDEH.RES */
+/* C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\dmIniDatosUt.dfm */
+/* C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\frmABMCUt.dfm */
+/* C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\frmSociosUt.dfm */
+/* C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\frmEstudiosCorporeosUt.dfm */
+/* C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\frmAcercaDeUt.dfm */
+/* C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\frmPrincipalUt.dfm */
+/* C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\ProyectoSysGym.res */
+/* C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\ProyectoSysGym.drf */

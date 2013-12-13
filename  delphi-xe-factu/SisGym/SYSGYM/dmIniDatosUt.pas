@@ -34,6 +34,8 @@ begin
     BBDDName:=MyIniFile.ReadString('Configuración','BD','');
     conAccesoBD.Params.Values['Database']:=BBDDName;
     try
+     conAccesoBD.LoginPrompt:=False;
+     conAccesoBD.Connected:=False;
      conAccesoBD.Connected:=True;
      conAccesoBD.Connected:=False;
     except
