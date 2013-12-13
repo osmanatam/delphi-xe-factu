@@ -235,12 +235,19 @@ object FLogin: TFLogin
     Left = 296
     Top = 8
   end
-  object qryLogin: TIBQuery
+  object ibqryLogin1: TIBQuery
     Database = DataModule1.DMBaseDatos
     Transaction = DataModule1.DMTransaction
     SQL.Strings = (
       '')
     Left = 224
     Top = 8
+  end
+  object qryLogin: TSQLQuery
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = DataModule1.conDMBaseDatos
+    Left = 224
+    Top = 72
   end
 end

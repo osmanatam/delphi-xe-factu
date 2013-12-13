@@ -12,7 +12,6 @@ type
     PageControl1: TPageControl;
     tgDatos: TTabSheet;
     tgConsulta: TTabSheet;
-    DBNavigator1: TDBNavigator;
     pnl3: TPanel;
     btnPrimero: TBitBtn;
     btnAnterior: TBitBtn;

@@ -24,6 +24,13 @@ inherited frmArticuloUt: TfrmArticuloUt
     inherited tgDatos: TTabSheet
       ExplicitWidth = 697
       ExplicitHeight = 315
+      inherited pnl3: TPanel
+        Top = 274
+        Width = 697
+        TabOrder = 5
+        ExplicitTop = 274
+        ExplicitWidth = 697
+      end
       inherited DBNavigator1: TDBNavigator
         Top = 276
         Width = 697
@@ -32,18 +39,11 @@ inherited frmArticuloUt: TfrmArticuloUt
         ExplicitTop = 276
         ExplicitWidth = 697
       end
-      inherited pnl3: TPanel
-        Top = 235
-        Width = 697
-        TabOrder = 5
-        ExplicitTop = 235
-        ExplicitWidth = 697
-      end
       object grpArticulo: TGroupBox
         Left = 0
         Top = 0
         Width = 697
-        Height = 235
+        Height = 274
         Align = alClient
         Caption = 'Datos Rapidos'
         Color = cl3DLight

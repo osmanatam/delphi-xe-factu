@@ -52,14 +52,13 @@ object frmBaseUt: TfrmBaseUt
     TabOrder = 1
     object tgDatos: TTabSheet
       Caption = 'Datos'
-      ExplicitLeft = 8
       object pnl3: TPanel
         Left = 0
         Top = 222
         Width = 626
         Height = 41
         Align = alBottom
-        TabOrder = 1
+        TabOrder = 0
         object btnPrimero: TBitBtn
           Left = 4
           Top = 8
@@ -1052,30 +1051,6 @@ object frmBaseUt: TfrmBaseUt
           ParentDoubleBuffered = False
           TabOrder = 8
         end
-      end
-      object DBNavigator1: TDBNavigator
-        Left = 443
-        Top = 162
-        Width = 180
-        Height = 18
-        ParentCustomHint = False
-        VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
-        Align = alCustom
-        Hints.Strings = (
-          'Primero'
-          'Anterior'
-          'Siguiente'
-          'Ultimo'
-          'Insertar'
-          'Eliminar'
-          'Editar'
-          'Guardar'
-          'Cancelar'
-          'Refrescar')
-        ParentShowHint = False
-        ConfirmDelete = False
-        ShowHint = False
-        TabOrder = 0
       end
     end
     object tgConsulta: TTabSheet

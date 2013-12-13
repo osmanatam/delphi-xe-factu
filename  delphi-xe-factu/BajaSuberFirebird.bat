@@ -2,3 +2,6 @@ net stop FirebirdGuardianDefaultInstance
 net stop FirebirdServerDefaultInstance
 net start FirebirdGuardianDefaultInstance
 net start FirebirdServerDefaultInstance
+
+net stop FirebirdServerfirebird_25
+net start FirebirdServerfirebird_25

@@ -1,0 +1,23 @@
+
+*****************************************************************************************************************************
+
+INSTALACIÓN DE GYMSOFTABC - VERSION DEMO
+
+	1. Para instalar GymSoftABC simplemente ejecute GymSoftABC.
+        2. Esta versión tiene 30 días de prueba para conocer el funcionamiento del software. Una vez expirado el período de
+           prueba, no podrá seguir utilizando el software.
+	3. Datos de acceso del usuario Administrador --> usuario: admin / clave: admin
+
+
+	4. Adquirir versión FULL aquí --> http://www.cgasoluciones.com/index.php/descargas-demo
+
+	5. Cualquier consulta, duda, escríbenos a --> info@cgasoluciones.com
+
+                                          -----------------------------------------------------
+						CGA SOLUCIONES - IT OutSourcing Specialists
+					    Sistemas, Diseño Web e Infraestructura Tecnológica 
+					                   www.cgasoluciones.com
+                                          -----------------------------------------------------		
+
+
+*****************************************************************************************************************************

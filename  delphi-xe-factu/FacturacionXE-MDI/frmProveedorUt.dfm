@@ -19,19 +19,17 @@ inherited frmProveedor: TfrmProveedor
     inherited tgDatos: TTabSheet
       ExplicitWidth = 577
       ExplicitHeight = 253
-      inherited DBNavigator1: TDBNavigator
-        Top = 214
+      inherited pnl3: TPanel
+        Top = 212
         Width = 577
-        DataSource = dsProveedor
-        OnClick = DBNavigator1Click
-        ExplicitTop = 214
+        ExplicitTop = 212
         ExplicitWidth = 577
       end
       object GroupBox1: TGroupBox
         Left = 0
         Top = 0
         Width = 577
-        Height = 253
+        Height = 212
         Align = alClient
         Caption = 'Datos Proveedor'
         Color = cl3DLight
@@ -44,7 +42,6 @@ inherited frmProveedor: TfrmProveedor
         ParentColor = False
         ParentFont = False
         TabOrder = 1
-        ExplicitHeight = 214
         object Label1: TLabel
           Left = 97
           Top = 21
