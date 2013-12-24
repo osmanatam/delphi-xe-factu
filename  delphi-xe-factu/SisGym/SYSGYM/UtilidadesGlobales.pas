@@ -3,9 +3,13 @@ unit UtilidadesGlobales;
 interface
 
 
+
  uses Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, frmBaseUt, ExtCtrls, FMTBcd, StdCtrls, DB, DBClient, Provider,
   SqlExpr, DBXCommon, Buttons;
+type
+ vShowStyle = (vShow, vShowModal);
+
  //funciones para consultar a la bd
  function ConsultaBD(FuenteDeDato: TDataSet):Boolean; overload;
  function ConsultaBD(FuentesDeDatos: array of TDataSet):Boolean; overload;
@@ -21,7 +25,15 @@ procedure MoviendoRegistro(QryMante:TClientDataSet; Sender:TObject; const Botone
  {Reemplazar where de condicione en los queris}
 procedure RemplazarWhere(QrySQL:TSQLQuery; TxtWhere:string=''); overload;
 procedure RemplazarWhere(QrySQL: TSQLQuery; PosicionWhere: Integer; TxtWhere: string=''); overload;
+procedure msgError (mensaje, titulo : String);
+procedure msgInfo (mensaje, titulo : String);
+procedure msgAtencion (mensaje, titulo : String);
+function msgOKn (mensaje, titulo : String) : boolean;
+function msgSi (mensaje, titulo : String) : boolean;
+function msgSin (mensaje, titulo : String) : boolean;
+function msgOK (mensaje, titulo : String) : boolean;
 
+procedure CrearFormulario(TvForm: TFormClass; vEstiloShow: vShowStyle = vShow);
 
 var
  vOKConexion: Boolean; //el datamodule setea para iniciar el frmPrincipal
@@ -284,6 +296,83 @@ begin
     end;
   end;
   QrySQL.SQL.Text:= Trim(Trim(TextoTrabajoSQL) + ' '+Trim(TxtWhere) +' '+ Trim(TextoOrderBySQL));
+end;
+
+
+//mensaje de error, con el botón "Aceptar"
+procedure msgError (mensaje, titulo : String);
+begin
+  Application.MessageBox(pchar(mensaje),pchar(titulo), (MB_OK + MB_ICONSTOP));
+end;
+
+//mensaje de información, con el botón "Aceptar"
+procedure msgInfo (mensaje, titulo : String);
+begin
+  application.MessageBox(pchar(mensaje),pchar(titulo),(MB_OK + MB_ICONINFORMATION));
+end;
+
+//mensaje de confirmación, con los botones Sí/No, devuelve True si se pulsa "Sí"
+//el botón por defecto será "Sí"
+function msgSi (mensaje, titulo : String) : boolean;
+begin
+  if application.MessageBox (pchar(mensaje),pchar(titulo), (MB_YESNO + MB_ICONQUESTION)) = IDYES then
+    result := true
+  else
+    result := false;
+end;
+
+//mensaje de confirmación, con los botones Sí/No, devuelve True si se pulsa "Sí"
+//el botón por defecto será "No"
+function msgSin (mensaje, titulo : String) : boolean;
+begin
+  if application.MessageBox (pchar(mensaje),pchar(titulo), (MB_YESNO + MB_DEFBUTTON2 + MB_ICONQUESTION)) = IDYES then
+    result := true
+  else
+    result := false;
+end;
+
+
+//mensaje de exclamación, con los botones Aceptar/Cancelar, devuelve True si se pulsa "Aceptar"
+//el botón por defecto será "Aceptar"
+function msgOK (mensaje, titulo : String) : boolean;
+begin
+  if application.MessageBox (pchar(mensaje),pchar(titulo), (MB_OKCANCEL + MB_ICONWARNING)) = IDOK then
+    result := true
+  else
+    result := false;
+end;
+
+//mensaje de exclamación, con los botones Aceptar/Cancelar, devuelve True si se pulsa "Aceptar"
+//el botón por defecto será "Cancelar"
+function msgOKn (mensaje, titulo : String) : boolean;
+begin
+  if application.MessageBox (pchar(mensaje),pchar(titulo), (MB_OKCANCEL + MB_DEFBUTTON2 + MB_ICONWARNING)) = IDOK then
+    result := true
+  else
+    result := false;
+end;
+
+//mensaje de exclamación, con el botón Aceptar
+procedure msgAtencion (mensaje, titulo : String);
+begin
+  application.MessageBox(pchar(mensaje),pchar(titulo), (MB_OK + MB_ICONWARNING));
+end;
+
+procedure CrearFormulario(TvForm: TFormClass; vEstiloShow: vShowStyle);
+var i: Integer;
+begin
+  i:= Screen.FormCount-1;
+  while (i > 0) and not (Screen.Forms[i] is TvForm) do Dec(i);
+  if Screen.Forms[i] is TvForm then
+   if vEstiloShow = vShow then
+    Screen.Forms[i].Show
+   else
+    Screen.Forms[i].ShowModal
+  else
+   if vEstiloShow = vShow then
+    TvForm.Create(Application).Show
+   else
+    TvForm.Create(Application).ShowModal;
 end;
 
 end.

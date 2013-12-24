@@ -30,6 +30,7 @@ type
     procedure btnCalcularContexturaClick(Sender: TObject);
     procedure edtTallaAlturaKeyPress(Sender: TObject; var Key: Char);
     procedure edtCincunfMunhecaKeyPress(Sender: TObject; var Key: Char);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -114,6 +115,13 @@ begin
   inherited;
   if Key=#13 then
    edtCincunfMunheca.SetFocus;
+end;
+
+procedure TfrmEstudiosCorporeos.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  inherited;
+  Action:=caFree;
 end;
 
 end.

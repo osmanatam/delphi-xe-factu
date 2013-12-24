@@ -10,7 +10,8 @@ uses
   frmAcercaDeUt in 'frmAcercaDeUt.pas' {frmAcercaDe},
   UtilidadesGlobales in 'UtilidadesGlobales.pas',
   frmABMCUt in 'frmABMCUt.pas' {frmBaseABMC},
-  frmSociosUt in 'frmSociosUt.pas' {frmSocios};
+  frmSociosUt in 'frmSociosUt.pas' {frmSocios},
+  frmPersonaUt in 'frmPersonaUt.pas' {frmPersona};
 
 {$R *.res}
 
@@ -19,5 +20,6 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TdmIniDatos, dmIniDatos);
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TfrmPersona, frmPersona);
   Application.Run;
 end.

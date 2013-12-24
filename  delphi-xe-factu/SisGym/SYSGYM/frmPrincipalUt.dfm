@@ -11,15 +11,15 @@ object frmPrincipal: TfrmPrincipal
   Font.Name = 'Tahoma'
   Font.Style = []
   FormStyle = fsMDIForm
-  Menu = mm1
+  Menu = mmMenu
   OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
-  object mm1: TMainMenu
-    Left = 16
-    Top = 16
+  object mmMenu: TMainMenu
+    Left = 120
+    Top = 32
     object mnuPersonas: TMenuItem
       Caption = 'Personas'
       object mnuPEMantenimientodePersonas: TMenuItem

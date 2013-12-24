@@ -22,7 +22,7 @@ type
     btnAnterior: TSpeedButton;
     btnSiguiente: TSpeedButton;
     btnUltimo: TSpeedButton;
-    pgc1: TPageControl;
+    pgcBase: TPageControl;
     tsConsulta: TTabSheet;
     tsMantenimiento: TTabSheet;
     pnlPnlParametrosBus: TPanel;
@@ -36,6 +36,11 @@ type
     procedure btnAcciones(Sender: TObject);
     procedure btnMoverRegistros(Sender: TObject);
     procedure btnMostrarClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure dsCabeceraStateChange(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure dbGrillaConsultaDblClick(Sender: TObject);
+    procedure pgcBaseChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -50,8 +55,11 @@ implementation
 {$R *.dfm}
 
 procedure TfrmBaseABMC.btnAcciones(Sender: TObject);
+var BookMarkCab,BookMarkDet: TBookmark;
 begin
   inherited;
+  BookMarkCab:=cdsCabecera.Bookmark;
+  BookMarkDet:=cdsDetalle.Bookmark;
   if Sender=btnNuevoGrabar then
    begin
     if btnNuevoGrabar.Caption='Nuevo' then
@@ -64,10 +72,18 @@ begin
      end
     else
      begin
+
+        if not GrabarEnBD(cdsCabecera) then
+         begin
+          msgError('Ocurrio algun imprevisto, verifique','Error en Grabar');
+          Exit;
+         end;
         btnNuevoGrabar.Caption:='Nuevo';
         btnEliminar.Caption:='Eliminar';
         btnEditar.Enabled:=True;
         btnEliminar.Enabled:=True;
+        cdsCabecera.Refresh; cdsDetalle.Refresh;
+
      end;
    end;
   ///////
@@ -83,18 +99,18 @@ begin
     else
     begin
       if BorrarEnBD(CdsCabecera) then
+       begin
          btnMostrar.Click;
+         ConsultaBD([cdsCabecera,cdsDetalle]);
+         cdsCabecera.Bookmark:=BookMarkCab;
+         cdsDetalle.Bookmark:=BookMarkDet;
+       end;
     end;
-
   end;
   //////
   if sender=btnEditar then
-   begin
     cdsCabecera.Edit;
-    btnNuevoGrabar.Caption:='Guardar';
-    btnEliminar.Caption:='Cancelar';
-    btnEditar.Enabled:=False;
-   end;
+
 end;
 
 procedure TfrmBaseABMC.btnMostrarClick(Sender: TObject);
@@ -110,6 +126,47 @@ begin
   inherited;
   MoviendoRegistro(cdsCabecera, Sender,
     [btnprimero, btnanterior, btnsiguiente, btnultimo]);
+end;
+
+procedure TfrmBaseABMC.dbGrillaConsultaDblClick(Sender: TObject);
+begin
+  inherited;
+  pgcBase.ActivePageIndex:=1;
+  btnNuevoGrabar.Visible:=True;
+  btnEditar.Visible:=True;
+  btnEliminar.Visible:=True;
+end;
+
+procedure TfrmBaseABMC.dsCabeceraStateChange(Sender: TObject);
+begin
+  inherited;
+  if cdsCabecera.State = dsEdit then
+   begin
+    btnNuevoGrabar.Caption:='Guardar';
+    btnEliminar.Caption:='Cancelar';
+    btnEditar.Enabled:=False;
+   end;
+end;
+
+procedure TfrmBaseABMC.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  inherited;
+   Action:= caFree;
+end;
+
+procedure TfrmBaseABMC.FormCreate(Sender: TObject);
+begin
+  inherited;
+  pgcBase.ActivePageIndex:=0;
+end;
+
+procedure TfrmBaseABMC.pgcBaseChange(Sender: TObject);
+begin
+  inherited;
+  btnNuevoGrabar.Visible:=pgcBase.ActivePageIndex=1;
+  btnEditar.Visible:=pgcBase.ActivePageIndex=1;
+  btnEliminar.Visible:=pgcBase.ActivePageIndex=1;
+
 end;
 
 end.
