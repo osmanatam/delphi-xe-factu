@@ -42,31 +42,35 @@
     <Transaction>2013/12/12 11:22:47.000.787,C:\FACTURACIONXE\SisGym\SYSGYM\Unit1.dfm=C:\FACTURACIONXE\SisGym\SYSGYM\frmBaseUt.dfm</Transaction>
     <Transaction>2013/12/12 11:22:47.000.787,C:\FACTURACIONXE\SisGym\SYSGYM\Unit1.pas=C:\FACTURACIONXE\SisGym\SYSGYM\frmBaseUt.pas</Transaction>
     <Transaction>2013/12/12 11:24:00.000.812,=C:\FACTURACIONXE\SisGym\SYSGYM\Unit1.pas</Transaction>
-    <Transaction>2013/12/12 11:24:42.000.520,C:\FACTURACIONXE\SisGym\SYSGYM\Unit1.pas=C:\FACTURACIONXE\SisGym\SYSGYM\frmEstudiosCorporeos.pas</Transaction>
     <Transaction>2013/12/12 11:24:42.000.520,C:\FACTURACIONXE\SisGym\SYSGYM\Unit1.dfm=C:\FACTURACIONXE\SisGym\SYSGYM\frmEstudiosCorporeos.dfm</Transaction>
+    <Transaction>2013/12/12 11:24:42.000.520,C:\FACTURACIONXE\SisGym\SYSGYM\Unit1.pas=C:\FACTURACIONXE\SisGym\SYSGYM\frmEstudiosCorporeos.pas</Transaction>
     <Transaction>2013/12/12 11:24:52.000.763,C:\FACTURACIONXE\SisGym\SYSGYM\frmEstudiosCorporeos.dfm=C:\FACTURACIONXE\SisGym\SYSGYM\frmEstudiosCorporeosUt.dfm</Transaction>
     <Transaction>2013/12/12 11:24:52.000.763,C:\FACTURACIONXE\SisGym\SYSGYM\frmEstudiosCorporeos.pas=C:\FACTURACIONXE\SisGym\SYSGYM\frmEstudiosCorporeosUt.pas</Transaction>
     <Transaction>2013/12/12 11:28:41.000.035,=C:\FACTURACIONXE\SisGym\SYSGYM\Unit2.pas</Transaction>
     <Transaction>2013/12/12 11:29:01.000.299,C:\FACTURACIONXE\SisGym\SYSGYM\Unit2.pas=C:\FACTURACIONXE\SisGym\SYSGYM\frmSociosUt.pas</Transaction>
     <Transaction>2013/12/12 11:29:01.000.299,C:\FACTURACIONXE\SisGym\SYSGYM\Unit2.dfm=C:\FACTURACIONXE\SisGym\SYSGYM\frmSociosUt.dfm</Transaction>
     <Transaction>2013/12/12 11:39:14.000.560,=C:\FACTURACIONXE\SisGym\SYSGYM\Unit1.pas</Transaction>
-    <Transaction>2013/12/12 12:26:42.000.772,C:\FACTURACIONXE\SisGym\SYSGYM\Unit1.pas=C:\FACTURACIONXE\SisGym\SYSGYM\dmIniDatosUt.pas</Transaction>
     <Transaction>2013/12/12 12:26:42.000.772,C:\FACTURACIONXE\SisGym\SYSGYM\Unit1.dfm=C:\FACTURACIONXE\SisGym\SYSGYM\dmIniDatosUt.dfm</Transaction>
+    <Transaction>2013/12/12 12:26:42.000.772,C:\FACTURACIONXE\SisGym\SYSGYM\Unit1.pas=C:\FACTURACIONXE\SisGym\SYSGYM\dmIniDatosUt.pas</Transaction>
     <Transaction>2013/12/12 17:25:20.000.063,=C:\FACTURACIONXE\SisGym\SYSGYM\Unit1.pas</Transaction>
-    <Transaction>2013/12/12 17:34:48.000.242,C:\FACTURACIONXE\SisGym\SYSGYM\frmAcercaDeUt.dfm=C:\FACTURACIONXE\SisGym\SYSGYM\Unit1.dfm</Transaction>
     <Transaction>2013/12/12 17:34:48.000.242,C:\FACTURACIONXE\SisGym\SYSGYM\frmAcercaDeUt.pas=C:\FACTURACIONXE\SisGym\SYSGYM\Unit1.pas</Transaction>
+    <Transaction>2013/12/12 17:34:48.000.242,C:\FACTURACIONXE\SisGym\SYSGYM\frmAcercaDeUt.dfm=C:\FACTURACIONXE\SisGym\SYSGYM\Unit1.dfm</Transaction>
     <Transaction>2013/12/13 11:58:59.000.404,=C:\FACTURACIONXE\SisGym\SYSGYM\Unit1.pas</Transaction>
     <Transaction>2013/12/13 11:59:24.000.358,C:\FACTURACIONXE\SisGym\SYSGYM\Unit1.pas=C:\FACTURACIONXE\SisGym\SYSGYM\UtlidadesGlobales.pas</Transaction>
     <Transaction>2013/12/13 12:09:16.000.400,C:\FACTURACIONXE\SisGym\SYSGYM\UtlidadesGlobales.pas=C:\FACTURACIONXE\SisGym\SYSGYM\UtilidadesGlobales.pas</Transaction>
-    <Transaction>2013/12/13 14:37:30.094,=C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\Unit1.pas</Transaction>
-    <Transaction>2013/12/13 14:38:01.431,C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\frmABMCUt.dfm=C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\Unit1.dfm</Transaction>
-    <Transaction>2013/12/13 14:38:01.431,C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\frmABMCUt.pas=C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\Unit1.pas</Transaction>
-    <Transaction>2013/12/13 16:14:39.608,C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\frmSociosUt.pas=</Transaction>
-    <Transaction>2013/12/13 16:14:45.300,=C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\Unit1.pas</Transaction>
-    <Transaction>2013/12/13 16:14:56.306,=C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\Unit1.pas</Transaction>
-    <Transaction>2013/12/13 16:15:07.630,C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\frmSociosUt.dfm=C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\Unit1.dfm</Transaction>
-    <Transaction>2013/12/13 16:15:07.630,C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\frmSociosUt.pas=C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\Unit1.pas</Transaction>
-  </Transactions>  <ProjectSortOrder AutoSort="0" SortType="0">
+    <Transaction>2013/12/13 14:37:30.000.094,=C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\Unit1.pas</Transaction>
+    <Transaction>2013/12/13 14:38:01.000.431,C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\frmABMCUt.pas=C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\Unit1.pas</Transaction>
+    <Transaction>2013/12/13 14:38:01.000.431,C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\frmABMCUt.dfm=C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\Unit1.dfm</Transaction>
+    <Transaction>2013/12/13 16:14:39.000.608,C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\frmSociosUt.pas=</Transaction>
+    <Transaction>2013/12/13 16:14:45.000.300,=C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\Unit1.pas</Transaction>
+    <Transaction>2013/12/13 16:14:56.000.306,=C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\Unit1.pas</Transaction>
+    <Transaction>2013/12/13 16:15:07.000.630,C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\frmSociosUt.dfm=C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\Unit1.dfm</Transaction>
+    <Transaction>2013/12/13 16:15:07.000.630,C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\frmSociosUt.pas=C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\Unit1.pas</Transaction>
+    <Transaction>2013/12/13 16:49:00.000.755,=C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\Unit1.pas</Transaction>
+    <Transaction>2013/12/13 16:49:20.000.958,C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\Unit1.pas=C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\frmPersonaUt.pas</Transaction>
+    <Transaction>2013/12/13 16:49:20.000.958,C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\Unit1.dfm=C:\FACTURACIONXE\ delphi-xe-factu\SisGym\SYSGYM\frmPersonaUt.dfm</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="dmIniDatosUt.pas"/>
     <File Path="dmIniDatosUt.dfm"/>
     <File Path="frmAcercaDeUt.pas"/>
@@ -79,8 +83,10 @@
     <File Path="frmPrincipalUt.dfm"/>
     <File Path="frmABMCUt.pas"/>
     <File Path="frmABMCUt.dfm"/>
-    <File Path="UtilidadesGlobales.pas"/>
     <File Path="frmSociosUt.pas"/>
     <File Path="frmSociosUt.dfm"/>
+    <File Path="frmPersonaUt.pas"/>
+    <File Path="frmPersonaUt.dfm"/>
+    <File Path="UtilidadesGlobales.pas"/>
   </ProjectSortOrder>
 </BorlandProject>

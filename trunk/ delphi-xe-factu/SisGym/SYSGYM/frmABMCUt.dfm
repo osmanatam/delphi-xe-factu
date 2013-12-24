@@ -1,7 +1,10 @@
 inherited frmBaseABMC: TfrmBaseABMC
+  BorderStyle = bsDialog
   Caption = 'frmBaseABMC'
-  ClientHeight = 373
-  ClientWidth = 748
+  ClientHeight = 383
+  ClientWidth = 758
+  OnClose = FormClose
+  OnCreate = FormCreate
   ExplicitWidth = 764
   ExplicitHeight = 411
   PixelsPerInch = 96
@@ -9,28 +12,25 @@ inherited frmBaseABMC: TfrmBaseABMC
   object pnlCabecera: TPanel
     Left = 0
     Top = 0
-    Width = 748
+    Width = 758
     Height = 33
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 553
   end
   object pnlPie: TPanel
     Left = 0
-    Top = 333
-    Width = 748
+    Top = 343
+    Width = 758
     Height = 40
     Align = alBottom
     Color = clInactiveCaption
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 320
-    ExplicitWidth = 553
     DesignSize = (
-      748
+      758
       40)
     object btnPrimero: TSpeedButton
-      Left = 417
+      Left = 423
       Top = 10
       Width = 74
       Height = 25
@@ -48,9 +48,10 @@ inherited frmBaseABMC: TfrmBaseABMC
       ParentShowHint = False
       ShowHint = True
       OnClick = btnMoverRegistros
+      ExplicitLeft = 417
     end
     object btnAnterior: TSpeedButton
-      Left = 493
+      Left = 500
       Top = 10
       Width = 74
       Height = 25
@@ -61,9 +62,11 @@ inherited frmBaseABMC: TfrmBaseABMC
       Flat = True
       ParentShowHint = False
       ShowHint = True
+      OnClick = btnMoverRegistros
+      ExplicitLeft = 493
     end
     object btnSiguiente: TSpeedButton
-      Left = 568
+      Left = 576
       Top = 10
       Width = 74
       Height = 25
@@ -74,9 +77,11 @@ inherited frmBaseABMC: TfrmBaseABMC
       Flat = True
       ParentShowHint = False
       ShowHint = True
+      OnClick = btnMoverRegistros
+      ExplicitLeft = 568
     end
     object btnUltimo: TSpeedButton
-      Left = 644
+      Left = 653
       Top = 10
       Width = 74
       Height = 25
@@ -87,6 +92,8 @@ inherited frmBaseABMC: TfrmBaseABMC
       Flat = True
       ParentShowHint = False
       ShowHint = True
+      OnClick = btnMoverRegistros
+      ExplicitLeft = 644
     end
     object btnNuevoGrabar: TButton
       Left = 21
@@ -95,6 +102,7 @@ inherited frmBaseABMC: TfrmBaseABMC
       Height = 26
       Caption = 'Nuevo'
       TabOrder = 0
+      Visible = False
       OnClick = btnAcciones
     end
     object btnEditar: TButton
@@ -104,6 +112,8 @@ inherited frmBaseABMC: TfrmBaseABMC
       Height = 26
       Caption = 'Editar'
       TabOrder = 1
+      Visible = False
+      OnClick = btnAcciones
     end
     object btnEliminar: TButton
       Left = 217
@@ -112,34 +122,34 @@ inherited frmBaseABMC: TfrmBaseABMC
       Height = 26
       Caption = 'Elininar'
       TabOrder = 2
+      Visible = False
+      OnClick = btnAcciones
     end
   end
-  object pgc1: TPageControl
+  object pgcBase: TPageControl
     Left = 0
     Top = 33
-    Width = 748
-    Height = 300
+    Width = 758
+    Height = 310
     ActivePage = tsConsulta
     Align = alClient
     TabOrder = 2
-    ExplicitHeight = 287
+    OnChange = pgcBaseChange
     object tsConsulta: TTabSheet
       Caption = '&Consulta'
-      ExplicitHeight = 259
       object pnlPnlParametrosBus: TPanel
         Left = 0
         Top = 0
-        Width = 740
+        Width = 750
         Height = 77
         Align = alTop
         ParentBackground = False
         TabOrder = 0
-        ExplicitTop = 39
       end
       object pnlBuscar: TPanel
         Left = 0
         Top = 77
-        Width = 740
+        Width = 750
         Height = 44
         Align = alTop
         Color = clMoneyGreen
@@ -147,12 +157,12 @@ inherited frmBaseABMC: TfrmBaseABMC
         TabOrder = 1
         Visible = False
         DesignSize = (
-          740
+          750
           44)
         object btnMostrar: TBitBtn
           Left = 87
           Top = 4
-          Width = 604
+          Width = 614
           Height = 35
           Anchors = [akLeft, akTop, akRight]
           Caption = '&Buscar'
@@ -165,8 +175,8 @@ inherited frmBaseABMC: TfrmBaseABMC
       object dbGrillaConsulta: TDBGridEh
         Left = 0
         Top = 121
-        Width = 740
-        Height = 151
+        Width = 750
+        Height = 161
         Align = alClient
         AllowedOperations = []
         DataGrouping.GroupLevels = <>
@@ -197,6 +207,7 @@ inherited frmBaseABMC: TfrmBaseABMC
         TitleFont.Style = [fsBold]
         UseMultiTitle = True
         VTitleMargin = 6
+        OnDblClick = dbGrillaConsultaDblClick
         object RowDetailData: TRowDetailPanelControlEh
         end
       end
@@ -204,7 +215,6 @@ inherited frmBaseABMC: TfrmBaseABMC
     object tsMantenimiento: TTabSheet
       Caption = '&Mantenimiento'
       ImageIndex = 1
-      ExplicitHeight = 259
     end
   end
   object qryCabecera: TSQLQuery
@@ -228,6 +238,7 @@ inherited frmBaseABMC: TfrmBaseABMC
   end
   object dsCabecera: TDataSource
     DataSet = cdsCabecera
+    OnStateChange = dsCabeceraStateChange
     Left = 472
     Top = 48
   end

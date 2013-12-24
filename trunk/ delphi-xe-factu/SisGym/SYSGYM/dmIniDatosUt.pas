@@ -3,11 +3,13 @@ unit dmIniDatosUt;
 interface
 
 uses
-  SysUtils, Classes, DBXFirebird, DB, SqlExpr, IniFiles, Dialogs;
+  SysUtils, Classes, DBXFirebird, DB, SqlExpr, IniFiles, Dialogs, ImgList,
+  Controls;
 
 type
   TdmIniDatos = class(TDataModule)
     conAccesoBD: TSQLConnection;
+    ilImagenes: TImageList;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }

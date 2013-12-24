@@ -8,7 +8,7 @@ uses
 
 type
   TfrmPrincipal = class(TForm)
-    mm1: TMainMenu;
+    mmMenu: TMainMenu;
     mnuPersonas: TMenuItem;
     mnuChequeos: TMenuItem;
     mnuPEMantenimientodePersonas: TMenuItem;
@@ -40,23 +40,17 @@ end;
 
 procedure TfrmPrincipal.mnuContexturaCorporalClick(Sender: TObject);
 begin
-  if not Assigned(frmEstudiosCorporeos) then
-    frmEstudiosCorporeos:= tfrmEstudiosCorporeos.Create(Self);
-  frmEstudiosCorporeos.Show;
+ CrearFormulario(TfrmEstudiosCorporeos);
 end;
 
 procedure TfrmPrincipal.mnuCreditosClick(Sender: TObject);
 begin
-  if not Assigned(frmAcercaDe) then
-    frmAcercaDe:=TfrmAcercaDe.Create(Self);
-  frmAcercaDe.Show;
+ CrearFormulario(TfrmAcercaDe);
 end;
 
 procedure TfrmPrincipal.mnuPEMantenimientodePersonasClick(Sender: TObject);
 begin
-  if not Assigned(frmSocios) then
-    frmSocios:=TfrmSocios.Create(Self);
-  frmSocios.Show;
+ CrearFormulario(TfrmSocios);
 end;
 
 end.

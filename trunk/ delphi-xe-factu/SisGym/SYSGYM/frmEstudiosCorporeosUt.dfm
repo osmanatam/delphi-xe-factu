@@ -2,6 +2,7 @@ inherited frmEstudiosCorporeos: TfrmEstudiosCorporeos
   Caption = 'Estudios'
   ClientHeight = 245
   ClientWidth = 541
+  OnClose = FormClose
   ExplicitWidth = 557
   ExplicitHeight = 283
   PixelsPerInch = 96

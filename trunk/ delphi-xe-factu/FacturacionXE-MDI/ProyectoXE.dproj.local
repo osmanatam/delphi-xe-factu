@@ -1,29 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>2013/04/30 16:24:24.000.920,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\ProyectoXE.dproj=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\MDIAPP.dproj</Transaction>
+    <Transaction>2013/04/30 16:24:24.000.920,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\MDIAPP.dproj=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\ProyectoXE.dproj</Transaction>
     <Transaction>2013/04/30 16:25:37.000.967,=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Unit1.pas</Transaction>
-    <Transaction>2013/04/30 16:26:52.000.394,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmBase.dfm=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Unit1.dfm</Transaction>
-    <Transaction>2013/04/30 16:26:52.000.394,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmBase.pas=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Unit1.pas</Transaction>
+    <Transaction>2013/04/30 16:26:52.000.394,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Unit1.pas=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmBase.pas</Transaction>
+    <Transaction>2013/04/30 16:26:52.000.394,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Unit1.dfm=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmBase.dfm</Transaction>
     <Transaction>2013/04/30 16:27:40.000.632,=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Unit1.pas</Transaction>
-    <Transaction>2013/04/30 16:28:24.000.129,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmArticulos.pas=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Unit1.pas</Transaction>
-    <Transaction>2013/04/30 16:28:24.000.129,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmArticulos.dfm=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Unit1.dfm</Transaction>
-    <Transaction>2013/04/30 16:29:01.000.725,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmPrincipalMain.pas=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Main.pas</Transaction>
-    <Transaction>2013/04/30 16:29:01.000.725,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmPrincipalMain.dfm=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Main.dfm</Transaction>
+    <Transaction>2013/04/30 16:28:24.000.129,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Unit1.pas=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmArticulos.pas</Transaction>
+    <Transaction>2013/04/30 16:28:24.000.129,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Unit1.dfm=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmArticulos.dfm</Transaction>
+    <Transaction>2013/04/30 16:29:01.000.725,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Main.dfm=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmPrincipalMain.dfm</Transaction>
+    <Transaction>2013/04/30 16:29:01.000.725,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Main.pas=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmPrincipalMain.pas</Transaction>
     <Transaction>2013/04/30 16:54:17.000.605,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\CHILDWIN.PAS=</Transaction>
     <Transaction>2013/05/02 12:30:05.000.991,=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Unit1.pas</Transaction>
-    <Transaction>2013/05/02 12:31:05.000.562,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Unit1.dfm=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmAgencia.dfm</Transaction>
-    <Transaction>2013/05/02 12:31:05.000.562,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Unit1.pas=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmAgencia.pas</Transaction>
+    <Transaction>2013/05/02 12:31:05.000.562,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmAgencia.dfm=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Unit1.dfm</Transaction>
+    <Transaction>2013/05/02 12:31:05.000.562,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmAgencia.pas=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Unit1.pas</Transaction>
     <Transaction>2013/05/02 14:40:19.000.052,=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\Utilidades.pas</Transaction>
     <Transaction>2013/05/02 14:42:40.000.975,=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\DataModule.pas</Transaction>
     <Transaction>2013/05/02 14:44:40.000.826,=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmLogin.pas</Transaction>
-    <Transaction>2013/05/02 16:10:54.000.161,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmArticulos.pas=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmArticulo.pas</Transaction>
-    <Transaction>2013/05/02 16:10:54.000.161,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmArticulos.dfm=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmArticulo.dfm</Transaction>
+    <Transaction>2013/05/02 16:10:54.000.161,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmArticulo.dfm=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmArticulos.dfm</Transaction>
+    <Transaction>2013/05/02 16:10:54.000.161,C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmArticulo.pas=C:\FACTURACIONXE\ delphi-xe-factu\FacturacionXE-MDI\frmArticulos.pas</Transaction>
     <Transaction>2013/06/23 08:12:42.000.833,=C:\FACTURACIONXE\delphi-xe-factu\FacturacionXE-MDI\Unit1.pas</Transaction>
-    <Transaction>2013/06/23 08:13:36.000.433,C:\FACTURACIONXE\delphi-xe-factu\FacturacionXE-MDI\frmBaseAll.dfm=C:\FACTURACIONXE\delphi-xe-factu\FacturacionXE-MDI\Unit1.dfm</Transaction>
-    <Transaction>2013/06/23 08:13:36.000.433,C:\FACTURACIONXE\delphi-xe-factu\FacturacionXE-MDI\frmBaseAll.pas=C:\FACTURACIONXE\delphi-xe-factu\FacturacionXE-MDI\Unit1.pas</Transaction>
+    <Transaction>2013/06/23 08:13:36.000.433,C:\FACTURACIONXE\delphi-xe-factu\FacturacionXE-MDI\Unit1.pas=C:\FACTURACIONXE\delphi-xe-factu\FacturacionXE-MDI\frmBaseAll.pas</Transaction>
+    <Transaction>2013/06/23 08:13:36.000.433,C:\FACTURACIONXE\delphi-xe-factu\FacturacionXE-MDI\Unit1.dfm=C:\FACTURACIONXE\delphi-xe-factu\FacturacionXE-MDI\frmBaseAll.dfm</Transaction>
     <Transaction>2013/06/29 09:19:23.000.013,=C:\FACTURACIONXE\delphi-xe-factu\FacturacionXE-MDI\Unit1.pas</Transaction>
-    <Transaction>2013/06/29 09:19:46.000.705,C:\FACTURACIONXE\delphi-xe-factu\FacturacionXE-MDI\Unit1.pas=C:\FACTURACIONXE\delphi-xe-factu\FacturacionXE-MDI\frmProveedorUt.pas</Transaction>
-    <Transaction>2013/06/29 09:19:46.000.705,C:\FACTURACIONXE\delphi-xe-factu\FacturacionXE-MDI\Unit1.dfm=C:\FACTURACIONXE\delphi-xe-factu\FacturacionXE-MDI\frmProveedorUt.dfm</Transaction>
+    <Transaction>2013/06/29 09:19:46.000.705,C:\FACTURACIONXE\delphi-xe-factu\FacturacionXE-MDI\frmProveedorUt.pas=C:\FACTURACIONXE\delphi-xe-factu\FacturacionXE-MDI\Unit1.pas</Transaction>
+    <Transaction>2013/06/29 09:19:46.000.705,C:\FACTURACIONXE\delphi-xe-factu\FacturacionXE-MDI\frmProveedorUt.dfm=C:\FACTURACIONXE\delphi-xe-factu\FacturacionXE-MDI\Unit1.dfm</Transaction>
   </Transactions>
 </BorlandProject>

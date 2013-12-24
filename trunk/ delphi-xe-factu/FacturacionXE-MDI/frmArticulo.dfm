@@ -22,21 +22,14 @@ inherited frmArticuloUt: TfrmArticuloUt
     ExplicitWidth = 705
     ExplicitHeight = 343
     inherited tgDatos: TTabSheet
+      ExplicitLeft = 4
+      ExplicitTop = 24
       ExplicitWidth = 697
       ExplicitHeight = 315
       inherited pnl3: TPanel
         Top = 274
         Width = 697
-        TabOrder = 5
         ExplicitTop = 274
-        ExplicitWidth = 697
-      end
-      inherited DBNavigator1: TDBNavigator
-        Top = 276
-        Width = 697
-        DataSource = dsArticulo
-        VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
-        ExplicitTop = 276
         ExplicitWidth = 697
       end
       object grpArticulo: TGroupBox
@@ -518,6 +511,8 @@ inherited frmArticuloUt: TfrmArticuloUt
       end
     end
     inherited tgConsulta: TTabSheet
+      ExplicitLeft = 4
+      ExplicitTop = 24
       ExplicitWidth = 697
       ExplicitHeight = 315
       object Panel2: TPanel
